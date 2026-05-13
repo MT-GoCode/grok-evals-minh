@@ -3,8 +3,10 @@
 __pycache__/
 *.pyc
 data/
-results/
 vendor/
+
+# results/ tracked for the AndroidBench remote run deliverable
+# (other evals' raw results stay local — add a more targeted gitignore there if needed)
 *.egg-info/
 dist/
 build/
