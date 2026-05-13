@@ -1,0 +1,15 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+data/
+results/
+vendor/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.cache/
+WRITEUP.md
+REMOTE_RUN.md
+INTRO.md
