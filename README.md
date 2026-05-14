@@ -185,3 +185,45 @@ Observation: by the strict leaderboard methodology Grok 4.3 sits well below ever
 Single-seed caveat: the public leaderboard averages 10 seeds × 100 tasks. With 1 seed and 37 effective task attempts our CI is much wider than the leaderboard models'.
 
 Full results: [`results/androidbench/full_run_v1/`](results/androidbench/full_run_v1/) — per-instance `*_scores.json`, `patches/`, `trajectories/`, `logs/`, `summary.txt`, `leaderboard_table.md`. Reproduction: [`scripts/`](scripts/) (`00_setup.sh` … `99_master_autopilot.py`).
+
+---
+
+## Reproducing the Android Bench run from scratch
+
+**Hardware**: x86_64 Ubuntu 22.04+ VM, KVM-enabled (`/dev/kvm` writable), ≥32 GB RAM with a 32 GB swapfile, ≥600 GB free disk. Cloud VMs work; ARM64 doesn't (no Android x86 emulator).
+
+**API keys** in `~/.env`:
+```bash
+XAI_API_KEY=sk-xai-...
+GITHUB_PAT=ghp-...   # optional, dodges GitHub rate limits during repo-base builds
+```
+
+**One-shot reproduction** of the full Android Bench run:
+```bash
+git clone git@github.com:MT-GoCode/grok-evals-minh.git && cd grok-evals-minh
+bash scripts/run_all_remote.sh full_run_v1 4
+```
+
+This calls each of the numbered scripts in order; everything is idempotent and resumable. Final results land in `results/androidbench/full_run_v1/`, and the README's `### Android Bench` section above is auto-rewritten.
+
+### What each script does
+
+| Script | Purpose |
+|---|---|
+| `00_setup.sh` | apt deps (docker, qemu-kvm), install uv, clone vendor `android-bench/android-bench` into `vendor/AndroidBench`, create Python 3.14 venv + install deps |
+| `10_setup_base.sh` | vendor's `utils.setup` — oracle agent + dataset summary |
+| `20_build_images.sh` | **Two-pass build.** Pass 1: vendor's `generate_docker_images.py` builds the base image + ~32 repo-base images. Pass 2: `rebuild_with_dns.sh` rebuilds the 100 task layers with `docker build --network=host` (the gradle wrapper inside task images can't resolve `services.gradle.org` on the default bridge network in many cloud-VM docker setups). |
+| `30_inference.sh` | `harness.inference.androidbench --workers N --model xai/grok-4.3 --skip-existing` — Grok generates patches, parallel across N workers |
+| `40_verify.sh` | vendor's verifier — applies each patch, runs unit + instrumentation tests in another docker container, scores `PASSED / AGENT_FAILED_TEST / ...` |
+| `50_aggregate.py` | Wilson 95% CI, status breakdown, leaderboard table, JSONL in `grok-evals` format |
+| `99_master_autopilot.py` | Full unattended runner. Waits for build, then per-task inference + bulk verify, with `git push` checkpoints every N tasks. Stops on xAI balance-exhausted. |
+| `35_inference_budgeted.py` | Sequential inference with a hard $-cap (used during exploratory runs). |
+| `auto_inference_loop.sh` | Re-runs inference every 15 min as new task images come online from a parallel rebuild. |
+| `rebuild_with_dns.sh` | Parallel `docker build --network=host` for any task images that don't yet exist — used as the second build pass and as a recovery tool. |
+| `finalize_results.py` | Merges all `*_scores.json` files (the verifier writes new files per filter), restores any statuses overwritten by a verifier startup pass, runs `50_aggregate.py`, refreshes the README. |
+
+### Caveats
+
+1. The vendor's verifier overwrites the consolidated `0_to_99_scores.json` with placeholder `AGENT_NO_PATCH` rows at startup, then leaves `--skip-existing` rows at the placeholder. `finalize_results.py` works around this by merging all per-invocation `*_scores.json` files.
+2. The `--network=host` change is required for many cloud-VM docker setups (DNS-resolution failure in the default bridge network). Bare-metal / clean-docker environments may not need it.
+3. Single-seed: this run is 1 seed × the buildable subset; the public leaderboard reports the mean of 10 seeds × all 100 tasks. The Wilson 95% CI here is correspondingly wider.
