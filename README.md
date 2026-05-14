@@ -86,26 +86,26 @@ Observation: Grok 4.3 performance collapses on symbolic.
 
 ### Android Bench
 
-#### Grok 4.3 result (single seed, n=100 task universe; 20 actually attempted)
+#### Grok 4.3 result (single seed, n=100 task universe; 23 actually attempted)
 
-> **⚠ Important caveat.** 76/100 of the Android Bench task images failed to build in our environment (Ubuntu 22.04 + Docker 29 + JDK 17, KVM-enabled VM): the gradle wrapper inside the build container couldn't reach `services.gradle.org` (DNS) on the default bridge network for those images. They're recorded as `AGENT_NO_PATCH` (steps=0, cost=$0) in `*_scores.json` because there was nothing for the agent to run against. These are **not** model failures.
+> **⚠ Important caveat.** 73/100 of the Android Bench task images failed to build in our environment (Ubuntu 22.04 + Docker 29 + JDK 17, KVM-enabled VM): the gradle wrapper inside the build container couldn't reach `services.gradle.org` (DNS) on the default bridge network for those images. They're recorded as `AGENT_NO_PATCH` (steps=0, cost=$0) in `*_scores.json` because there was nothing for the agent to run against. These are **not** model failures.
 >
 > So we report **two metrics**:
 
 **Headline (leaderboard methodology, n=100):**
-- **Accuracy: 10.0%** (10 PASSED+PASSED_FLAKY out of 100)
-- Wilson 95% CI: [5.5%, 17.4%]
+- **Accuracy: 13.0%** (13 PASSED+PASSED_FLAKY out of 100)
+- Wilson 95% CI: [7.8%, 21.0%]
 
-**Attempted-only (n=20, the subset where the docker image built and Grok actually ran):**
-- **Accuracy: 50.0%** (10 / 20)
-- Wilson 95% CI: [29.9%, 70.1%] — wide because n is small
+**Attempted-only (n=23, the subset where the docker image built and Grok actually ran):**
+- **Accuracy: 56.5%** (13 / 23)
+- Wilson 95% CI: [36.8%, 74.4%] — wide because n is small
 
 #### Status breakdown
 
 | Status | Count | % of 100 | What it means |
 |---|---:|---:|---|
-| `AGENT_NO_PATCH (no image built — Grok never ran)` | 76 | 76.0% | No docker image was built — Grok never ran (not a model failure) |
-| `PASSED` | 9 | 9.0% | Grok's patch compiled and the must-pass tests passed |
+| `AGENT_NO_PATCH (no image built — Grok never ran)` | 73 | 73.0% | No docker image was built — Grok never ran (not a model failure) |
+| `PASSED` | 12 | 12.0% | Grok's patch compiled and the must-pass tests passed |
 | `AGENT_FAILED_TEST` | 7 | 7.0% | Grok's patch compiled but a must-pass test failed |
 | `INFRA_FAILURE_AGENT` | 4 | 4.0% |  |
 | `INFRA_FAILURE` | 2 | 2.0% | Verifier infra error |
@@ -122,6 +122,9 @@ Observation: Grok 4.3 performance collapses on symbolic.
 | `LemmyNet__jerboa-pr_1068` | $0.537 | 52 |  |
 | `LemmyNet__jerboa-pr_1114` | $0.200 | 22 |  |
 | `LemmyNet__jerboa-pr_1198` | $0.853 | 54 |  |
+| `LemmyNet__jerboa-pr_809` | $0.235 | 23 |  |
+| `LemmyNet__jerboa-pr_868` | $0.111 | 17 |  |
+| `LemmyNet__jerboa-pr_894` | $0.048 | 9 |  |
 | `LemmyNet__jerboa-pr_991` | $2.277 | 128 | FLAKY (passed only after test retry) |
 | `thunderbird__thunderbird-android-pr_7103` | $0.083 | 10 |  |
 | `thunderbird__thunderbird-android-pr_7190` | $0.157 | 22 |  |
@@ -144,7 +147,7 @@ Observation: Grok 4.3 performance collapses on symbolic.
 
 #### Leaderboard placement
 
-Public scores: mean accuracy over 10 seeds × 100 tasks each ([developer.android.com/bench](https://developer.android.com/bench), snapshot 2026-05-05). Our run: 1 seed × 100 tasks (76 of which never reached the model).
+Public scores: mean accuracy over 10 seeds × 100 tasks each ([developer.android.com/bench](https://developer.android.com/bench), snapshot 2026-05-05). Our run: 1 seed × 100 tasks (73 of which never reached the model).
 
 | Rank | Model | Accuracy |
 |---:|---|---:|
@@ -161,10 +164,10 @@ Public scores: mean accuracy over 10 seeds × 100 tasks each ([developer.android
 | 11 | Claude Sonnet 4.5 | 53.8% |
 | 12 | Gemini 3 Flash Preview | 42.0% |
 | 13 | Gemini 2.5 Flash | 16.7% |
-| **→** | **Grok 4.3 (this run, 1 seed, leaderboard methodology)** | **10.0%** |
+| **→** | **Grok 4.3 (this run, 1 seed, leaderboard methodology)** | **13.0%** |
 
-Observation: by the strict leaderboard methodology Grok 4.3 sits well below every officially-tested model. By the attempted-only subset (50.0%, n=20) Grok would slot among mid/upper-tier models — but the small n means a wide CI, so this number is not directly comparable until the build issues are resolved and the rest of the 100 tasks complete.
+Observation: by the strict leaderboard methodology Grok 4.3 sits well below every officially-tested model. By the attempted-only subset (56.5%, n=23) Grok would slot among mid/upper-tier models — but the small n means a wide CI, so this number is not directly comparable until the build issues are resolved and the rest of the 100 tasks complete.
 
-Single-seed caveat: the public leaderboard averages 10 seeds × 100 tasks. With 1 seed and 20 effective task attempts our CI is much wider than the leaderboard models'.
+Single-seed caveat: the public leaderboard averages 10 seeds × 100 tasks. With 1 seed and 23 effective task attempts our CI is much wider than the leaderboard models'.
 
 Full results: [`results/androidbench/full_run_v1/`](results/androidbench/full_run_v1/) — per-instance `*_scores.json`, `patches/`, `trajectories/`, `logs/`, `summary.txt`, `leaderboard_table.md`. Reproduction: [`scripts/`](scripts/) (`00_setup.sh` … `99_master_autopilot.py`).

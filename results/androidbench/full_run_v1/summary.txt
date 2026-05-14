@@ -1,10 +1,10 @@
 Grok 4.3 on AndroidBench v1 (n=100)
-Accuracy: 10.00%   Wilson 95% CI: [5.52, 17.44]   (±6.0pp)
+Accuracy: 13.00%   Wilson 95% CI: [7.76, 20.98]   (±6.6pp)
 Median cost / task: $0.1929    Total: $14.56
 
 Status breakdown:
-  AGENT_NO_PATCH             76  (76.0%)
-  PASSED                      9  (9.0%)
+  AGENT_NO_PATCH             73  (73.0%)
+  PASSED                     12  (12.0%)
   AGENT_FAILED_TEST           7  (7.0%)
   INFRA_FAILURE_AGENT         4  (4.0%)
   INFRA_FAILURE               2  (2.0%)
@@ -19,9 +19,6 @@ Failing instance ids (status != PASSED*):
   DroidKaigi__conference-app-2023-pr_896                       INFRA_FAILURE
   LemmyNet__jerboa-pr_1122                                     AGENT_FAILED_TEST
   LemmyNet__jerboa-pr_1485                                     AGENT_NO_PATCH
-  LemmyNet__jerboa-pr_809                                      AGENT_NO_PATCH
-  LemmyNet__jerboa-pr_868                                      AGENT_NO_PATCH
-  LemmyNet__jerboa-pr_894                                      AGENT_NO_PATCH
   LemmyNet__jerboa-pr_941                                      AGENT_NO_PATCH
   LemmyNet__jerboa-pr_946                                      AGENT_NO_PATCH
   LemmyNet__jerboa-pr_947                                      AGENT_NO_PATCH

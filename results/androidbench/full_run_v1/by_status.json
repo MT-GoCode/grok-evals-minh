@@ -15,6 +15,9 @@
     "LemmyNet__jerboa-pr_1068",
     "LemmyNet__jerboa-pr_1114",
     "LemmyNet__jerboa-pr_1198",
+    "LemmyNet__jerboa-pr_809",
+    "LemmyNet__jerboa-pr_868",
+    "LemmyNet__jerboa-pr_894",
     "thunderbird__thunderbird-android-pr_7103",
     "thunderbird__thunderbird-android-pr_7190",
     "thunderbird__thunderbird-android-pr_8020"
@@ -25,9 +28,6 @@
   ],
   "AGENT_NO_PATCH": [
     "LemmyNet__jerboa-pr_1485",
-    "LemmyNet__jerboa-pr_809",
-    "LemmyNet__jerboa-pr_868",
-    "LemmyNet__jerboa-pr_894",
     "LemmyNet__jerboa-pr_941",
     "LemmyNet__jerboa-pr_946",
     "LemmyNet__jerboa-pr_947",
