@@ -1,6 +1,6 @@
 Grok 4.3 on AndroidBench v1 (n=100)
 Accuracy: 21.00%   Wilson 95% CI: [14.17, 29.98]   (±7.9pp)
-Median cost / task: $0.1929    Total: $14.56
+Median cost / task: $0.1929    Total: $21.91
 
 Status breakdown:
   AGENT_NO_PATCH             61  (61.0%)
