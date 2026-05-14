@@ -352,7 +352,11 @@ def main() -> int:
     pidfile.write_text(str(os.getpid()))
     log(f"pid={os.getpid()} pidfile={pidfile}")
     wait_for_build()
-    retry_failed_builds()
+    # Retry pass DISABLED: empirically every retry of the failed builds also
+    # fails (gradle assembleDebug fails fast). Spending 30 min retrying with
+    # zero recoveries is dead time; go straight to inference on what we have.
+    if os.environ.get("AUTOPILOT_RETRY", "0") == "1":
+        retry_failed_builds()
 
     run_dir = OUT_DIR / args.run_name
     run_dir.mkdir(parents=True, exist_ok=True)
