@@ -90,12 +90,12 @@ Observation: Grok 4.3 performance collapses on symbolic.
 
 | Subset | n | Accuracy | Notes |
 |---|---|---|---|
-| Solid run-throughs (image built + Grok ran + verifier scored) | 40 | **65.0% ± 14.2** | Apples-to-apples Grok number |
-| Full task universe (incl. 59 where the docker image couldn't be built) | 100 | 26.0% | Strict leaderboard methodology |
+| Solid run-throughs (image built + Grok ran + verifier scored) | 41 | **63.4% ± 14.1** | Apples-to-apples Grok number |
+| Full task universe (incl. 58 where the docker image couldn't be built) | 100 | 26.0% | Strict leaderboard methodology |
 
-Observation: 59/100 task images failed to build in our cloud-VM docker env (gradle DNS failure inside the bridge network). On the 40 we did get a complete pipeline for, Grok 4.3 wins 65.0%.
+Observation: 58/100 task images failed to build in our cloud-VM docker env (gradle DNS failure inside the bridge network). On the 41 we did get a complete pipeline for, Grok 4.3 wins 63.4%.
 
-#### Leaderboard placement (attempted-only, n=40)
+#### Leaderboard placement (attempted-only, n=41)
 
 | Rank | Model | Accuracy |
 |---|---|---|
@@ -105,7 +105,7 @@ Observation: 59/100 task images failed to build in our cloud-VM docker env (grad
 | 4 | Claude Opus 4.7 | 68.7 |
 | 5 | GPT-5.3 Codex | 67.7 |
 | 6 | Claude Opus 4.6 | 66.6 |
-| **→ ≈7** | **Grok 4.3 (n=40)** | **65.0 ± 14.2** |
+| **→ ≈7** | **Grok 4.3 (n=41)** | **63.4 ± 14.1** |
 | 8 | GPT-5.2 Codex | 62.5 |
 | 9 | Claude Opus 4.5 | 61.9 |
 | 10 | Gemini 3 Pro Preview | 60.4 |
@@ -114,4 +114,4 @@ Observation: 59/100 task images failed to build in our cloud-VM docker env (grad
 | 13 | Gemini 3 Flash Preview | 42.0 |
 | 14 | Gemini 2.5 Flash | 16.7 |
 
-Observation: Grok 4.3 sits in the middle of the frontier band, behind the GPT-5.4 / Gemini 3.1 Pro Preview / Opus 4.7 leaders by ~10pp. Single-seed, n=40 → wide CI; full per-task breakdown + caveats + repro in [`results/androidbench/`](results/androidbench/).
+Observation: Grok 4.3 sits in the middle of the frontier band, behind the GPT-5.4 / Gemini 3.1 Pro Preview / Opus 4.7 leaders by ~10pp. Single-seed, n=41 → wide CI; full per-task breakdown + caveats + repro in [`results/androidbench/`](results/androidbench/).

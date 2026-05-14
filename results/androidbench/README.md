@@ -4,7 +4,7 @@
 
 ## Headline numbers
 
-> **⚠ Important caveat.** 59/100 of the Android Bench task images failed to build in our environment (Ubuntu 22.04 + Docker 29 + JDK 17, KVM-enabled VM): the gradle wrapper inside the build container couldn't reach `services.gradle.org` (DNS) on the default bridge network for those images. They're recorded as `AGENT_NO_PATCH` (steps=0, cost=$0) in `*_scores.json` because there was nothing for the agent to run against. These are **not** model failures.
+> **⚠ Important caveat.** 58/100 of the Android Bench task images failed to build in our environment (Ubuntu 22.04 + Docker 29 + JDK 17, KVM-enabled VM): the gradle wrapper inside the build container couldn't reach `services.gradle.org` (DNS) on the default bridge network for those images. They're recorded as `AGENT_NO_PATCH` (steps=0, cost=$0) in `*_scores.json` because there was nothing for the agent to run against. These are **not** model failures.
 >
 > So we report **two metrics**:
 
@@ -12,17 +12,17 @@
 - **Accuracy: 26.0%** (26 PASSED+PASSED_FLAKY out of 100)
 - Wilson 95% CI: [18.4%, 35.4%]
 
-**Attempted-only (n=40, the subset where the docker image built and Grok actually ran):**
-- **Accuracy: 65.0%** (26 / 40)
-- Wilson 95% CI: [49.5%, 77.9%] — wide because n is small (single seed)
+**Attempted-only (n=41, the subset where the docker image built and Grok actually ran):**
+- **Accuracy: 63.4%** (26 / 41)
+- Wilson 95% CI: [48.1%, 76.4%] — wide because n is small (single seed)
 
 ## Status breakdown
 
 | Status | Count | % of 100 | What it means |
 |---|---:|---:|---|
-| `AGENT_NO_PATCH (no image built — Grok never ran)` | 59 | 59.0% | No docker image was built — Grok never ran (not a model failure) |
+| `AGENT_NO_PATCH (no image built — Grok never ran)` | 58 | 58.0% | No docker image was built — Grok never ran (not a model failure) |
 | `PASSED` | 25 | 25.0% | Grok's patch compiled and the must-pass tests passed |
-| `AGENT_FAILED_TEST` | 11 | 11.0% | Grok's patch compiled but a must-pass test failed |
+| `AGENT_FAILED_TEST` | 12 | 12.0% | Grok's patch compiled but a must-pass test failed |
 | `INFRA_FAILURE` | 2 | 2.0% | Verifier infra error |
 | `PASSED_FLAKY` | 1 | 1.0% | Passed after a retry of the test execution |
 | `INFRA_FAILURE_AGENT` | 1 | 1.0% |  |
@@ -76,6 +76,7 @@
 | `MohamedRejeb__compose-rich-editor-pr_367` | AGENT_FAILED_TEST | $0.566 | 28 |
 | `airbnb__lottie-android-pr_2427` | AGENT_FAILED_TEST | $0.234 | 20 |
 | `android_snippets_1` | AGENT_FAILED_BUILD | $0.118 | 13 |
+| `badoo__Reaktive-pr_786` | AGENT_FAILED_TEST | $0.121 | 17 |
 | `coil-kt__coil-pr_2669` | AGENT_FAILED_TEST | $0.441 | 42 |
 
 ## Reproducing this run from scratch
@@ -116,7 +117,7 @@ This calls each of the numbered scripts in order; everything is idempotent and r
 
 1. **Verifier `--skip-existing` quirk.** The vendor's verifier overwrites the consolidated `0_to_99_scores.json` with placeholder `AGENT_NO_PATCH` rows at startup, then leaves `--skip-existing` rows at the placeholder. `finalize_results.py` works around this by merging all per-invocation `*_scores.json` files and never letting a fresh placeholder overwrite a real prior status.
 2. **Docker `--network=host`** is required for many cloud-VM docker setups due to DNS-resolution failure inside the default bridge network. Bare-metal / clean-docker environments may not need it.
-3. **Single-seed.** This run is 1 seed × the buildable subset; the public leaderboard reports the mean of 10 seeds × all 100 tasks. The Wilson 95% CI here is correspondingly wider (~±15pp at n=40 vs ~±5pp on the leaderboard).
+3. **Single-seed.** This run is 1 seed × the buildable subset; the public leaderboard reports the mean of 10 seeds × all 100 tasks. The Wilson 95% CI here is correspondingly wider (~±15pp at n=41 vs ~±5pp on the leaderboard).
 4. **Cost cap.** Each task is hard-capped at $10 of model spend by `harness/inference/androidbench.yaml`. Median observed per-task cost in this run was ~$0.17.
 
 ## Where the raw data is

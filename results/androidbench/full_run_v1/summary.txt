@@ -1,11 +1,11 @@
 Grok 4.3 on AndroidBench v1 (n=100)
 Accuracy: 26.00%   Wilson 95% CI: [18.40, 35.37]   (±8.5pp)
-Median cost / task: $0.2335    Total: $23.64
+Median cost / task: $0.2280    Total: $23.80
 
 Status breakdown:
-  AGENT_NO_PATCH             59  (59.0%)
+  AGENT_NO_PATCH             58  (58.0%)
   PASSED                     25  (25.0%)
-  AGENT_FAILED_TEST          11  (11.0%)
+  AGENT_FAILED_TEST          12  (12.0%)
   INFRA_FAILURE               2  (2.0%)
   PASSED_FLAKY                1  (1.0%)
   INFRA_FAILURE_AGENT         1  (1.0%)
@@ -30,7 +30,7 @@ Failing instance ids (status != PASSED*):
   arkivanov__Decompose-pr_394                                  AGENT_NO_PATCH
   arkivanov__Decompose-pr_646                                  AGENT_NO_PATCH
   badoo__Reaktive-pr_735                                       AGENT_NO_PATCH
-  badoo__Reaktive-pr_786                                       AGENT_NO_PATCH
+  badoo__Reaktive-pr_786                                       AGENT_FAILED_TEST
   bitfireAT__davx5-ose-pr_1267                                 AGENT_NO_PATCH
   bitfireAT__davx5-ose-pr_1504                                 AGENT_NO_PATCH
   bitfireAT__davx5-ose-pr_1512                                 AGENT_NO_PATCH
