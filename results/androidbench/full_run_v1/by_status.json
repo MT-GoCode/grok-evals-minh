@@ -32,6 +32,9 @@
     "MohamedRejeb__compose-rich-editor-pr_523",
     "android__nowinandroid-pr_553",
     "android__nowinandroid-pr_720",
+    "arkivanov__Decompose-pr_388",
+    "badoo__Reaktive-pr_763",
+    "badoo__Reaktive-pr_764",
     "thunderbird__thunderbird-android-pr_7103",
     "thunderbird__thunderbird-android-pr_7190",
     "thunderbird__thunderbird-android-pr_8020"
@@ -40,17 +43,11 @@
     "CatimaLoyalty__Android-pr_1588",
     "DroidKaigi__conference-app-2023-pr_896"
   ],
-  "INFRA_FAILURE_AGENT": [
-    "android_androidify_gradleplugin",
-    "arkivanov__Decompose-pr_388"
-  ],
   "AGENT_NO_PATCH": [
     "LemmyNet__jerboa-pr_1485",
     "arkivanov__Decompose-pr_394",
     "arkivanov__Decompose-pr_646",
     "badoo__Reaktive-pr_735",
-    "badoo__Reaktive-pr_763",
-    "badoo__Reaktive-pr_764",
     "badoo__Reaktive-pr_786",
     "bitfireAT__davx5-ose-pr_1267",
     "bitfireAT__davx5-ose-pr_1504",
@@ -109,6 +106,9 @@
   ],
   "PASSED_FLAKY": [
     "LemmyNet__jerboa-pr_991"
+  ],
+  "INFRA_FAILURE_AGENT": [
+    "android_androidify_gradleplugin"
   ],
   "AGENT_FAILED_BUILD": [
     "android_snippets_1"

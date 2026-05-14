@@ -1,14 +1,14 @@
 Grok 4.3 on AndroidBench v1 (n=100)
-Accuracy: 23.00%   Wilson 95% CI: [15.84, 32.15]   (±8.2pp)
-Median cost / task: $0.1714    Total: $19.65
+Accuracy: 26.00%   Wilson 95% CI: [18.40, 35.37]   (±8.5pp)
+Median cost / task: $0.2335    Total: $23.64
 
 Status breakdown:
-  AGENT_NO_PATCH             61  (61.0%)
-  PASSED                     22  (22.0%)
+  AGENT_NO_PATCH             59  (59.0%)
+  PASSED                     25  (25.0%)
   AGENT_FAILED_TEST          11  (11.0%)
   INFRA_FAILURE               2  (2.0%)
-  INFRA_FAILURE_AGENT         2  (2.0%)
   PASSED_FLAKY                1  (1.0%)
+  INFRA_FAILURE_AGENT         1  (1.0%)
   AGENT_FAILED_BUILD          1  (1.0%)
 
 Failing instance ids (status != PASSED*):
@@ -27,12 +27,9 @@ Failing instance ids (status != PASSED*):
   airbnb__lottie-android-pr_2427                               AGENT_FAILED_TEST
   android_androidify_gradleplugin                              INFRA_FAILURE_AGENT
   android_snippets_1                                           AGENT_FAILED_BUILD
-  arkivanov__Decompose-pr_388                                  INFRA_FAILURE_AGENT
   arkivanov__Decompose-pr_394                                  AGENT_NO_PATCH
   arkivanov__Decompose-pr_646                                  AGENT_NO_PATCH
   badoo__Reaktive-pr_735                                       AGENT_NO_PATCH
-  badoo__Reaktive-pr_763                                       AGENT_NO_PATCH
-  badoo__Reaktive-pr_764                                       AGENT_NO_PATCH
   badoo__Reaktive-pr_786                                       AGENT_NO_PATCH
   bitfireAT__davx5-ose-pr_1267                                 AGENT_NO_PATCH
   bitfireAT__davx5-ose-pr_1504                                 AGENT_NO_PATCH

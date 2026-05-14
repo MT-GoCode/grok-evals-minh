@@ -4,28 +4,28 @@
 
 ## Headline numbers
 
-> **⚠ Important caveat.** 61/100 of the Android Bench task images failed to build in our environment (Ubuntu 22.04 + Docker 29 + JDK 17, KVM-enabled VM): the gradle wrapper inside the build container couldn't reach `services.gradle.org` (DNS) on the default bridge network for those images. They're recorded as `AGENT_NO_PATCH` (steps=0, cost=$0) in `*_scores.json` because there was nothing for the agent to run against. These are **not** model failures.
+> **⚠ Important caveat.** 59/100 of the Android Bench task images failed to build in our environment (Ubuntu 22.04 + Docker 29 + JDK 17, KVM-enabled VM): the gradle wrapper inside the build container couldn't reach `services.gradle.org` (DNS) on the default bridge network for those images. They're recorded as `AGENT_NO_PATCH` (steps=0, cost=$0) in `*_scores.json` because there was nothing for the agent to run against. These are **not** model failures.
 >
 > So we report **two metrics**:
 
 **Headline (leaderboard methodology, n=100):**
-- **Accuracy: 23.0%** (23 PASSED+PASSED_FLAKY out of 100)
-- Wilson 95% CI: [15.8%, 32.2%]
+- **Accuracy: 26.0%** (26 PASSED+PASSED_FLAKY out of 100)
+- Wilson 95% CI: [18.4%, 35.4%]
 
-**Attempted-only (n=37, the subset where the docker image built and Grok actually ran):**
-- **Accuracy: 62.2%** (23 / 37)
-- Wilson 95% CI: [46.1%, 75.9%] — wide because n is small (single seed)
+**Attempted-only (n=40, the subset where the docker image built and Grok actually ran):**
+- **Accuracy: 65.0%** (26 / 40)
+- Wilson 95% CI: [49.5%, 77.9%] — wide because n is small (single seed)
 
 ## Status breakdown
 
 | Status | Count | % of 100 | What it means |
 |---|---:|---:|---|
-| `AGENT_NO_PATCH (no image built — Grok never ran)` | 61 | 61.0% | No docker image was built — Grok never ran (not a model failure) |
-| `PASSED` | 22 | 22.0% | Grok's patch compiled and the must-pass tests passed |
+| `AGENT_NO_PATCH (no image built — Grok never ran)` | 59 | 59.0% | No docker image was built — Grok never ran (not a model failure) |
+| `PASSED` | 25 | 25.0% | Grok's patch compiled and the must-pass tests passed |
 | `AGENT_FAILED_TEST` | 11 | 11.0% | Grok's patch compiled but a must-pass test failed |
 | `INFRA_FAILURE` | 2 | 2.0% | Verifier infra error |
-| `INFRA_FAILURE_AGENT` | 2 | 2.0% |  |
 | `PASSED_FLAKY` | 1 | 1.0% | Passed after a retry of the test execution |
+| `INFRA_FAILURE_AGENT` | 1 | 1.0% |  |
 | `AGENT_FAILED_BUILD` | 1 | 1.0% | Grok's patch broke compilation |
 
 ## Wins (Grok 4.3 actually solved these)
@@ -52,6 +52,9 @@
 | `MohamedRejeb__compose-rich-editor-pr_523` | $0.559 | 32 |  |
 | `android__nowinandroid-pr_553` | $0.092 | 13 |  |
 | `android__nowinandroid-pr_720` | $0.522 | 31 |  |
+| `arkivanov__Decompose-pr_388` | $0.228 | 18 |  |
+| `badoo__Reaktive-pr_763` | $0.165 | 26 |  |
+| `badoo__Reaktive-pr_764` | $0.049 | 18 |  |
 | `thunderbird__thunderbird-android-pr_7103` | $0.083 | 10 |  |
 | `thunderbird__thunderbird-android-pr_7190` | $0.157 | 22 |  |
 | `thunderbird__thunderbird-android-pr_8020` | $0.193 | 18 |  |
@@ -113,7 +116,7 @@ This calls each of the numbered scripts in order; everything is idempotent and r
 
 1. **Verifier `--skip-existing` quirk.** The vendor's verifier overwrites the consolidated `0_to_99_scores.json` with placeholder `AGENT_NO_PATCH` rows at startup, then leaves `--skip-existing` rows at the placeholder. `finalize_results.py` works around this by merging all per-invocation `*_scores.json` files and never letting a fresh placeholder overwrite a real prior status.
 2. **Docker `--network=host`** is required for many cloud-VM docker setups due to DNS-resolution failure inside the default bridge network. Bare-metal / clean-docker environments may not need it.
-3. **Single-seed.** This run is 1 seed × the buildable subset; the public leaderboard reports the mean of 10 seeds × all 100 tasks. The Wilson 95% CI here is correspondingly wider (~±15pp at n=37 vs ~±5pp on the leaderboard).
+3. **Single-seed.** This run is 1 seed × the buildable subset; the public leaderboard reports the mean of 10 seeds × all 100 tasks. The Wilson 95% CI here is correspondingly wider (~±15pp at n=40 vs ~±5pp on the leaderboard).
 4. **Cost cap.** Each task is hard-capped at $10 of model spend by `harness/inference/androidbench.yaml`. Median observed per-task cost in this run was ~$0.17.
 
 ## Where the raw data is
