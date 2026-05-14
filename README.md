@@ -86,13 +86,18 @@ Observation: Grok 4.3 performance collapses on symbolic.
 
 ### Android Bench
 
-#### Grok 4.3 result (single seed, n=1 tasks scored)
+#### Grok 4.3 result (single seed, n=100 tasks scored)
 
-Accuracy: 0.00%   Wilson 95% CI: [0.00, 79.35]   (±39.7pp)
+Accuracy: 5.00%   Wilson 95% CI: [2.15, 11.18]   (±4.5pp)
 
 | Status | Count | % |
 |---|---|---|
-| AGENT_FAILED_TEST | 1 | (100.0%) |
+| AGENT_NO_PATCH | 90 | (90.0%) |
+| PASSED | 4 | (4.0%) |
+| AGENT_FAILED_TEST | 3 | (3.0%) |
+| INFRA_FAILURE | 1 | (1.0%) |
+| PASSED_FLAKY | 1 | (1.0%) |
+| AGENT_FAILED_BUILD | 1 | (1.0%) |
 
 #### Leaderboard placement
 
@@ -111,10 +116,10 @@ Accuracy: 0.00%   Wilson 95% CI: [0.00, 79.35]   (±39.7pp)
 | 11 | Claude Sonnet 4.5 | 53.8% |
 | 12 | Gemini 3 Flash Preview | 42.0% |
 | 13 | Gemini 2.5 Flash | 16.7% |
-| 14 | Grok 4.3 (this run, 1 seed) ← | 0.0% |
+| 14 | Grok 4.3 (this run, 1 seed) ← | 5.0% |
 
 Observation: Grok 4.3 lands in the lower band of frontier models on Android Bench. The dominant failure mode is `AGENT_FAILED_TEST` — Grok generates a patch that compiles but fails the must-pass tests — followed by `AGENT_FAILED_BUILD` and `NO_PATCH_GENERATED`.
 
-Single-seed caveat: the public leaderboard reports the mean of 10 seeds × 100 tasks; this is 1 seed × 1 tasks. The Wilson 95% CI in `results/androidbench/full_run_v1/summary.txt` is wider than what you see on the leaderboard.
+Single-seed caveat: the public leaderboard reports the mean of 10 seeds × 100 tasks; this is 1 seed × 100 tasks. The Wilson 95% CI in `results/androidbench/full_run_v1/summary.txt` is wider than what you see on the leaderboard.
 
 Full results: [`results/androidbench/full_run_v1/`](results/androidbench/full_run_v1/)

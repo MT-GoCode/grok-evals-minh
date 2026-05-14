@@ -1,6 +1,6 @@
 # AndroidBench v1 leaderboard — with Grok 4.3
 
-Public scores: mean accuracy over 10 runs of 100 tasks each (https://developer.android.com/bench, snapshot 2026-05-05). This run: 1 seed, n=1, Wilson 95% CI shown.
+Public scores: mean accuracy over 10 runs of 100 tasks each (https://developer.android.com/bench, snapshot 2026-05-05). This run: 1 seed, n=100, Wilson 95% CI shown.
 
 | Rank | Model | Accuracy |
 |---:|---|---:|
@@ -17,6 +17,6 @@ Public scores: mean accuracy over 10 runs of 100 tasks each (https://developer.a
 | 11 | Claude Sonnet 4.5 | 53.8% |
 | 12 | Gemini 3 Flash Preview | 42.0% |
 | 13 | Gemini 2.5 Flash | 16.7% |
-| 14 | Grok 4.3 (this run, 1 seed) ← | 0.0% |
+| 14 | Grok 4.3 (this run, 1 seed) ← | 5.0% |
 
-**Grok 4.3:** 0.0% (Wilson 95% CI 0.0–79.3)
+**Grok 4.3:** 5.0% (Wilson 95% CI 2.2–11.2)

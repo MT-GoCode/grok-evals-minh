@@ -1,9 +1,108 @@
-Grok 4.3 on AndroidBench v1 (n=1)
-Accuracy: 0.00%   Wilson 95% CI: [0.00, 79.35]   (±39.7pp)
+Grok 4.3 on AndroidBench v1 (n=100)
+Accuracy: 5.00%   Wilson 95% CI: [2.15, 11.18]   (±4.5pp)
 Median cost / task: $0.1252    Total: $4.22
 
 Status breakdown:
-  AGENT_FAILED_TEST           1  (100.0%)
+  AGENT_NO_PATCH             90  (90.0%)
+  PASSED                      4  (4.0%)
+  AGENT_FAILED_TEST           3  (3.0%)
+  INFRA_FAILURE               1  (1.0%)
+  PASSED_FLAKY                1  (1.0%)
+  AGENT_FAILED_BUILD          1  (1.0%)
 
 Failing instance ids (status != PASSED*):
-  AlphaWallet__alpha-wallet-android-pr_3329                    AGENT_FAILED_TEST
+  AlphaWallet__alpha-wallet-android-pr_3329                    AGENT_NO_PATCH
+  Automattic__pocket-casts-android-pr_1114                     AGENT_NO_PATCH
+  Automattic__pocket-casts-android-pr_3970                     AGENT_NO_PATCH
+  Automattic__pocket-casts-android-pr_757                      AGENT_NO_PATCH
+  CatimaLoyalty__Android-pr_1524                               AGENT_NO_PATCH
+  CatimaLoyalty__Android-pr_1588                               AGENT_NO_PATCH
+  DroidKaigi__conference-app-2023-pr_896                       INFRA_FAILURE
+  LemmyNet__jerboa-pr_1068                                     AGENT_NO_PATCH
+  LemmyNet__jerboa-pr_1114                                     AGENT_NO_PATCH
+  LemmyNet__jerboa-pr_1122                                     AGENT_NO_PATCH
+  LemmyNet__jerboa-pr_1198                                     AGENT_NO_PATCH
+  LemmyNet__jerboa-pr_1485                                     AGENT_NO_PATCH
+  LemmyNet__jerboa-pr_809                                      AGENT_NO_PATCH
+  LemmyNet__jerboa-pr_868                                      AGENT_NO_PATCH
+  LemmyNet__jerboa-pr_894                                      AGENT_NO_PATCH
+  LemmyNet__jerboa-pr_941                                      AGENT_NO_PATCH
+  LemmyNet__jerboa-pr_946                                      AGENT_NO_PATCH
+  LemmyNet__jerboa-pr_947                                      AGENT_NO_PATCH
+  LemmyNet__jerboa-pr_985                                      AGENT_NO_PATCH
+  MohamedRejeb__compose-rich-editor-pr_319                     AGENT_FAILED_TEST
+  MohamedRejeb__compose-rich-editor-pr_335                     AGENT_FAILED_TEST
+  MohamedRejeb__compose-rich-editor-pr_357                     AGENT_NO_PATCH
+  MohamedRejeb__compose-rich-editor-pr_363                     AGENT_NO_PATCH
+  MohamedRejeb__compose-rich-editor-pr_367                     AGENT_NO_PATCH
+  MohamedRejeb__compose-rich-editor-pr_379                     AGENT_NO_PATCH
+  MohamedRejeb__compose-rich-editor-pr_403                     AGENT_NO_PATCH
+  MohamedRejeb__compose-rich-editor-pr_445                     AGENT_NO_PATCH
+  MohamedRejeb__compose-rich-editor-pr_523                     AGENT_NO_PATCH
+  airbnb__lottie-android-pr_2427                               AGENT_NO_PATCH
+  android__nowinandroid-pr_553                                 AGENT_NO_PATCH
+  android__nowinandroid-pr_720                                 AGENT_NO_PATCH
+  android_androidify_gradleplugin                              AGENT_NO_PATCH
+  android_snippets_1                                           AGENT_FAILED_BUILD
+  arkivanov__Decompose-pr_388                                  AGENT_NO_PATCH
+  arkivanov__Decompose-pr_394                                  AGENT_NO_PATCH
+  arkivanov__Decompose-pr_646                                  AGENT_NO_PATCH
+  badoo__Reaktive-pr_735                                       AGENT_NO_PATCH
+  badoo__Reaktive-pr_763                                       AGENT_NO_PATCH
+  badoo__Reaktive-pr_764                                       AGENT_NO_PATCH
+  badoo__Reaktive-pr_786                                       AGENT_NO_PATCH
+  bitfireAT__davx5-ose-pr_1267                                 AGENT_NO_PATCH
+  bitfireAT__davx5-ose-pr_1504                                 AGENT_NO_PATCH
+  bitfireAT__davx5-ose-pr_1512                                 AGENT_NO_PATCH
+  braintree__braintree_android-pr_1323                         AGENT_NO_PATCH
+  bumble-tech__appyx-pr_425                                    AGENT_NO_PATCH
+  bumble-tech__appyx-pr_638                                    AGENT_NO_PATCH
+  bumble-tech__appyx-pr_694                                    AGENT_NO_PATCH
+  cahier-adaptive-1                                            AGENT_NO_PATCH
+  chrisbanes__haze-pr_250                                      AGENT_NO_PATCH
+  chrisbanes__haze-pr_710                                      AGENT_NO_PATCH
+  coil-kt__coil-pr_1964                                        AGENT_NO_PATCH
+  coil-kt__coil-pr_2033                                        AGENT_NO_PATCH
+  coil-kt__coil-pr_2121                                        AGENT_NO_PATCH
+  coil-kt__coil-pr_2669                                        AGENT_FAILED_TEST
+  coil-kt__coil-pr_2945                                        AGENT_NO_PATCH
+  coil-kt__coil-pr_3137                                        AGENT_NO_PATCH
+  element-hq__element-x-android-pr_1848                        AGENT_NO_PATCH
+  element-hq__element-x-android-pr_2073                        AGENT_NO_PATCH
+  element-hq__element-x-android-pr_2342                        AGENT_NO_PATCH
+  getsentry__sentry-java-pr_2891                               AGENT_NO_PATCH
+  getsentry__sentry-java-pr_4262                               AGENT_NO_PATCH
+  getsentry__sentry-java-pr_4582                               AGENT_NO_PATCH
+  getsentry__sentry-java-pr_4724                               AGENT_NO_PATCH
+  google__accompanist-pr_903                                   AGENT_NO_PATCH
+  google__android-fhir-pr_1822                                 AGENT_NO_PATCH
+  google__android-fhir-pr_1894                                 AGENT_NO_PATCH
+  googlemaps__android-maps-compose-pr_327                      AGENT_NO_PATCH
+  googlemaps__android-maps-compose-pr_336                      AGENT_NO_PATCH
+  googlemaps__android-maps-compose-pr_478                      AGENT_NO_PATCH
+  googlemaps__android-maps-compose-pr_603                      AGENT_NO_PATCH
+  komikku-app__komikku-pr_992                                  AGENT_NO_PATCH
+  lihenggui__blocker-pr_725                                    AGENT_NO_PATCH
+  nowinandroid-adaptive-1                                      AGENT_NO_PATCH
+  nowinandroid-compose-fling_behavior                          AGENT_NO_PATCH
+  nowinandroid-custom-modifier-node                            AGENT_NO_PATCH
+  nowinandroid-hide-toolbar-when-scroll                        AGENT_NO_PATCH
+  nowinandroid-workmanager-2                                   AGENT_NO_PATCH
+  pocketcasts-room-1                                           AGENT_NO_PATCH
+  pocketcasts-room-2                                           AGENT_NO_PATCH
+  pocketcasts-room-3                                           AGENT_NO_PATCH
+  pocketcasts-room-4                                           AGENT_NO_PATCH
+  seedvault-app__seedvault-pr_736                              AGENT_NO_PATCH
+  thunderbird__thunderbird-android-pr_8151                     AGENT_NO_PATCH
+  thunderbird__thunderbird-android-pr_8510                     AGENT_NO_PATCH
+  thunderbird__thunderbird-android-pr_8806                     AGENT_NO_PATCH
+  thunderbird__thunderbird-android-pr_9152                     AGENT_NO_PATCH
+  tuskyapp__Tusky-pr_3341                                      AGENT_NO_PATCH
+  tuskyapp__Tusky-pr_4723                                      AGENT_NO_PATCH
+  tuskyapp__Tusky-pr_4821                                      AGENT_NO_PATCH
+  usuiat__Zoomable-pr_239                                      AGENT_NO_PATCH
+  usuiat__Zoomable-pr_322                                      AGENT_NO_PATCH
+  usuiat__Zoomable-pr_334                                      AGENT_NO_PATCH
+  wgtunnel__wgtunnel-pr_623                                    AGENT_NO_PATCH
+  you-apps__ClockYou-pr_190                                    AGENT_NO_PATCH
+  you-apps__ClockYou-pr_292                                    AGENT_NO_PATCH

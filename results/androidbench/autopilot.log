@@ -214,3 +214,21 @@
 [2026-05-14 03:04:47]   infer cmd: /home/minh/grok-evals-minh/vendor/AndroidBench/.venv/bin/python -m harness.inference.androidbench --instance thunderbird__thunderbird-android-pr_8020 --workers 1 --model xai/grok-4.3 --run-name full_run_v1 --images local --skip-existing
 [2026-05-14 03:10:12]   infer rc=0 elapsed=324.5s cost=$0.1929 total=$4.2236 balance_exhausted=False
 [2026-05-14 03:10:12]   --- batch checkpoint after 10 new tasks (total spend $4.2236) ---
+[2026-05-14 03:10:13]   git push rc=0
+[2026-05-14 03:10:13] [88/100] thunderbird__thunderbird-android-pr_8151: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] [89/100] thunderbird__thunderbird-android-pr_8510: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] [90/100] thunderbird__thunderbird-android-pr_8806: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] [91/100] thunderbird__thunderbird-android-pr_9152: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] [92/100] tuskyapp__Tusky-pr_3341: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] [93/100] tuskyapp__Tusky-pr_4723: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] [94/100] tuskyapp__Tusky-pr_4821: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] [95/100] usuiat__Zoomable-pr_239: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] [96/100] usuiat__Zoomable-pr_322: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] [97/100] usuiat__Zoomable-pr_334: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] [98/100] wgtunnel__wgtunnel-pr_623: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] [99/100] you-apps__ClockYou-pr_190: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] [100/100] you-apps__ClockYou-pr_292: SKIP (no docker image — was a build failure)
+[2026-05-14 03:10:13] === bulk verify pass (parallel=2) ===
+[2026-05-14 03:10:13]   bulk verify cmd: yes y | /home/minh/grok-evals-minh/vendor/AndroidBench/.venv/bin/verifier --tasks-dir /home/minh/grok-evals-minh/vendor/AndroidBench/dataset/tasks --run-name full_run_v1 --use_local_images --max-parallel-containers 2 --skip-existing
+[2026-05-14 05:06:06]   bulk verify rc=0
+[2026-05-14 05:06:07] === final aggregate + push ===
