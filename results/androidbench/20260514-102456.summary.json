@@ -1,0 +1,22 @@
+{
+  "model": "Grok 4.3",
+  "eval": "androidbench",
+  "n_tasks_done": 100,
+  "n_passed": 7,
+  "accuracy": 0.07,
+  "wilson_95_ci": [
+    0.034318824364064096,
+    0.13749671006529757
+  ],
+  "median_instance_cost_usd": 0.1929035,
+  "total_instance_cost_usd": 14.55904385,
+  "status_counts": {
+    "AGENT_FAILED_TEST": 5,
+    "PASSED": 6,
+    "AGENT_NO_PATCH": 82,
+    "INFRA_FAILURE": 1,
+    "PASSED_FLAKY": 1,
+    "INFRA_FAILURE_AGENT": 4,
+    "AGENT_FAILED_BUILD": 1
+  }
+}
