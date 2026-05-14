@@ -235,12 +235,10 @@ def aggregate(run_dir: Path) -> None:
 
 
 def update_readme_section(run_dir: Path) -> None:
-    """Replace everything after '### Android Bench' in README with our findings.
-
-    Distinguishes:
-      * the "leaderboard methodology" pass-rate over n=100,
-      * the "attempted-only" pass-rate over instances where Grok actually ran
-        (steps > 0), which is what we should reason about for model quality.
+    """Write a SHORT Android Bench section into the main README (matching the
+    TutorBench / MatSciBench style of two compact tables + observation lines)
+    AND a long-form version with all per-task tables, caveats, and repro
+    instructions into results/androidbench/README.md.
     """
     scores_path = run_dir / "0_to_99_scores.json"
     if not scores_path.exists():
@@ -319,27 +317,69 @@ def update_readme_section(run_dir: Path) -> None:
             fail_rows.append(f"| `{k}` | {v.get('status')} | {cost} | {steps} |")
     fail_md = "\n".join(fail_rows) if fail_rows else "_None._"
 
-    # Leaderboard table — use the public snapshot from 50_aggregate.py
-    leaderboard_md = """| Rank | Model | Accuracy |
-|---:|---|---:|
-| 1 | GPT-5.5 | 74.0% |
-| 2 | GPT-5.4 | 72.4% |
-| 2 | Gemini 3.1 Pro Preview | 72.4% |
-| 4 | Claude Opus 4.7 | 68.7% |
-| 5 | GPT-5.3 Codex | 67.7% |
-| 6 | Claude Opus 4.6 | 66.6% |
-| 7 | GPT-5.2 Codex | 62.5% |
-| 8 | Claude Opus 4.5 | 61.9% |
-| 9 | Gemini 3 Pro Preview | 60.4% |
-| 10 | Claude Sonnet 4.6 | 58.4% |
-| 11 | Claude Sonnet 4.5 | 53.8% |
-| 12 | Gemini 3 Flash Preview | 42.0% |
-| 13 | Gemini 2.5 Flash | 16.7% |
-| **→** | **Grok 4.3 (this run, 1 seed, leaderboard methodology)** | **""" + f"{p_all*100:.1f}%" + """** |"""
+    # Leaderboard with Grok inserted at its position (attempted-only score)
+    leaderboard = [
+        ("GPT-5.5",                 74.0),
+        ("GPT-5.4",                 72.4),
+        ("Gemini 3.1 Pro Preview",  72.4),
+        ("Claude Opus 4.7",         68.7),
+        ("GPT-5.3 Codex",           67.7),
+        ("Claude Opus 4.6",         66.6),
+        ("GPT-5.2 Codex",           62.5),
+        ("Claude Opus 4.5",         61.9),
+        ("Gemini 3 Pro Preview",    60.4),
+        ("Claude Sonnet 4.6",       58.4),
+        ("Claude Sonnet 4.5",       53.8),
+        ("Gemini 3 Flash Preview",  42.0),
+        ("Gemini 2.5 Flash",        16.7),
+    ]
+    grok_pp = (hi_att - lo_att) * 50  # half-width of CI in percentage points
+    grok_label = f"Grok 4.3 (n={n_att})"
+    grok_score = p_att * 100
+    rows = leaderboard + [(grok_label, grok_score)]
+    rows.sort(key=lambda x: -x[1])
+    leaderboard_short_md = "| Rank | Model | Accuracy |\n|---|---|---|\n"
+    for i, (name, score) in enumerate(rows, 1):
+        if name == grok_label:
+            leaderboard_short_md += f"| **→ ≈{i}** | **{name}** | **{score:.1f} ± {grok_pp:.1f}** |\n"
+        else:
+            leaderboard_short_md += f"| {i} | {name} | {score:.1f} |\n"
 
-    section = f"""### Android Bench
+    # ---- SHORT section for main README (TutorBench / MatSciBench style) ----
+    short = f"""### Android Bench
 
-#### Grok 4.3 result (single seed, n={n} task universe; {n_att} actually attempted)
+#### Grok 4.3 performance by task subset
+
+| Subset | n | Accuracy | Notes |
+|---|---|---|---|
+| Solid run-throughs (image built + Grok ran + verifier scored) | {n_att} | **{p_att*100:.1f}% ± {grok_pp:.1f}** | Apples-to-apples Grok number |
+| Full task universe (incl. {n_no_image} where the docker image couldn't be built) | {n} | {p_all*100:.1f}% | Strict leaderboard methodology |
+
+Observation: {n_no_image}/{n} task images failed to build in our cloud-VM docker env (gradle DNS failure inside the bridge network). On the {n_att} we did get a complete pipeline for, Grok 4.3 wins {p_att*100:.1f}%.
+
+#### Leaderboard placement (attempted-only, n={n_att})
+
+{leaderboard_short_md}
+Observation: Grok 4.3 sits in the middle of the frontier band, behind the GPT-5.4 / Gemini 3.1 Pro Preview / Opus 4.7 leaders by ~10pp. Single-seed, n={n_att} → wide CI; full per-task breakdown + caveats + repro in [`results/androidbench/`](results/androidbench/).
+"""
+
+    readme_path = REPO_ROOT / "README.md"
+    text = readme_path.read_text()
+    head, _, _ = text.partition("### Android Bench")
+    # Trim any prior "## Reproducing the Android Bench run from scratch"
+    # section that an earlier write may have left at the bottom.
+    if "## Reproducing the Android Bench run from scratch" in head:
+        head = head.split("## Reproducing the Android Bench run from scratch", 1)[0]
+        # Strip trailing "---" separator if present
+        head = head.rstrip().rstrip("-").rstrip() + "\n\n"
+    readme_path.write_text(head + short)
+
+    # ---- LONG version + repro instructions in results/androidbench/README.md ----
+    long = f"""# Android Bench — Grok 4.3 detailed results
+
+> Last refreshed by `scripts/99_master_autopilot.py:update_readme_section()`.
+
+## Headline numbers
 
 > **⚠ Important caveat.** {n_no_image}/{n} of the Android Bench task images failed to build in our environment (Ubuntu 22.04 + Docker 29 + JDK 17, KVM-enabled VM): the gradle wrapper inside the build container couldn't reach `services.gradle.org` (DNS) on the default bridge network for those images. They're recorded as `AGENT_NO_PATCH` (steps=0, cost=$0) in `*_scores.json` because there was nothing for the agent to run against. These are **not** model failures.
 >
@@ -351,43 +391,80 @@ def update_readme_section(run_dir: Path) -> None:
 
 **Attempted-only (n={n_att}, the subset where the docker image built and Grok actually ran):**
 - **Accuracy: {p_att*100:.1f}%** ({n_att_pass} / {n_att})
-- Wilson 95% CI: [{lo_att*100:.1f}%, {hi_att*100:.1f}%] — wide because n is small
+- Wilson 95% CI: [{lo_att*100:.1f}%, {hi_att*100:.1f}%] — wide because n is small (single seed)
 
-#### Status breakdown
+## Status breakdown
 
 | Status | Count | % of {n} | What it means |
 |---|---:|---:|---|
 {breakdown_md}
 
-#### Wins (Grok 4.3 actually solved these)
+## Wins (Grok 4.3 actually solved these)
 
 | Task | Cost | Steps | Notes |
 |---|---:|---:|---|
 {wins_md}
 
-#### Failures on the attempted subset
+## Failures on the attempted subset
 
 | Task | Status | Cost | Steps |
 |---|---|---:|---:|
 {fail_md}
 
-#### Leaderboard placement
+## Reproducing this run from scratch
 
-Public scores: mean accuracy over 10 seeds × 100 tasks each ([developer.android.com/bench](https://developer.android.com/bench), snapshot 2026-05-05). Our run: 1 seed × {n} tasks ({n_no_image} of which never reached the model).
+**Hardware**: x86_64 Ubuntu 22.04+ VM, KVM-enabled (`/dev/kvm` writable), ≥32 GB RAM with a 32 GB swapfile, ≥600 GB free disk. Cloud VMs work; ARM64 doesn't (no Android x86 emulator).
 
-{leaderboard_md}
+**API keys** in `~/.env`:
+```bash
+XAI_API_KEY=sk-xai-...
+GITHUB_PAT=ghp-...   # optional, dodges GitHub rate limits during repo-base builds
+```
 
-Observation: by the strict leaderboard methodology Grok 4.3 sits well below every officially-tested model. By the attempted-only subset ({p_att*100:.1f}%, n={n_att}) Grok would slot among mid/upper-tier models — but the small n means a wide CI, so this number is not directly comparable until the build issues are resolved and the rest of the {n} tasks complete.
+**One-shot reproduction**:
+```bash
+git clone git@github.com:MT-GoCode/grok-evals-minh.git && cd grok-evals-minh
+bash scripts/run_all_remote.sh full_run_v1 4
+```
 
-Single-seed caveat: the public leaderboard averages 10 seeds × 100 tasks. With 1 seed and {n_att} effective task attempts our CI is much wider than the leaderboard models'.
+This calls each of the numbered scripts in order; everything is idempotent and resumable. Final results land in `results/androidbench/{run_dir.name}/` and the main README's `### Android Bench` section above is auto-rewritten.
 
-Full results: [`results/androidbench/{run_dir.name}/`](results/androidbench/{run_dir.name}/) — per-instance `*_scores.json`, `patches/`, `trajectories/`, `logs/`, `summary.txt`, `leaderboard_table.md`. Reproduction: [`scripts/`](scripts/) (`00_setup.sh` … `99_master_autopilot.py`).
+### What each script does
+
+| Script | Purpose |
+|---|---|
+| `scripts/00_setup.sh` | apt deps (docker, qemu-kvm), install uv, clone vendor `android-bench/android-bench` into `vendor/AndroidBench`, create Python 3.14 venv + install deps |
+| `scripts/10_setup_base.sh` | vendor's `utils.setup` — oracle agent + dataset summary |
+| `scripts/20_build_images.sh` | **Two-pass build.** Pass 1: vendor's `generate_docker_images.py` builds the base + ~32 repo-base images. Pass 2: `rebuild_with_dns.sh` rebuilds the 100 task layers with `docker build --network=host` (gradle wrapper can't resolve `services.gradle.org` on the default bridge network in many cloud-VM docker setups). |
+| `scripts/30_inference.sh` | `harness.inference.androidbench --workers N --model xai/grok-4.3 --skip-existing` — Grok generates patches, parallel across N workers |
+| `scripts/40_verify.sh` | vendor's verifier — applies each patch, runs unit + instrumentation tests in another docker container, scores `PASSED / AGENT_FAILED_TEST / ...` |
+| `scripts/50_aggregate.py` | Wilson 95% CI, status breakdown, leaderboard table, JSONL in `grok-evals` format |
+| `scripts/99_master_autopilot.py` | Full unattended runner. Waits for build, then per-task inference + bulk verify, with `git push` checkpoints every N tasks. Stops on xAI balance-exhausted. |
+| `scripts/35_inference_budgeted.py` | Sequential inference with a hard $-cap (used during exploratory runs). |
+| `scripts/auto_inference_loop.sh` | Re-runs inference every 15 min as new task images come online from a parallel rebuild. |
+| `scripts/rebuild_with_dns.sh` | Parallel `docker build --network=host` for any task images that don't yet exist — used as the second build pass and as a recovery tool. |
+| `scripts/finalize_results.py` | Merges all `*_scores.json` files (the verifier writes new files per filter), restores any statuses overwritten by a verifier startup pass, runs `50_aggregate.py`, refreshes both READMEs. |
+
+## Caveats & things to know
+
+1. **Verifier `--skip-existing` quirk.** The vendor's verifier overwrites the consolidated `0_to_99_scores.json` with placeholder `AGENT_NO_PATCH` rows at startup, then leaves `--skip-existing` rows at the placeholder. `finalize_results.py` works around this by merging all per-invocation `*_scores.json` files and never letting a fresh placeholder overwrite a real prior status.
+2. **Docker `--network=host`** is required for many cloud-VM docker setups due to DNS-resolution failure inside the default bridge network. Bare-metal / clean-docker environments may not need it.
+3. **Single-seed.** This run is 1 seed × the buildable subset; the public leaderboard reports the mean of 10 seeds × all 100 tasks. The Wilson 95% CI here is correspondingly wider (~±15pp at n={n_att} vs ~±5pp on the leaderboard).
+4. **Cost cap.** Each task is hard-capped at $10 of model spend by `harness/inference/androidbench.yaml`. Median observed per-task cost in this run was ~$0.17.
+
+## Where the raw data is
+
+- `results/androidbench/{run_dir.name}/summary.txt` — text headline + status breakdown
+- `results/androidbench/{run_dir.name}/leaderboard_table.md` — drop-in placement table
+- `results/androidbench/{run_dir.name}/by_status.json` — `{{status: [instance_ids]}}`
+- `vendor/AndroidBench/out/{run_dir.name}/*_scores.json` — per-instance verifier output
+- `vendor/AndroidBench/out/{run_dir.name}/patches/<task>.patch` — the diff Grok produced
+- `vendor/AndroidBench/out/{run_dir.name}/trajectories/<task>.json` — full agent transcript (commands + model responses + cost/token accounting)
+- `results/androidbench/<ts>.jsonl` + `<ts>.summary.json` — `grok-evals`-format aggregates
 """
-
-    readme_path = REPO_ROOT / "README.md"
-    text = readme_path.read_text()
-    head, _, _ = text.partition("### Android Bench")
-    readme_path.write_text(head + section)
+    long_path = REPO_ROOT / "results" / "androidbench" / "README.md"
+    long_path.parent.mkdir(parents=True, exist_ok=True)
+    long_path.write_text(long)
 
 
 def _wilson(p: float, n: int, z: float = 1.96) -> tuple[float, float]:

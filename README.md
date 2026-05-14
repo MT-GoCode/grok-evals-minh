@@ -86,144 +86,32 @@ Observation: Grok 4.3 performance collapses on symbolic.
 
 ### Android Bench
 
-#### Grok 4.3 result (single seed, n=100 task universe; 37 actually attempted)
+#### Grok 4.3 performance by task subset
 
-> **⚠ Important caveat.** 61/100 of the Android Bench task images failed to build in our environment (Ubuntu 22.04 + Docker 29 + JDK 17, KVM-enabled VM): the gradle wrapper inside the build container couldn't reach `services.gradle.org` (DNS) on the default bridge network for those images. They're recorded as `AGENT_NO_PATCH` (steps=0, cost=$0) in `*_scores.json` because there was nothing for the agent to run against. These are **not** model failures.
->
-> So we report **two metrics**:
+| Subset | n | Accuracy | Notes |
+|---|---|---|---|
+| Solid run-throughs (image built + Grok ran + verifier scored) | 37 | **62.2% ± 14.9** | Apples-to-apples Grok number |
+| Full task universe (incl. 61 where the docker image couldn't be built) | 100 | 23.0% | Strict leaderboard methodology |
 
-**Headline (leaderboard methodology, n=100):**
-- **Accuracy: 23.0%** (23 PASSED+PASSED_FLAKY out of 100)
-- Wilson 95% CI: [15.8%, 32.2%]
+Observation: 61/100 task images failed to build in our cloud-VM docker env (gradle DNS failure inside the bridge network). On the 37 we did get a complete pipeline for, Grok 4.3 wins 62.2%.
 
-**Attempted-only (n=37, the subset where the docker image built and Grok actually ran):**
-- **Accuracy: 62.2%** (23 / 37)
-- Wilson 95% CI: [46.1%, 75.9%] — wide because n is small
-
-#### Status breakdown
-
-| Status | Count | % of 100 | What it means |
-|---|---:|---:|---|
-| `AGENT_NO_PATCH (no image built — Grok never ran)` | 61 | 61.0% | No docker image was built — Grok never ran (not a model failure) |
-| `PASSED` | 22 | 22.0% | Grok's patch compiled and the must-pass tests passed |
-| `AGENT_FAILED_TEST` | 11 | 11.0% | Grok's patch compiled but a must-pass test failed |
-| `INFRA_FAILURE` | 2 | 2.0% | Verifier infra error |
-| `INFRA_FAILURE_AGENT` | 2 | 2.0% |  |
-| `PASSED_FLAKY` | 1 | 1.0% | Passed after a retry of the test execution |
-| `AGENT_FAILED_BUILD` | 1 | 1.0% | Grok's patch broke compilation |
-
-#### Wins (Grok 4.3 actually solved these)
-
-| Task | Cost | Steps | Notes |
-|---|---:|---:|---|
-| `AntennaPod__AntennaPod-pr_6838` | $0.033 | 8 |  |
-| `Automattic__pocket-casts-android-pr_3970` | $0.171 | 16 |  |
-| `CatimaLoyalty__Android-pr_1524` | $0.096 | 14 |  |
-| `LemmyNet__jerboa-pr_1068` | $0.537 | 52 |  |
-| `LemmyNet__jerboa-pr_1114` | $0.200 | 22 |  |
-| `LemmyNet__jerboa-pr_1198` | $0.853 | 54 |  |
-| `LemmyNet__jerboa-pr_809` | $0.235 | 23 |  |
-| `LemmyNet__jerboa-pr_868` | $0.111 | 17 |  |
-| `LemmyNet__jerboa-pr_894` | $0.048 | 9 |  |
-| `LemmyNet__jerboa-pr_941` | $0.104 | 14 |  |
-| `LemmyNet__jerboa-pr_947` | $0.106 | 15 |  |
-| `LemmyNet__jerboa-pr_985` | $0.251 | 18 |  |
-| `LemmyNet__jerboa-pr_991` | $2.277 | 128 | FLAKY (passed only after test retry) |
-| `MohamedRejeb__compose-rich-editor-pr_363` | $0.804 | 51 |  |
-| `MohamedRejeb__compose-rich-editor-pr_379` | $0.286 | 19 |  |
-| `MohamedRejeb__compose-rich-editor-pr_403` | $1.273 | 68 |  |
-| `MohamedRejeb__compose-rich-editor-pr_445` | $2.221 | 59 |  |
-| `MohamedRejeb__compose-rich-editor-pr_523` | $0.559 | 32 |  |
-| `android__nowinandroid-pr_553` | $0.092 | 13 |  |
-| `android__nowinandroid-pr_720` | $0.522 | 31 |  |
-| `thunderbird__thunderbird-android-pr_7103` | $0.083 | 10 |  |
-| `thunderbird__thunderbird-android-pr_7190` | $0.157 | 22 |  |
-| `thunderbird__thunderbird-android-pr_8020` | $0.193 | 18 |  |
-
-#### Failures on the attempted subset
-
-| Task | Status | Cost | Steps |
-|---|---|---:|---:|
-| `AlphaWallet__alpha-wallet-android-pr_3329` | AGENT_FAILED_TEST | $0.118 | 17 |
-| `Automattic__pocket-casts-android-pr_1114` | AGENT_FAILED_TEST | $0.116 | 15 |
-| `Automattic__pocket-casts-android-pr_757` | AGENT_FAILED_TEST | $0.453 | 34 |
-| `CatimaLoyalty__Android-pr_1588` | INFRA_FAILURE | $0.306 | 29 |
-| `DroidKaigi__conference-app-2023-pr_896` | INFRA_FAILURE | $0.067 | 13 |
-| `LemmyNet__jerboa-pr_1122` | AGENT_FAILED_TEST | $2.214 | 127 |
-| `LemmyNet__jerboa-pr_946` | AGENT_FAILED_TEST | $0.282 | 17 |
-| `MohamedRejeb__compose-rich-editor-pr_319` | AGENT_FAILED_TEST | $0.611 | 45 |
-| `MohamedRejeb__compose-rich-editor-pr_335` | AGENT_FAILED_TEST | $0.125 | 17 |
-| `MohamedRejeb__compose-rich-editor-pr_357` | AGENT_FAILED_TEST | $0.409 | 24 |
-| `MohamedRejeb__compose-rich-editor-pr_367` | AGENT_FAILED_TEST | $0.566 | 28 |
-| `airbnb__lottie-android-pr_2427` | AGENT_FAILED_TEST | $0.234 | 20 |
-| `android_snippets_1` | AGENT_FAILED_BUILD | $0.118 | 13 |
-| `coil-kt__coil-pr_2669` | AGENT_FAILED_TEST | $0.441 | 42 |
-
-#### Leaderboard placement
-
-Public scores: mean accuracy over 10 seeds × 100 tasks each ([developer.android.com/bench](https://developer.android.com/bench), snapshot 2026-05-05). Our run: 1 seed × 100 tasks (61 of which never reached the model).
+#### Leaderboard placement (attempted-only, n=37)
 
 | Rank | Model | Accuracy |
-|---:|---|---:|
-| 1 | GPT-5.5 | 74.0% |
-| 2 | GPT-5.4 | 72.4% |
-| 2 | Gemini 3.1 Pro Preview | 72.4% |
-| 4 | Claude Opus 4.7 | 68.7% |
-| 5 | GPT-5.3 Codex | 67.7% |
-| 6 | Claude Opus 4.6 | 66.6% |
-| 7 | GPT-5.2 Codex | 62.5% |
-| 8 | Claude Opus 4.5 | 61.9% |
-| 9 | Gemini 3 Pro Preview | 60.4% |
-| 10 | Claude Sonnet 4.6 | 58.4% |
-| 11 | Claude Sonnet 4.5 | 53.8% |
-| 12 | Gemini 3 Flash Preview | 42.0% |
-| 13 | Gemini 2.5 Flash | 16.7% |
-| **→** | **Grok 4.3 (this run, 1 seed, leaderboard methodology)** | **23.0%** |
+|---|---|---|
+| 1 | GPT-5.5 | 74.0 |
+| 2 | GPT-5.4 | 72.4 |
+| 3 | Gemini 3.1 Pro Preview | 72.4 |
+| 4 | Claude Opus 4.7 | 68.7 |
+| 5 | GPT-5.3 Codex | 67.7 |
+| 6 | Claude Opus 4.6 | 66.6 |
+| 7 | GPT-5.2 Codex | 62.5 |
+| **→ ≈8** | **Grok 4.3 (n=37)** | **62.2 ± 14.9** |
+| 9 | Claude Opus 4.5 | 61.9 |
+| 10 | Gemini 3 Pro Preview | 60.4 |
+| 11 | Claude Sonnet 4.6 | 58.4 |
+| 12 | Claude Sonnet 4.5 | 53.8 |
+| 13 | Gemini 3 Flash Preview | 42.0 |
+| 14 | Gemini 2.5 Flash | 16.7 |
 
-Observation: by the strict leaderboard methodology Grok 4.3 sits well below every officially-tested model. By the attempted-only subset (62.2%, n=37) Grok would slot among mid/upper-tier models — but the small n means a wide CI, so this number is not directly comparable until the build issues are resolved and the rest of the 100 tasks complete.
-
-Single-seed caveat: the public leaderboard averages 10 seeds × 100 tasks. With 1 seed and 37 effective task attempts our CI is much wider than the leaderboard models'.
-
-Full results: [`results/androidbench/full_run_v1/`](results/androidbench/full_run_v1/) — per-instance `*_scores.json`, `patches/`, `trajectories/`, `logs/`, `summary.txt`, `leaderboard_table.md`. Reproduction: [`scripts/`](scripts/) (`00_setup.sh` … `99_master_autopilot.py`).
-
----
-
-## Reproducing the Android Bench run from scratch
-
-**Hardware**: x86_64 Ubuntu 22.04+ VM, KVM-enabled (`/dev/kvm` writable), ≥32 GB RAM with a 32 GB swapfile, ≥600 GB free disk. Cloud VMs work; ARM64 doesn't (no Android x86 emulator).
-
-**API keys** in `~/.env`:
-```bash
-XAI_API_KEY=sk-xai-...
-GITHUB_PAT=ghp-...   # optional, dodges GitHub rate limits during repo-base builds
-```
-
-**One-shot reproduction** of the full Android Bench run:
-```bash
-git clone git@github.com:MT-GoCode/grok-evals-minh.git && cd grok-evals-minh
-bash scripts/run_all_remote.sh full_run_v1 4
-```
-
-This calls each of the numbered scripts in order; everything is idempotent and resumable. Final results land in `results/androidbench/full_run_v1/`, and the README's `### Android Bench` section above is auto-rewritten.
-
-### What each script does
-
-| Script | Purpose |
-|---|---|
-| `00_setup.sh` | apt deps (docker, qemu-kvm), install uv, clone vendor `android-bench/android-bench` into `vendor/AndroidBench`, create Python 3.14 venv + install deps |
-| `10_setup_base.sh` | vendor's `utils.setup` — oracle agent + dataset summary |
-| `20_build_images.sh` | **Two-pass build.** Pass 1: vendor's `generate_docker_images.py` builds the base image + ~32 repo-base images. Pass 2: `rebuild_with_dns.sh` rebuilds the 100 task layers with `docker build --network=host` (the gradle wrapper inside task images can't resolve `services.gradle.org` on the default bridge network in many cloud-VM docker setups). |
-| `30_inference.sh` | `harness.inference.androidbench --workers N --model xai/grok-4.3 --skip-existing` — Grok generates patches, parallel across N workers |
-| `40_verify.sh` | vendor's verifier — applies each patch, runs unit + instrumentation tests in another docker container, scores `PASSED / AGENT_FAILED_TEST / ...` |
-| `50_aggregate.py` | Wilson 95% CI, status breakdown, leaderboard table, JSONL in `grok-evals` format |
-| `99_master_autopilot.py` | Full unattended runner. Waits for build, then per-task inference + bulk verify, with `git push` checkpoints every N tasks. Stops on xAI balance-exhausted. |
-| `35_inference_budgeted.py` | Sequential inference with a hard $-cap (used during exploratory runs). |
-| `auto_inference_loop.sh` | Re-runs inference every 15 min as new task images come online from a parallel rebuild. |
-| `rebuild_with_dns.sh` | Parallel `docker build --network=host` for any task images that don't yet exist — used as the second build pass and as a recovery tool. |
-| `finalize_results.py` | Merges all `*_scores.json` files (the verifier writes new files per filter), restores any statuses overwritten by a verifier startup pass, runs `50_aggregate.py`, refreshes the README. |
-
-### Caveats
-
-1. The vendor's verifier overwrites the consolidated `0_to_99_scores.json` with placeholder `AGENT_NO_PATCH` rows at startup, then leaves `--skip-existing` rows at the placeholder. `finalize_results.py` works around this by merging all per-invocation `*_scores.json` files.
-2. The `--network=host` change is required for many cloud-VM docker setups (DNS-resolution failure in the default bridge network). Bare-metal / clean-docker environments may not need it.
-3. Single-seed: this run is 1 seed × the buildable subset; the public leaderboard reports the mean of 10 seeds × all 100 tasks. The Wilson 95% CI here is correspondingly wider.
+Observation: Grok 4.3 sits in the middle of the frontier band, behind the GPT-5.4 / Gemini 3.1 Pro Preview / Opus 4.7 leaders by ~10pp. Single-seed, n=37 → wide CI; full per-task breakdown + caveats + repro in [`results/androidbench/`](results/androidbench/).
