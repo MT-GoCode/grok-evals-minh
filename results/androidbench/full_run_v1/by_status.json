@@ -1,10 +1,21 @@
 {
-  "AGENT_NO_PATCH": [
+  "AGENT_FAILED_TEST": [
     "AlphaWallet__alpha-wallet-android-pr_3329",
     "Automattic__pocket-casts-android-pr_1114",
+    "MohamedRejeb__compose-rich-editor-pr_319",
+    "MohamedRejeb__compose-rich-editor-pr_335",
+    "coil-kt__coil-pr_2669"
+  ],
+  "PASSED": [
+    "AntennaPod__AntennaPod-pr_6838",
     "Automattic__pocket-casts-android-pr_3970",
-    "Automattic__pocket-casts-android-pr_757",
     "CatimaLoyalty__Android-pr_1524",
+    "thunderbird__thunderbird-android-pr_7103",
+    "thunderbird__thunderbird-android-pr_7190",
+    "thunderbird__thunderbird-android-pr_8020"
+  ],
+  "AGENT_NO_PATCH": [
+    "Automattic__pocket-casts-android-pr_757",
     "CatimaLoyalty__Android-pr_1588",
     "LemmyNet__jerboa-pr_1068",
     "LemmyNet__jerboa-pr_1114",
@@ -23,13 +34,9 @@
     "MohamedRejeb__compose-rich-editor-pr_367",
     "MohamedRejeb__compose-rich-editor-pr_379",
     "MohamedRejeb__compose-rich-editor-pr_403",
-    "MohamedRejeb__compose-rich-editor-pr_445",
     "MohamedRejeb__compose-rich-editor-pr_523",
     "airbnb__lottie-android-pr_2427",
     "android__nowinandroid-pr_553",
-    "android__nowinandroid-pr_720",
-    "android_androidify_gradleplugin",
-    "arkivanov__Decompose-pr_388",
     "arkivanov__Decompose-pr_394",
     "arkivanov__Decompose-pr_646",
     "badoo__Reaktive-pr_735",
@@ -91,22 +98,17 @@
     "you-apps__ClockYou-pr_190",
     "you-apps__ClockYou-pr_292"
   ],
-  "PASSED": [
-    "AntennaPod__AntennaPod-pr_6838",
-    "thunderbird__thunderbird-android-pr_7103",
-    "thunderbird__thunderbird-android-pr_7190",
-    "thunderbird__thunderbird-android-pr_8020"
-  ],
   "INFRA_FAILURE": [
     "DroidKaigi__conference-app-2023-pr_896"
   ],
   "PASSED_FLAKY": [
     "LemmyNet__jerboa-pr_991"
   ],
-  "AGENT_FAILED_TEST": [
-    "MohamedRejeb__compose-rich-editor-pr_319",
-    "MohamedRejeb__compose-rich-editor-pr_335",
-    "coil-kt__coil-pr_2669"
+  "INFRA_FAILURE_AGENT": [
+    "MohamedRejeb__compose-rich-editor-pr_445",
+    "android__nowinandroid-pr_720",
+    "android_androidify_gradleplugin",
+    "arkivanov__Decompose-pr_388"
   ],
   "AGENT_FAILED_BUILD": [
     "android_snippets_1"

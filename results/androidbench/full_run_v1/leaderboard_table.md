@@ -17,6 +17,6 @@ Public scores: mean accuracy over 10 runs of 100 tasks each (https://developer.a
 | 11 | Claude Sonnet 4.5 | 53.8% |
 | 12 | Gemini 3 Flash Preview | 42.0% |
 | 13 | Gemini 2.5 Flash | 16.7% |
-| 14 | Grok 4.3 (this run, 1 seed) ← | 5.0% |
+| 14 | Grok 4.3 (this run, 1 seed) ← | 7.0% |
 
-**Grok 4.3:** 5.0% (Wilson 95% CI 2.2–11.2)
+**Grok 4.3:** 7.0% (Wilson 95% CI 3.4–13.7)

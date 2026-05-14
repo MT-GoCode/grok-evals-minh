@@ -1,21 +1,20 @@
 Grok 4.3 on AndroidBench v1 (n=100)
-Accuracy: 5.00%   Wilson 95% CI: [2.15, 11.18]   (±4.5pp)
-Median cost / task: $0.1252    Total: $4.22
+Accuracy: 7.00%   Wilson 95% CI: [3.43, 13.75]   (±5.2pp)
+Median cost / task: $0.1929    Total: $14.56
 
 Status breakdown:
-  AGENT_NO_PATCH             90  (90.0%)
-  PASSED                      4  (4.0%)
-  AGENT_FAILED_TEST           3  (3.0%)
+  AGENT_NO_PATCH             82  (82.0%)
+  PASSED                      6  (6.0%)
+  AGENT_FAILED_TEST           5  (5.0%)
+  INFRA_FAILURE_AGENT         4  (4.0%)
   INFRA_FAILURE               1  (1.0%)
   PASSED_FLAKY                1  (1.0%)
   AGENT_FAILED_BUILD          1  (1.0%)
 
 Failing instance ids (status != PASSED*):
-  AlphaWallet__alpha-wallet-android-pr_3329                    AGENT_NO_PATCH
-  Automattic__pocket-casts-android-pr_1114                     AGENT_NO_PATCH
-  Automattic__pocket-casts-android-pr_3970                     AGENT_NO_PATCH
+  AlphaWallet__alpha-wallet-android-pr_3329                    AGENT_FAILED_TEST
+  Automattic__pocket-casts-android-pr_1114                     AGENT_FAILED_TEST
   Automattic__pocket-casts-android-pr_757                      AGENT_NO_PATCH
-  CatimaLoyalty__Android-pr_1524                               AGENT_NO_PATCH
   CatimaLoyalty__Android-pr_1588                               AGENT_NO_PATCH
   DroidKaigi__conference-app-2023-pr_896                       INFRA_FAILURE
   LemmyNet__jerboa-pr_1068                                     AGENT_NO_PATCH
@@ -37,14 +36,14 @@ Failing instance ids (status != PASSED*):
   MohamedRejeb__compose-rich-editor-pr_367                     AGENT_NO_PATCH
   MohamedRejeb__compose-rich-editor-pr_379                     AGENT_NO_PATCH
   MohamedRejeb__compose-rich-editor-pr_403                     AGENT_NO_PATCH
-  MohamedRejeb__compose-rich-editor-pr_445                     AGENT_NO_PATCH
+  MohamedRejeb__compose-rich-editor-pr_445                     INFRA_FAILURE_AGENT
   MohamedRejeb__compose-rich-editor-pr_523                     AGENT_NO_PATCH
   airbnb__lottie-android-pr_2427                               AGENT_NO_PATCH
   android__nowinandroid-pr_553                                 AGENT_NO_PATCH
-  android__nowinandroid-pr_720                                 AGENT_NO_PATCH
-  android_androidify_gradleplugin                              AGENT_NO_PATCH
+  android__nowinandroid-pr_720                                 INFRA_FAILURE_AGENT
+  android_androidify_gradleplugin                              INFRA_FAILURE_AGENT
   android_snippets_1                                           AGENT_FAILED_BUILD
-  arkivanov__Decompose-pr_388                                  AGENT_NO_PATCH
+  arkivanov__Decompose-pr_388                                  INFRA_FAILURE_AGENT
   arkivanov__Decompose-pr_394                                  AGENT_NO_PATCH
   arkivanov__Decompose-pr_646                                  AGENT_NO_PATCH
   badoo__Reaktive-pr_735                                       AGENT_NO_PATCH
