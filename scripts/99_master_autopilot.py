@@ -60,6 +60,54 @@ def wait_for_build() -> None:
         time.sleep(60)
 
 
+def retry_failed_builds() -> None:
+    """Retry every 'Error building docker image X' once. Some are flaky network
+    failures (gradle dep download); retrying recovers them. Issue-#46 ones
+    will fail again, which is fine."""
+    if not BUILD_LOG.is_file():
+        return
+    txt = BUILD_LOG.read_text(errors="ignore")
+    failed = []
+    seen = set()
+    for line in txt.splitlines():
+        if line.startswith("Error building docker image "):
+            tid_lc = line.split("Error building docker image ", 1)[1].strip()
+            if tid_lc and tid_lc not in seen:
+                failed.append(tid_lc)
+                seen.add(tid_lc)
+    if not failed:
+        log("no failed images to retry")
+        return
+
+    # Map lowercase tag back to actual task dir name
+    actual: dict[str, str] = {}
+    for p in TASKS_DIR.iterdir():
+        if p.is_dir() and (p / "task.yaml").exists():
+            actual[p.name.lower()] = p.name
+    log(f"retrying {len(failed)} failed image builds (one shot each)…")
+    n_recovered = 0
+    for tid_lc in failed:
+        if task_has_image(tid_lc):
+            n_recovered += 1
+            continue
+        real = actual.get(tid_lc)
+        if not real:
+            log(f"  ? no task dir for {tid_lc}")
+            continue
+        df = TASKS_DIR / real / "Dockerfile"
+        if not df.is_file():
+            continue
+        cmd = ["docker", "build", "--quiet", "-t", tid_lc, "-f", str(df), str(TASKS_DIR / real)]
+        log(f"  retry {real} ...")
+        rc = subprocess.run(cmd, capture_output=True, text=True, check=False)
+        if rc.returncode == 0:
+            n_recovered += 1
+            log(f"    OK -> {tid_lc}")
+        else:
+            log(f"    FAIL rc={rc.returncode} stderr_tail={(rc.stderr or '')[-200:]!r}")
+    log(f"retry pass done: recovered {n_recovered}/{len(failed)}")
+
+
 def all_task_ids() -> list[str]:
     return sorted(p.name for p in TASKS_DIR.iterdir() if p.is_dir() and (p / "task.yaml").exists())
 
@@ -291,7 +339,12 @@ def main() -> int:
     args = ap.parse_args()
 
     log(f"=== autopilot start run_name={args.run_name} model={args.model} (no budget cap; stops on xAI balance-exhausted)")
+    # Write a PID file so safe kill+restart from outside is unambiguous.
+    pidfile = Path("/tmp/autopilot.pid")
+    pidfile.write_text(str(os.getpid()))
+    log(f"pid={os.getpid()} pidfile={pidfile}")
     wait_for_build()
+    retry_failed_builds()
 
     run_dir = OUT_DIR / args.run_name
     run_dir.mkdir(parents=True, exist_ok=True)
