@@ -7,6 +7,8 @@
     "LemmyNet__jerboa-pr_946",
     "MohamedRejeb__compose-rich-editor-pr_319",
     "MohamedRejeb__compose-rich-editor-pr_335",
+    "MohamedRejeb__compose-rich-editor-pr_357",
+    "MohamedRejeb__compose-rich-editor-pr_367",
     "coil-kt__coil-pr_2669"
   ],
   "PASSED": [
@@ -22,6 +24,8 @@
     "LemmyNet__jerboa-pr_941",
     "LemmyNet__jerboa-pr_947",
     "LemmyNet__jerboa-pr_985",
+    "MohamedRejeb__compose-rich-editor-pr_363",
+    "MohamedRejeb__compose-rich-editor-pr_379",
     "thunderbird__thunderbird-android-pr_7103",
     "thunderbird__thunderbird-android-pr_7190",
     "thunderbird__thunderbird-android-pr_8020"
@@ -32,10 +36,6 @@
   ],
   "AGENT_NO_PATCH": [
     "LemmyNet__jerboa-pr_1485",
-    "MohamedRejeb__compose-rich-editor-pr_357",
-    "MohamedRejeb__compose-rich-editor-pr_363",
-    "MohamedRejeb__compose-rich-editor-pr_367",
-    "MohamedRejeb__compose-rich-editor-pr_379",
     "MohamedRejeb__compose-rich-editor-pr_403",
     "MohamedRejeb__compose-rich-editor-pr_523",
     "airbnb__lottie-android-pr_2427",

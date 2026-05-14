@@ -1,11 +1,11 @@
 Grok 4.3 on AndroidBench v1 (n=100)
-Accuracy: 16.00%   Wilson 95% CI: [10.10, 24.42]   (±7.2pp)
+Accuracy: 18.00%   Wilson 95% CI: [11.70, 26.67]   (±7.5pp)
 Median cost / task: $0.1929    Total: $14.56
 
 Status breakdown:
-  AGENT_NO_PATCH             69  (69.0%)
-  PASSED                     15  (15.0%)
-  AGENT_FAILED_TEST           8  (8.0%)
+  AGENT_NO_PATCH             65  (65.0%)
+  PASSED                     17  (17.0%)
+  AGENT_FAILED_TEST          10  (10.0%)
   INFRA_FAILURE_AGENT         4  (4.0%)
   INFRA_FAILURE               2  (2.0%)
   PASSED_FLAKY                1  (1.0%)
@@ -22,10 +22,8 @@ Failing instance ids (status != PASSED*):
   LemmyNet__jerboa-pr_946                                      AGENT_FAILED_TEST
   MohamedRejeb__compose-rich-editor-pr_319                     AGENT_FAILED_TEST
   MohamedRejeb__compose-rich-editor-pr_335                     AGENT_FAILED_TEST
-  MohamedRejeb__compose-rich-editor-pr_357                     AGENT_NO_PATCH
-  MohamedRejeb__compose-rich-editor-pr_363                     AGENT_NO_PATCH
-  MohamedRejeb__compose-rich-editor-pr_367                     AGENT_NO_PATCH
-  MohamedRejeb__compose-rich-editor-pr_379                     AGENT_NO_PATCH
+  MohamedRejeb__compose-rich-editor-pr_357                     AGENT_FAILED_TEST
+  MohamedRejeb__compose-rich-editor-pr_367                     AGENT_FAILED_TEST
   MohamedRejeb__compose-rich-editor-pr_403                     AGENT_NO_PATCH
   MohamedRejeb__compose-rich-editor-pr_445                     INFRA_FAILURE_AGENT
   MohamedRejeb__compose-rich-editor-pr_523                     AGENT_NO_PATCH
