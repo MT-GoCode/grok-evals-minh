@@ -4,6 +4,7 @@
     "Automattic__pocket-casts-android-pr_1114",
     "Automattic__pocket-casts-android-pr_757",
     "LemmyNet__jerboa-pr_1122",
+    "LemmyNet__jerboa-pr_946",
     "MohamedRejeb__compose-rich-editor-pr_319",
     "MohamedRejeb__compose-rich-editor-pr_335",
     "coil-kt__coil-pr_2669"
@@ -18,6 +19,9 @@
     "LemmyNet__jerboa-pr_809",
     "LemmyNet__jerboa-pr_868",
     "LemmyNet__jerboa-pr_894",
+    "LemmyNet__jerboa-pr_941",
+    "LemmyNet__jerboa-pr_947",
+    "LemmyNet__jerboa-pr_985",
     "thunderbird__thunderbird-android-pr_7103",
     "thunderbird__thunderbird-android-pr_7190",
     "thunderbird__thunderbird-android-pr_8020"
@@ -28,10 +32,6 @@
   ],
   "AGENT_NO_PATCH": [
     "LemmyNet__jerboa-pr_1485",
-    "LemmyNet__jerboa-pr_941",
-    "LemmyNet__jerboa-pr_946",
-    "LemmyNet__jerboa-pr_947",
-    "LemmyNet__jerboa-pr_985",
     "MohamedRejeb__compose-rich-editor-pr_357",
     "MohamedRejeb__compose-rich-editor-pr_363",
     "MohamedRejeb__compose-rich-editor-pr_367",
