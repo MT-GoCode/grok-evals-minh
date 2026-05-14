@@ -3,6 +3,7 @@
     "AlphaWallet__alpha-wallet-android-pr_3329",
     "Automattic__pocket-casts-android-pr_1114",
     "Automattic__pocket-casts-android-pr_757",
+    "LemmyNet__jerboa-pr_1122",
     "MohamedRejeb__compose-rich-editor-pr_319",
     "MohamedRejeb__compose-rich-editor-pr_335",
     "coil-kt__coil-pr_2669"
@@ -13,14 +14,16 @@
     "CatimaLoyalty__Android-pr_1524",
     "LemmyNet__jerboa-pr_1068",
     "LemmyNet__jerboa-pr_1114",
+    "LemmyNet__jerboa-pr_1198",
     "thunderbird__thunderbird-android-pr_7103",
     "thunderbird__thunderbird-android-pr_7190",
     "thunderbird__thunderbird-android-pr_8020"
   ],
-  "AGENT_NO_PATCH": [
+  "INFRA_FAILURE": [
     "CatimaLoyalty__Android-pr_1588",
-    "LemmyNet__jerboa-pr_1122",
-    "LemmyNet__jerboa-pr_1198",
+    "DroidKaigi__conference-app-2023-pr_896"
+  ],
+  "AGENT_NO_PATCH": [
     "LemmyNet__jerboa-pr_1485",
     "LemmyNet__jerboa-pr_809",
     "LemmyNet__jerboa-pr_868",
@@ -97,9 +100,6 @@
     "wgtunnel__wgtunnel-pr_623",
     "you-apps__ClockYou-pr_190",
     "you-apps__ClockYou-pr_292"
-  ],
-  "INFRA_FAILURE": [
-    "DroidKaigi__conference-app-2023-pr_896"
   ],
   "PASSED_FLAKY": [
     "LemmyNet__jerboa-pr_991"

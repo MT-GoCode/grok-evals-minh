@@ -86,29 +86,29 @@ Observation: Grok 4.3 performance collapses on symbolic.
 
 ### Android Bench
 
-#### Grok 4.3 result (single seed, n=100 task universe; 17 actually attempted)
+#### Grok 4.3 result (single seed, n=100 task universe; 20 actually attempted)
 
-> **⚠ Important caveat.** 79/100 of the Android Bench task images failed to build in our environment (Ubuntu 22.04 + Docker 29 + JDK 17, KVM-enabled VM): the gradle wrapper inside the build container couldn't reach `services.gradle.org` (DNS) on the default bridge network for those images. They're recorded as `AGENT_NO_PATCH` (steps=0, cost=$0) in `*_scores.json` because there was nothing for the agent to run against. These are **not** model failures.
+> **⚠ Important caveat.** 76/100 of the Android Bench task images failed to build in our environment (Ubuntu 22.04 + Docker 29 + JDK 17, KVM-enabled VM): the gradle wrapper inside the build container couldn't reach `services.gradle.org` (DNS) on the default bridge network for those images. They're recorded as `AGENT_NO_PATCH` (steps=0, cost=$0) in `*_scores.json` because there was nothing for the agent to run against. These are **not** model failures.
 >
 > So we report **two metrics**:
 
 **Headline (leaderboard methodology, n=100):**
-- **Accuracy: 9.0%** (9 PASSED+PASSED_FLAKY out of 100)
-- Wilson 95% CI: [4.8%, 16.2%]
+- **Accuracy: 10.0%** (10 PASSED+PASSED_FLAKY out of 100)
+- Wilson 95% CI: [5.5%, 17.4%]
 
-**Attempted-only (n=17, the subset where the docker image built and Grok actually ran):**
-- **Accuracy: 52.9%** (9 / 17)
-- Wilson 95% CI: [31.0%, 73.8%] — wide because n is small
+**Attempted-only (n=20, the subset where the docker image built and Grok actually ran):**
+- **Accuracy: 50.0%** (10 / 20)
+- Wilson 95% CI: [29.9%, 70.1%] — wide because n is small
 
 #### Status breakdown
 
 | Status | Count | % of 100 | What it means |
 |---|---:|---:|---|
-| `AGENT_NO_PATCH (no image built — Grok never ran)` | 79 | 79.0% | No docker image was built — Grok never ran (not a model failure) |
-| `PASSED` | 8 | 8.0% | Grok's patch compiled and the must-pass tests passed |
-| `AGENT_FAILED_TEST` | 6 | 6.0% | Grok's patch compiled but a must-pass test failed |
+| `AGENT_NO_PATCH (no image built — Grok never ran)` | 76 | 76.0% | No docker image was built — Grok never ran (not a model failure) |
+| `PASSED` | 9 | 9.0% | Grok's patch compiled and the must-pass tests passed |
+| `AGENT_FAILED_TEST` | 7 | 7.0% | Grok's patch compiled but a must-pass test failed |
 | `INFRA_FAILURE_AGENT` | 4 | 4.0% |  |
-| `INFRA_FAILURE` | 1 | 1.0% | Verifier infra error |
+| `INFRA_FAILURE` | 2 | 2.0% | Verifier infra error |
 | `PASSED_FLAKY` | 1 | 1.0% | Passed after a retry of the test execution |
 | `AGENT_FAILED_BUILD` | 1 | 1.0% | Grok's patch broke compilation |
 
@@ -121,6 +121,7 @@ Observation: Grok 4.3 performance collapses on symbolic.
 | `CatimaLoyalty__Android-pr_1524` | $0.096 | 14 |  |
 | `LemmyNet__jerboa-pr_1068` | $0.537 | 52 |  |
 | `LemmyNet__jerboa-pr_1114` | $0.200 | 22 |  |
+| `LemmyNet__jerboa-pr_1198` | $0.853 | 54 |  |
 | `LemmyNet__jerboa-pr_991` | $2.277 | 128 | FLAKY (passed only after test retry) |
 | `thunderbird__thunderbird-android-pr_7103` | $0.083 | 10 |  |
 | `thunderbird__thunderbird-android-pr_7190` | $0.157 | 22 |  |
@@ -133,7 +134,9 @@ Observation: Grok 4.3 performance collapses on symbolic.
 | `AlphaWallet__alpha-wallet-android-pr_3329` | AGENT_FAILED_TEST | $0.118 | 17 |
 | `Automattic__pocket-casts-android-pr_1114` | AGENT_FAILED_TEST | $0.116 | 15 |
 | `Automattic__pocket-casts-android-pr_757` | AGENT_FAILED_TEST | $0.453 | 34 |
+| `CatimaLoyalty__Android-pr_1588` | INFRA_FAILURE | $0.306 | 29 |
 | `DroidKaigi__conference-app-2023-pr_896` | INFRA_FAILURE | $0.067 | 13 |
+| `LemmyNet__jerboa-pr_1122` | AGENT_FAILED_TEST | $2.214 | 127 |
 | `MohamedRejeb__compose-rich-editor-pr_319` | AGENT_FAILED_TEST | $0.611 | 45 |
 | `MohamedRejeb__compose-rich-editor-pr_335` | AGENT_FAILED_TEST | $0.125 | 17 |
 | `android_snippets_1` | AGENT_FAILED_BUILD | $0.118 | 13 |
@@ -141,7 +144,7 @@ Observation: Grok 4.3 performance collapses on symbolic.
 
 #### Leaderboard placement
 
-Public scores: mean accuracy over 10 seeds × 100 tasks each ([developer.android.com/bench](https://developer.android.com/bench), snapshot 2026-05-05). Our run: 1 seed × 100 tasks (79 of which never reached the model).
+Public scores: mean accuracy over 10 seeds × 100 tasks each ([developer.android.com/bench](https://developer.android.com/bench), snapshot 2026-05-05). Our run: 1 seed × 100 tasks (76 of which never reached the model).
 
 | Rank | Model | Accuracy |
 |---:|---|---:|
@@ -158,10 +161,10 @@ Public scores: mean accuracy over 10 seeds × 100 tasks each ([developer.android
 | 11 | Claude Sonnet 4.5 | 53.8% |
 | 12 | Gemini 3 Flash Preview | 42.0% |
 | 13 | Gemini 2.5 Flash | 16.7% |
-| **→** | **Grok 4.3 (this run, 1 seed, leaderboard methodology)** | **9.0%** |
+| **→** | **Grok 4.3 (this run, 1 seed, leaderboard methodology)** | **10.0%** |
 
-Observation: by the strict leaderboard methodology Grok 4.3 sits well below every officially-tested model. By the attempted-only subset (52.9%, n=17) Grok would slot among mid/upper-tier models — but the small n means a wide CI, so this number is not directly comparable until the build issues are resolved and the rest of the 100 tasks complete.
+Observation: by the strict leaderboard methodology Grok 4.3 sits well below every officially-tested model. By the attempted-only subset (50.0%, n=20) Grok would slot among mid/upper-tier models — but the small n means a wide CI, so this number is not directly comparable until the build issues are resolved and the rest of the 100 tasks complete.
 
-Single-seed caveat: the public leaderboard averages 10 seeds × 100 tasks. With 1 seed and 17 effective task attempts our CI is much wider than the leaderboard models'.
+Single-seed caveat: the public leaderboard averages 10 seeds × 100 tasks. With 1 seed and 20 effective task attempts our CI is much wider than the leaderboard models'.
 
 Full results: [`results/androidbench/full_run_v1/`](results/androidbench/full_run_v1/) — per-instance `*_scores.json`, `patches/`, `trajectories/`, `logs/`, `summary.txt`, `leaderboard_table.md`. Reproduction: [`scripts/`](scripts/) (`00_setup.sh` … `99_master_autopilot.py`).
