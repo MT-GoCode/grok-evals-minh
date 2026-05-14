@@ -39,15 +39,38 @@ ORIGINALS = {
 
 
 def main() -> int:
+    # Merge ALL *_scores.json files, with newer files winning. Verifier
+    # writes per-invocation files (e.g. 0_to_99_scores.json from the
+    # autopilot's first pass; 0_to_24_scores.json from the filtered
+    # verify-new pass). We want every per-task entry, with the most-recent
+    # verification winning for any tid present in multiple files.
+    score_files = sorted(RUN_DIR.glob("*_scores.json"), key=lambda p: p.stat().st_mtime)
+    if not score_files:
+        print("ERROR: no *_scores.json found")
+        return 1
+    print(f"merging {len(score_files)} score files (oldest first):")
+    d: dict = {}
+    for sf in score_files:
+        try:
+            piece = json.loads(sf.read_text())
+        except Exception as e:
+            print(f"  WARN: skipping {sf.name}: {e}")
+            continue
+        if isinstance(piece, dict):
+            for k, v in piece.items():
+                if isinstance(v, dict) and "status" in v:
+                    # Don't let a fresh AGENT_NO_PATCH placeholder overwrite
+                    # an earlier real status.
+                    cur = d.get(k)
+                    if (
+                        cur and cur.get("status") not in ("AGENT_NO_PATCH", None, "")
+                        and v.get("status") == "AGENT_NO_PATCH"
+                        and str(v.get("steps", "0")) in ("0", "")
+                    ):
+                        continue
+                    d[k] = v
+        print(f"  {sf.name}: {len(piece)} entries (running merged size: {len(d)})")
     scores_path = RUN_DIR / "0_to_99_scores.json"
-    if not scores_path.exists():
-        # Find any *_scores.json
-        cands = sorted(RUN_DIR.glob("*_scores.json"))
-        if not cands:
-            print("ERROR: no scores.json found")
-            return 1
-        scores_path = cands[-1]
-    d = json.loads(scores_path.read_text())
 
     # Override originals with saved values (since the live scores.json was
     # corrupted by the second verifier's "Initial scores" overwrite).
