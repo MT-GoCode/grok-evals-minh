@@ -9,6 +9,7 @@
     "MohamedRejeb__compose-rich-editor-pr_335",
     "MohamedRejeb__compose-rich-editor-pr_357",
     "MohamedRejeb__compose-rich-editor-pr_367",
+    "airbnb__lottie-android-pr_2427",
     "coil-kt__coil-pr_2669"
   ],
   "PASSED": [
@@ -26,6 +27,9 @@
     "LemmyNet__jerboa-pr_985",
     "MohamedRejeb__compose-rich-editor-pr_363",
     "MohamedRejeb__compose-rich-editor-pr_379",
+    "MohamedRejeb__compose-rich-editor-pr_403",
+    "MohamedRejeb__compose-rich-editor-pr_523",
+    "android__nowinandroid-pr_553",
     "thunderbird__thunderbird-android-pr_7103",
     "thunderbird__thunderbird-android-pr_7190",
     "thunderbird__thunderbird-android-pr_8020"
@@ -36,10 +40,6 @@
   ],
   "AGENT_NO_PATCH": [
     "LemmyNet__jerboa-pr_1485",
-    "MohamedRejeb__compose-rich-editor-pr_403",
-    "MohamedRejeb__compose-rich-editor-pr_523",
-    "airbnb__lottie-android-pr_2427",
-    "android__nowinandroid-pr_553",
     "arkivanov__Decompose-pr_394",
     "arkivanov__Decompose-pr_646",
     "badoo__Reaktive-pr_735",
