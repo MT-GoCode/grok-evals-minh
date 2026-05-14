@@ -235,64 +235,169 @@ def aggregate(run_dir: Path) -> None:
 
 
 def update_readme_section(run_dir: Path) -> None:
-    """Replace everything after '### Android Bench' in README with our findings."""
-    summary_path = RESULTS_DIR_REPO / run_dir.name / "summary.txt"
-    table_path = RESULTS_DIR_REPO / run_dir.name / "leaderboard_table.md"
-    by_status_path = RESULTS_DIR_REPO / run_dir.name / "by_status.json"
-    if not summary_path.exists():
+    """Replace everything after '### Android Bench' in README with our findings.
+
+    Distinguishes:
+      * the "leaderboard methodology" pass-rate over n=100,
+      * the "attempted-only" pass-rate over instances where Grok actually ran
+        (steps > 0), which is what we should reason about for model quality.
+    """
+    scores_path = run_dir / "0_to_99_scores.json"
+    if not scores_path.exists():
+        # fall back: any *_scores.json
+        cands = sorted(run_dir.glob("*_scores.json"))
+        if not cands:
+            return
+        scores_path = cands[-1]
+    try:
+        d = json.loads(scores_path.read_text())
+    except Exception:
         return
 
-    summary_text = summary_path.read_text()
-    table_text = table_path.read_text() if table_path.exists() else ""
-    by_status = {}
-    try:
-        by_status = json.loads(by_status_path.read_text())
-    except Exception:
-        pass
+    PASS = {"PASSED", "PASSED_FLAKY"}
+    n = len(d)
+    n_pass = sum(1 for v in d.values() if v.get("status") in PASS)
+    attempted = {k: v for k, v in d.items() if str(v.get("steps", "0")) not in ("0", "")}
+    n_att = len(attempted)
+    n_att_pass = sum(1 for v in attempted.values() if v.get("status") in PASS)
+    p_all = n_pass / n if n else 0.0
+    lo_all, hi_all = _wilson(p_all, n)
+    p_att = n_att_pass / n_att if n_att else 0.0
+    lo_att, hi_att = _wilson(p_att, n_att)
 
-    # Pull headline numbers from summary.txt
-    accuracy_line = ""
-    breakdown_lines: list[str] = []
-    in_breakdown = False
-    for line in summary_text.splitlines():
-        if line.startswith("Accuracy:"):
-            accuracy_line = line
-        if line.startswith("Status breakdown:"):
-            in_breakdown = True
-            continue
-        if in_breakdown:
-            if not line.strip() or line.startswith("Failing"):
-                in_breakdown = False
-            else:
-                breakdown_lines.append(line.strip())
+    import collections
+    statuses = collections.Counter(v.get("status", "MISSING") for v in d.values())
+    n_no_image = sum(
+        1 for v in d.values()
+        if v.get("status") == "AGENT_NO_PATCH" and str(v.get("steps", "0")) in ("0", "")
+    )
 
-    breakdown_md = "\n".join(f"| {l.split()[0]} | {l.split()[1]} | {' '.join(l.split()[2:])} |" for l in breakdown_lines)
+    breakdown_rows = []
+    explain = {
+        "PASSED": "Grok's patch compiled and the must-pass tests passed",
+        "PASSED_FLAKY": "Passed after a retry of the test execution",
+        "AGENT_FAILED_TEST": "Grok's patch compiled but a must-pass test failed",
+        "AGENT_FAILED_BUILD": "Grok's patch broke compilation",
+        "NO_PATCH_GENERATED": "Agent gave up or produced an empty diff",
+        "AGENT_NO_PATCH": "No docker image was built — Grok never ran (not a model failure)",
+        "INFRA_FAILURE": "Verifier infra error",
+        "EVAL_ERROR": "Evaluator-side error",
+        "SKIPPED": "Task excluded by config",
+    }
+    for status, count in statuses.most_common():
+        label = status
+        if status == "AGENT_NO_PATCH" and n_no_image == count:
+            label = "AGENT_NO_PATCH (no image built — Grok never ran)"
+        breakdown_rows.append(
+            f"| `{label}` | {count} | {count/n*100:.1f}% | {explain.get(status, '')} |"
+        )
+    breakdown_md = "\n".join(breakdown_rows)
+
+    def fmt_cost(c):
+        try:
+            s = str(c).lstrip("$")
+            return f"${float(s):.3f}"
+        except Exception:
+            return str(c)
+
+    # Wins table
+    wins_rows = []
+    for k, v in sorted(d.items()):
+        if v.get("status") in PASS:
+            cost = fmt_cost(v.get("cost", "$0"))
+            steps = v.get("steps", "")
+            note = "FLAKY (passed only after test retry)" if v.get("status") == "PASSED_FLAKY" else ""
+            wins_rows.append(f"| `{k}` | {cost} | {steps} | {note} |")
+    wins_md = "\n".join(wins_rows) if wins_rows else "_None._"
+
+    # Attempted-only failures
+    fail_rows = []
+    for k, v in sorted(attempted.items()):
+        if v.get("status") not in PASS:
+            cost = fmt_cost(v.get("cost", "$0"))
+            steps = v.get("steps", "")
+            fail_rows.append(f"| `{k}` | {v.get('status')} | {cost} | {steps} |")
+    fail_md = "\n".join(fail_rows) if fail_rows else "_None._"
+
+    # Leaderboard table — use the public snapshot from 50_aggregate.py
+    leaderboard_md = """| Rank | Model | Accuracy |
+|---:|---|---:|
+| 1 | GPT-5.5 | 74.0% |
+| 2 | GPT-5.4 | 72.4% |
+| 2 | Gemini 3.1 Pro Preview | 72.4% |
+| 4 | Claude Opus 4.7 | 68.7% |
+| 5 | GPT-5.3 Codex | 67.7% |
+| 6 | Claude Opus 4.6 | 66.6% |
+| 7 | GPT-5.2 Codex | 62.5% |
+| 8 | Claude Opus 4.5 | 61.9% |
+| 9 | Gemini 3 Pro Preview | 60.4% |
+| 10 | Claude Sonnet 4.6 | 58.4% |
+| 11 | Claude Sonnet 4.5 | 53.8% |
+| 12 | Gemini 3 Flash Preview | 42.0% |
+| 13 | Gemini 2.5 Flash | 16.7% |
+| **→** | **Grok 4.3 (this run, 1 seed, leaderboard methodology)** | **""" + f"{p_all*100:.1f}%" + """** |"""
 
     section = f"""### Android Bench
 
-#### Grok 4.3 result (single seed, n={len(by_status_total(by_status))} tasks scored)
+#### Grok 4.3 result (single seed, n={n} task universe; {n_att} actually attempted)
 
-{accuracy_line}
+> **⚠ Important caveat.** {n_no_image}/{n} of the Android Bench task images failed to build in our environment (Ubuntu 22.04 + Docker 29 + JDK 17, KVM-enabled VM): the gradle wrapper inside the build container couldn't reach `services.gradle.org` (DNS) on the default bridge network for those images. They're recorded as `AGENT_NO_PATCH` (steps=0, cost=$0) in `*_scores.json` because there was nothing for the agent to run against. These are **not** model failures.
+>
+> So we report **two metrics**:
 
-| Status | Count | % |
-|---|---|---|
+**Headline (leaderboard methodology, n={n}):**
+- **Accuracy: {p_all*100:.1f}%** ({n_pass} PASSED+PASSED_FLAKY out of {n})
+- Wilson 95% CI: [{lo_all*100:.1f}%, {hi_all*100:.1f}%]
+
+**Attempted-only (n={n_att}, the subset where the docker image built and Grok actually ran):**
+- **Accuracy: {p_att*100:.1f}%** ({n_att_pass} / {n_att})
+- Wilson 95% CI: [{lo_att*100:.1f}%, {hi_att*100:.1f}%] — wide because n is small
+
+#### Status breakdown
+
+| Status | Count | % of {n} | What it means |
+|---|---:|---:|---|
 {breakdown_md}
+
+#### Wins (Grok 4.3 actually solved these)
+
+| Task | Cost | Steps | Notes |
+|---|---:|---:|---|
+{wins_md}
+
+#### Failures on the attempted subset
+
+| Task | Status | Cost | Steps |
+|---|---|---:|---:|
+{fail_md}
 
 #### Leaderboard placement
 
-{strip_table(table_text)}
+Public scores: mean accuracy over 10 seeds × 100 tasks each ([developer.android.com/bench](https://developer.android.com/bench), snapshot 2026-05-05). Our run: 1 seed × {n} tasks ({n_no_image} of which never reached the model).
 
-Observation: Grok 4.3 lands in the lower band of frontier models on Android Bench. The dominant failure mode is `AGENT_FAILED_TEST` — Grok generates a patch that compiles but fails the must-pass tests — followed by `AGENT_FAILED_BUILD` and `NO_PATCH_GENERATED`.
+{leaderboard_md}
 
-Single-seed caveat: the public leaderboard reports the mean of 10 seeds × 100 tasks; this is 1 seed × {len(by_status_total(by_status))} tasks. The Wilson 95% CI in `results/androidbench/{run_dir.name}/summary.txt` is wider than what you see on the leaderboard.
+Observation: by the strict leaderboard methodology Grok 4.3 sits well below every officially-tested model. By the attempted-only subset ({p_att*100:.1f}%, n={n_att}) Grok would slot among mid/upper-tier models — but the small n means a wide CI, so this number is not directly comparable until the build issues are resolved and the rest of the {n} tasks complete.
 
-Full results: [`results/androidbench/{run_dir.name}/`](results/androidbench/{run_dir.name}/)
+Single-seed caveat: the public leaderboard averages 10 seeds × 100 tasks. With 1 seed and {n_att} effective task attempts our CI is much wider than the leaderboard models'.
+
+Full results: [`results/androidbench/{run_dir.name}/`](results/androidbench/{run_dir.name}/) — per-instance `*_scores.json`, `patches/`, `trajectories/`, `logs/`, `summary.txt`, `leaderboard_table.md`. Reproduction: [`scripts/`](scripts/) (`00_setup.sh` … `99_master_autopilot.py`).
 """
 
     readme_path = REPO_ROOT / "README.md"
     text = readme_path.read_text()
     head, _, _ = text.partition("### Android Bench")
     readme_path.write_text(head + section)
+
+
+def _wilson(p: float, n: int, z: float = 1.96) -> tuple[float, float]:
+    if n == 0:
+        return (0.0, 0.0)
+    import math
+    d = 1 + z * z / n
+    c = (p + z * z / (2 * n)) / d
+    h = z * math.sqrt((p * (1 - p) + z * z / (4 * n)) / n) / d
+    return c - h, c + h
 
 
 def by_status_total(by_status: dict) -> list:
