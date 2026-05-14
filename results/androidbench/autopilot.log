@@ -138,3 +138,79 @@
 [2026-05-14 02:42:31]   infer cmd: /home/minh/grok-evals-minh/vendor/AndroidBench/.venv/bin/python -m harness.inference.androidbench --instance MohamedRejeb__compose-rich-editor-pr_335 --workers 1 --model xai/grok-4.3 --run-name full_run_v1 --images local --skip-existing
 [2026-05-14 02:46:42]   infer rc=0 elapsed=251.6s cost=$0.1252 total=$3.2310 balance_exhausted=False
 [2026-05-14 02:46:42]   --- batch checkpoint after 5 new tasks (total spend $3.2310) ---
+[2026-05-14 02:46:43]   git push rc=0
+[2026-05-14 02:46:43] [24/100] MohamedRejeb__compose-rich-editor-pr_357: SKIP (no docker image — was a build failure)
+[2026-05-14 02:46:44] [25/100] MohamedRejeb__compose-rich-editor-pr_363: SKIP (no docker image — was a build failure)
+[2026-05-14 02:46:44] [26/100] MohamedRejeb__compose-rich-editor-pr_367: SKIP (no docker image — was a build failure)
+[2026-05-14 02:46:44] [27/100] MohamedRejeb__compose-rich-editor-pr_379: SKIP (no docker image — was a build failure)
+[2026-05-14 02:46:44] [28/100] MohamedRejeb__compose-rich-editor-pr_403: SKIP (no docker image — was a build failure)
+[2026-05-14 02:46:44] [29/100] MohamedRejeb__compose-rich-editor-pr_445: SKIP (no docker image — was a build failure)
+[2026-05-14 02:46:44] [30/100] MohamedRejeb__compose-rich-editor-pr_523: SKIP (no docker image — was a build failure)
+[2026-05-14 02:46:44] [31/100] airbnb__lottie-android-pr_2427: SKIP (no docker image — was a build failure)
+[2026-05-14 02:46:44] [32/100] android__nowinandroid-pr_553: SKIP (no docker image — was a build failure)
+[2026-05-14 02:46:44] [33/100] android__nowinandroid-pr_720: SKIP (no docker image — was a build failure)
+[2026-05-14 02:46:44] [34/100] android_androidify_gradleplugin: SKIP (no docker image — was a build failure)
+[2026-05-14 02:46:44] [35/100] android_snippets_1: inference (running_total=$3.2310)
+[2026-05-14 02:46:44]   infer cmd: /home/minh/grok-evals-minh/vendor/AndroidBench/.venv/bin/python -m harness.inference.androidbench --instance android_snippets_1 --workers 1 --model xai/grok-4.3 --run-name full_run_v1 --images local --skip-existing
+[2026-05-14 02:50:22]   infer rc=0 elapsed=218.3s cost=$0.1185 total=$3.3495 balance_exhausted=False
+[2026-05-14 02:50:22] [36/100] arkivanov__Decompose-pr_388: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:22] [37/100] arkivanov__Decompose-pr_394: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:22] [38/100] arkivanov__Decompose-pr_646: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:22] [39/100] badoo__Reaktive-pr_735: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:22] [40/100] badoo__Reaktive-pr_763: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [41/100] badoo__Reaktive-pr_764: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [42/100] badoo__Reaktive-pr_786: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [43/100] bitfireAT__davx5-ose-pr_1267: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [44/100] bitfireAT__davx5-ose-pr_1504: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [45/100] bitfireAT__davx5-ose-pr_1512: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [46/100] braintree__braintree_android-pr_1323: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [47/100] bumble-tech__appyx-pr_425: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [48/100] bumble-tech__appyx-pr_638: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [49/100] bumble-tech__appyx-pr_694: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [50/100] cahier-adaptive-1: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [51/100] chrisbanes__haze-pr_250: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [52/100] chrisbanes__haze-pr_710: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [53/100] coil-kt__coil-pr_1964: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [54/100] coil-kt__coil-pr_2033: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [55/100] coil-kt__coil-pr_2121: SKIP (no docker image — was a build failure)
+[2026-05-14 02:50:23] [56/100] coil-kt__coil-pr_2669: inference (running_total=$3.3495)
+[2026-05-14 02:50:23]   infer cmd: /home/minh/grok-evals-minh/vendor/AndroidBench/.venv/bin/python -m harness.inference.androidbench --instance coil-kt__coil-pr_2669 --workers 1 --model xai/grok-4.3 --run-name full_run_v1 --images local --skip-existing
+[2026-05-14 02:57:11]   infer rc=0 elapsed=407.7s cost=$0.4410 total=$3.7905 balance_exhausted=False
+[2026-05-14 02:57:11] [57/100] coil-kt__coil-pr_2945: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:11] [58/100] coil-kt__coil-pr_3137: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:11] [59/100] element-hq__element-x-android-pr_1848: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:11] [60/100] element-hq__element-x-android-pr_2073: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:11] [61/100] element-hq__element-x-android-pr_2342: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:11] [62/100] getsentry__sentry-java-pr_2891: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:11] [63/100] getsentry__sentry-java-pr_4262: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:11] [64/100] getsentry__sentry-java-pr_4582: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:11] [65/100] getsentry__sentry-java-pr_4724: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:11] [66/100] google__accompanist-pr_903: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [67/100] google__android-fhir-pr_1822: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [68/100] google__android-fhir-pr_1894: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [69/100] googlemaps__android-maps-compose-pr_327: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [70/100] googlemaps__android-maps-compose-pr_336: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [71/100] googlemaps__android-maps-compose-pr_478: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [72/100] googlemaps__android-maps-compose-pr_603: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [73/100] komikku-app__komikku-pr_992: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [74/100] lihenggui__blocker-pr_725: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [75/100] nowinandroid-adaptive-1: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [76/100] nowinandroid-compose-fling_behavior: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [77/100] nowinandroid-custom-modifier-node: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [78/100] nowinandroid-hide-toolbar-when-scroll: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [79/100] nowinandroid-workmanager-2: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [80/100] pocketcasts-room-1: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [81/100] pocketcasts-room-2: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [82/100] pocketcasts-room-3: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [83/100] pocketcasts-room-4: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [84/100] seedvault-app__seedvault-pr_736: SKIP (no docker image — was a build failure)
+[2026-05-14 02:57:12] [85/100] thunderbird__thunderbird-android-pr_7103: inference (running_total=$3.7905)
+[2026-05-14 02:57:12]   infer cmd: /home/minh/grok-evals-minh/vendor/AndroidBench/.venv/bin/python -m harness.inference.androidbench --instance thunderbird__thunderbird-android-pr_7103 --workers 1 --model xai/grok-4.3 --run-name full_run_v1 --images local --skip-existing
+[2026-05-14 03:00:09]   infer rc=0 elapsed=177.1s cost=$0.0832 total=$3.8737 balance_exhausted=False
+[2026-05-14 03:00:10] [86/100] thunderbird__thunderbird-android-pr_7190: inference (running_total=$3.8737)
+[2026-05-14 03:00:10]   infer cmd: /home/minh/grok-evals-minh/vendor/AndroidBench/.venv/bin/python -m harness.inference.androidbench --instance thunderbird__thunderbird-android-pr_7190 --workers 1 --model xai/grok-4.3 --run-name full_run_v1 --images local --skip-existing
+[2026-05-14 03:04:47]   infer rc=0 elapsed=277.4s cost=$0.1570 total=$4.0307 balance_exhausted=False
+[2026-05-14 03:04:47] [87/100] thunderbird__thunderbird-android-pr_8020: inference (running_total=$4.0307)
+[2026-05-14 03:04:47]   infer cmd: /home/minh/grok-evals-minh/vendor/AndroidBench/.venv/bin/python -m harness.inference.androidbench --instance thunderbird__thunderbird-android-pr_8020 --workers 1 --model xai/grok-4.3 --run-name full_run_v1 --images local --skip-existing
+[2026-05-14 03:10:12]   infer rc=0 elapsed=324.5s cost=$0.1929 total=$4.2236 balance_exhausted=False
+[2026-05-14 03:10:12]   --- batch checkpoint after 10 new tasks (total spend $4.2236) ---
