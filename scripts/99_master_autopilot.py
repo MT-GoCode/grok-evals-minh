@@ -344,6 +344,10 @@ def main() -> int:
     ap.add_argument("--start-from", default=None)
     ap.add_argument("--max-balance-misses", type=int, default=2,
                     help="Stop after this many consecutive tasks return an unambiguous balance-exhausted error from xAI.")
+    ap.add_argument("--inline-verify", action="store_true",
+                    help="If set, verify after each inference (slow). Default: skip per-task verify; do bulk parallel verify at end.")
+    ap.add_argument("--bulk-verify-parallel", type=int, default=2,
+                    help="Parallelism for the bulk verify pass at the end. Each gradle test JVM uses ~4 GB heap.")
     args = ap.parse_args()
 
     log(f"=== autopilot start run_name={args.run_name} model={args.model} (no budget cap; stops on xAI balance-exhausted)")
@@ -408,15 +412,16 @@ def main() -> int:
         else:
             log(f"[{idx}/{len(task_ids)}] {tid}: skip-inference (patch exists)")
 
-        # ---- verify (always, even if inference rc != 0 — there may still be a patch) ----
-        if (run_dir / "patches" / f"{tid}.patch").exists():
-            log(f"[{idx}/{len(task_ids)}] {tid}: verify")
-            t0 = time.time()
-            rc = run_verify_one(tid, args.run_name)
-            elapsed = time.time() - t0
-            log(f"  verify rc={rc} elapsed={elapsed:.1f}s")
-        else:
-            log(f"  no patch produced; skipping verifier for {tid}")
+        # ---- verify (inline only when explicitly requested; default = bulk at end) ----
+        if args.inline_verify:
+            if (run_dir / "patches" / f"{tid}.patch").exists():
+                log(f"[{idx}/{len(task_ids)}] {tid}: verify (inline)")
+                t0 = time.time()
+                rc = run_verify_one(tid, args.run_name)
+                elapsed = time.time() - t0
+                log(f"  verify rc={rc} elapsed={elapsed:.1f}s")
+            else:
+                log(f"  no patch produced; skipping verifier for {tid}")
 
         n_attempted += 1
         # ---- aggregate + push every N ----
@@ -427,6 +432,26 @@ def main() -> int:
             git_push(
                 f"AndroidBench: progress checkpoint ({n_attempted} new this session, ${total_spend:.4f} spent)"
             )
+
+    # ---- bulk verify pass (default mode) ----
+    if not args.inline_verify:
+        log(f"=== bulk verify pass (parallel={args.bulk_verify_parallel}) ===")
+        cmd = [
+            str(VERIFIER),
+            "--tasks-dir", str(TASKS_DIR),
+            "--run-name", args.run_name,
+            "--use_local_images",
+            "--max-parallel-containers", str(args.bulk_verify_parallel),
+            "--skip-existing",
+        ]
+        log(f"  bulk verify cmd: yes y | {' '.join(cmd)}")
+        p1 = subprocess.Popen(["yes", "y"], stdout=subprocess.PIPE)
+        p2 = subprocess.Popen(cmd, stdin=p1.stdout, cwd=str(VENDOR))
+        if p1.stdout:
+            p1.stdout.close()
+        rc = p2.wait()
+        p1.wait()
+        log(f"  bulk verify rc={rc}")
 
     log("=== final aggregate + push ===")
     aggregate(run_dir)
