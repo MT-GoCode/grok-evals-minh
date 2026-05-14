@@ -53,7 +53,7 @@ def trajectory_cost(run_dir: Path, instance_id: str) -> float | None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--run-name", default="full_run_v1")
-    ap.add_argument("--budget", type=float, default=10.50, help="USD; stop before launching a task if total >= this")
+    ap.add_argument("--budget", type=float, default=14.50, help="USD; stop before launching a task if total >= this")
     ap.add_argument("--start-from", default=None, help="Optional task id to resume from (alphabetic order otherwise)")
     ap.add_argument("--max-tasks", type=int, default=None, help="Optional safety cap on number of tasks attempted")
     args = ap.parse_args()
