@@ -86,26 +86,58 @@ Observation: Grok 4.3 performance collapses on symbolic.
 
 ### Android Bench
 
-#### Grok 4.3 result (single seed, n=100 tasks scored)
+#### Grok 4.3 result (single seed, n=100 task universe; 10 actually attempted)
 
-Accuracy: 5.00%   Wilson 95% CI: [2.15, 11.18]   (±4.5pp)
+> **⚠ Important caveat.** 90 of the 100 Android Bench task images failed to build in our environment (Ubuntu 22.04 + Docker 29 + JDK 17, KVM-enabled VM): the gradle wrapper inside the build container couldn't reach `services.gradle.org` (DNS), so `./gradlew assembleDebug` exited 1 before any Grok inference happened. These 90 are recorded as `AGENT_NO_PATCH` (steps=0, cost=$0) in `*_scores.json` because there was nothing for the agent to run against.
+>
+> So we have **two metrics** to report:
 
-| Status | Count | % |
-|---|---|---|
-| AGENT_NO_PATCH | 90 | (90.0%) |
-| PASSED | 4 | (4.0%) |
-| AGENT_FAILED_TEST | 3 | (3.0%) |
-| INFRA_FAILURE | 1 | (1.0%) |
-| PASSED_FLAKY | 1 | (1.0%) |
-| AGENT_FAILED_BUILD | 1 | (1.0%) |
+**Headline (leaderboard methodology, n=100):**
+- **Accuracy: 5.0%** (5 PASSED+PASSED_FLAKY out of 100)
+- Wilson 95% CI: [2.2%, 11.2%]
+
+**Attempted-only (n=10, the subset where the docker image built and Grok actually ran):**
+- **Accuracy: 50.0%** (5 / 10)
+- Wilson 95% CI: [23.7%, 76.3%] — wide because n is small
+
+#### Status breakdown
+
+| Status | Count | % of 100 | What it means |
+|---|---:|---:|---|
+| `PASSED` | 4 | 4.0% | Grok's patch compiled and the must-pass tests passed |
+| `PASSED_FLAKY` | 1 | 1.0% | Passed after a retry of the test execution |
+| `AGENT_FAILED_TEST` | 3 | 3.0% | Grok's patch compiled but a must-pass test failed |
+| `AGENT_FAILED_BUILD` | 1 | 1.0% | Grok's patch broke compilation |
+| `INFRA_FAILURE` | 1 | 1.0% | Verifier infra error (verifier couldn't run the tests) |
+| `AGENT_NO_PATCH` (no image built — Grok never ran) | 90 | 90.0% | DNS to services.gradle.org failed inside the build container; not a model failure |
+
+#### Wins (Grok 4.3 actually solved these)
+
+| Task | Cost | Steps | Notes |
+|---|---:|---:|---|
+| `AntennaPod__AntennaPod-pr_6838` | $0.033 | 8 | Wrapped a `LinearLayout` in a `ScrollView` for the Nextcloud auth dialog so it scrolls under small screens |
+| `thunderbird__thunderbird-android-pr_7103` | $0.083 | 10 | Single-file logic fix in the email client |
+| `thunderbird__thunderbird-android-pr_7190` | $0.157 | 22 | Multi-file fix |
+| `thunderbird__thunderbird-android-pr_8020` | $0.193 | 18 | Multi-file fix |
+| `LemmyNet__jerboa-pr_991` (FLAKY) | $2.277 | 128 | Long-horizon Compose fix: added `DrawerState` + `CoroutineScope` plumbing through `CommunityListHeader`. Used the full step budget; passed only after a flaky-retry of the test |
+
+#### Failure modes on the attempted subset
+
+- `MohamedRejeb__compose-rich-editor-pr_319` (45 steps, $0.611) — produced a substantial patch that compiled but failed the must-pass test
+- `MohamedRejeb__compose-rich-editor-pr_335` (17 steps, $0.125) — same shape
+- `coil-kt__coil-pr_2669` (42 steps, $0.441) — same shape
+- `android_snippets_1` (13 steps, $0.119) — patch broke compilation
+- `DroidKaigi__conference-app-2023-pr_896` (13 steps, $0.067) — verifier infra error, not a model issue
 
 #### Leaderboard placement
+
+Public scores: mean accuracy over 10 seeds × 100 tasks each ([developer.android.com/bench](https://developer.android.com/bench), snapshot 2026-05-05). Our run: 1 seed × 100 tasks (90 of which never reached the model).
 
 | Rank | Model | Accuracy |
 |---:|---|---:|
 | 1 | GPT-5.5 | 74.0% |
 | 2 | GPT-5.4 | 72.4% |
-| 3 | Gemini 3.1 Pro Preview | 72.4% |
+| 2 | Gemini 3.1 Pro Preview | 72.4% |
 | 4 | Claude Opus 4.7 | 68.7% |
 | 5 | GPT-5.3 Codex | 67.7% |
 | 6 | Claude Opus 4.6 | 66.6% |
@@ -116,10 +148,10 @@ Accuracy: 5.00%   Wilson 95% CI: [2.15, 11.18]   (±4.5pp)
 | 11 | Claude Sonnet 4.5 | 53.8% |
 | 12 | Gemini 3 Flash Preview | 42.0% |
 | 13 | Gemini 2.5 Flash | 16.7% |
-| 14 | Grok 4.3 (this run, 1 seed) ← | 5.0% |
+| **→** | **Grok 4.3 (this run, 1 seed, leaderboard methodology)** | **5.0%** |
 
-Observation: Grok 4.3 lands in the lower band of frontier models on Android Bench. The dominant failure mode is `AGENT_FAILED_TEST` — Grok generates a patch that compiles but fails the must-pass tests — followed by `AGENT_FAILED_BUILD` and `NO_PATCH_GENERATED`.
+Observation: by the strict leaderboard methodology Grok 4.3 sits well below every officially-tested model. By the attempted-only subset (50.0%, n=10) it would slot between Claude Sonnet 4.6 and Claude Opus 4.5 — but n=10 means the CI [23.7%, 76.3%] overlaps with most of the leaderboard, so this number is not directly comparable until the build issues are resolved and the rest of the 100 tasks complete.
 
-Single-seed caveat: the public leaderboard reports the mean of 10 seeds × 100 tasks; this is 1 seed × 100 tasks. The Wilson 95% CI in `results/androidbench/full_run_v1/summary.txt` is wider than what you see on the leaderboard.
+Single-seed caveat: the public leaderboard averages 10 seeds × 100 tasks. With 1 seed × 100 tasks (and 10 effective task attempts) our CI is much wider than the leaderboard models'.
 
-Full results: [`results/androidbench/full_run_v1/`](results/androidbench/full_run_v1/)
+Full results: [`results/androidbench/full_run_v1/`](results/androidbench/full_run_v1/) — per-instance `*_scores.json`, `patches/`, `trajectories/`, `logs/`, `summary.txt`, `leaderboard_table.md`. Reproduction: [`scripts/`](scripts/) (`00_setup.sh` … `99_master_autopilot.py`).
