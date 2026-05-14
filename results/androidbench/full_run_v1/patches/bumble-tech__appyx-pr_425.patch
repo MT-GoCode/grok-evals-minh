@@ -1,0 +1,39 @@
+diff --git a/libraries/interop-ribs/src/main/kotlin/com/bumble/appyx/interop/ribs/InteropNode.kt b/libraries/interop-ribs/src/main/kotlin/com/bumble/appyx/interop/ribs/InteropNode.kt
+index 52e20ec8..8b917af8 100644
+--- a/libraries/interop-ribs/src/main/kotlin/com/bumble/appyx/interop/ribs/InteropNode.kt
++++ b/libraries/interop-ribs/src/main/kotlin/com/bumble/appyx/interop/ribs/InteropNode.kt
+@@ -7,6 +7,7 @@ import androidx.lifecycle.LifecycleEventObserver
+ import com.badoo.ribs.core.Rib
+ import com.badoo.ribs.core.modality.BuildParams
+ import com.badoo.ribs.core.view.ViewFactory
++import com.bumble.appyx.core.integrationpoint.IntegrationPoint
+ import com.bumble.appyx.core.node.Node
+ import com.bumble.appyx.interop.ribs.InteropNode.Customisation
+ import com.bumble.appyx.interop.ribs.InteropViewImpl.Factory
+@@ -46,6 +47,26 @@ internal class InteropNodeImpl<N : Node>(
+ 
+     override fun onCreate() {
+         super.onCreate()
++        // Wrap the integration point so that "up" navigation events from the Appyx child
++        // are first attempted to be handled by the RIBs navigation stack (via handleBackPress
++        // which can pop the current RIB from its backstack). Falls back to original behavior.
++        val originalIntegrationPoint = appyxNode.integrationPoint
++        appyxNode.integrationPoint = object : IntegrationPoint(null) {
++            override val activityStarter get() = originalIntegrationPoint.activityStarter
++            override val permissionRequester get() = originalIntegrationPoint.permissionRequester
++            override val isChangingConfigurations get() = originalIntegrationPoint.isChangingConfigurations
++
++            override fun handleUpNavigation() {
++                if (!handleBackPress()) {
++                    originalIntegrationPoint.handleUpNavigation()
++                }
++            }
++
++            override fun onRootFinished() {
++                originalIntegrationPoint.onRootFinished()
++            }
++        }
++
+         appyxNode.updateLifecycleState(lifecycle.currentState)
+         lifecycle.addObserver(observer)
+     }

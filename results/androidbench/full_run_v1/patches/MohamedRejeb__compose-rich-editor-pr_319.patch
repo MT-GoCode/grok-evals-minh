@@ -1,0 +1,24 @@
+diff --git a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/model/RichTextState.kt b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/model/RichTextState.kt
+index 47d91f0..ba37d6f 100644
+--- a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/model/RichTextState.kt
++++ b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/model/RichTextState.kt
+@@ -2406,8 +2406,17 @@ public class RichTextState internal constructor(
+                 config.preserveStyleOnEmptyLine &&
+                 (richSpan == null || (richSpan.isFirstInParagraph && richSpan.paragraph.isEmpty()))
+             ) {
+-                toAddRichSpanStyle = currentAppliedRichSpanStyle
+-                toAddSpanStyle = currentAppliedSpanStyle
++                // Check for multiple consecutive new lines: reset style if previous paragraph is also empty
++                val currentParagraph = richSpan?.paragraph ?: richParagraphList.lastOrNull()
++                val paraIndex = if (currentParagraph != null) richParagraphList.indexOf(currentParagraph) else -1
++                val prevIsEmpty = if (paraIndex > 0) {
++                    val prevPara = richParagraphList[paraIndex - 1]
++                    prevPara.isEmpty() || prevPara.isBlank()
++                } else false
++                if (!prevIsEmpty) {
++                    toAddRichSpanStyle = currentAppliedRichSpanStyle
++                    toAddSpanStyle = currentAppliedSpanStyle
++                }
+             }
+ 
+             currentAppliedRichSpanStyle = richSpan

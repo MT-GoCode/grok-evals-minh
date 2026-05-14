@@ -1,0 +1,13 @@
+diff --git a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/markdown/MarkdownUtils.kt b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/markdown/MarkdownUtils.kt
+index 7292e43..a0c1c0f 100644
+--- a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/markdown/MarkdownUtils.kt
++++ b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/markdown/MarkdownUtils.kt
+@@ -175,6 +175,8 @@ private fun encodeMarkdownNodeToRichText(
+         MarkdownTokenTypes.EXCLAMATION_MARK -> onText("!")
+         MarkdownTokenTypes.EMPH -> onText("*")
+         GFMTokenTypes.TILDE -> onText("~")
++        MarkdownTokenTypes.CODE_LINE -> onText(node.getTextInNode(markdown).toString())
++        MarkdownTokenTypes.CODE_FENCE_CONTENT -> onText(node.getTextInNode(markdown).toString())
+         MarkdownElementTypes.STRONG, GFMElementTypes.STRIKETHROUGH -> {
+             onOpenNode(node)
+             val children = node.children.toMutableList()

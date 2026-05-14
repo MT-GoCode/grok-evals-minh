@@ -1,0 +1,51 @@
+diff --git a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/model/RichTextState.kt b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/model/RichTextState.kt
+index 4323f65..b4788cb 100644
+--- a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/model/RichTextState.kt
++++ b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/model/RichTextState.kt
+@@ -80,6 +80,7 @@ public class RichTextState internal constructor(
+         private set
+ 
+     private var lastPressPosition: Offset? by mutableStateOf(null)
++    private var pendingExplicitRemoveRange: TextRange? = null
+ 
+     private var currentAppliedSpanStyle: SpanStyle by mutableStateOf(
+         getRichSpanByTextIndex(textIndex = selection.min - 1)?.fullSpanStyle
+@@ -275,6 +276,7 @@ public class RichTextState internal constructor(
+                 "but the end index is ${textRange.max}."
+         }
+ 
++        pendingExplicitRemoveRange = textRange
+         onTextFieldValueChange(
+             newTextFieldValue = textFieldValue.copy(
+                 text = textFieldValue.text.removeRange(
+@@ -1362,15 +1364,23 @@ public class RichTextState internal constructor(
+     private fun handleRemovingCharacters() {
+         val removedCharsCount = textFieldValue.text.length - tempTextFieldValue.text.length
+ 
+-        val minRemoveIndex =
+-            (textFieldValue.selection.max - removedCharsCount)
+-                .coerceAtLeast(0)
++        val removeRange = if (pendingExplicitRemoveRange != null) {
++            val r = pendingExplicitRemoveRange!!
++            pendingExplicitRemoveRange = null
++            r
++        } else {
++            val minRemoveIndex =
++                (textFieldValue.selection.max - removedCharsCount)
++                    .coerceAtLeast(0)
+ 
+-        val maxRemoveIndex =
+-            (minRemoveIndex + removedCharsCount)
+-                .coerceAtMost(textFieldValue.text.length)
++            val maxRemoveIndex =
++                (minRemoveIndex + removedCharsCount)
++                    .coerceAtMost(textFieldValue.text.length)
+ 
+-        val removeRange = TextRange(minRemoveIndex, maxRemoveIndex)
++            TextRange(minRemoveIndex, maxRemoveIndex)
++        }
++        val minRemoveIndex = removeRange.min
++        val maxRemoveIndex = removeRange.max
+ 
+         val minRichSpan = getRichSpanByTextIndex(textIndex = minRemoveIndex, true) ?: return
+         val maxRichSpan = getRichSpanByTextIndex(textIndex = maxRemoveIndex - 1, true) ?: return

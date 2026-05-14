@@ -1,0 +1,34 @@
+diff --git a/reaktive/src/commonMain/kotlin/com/badoo/reaktive/utils/HandleSourceError.kt b/reaktive/src/commonMain/kotlin/com/badoo/reaktive/utils/HandleSourceError.kt
+index 836f6642..8c761726 100644
+--- a/reaktive/src/commonMain/kotlin/com/badoo/reaktive/utils/HandleSourceError.kt
++++ b/reaktive/src/commonMain/kotlin/com/badoo/reaktive/utils/HandleSourceError.kt
+@@ -2,7 +2,16 @@ package com.badoo.reaktive.utils
+ 
+ import com.badoo.reaktive.base.exceptions.CompositeException
+ 
++private val FATAL_ERROR_NAMES = setOf(
++    "java.lang.VirtualMachineError",
++    "java.lang.StackOverflowError",
++    "java.lang.OutOfMemoryError",
++    "java.lang.ThreadDeath",
++    "java.lang.LinkageError"
++)
++
+ fun handleReaktiveError(error: Throwable, onError: ((Throwable) -> Unit)? = null) {
++    rethrowIfFatal(error)
+     if (onError == null) {
+         handleError(error)
+     } else {
+@@ -10,6 +19,12 @@ fun handleReaktiveError(error: Throwable, onError: ((Throwable) -> Unit)? = null
+     }
+ }
+ 
++private fun rethrowIfFatal(error: Throwable) {
++    if (error::class.qualifiedName in FATAL_ERROR_NAMES) {
++        throw error
++    }
++}
++
+ private fun handleError(error: Throwable) {
+     try {
+         reaktiveUncaughtErrorHandler(error)

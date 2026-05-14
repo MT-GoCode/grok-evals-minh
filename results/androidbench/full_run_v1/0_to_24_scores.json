@@ -1,0 +1,502 @@
+{
+    "AlphaWallet__alpha-wallet-android-pr_3329": {
+        "instance_id": "AlphaWallet__alpha-wallet-android-pr_3329",
+        "score": 0.0,
+        "status": "AGENT_FAILED_TEST",
+        "diagnostics": "Verifying 245 pass_to_pass tests and 2 fail_to_pass tests.\nRunning test attempt: 1\nMust Pass test failed: 'testAnalyticsDebugUnitTest#Test intentsAreParsedCorrectly(com.alphawallet.app.IntentTest)'\nMust Pass test failed: 'testNoAnalyticsDebugUnitTest#Test intentsAreParsedCorrectly(com.alphawallet.app.IntentTest)'\nTest attempt 1: AGENT_FAILED_TEST\nRunning test attempt: 2\nMust Pass test failed: 'testAnalyticsDebugUnitTest#Test intentsAreParsedCorrectly(com.alphawallet.app.IntentTest)'\nMust Pass test failed: 'testNoAnalyticsDebugUnitTest#Test intentsAreParsedCorrectly(com.alphawallet.app.IntentTest)'\nTest attempt 2: AGENT_FAILED_TEST\nRunning test attempt: 3\nMust Pass test failed: 'testAnalyticsDebugUnitTest#Test intentsAreParsedCorrectly(com.alphawallet.app.IntentTest)'\nMust Pass test failed: 'testNoAnalyticsDebugUnitTest#Test intentsAreParsedCorrectly(com.alphawallet.app.IntentTest)'\nTest attempt 3: AGENT_FAILED_TEST",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 2427,
+            "prompt_tokens": 132642,
+            "total_tokens": 140509
+        },
+        "latency_details": {
+            "query_latency_seconds": 157.1432917430002,
+            "processing_latency_seconds": 95.43494186899989,
+            "total_latency_seconds": 253.96835450699928
+        },
+        "steps": "17",
+        "cost": "$0.11813560000000001",
+        "status_description": "Agent created a patch that fails the tests"
+    },
+    "Automattic__pocket-casts-android-pr_1114": {
+        "instance_id": "Automattic__pocket-casts-android-pr_1114",
+        "score": 0.0,
+        "status": "AGENT_FAILED_TEST",
+        "diagnostics": "Verifying 133 pass_to_pass tests and 4 fail_to_pass tests.\nRunning test attempt: 1\nMust Pass test failed: 'testDebugUnitTest#Test streaming will prefer wifi over cell(au.com.shiftyjelly.pocketcasts.wear.networking.PocketCastsNetworkingRulesTest)'\nMust Pass test failed: 'testDebugUnitTest#Test streaming will use bluetooth if available(au.com.shiftyjelly.pocketcasts.wear.networking.PocketCastsNetworkingRulesTest)'\nTest attempt 1: AGENT_FAILED_TEST\nRunning test attempt: 2\nMust Pass test failed: 'testDebugUnitTest#Test streaming will prefer wifi over cell(au.com.shiftyjelly.pocketcasts.wear.networking.PocketCastsNetworkingRulesTest)'\nMust Pass test failed: 'testDebugUnitTest#Test streaming will use bluetooth if available(au.com.shiftyjelly.pocketcasts.wear.networking.PocketCastsNetworkingRulesTest)'\nTest attempt 2: AGENT_FAILED_TEST\nRunning test attempt: 3\nMust Pass test failed: 'testDebugUnitTest#Test streaming will prefer wifi over cell(au.com.shiftyjelly.pocketcasts.wear.networking.PocketCastsNetworkingRulesTest)'\nMust Pass test failed: 'testDebugUnitTest#Test streaming will use bluetooth if available(au.com.shiftyjelly.pocketcasts.wear.networking.PocketCastsNetworkingRulesTest)'\nTest attempt 3: AGENT_FAILED_TEST",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1660,
+            "prompt_tokens": 107026,
+            "total_tokens": 114392
+        },
+        "latency_details": {
+            "query_latency_seconds": 116.97834551199776,
+            "processing_latency_seconds": 145.7721137439985,
+            "total_latency_seconds": 262.97065611700236
+        },
+        "steps": "15",
+        "cost": "$0.11637990000000001",
+        "status_description": "Agent created a patch that fails the tests"
+    },
+    "Automattic__pocket-casts-android-pr_3970": {
+        "instance_id": "Automattic__pocket-casts-android-pr_3970",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 860 pass_to_pass tests and 2 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1839,
+            "prompt_tokens": 157113,
+            "total_tokens": 165525
+        },
+        "latency_details": {
+            "query_latency_seconds": 341.0120648969969,
+            "processing_latency_seconds": 286.9375646669978,
+            "total_latency_seconds": 628.3540465189981
+        },
+        "steps": "16",
+        "cost": "$0.17138925000000002",
+        "status_description": "PASSED"
+    },
+    "Automattic__pocket-casts-android-pr_757": {
+        "instance_id": "Automattic__pocket-casts-android-pr_757",
+        "score": 0.0,
+        "status": "AGENT_FAILED_TEST",
+        "diagnostics": "Verifying 30 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nMust Pass test failed: 'connectedDebugAndroidTest#Test notificationPermissionDialogShown_ifNotEnabled(au.com.shiftyjelly.pocketcasts.ui.MainActivityTest)'\nTest attempt 1: AGENT_FAILED_TEST\nRunning test attempt: 2\nMust Pass test failed: 'connectedDebugAndroidTest#Test notificationPermissionDialogShown_ifNotEnabled(au.com.shiftyjelly.pocketcasts.ui.MainActivityTest)'\nTest attempt 2: AGENT_FAILED_TEST\nRunning test attempt: 3\nMust Pass test failed: 'connectedDebugAndroidTest#Test notificationPermissionDialogShown_ifNotEnabled(au.com.shiftyjelly.pocketcasts.ui.MainActivityTest)'\nTest attempt 3: AGENT_FAILED_TEST",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 2256,
+            "prompt_tokens": 509365,
+            "total_tokens": 519338
+        },
+        "latency_details": {
+            "query_latency_seconds": 280.9612713119932,
+            "processing_latency_seconds": 110.22023036599785,
+            "total_latency_seconds": 391.72255443700124
+        },
+        "steps": "34",
+        "cost": "$0.4526467500000001",
+        "status_description": "Agent created a patch that fails the tests"
+    },
+    "CatimaLoyalty__Android-pr_1524": {
+        "instance_id": "CatimaLoyalty__Android-pr_1524",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 96 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1471,
+            "prompt_tokens": 115194,
+            "total_tokens": 121588
+        },
+        "latency_details": {
+            "query_latency_seconds": 114.19990925699676,
+            "processing_latency_seconds": 55.81625465299294,
+            "total_latency_seconds": 170.98921015499945
+        },
+        "steps": "14",
+        "cost": "$0.0955999",
+        "status_description": "PASSED"
+    },
+    "CatimaLoyalty__Android-pr_1588": {
+        "instance_id": "CatimaLoyalty__Android-pr_1588",
+        "score": 0.0,
+        "status": "INFRA_FAILURE",
+        "diagnostics": "Unexpected error: UnixHTTPConnectionPool(host='localhost', port=None): Read timed out.",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 5031,
+            "prompt_tokens": 532156,
+            "total_tokens": 558884
+        },
+        "latency_details": {
+            "query_latency_seconds": 463.24328881600377,
+            "processing_latency_seconds": 204.1358553849932,
+            "total_latency_seconds": 668.3349493499991
+        },
+        "steps": "29",
+        "cost": "$0.30583260000000007",
+        "status_description": "General infra issues with harness"
+    },
+    "LemmyNet__jerboa-pr_1068": {
+        "instance_id": "LemmyNet__jerboa-pr_1068",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 34 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 3470,
+            "prompt_tokens": 801765,
+            "total_tokens": 820339
+        },
+        "latency_details": {
+            "query_latency_seconds": 508.0139777370023,
+            "processing_latency_seconds": 141.58798893401035,
+            "total_latency_seconds": 649.9023575459978
+        },
+        "steps": "52",
+        "cost": "$0.53698045",
+        "status_description": "PASSED"
+    },
+    "LemmyNet__jerboa-pr_1114": {
+        "instance_id": "LemmyNet__jerboa-pr_1114",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 36 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 3126,
+            "prompt_tokens": 199175,
+            "total_tokens": 209299
+        },
+        "latency_details": {
+            "query_latency_seconds": 274.2001282609999,
+            "processing_latency_seconds": 124.77254549999634,
+            "total_latency_seconds": 399.31374097200023
+        },
+        "steps": "22",
+        "cost": "$0.19988835000000002",
+        "status_description": "PASSED"
+    },
+    "LemmyNet__jerboa-pr_1122": {
+        "instance_id": "LemmyNet__jerboa-pr_1122",
+        "score": 0.0,
+        "status": "AGENT_FAILED_TEST",
+        "diagnostics": "Verifying 36 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nMust Pass test failed: 'connectedDebugAndroidTest#Test testTogglingShowScoresHidesScoresOnHomeCommentsInbox(com.jerboa.ScoreVisibilityTest)'\nTest attempt 1: AGENT_FAILED_TEST\nRunning test attempt: 2\nMust Pass test failed: 'connectedDebugAndroidTest#Test testTogglingShowScoresHidesScoresOnHomeCommentsInbox(com.jerboa.ScoreVisibilityTest)'\nTest attempt 2: AGENT_FAILED_TEST\nRunning test attempt: 3\nMust Pass test failed: 'connectedDebugAndroidTest#Test testTogglingShowScoresHidesScoresOnHomeCommentsInbox(com.jerboa.ScoreVisibilityTest)'\nTest attempt 3: AGENT_FAILED_TEST",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 10147,
+            "prompt_tokens": 4100633,
+            "total_tokens": 4128176
+        },
+        "latency_details": {
+            "query_latency_seconds": 945.115091307016,
+            "processing_latency_seconds": 356.5145865189879,
+            "total_latency_seconds": 1301.9544580619986
+        },
+        "steps": "127",
+        "cost": "$2.21446315",
+        "status_description": "Agent created a patch that fails the tests"
+    },
+    "LemmyNet__jerboa-pr_1198": {
+        "instance_id": "LemmyNet__jerboa-pr_1198",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 41 pass_to_pass tests and 4 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 8074,
+            "prompt_tokens": 1311793,
+            "total_tokens": 1342045
+        },
+        "latency_details": {
+            "query_latency_seconds": 663.9072900590036,
+            "processing_latency_seconds": 137.2588665949952,
+            "total_latency_seconds": 801.7890045139975
+        },
+        "steps": "54",
+        "cost": "$0.85259045",
+        "status_description": "PASSED"
+    },
+    "LemmyNet__jerboa-pr_809": {
+        "instance_id": "LemmyNet__jerboa-pr_809",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 35 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1771,
+            "prompt_tokens": 241954,
+            "total_tokens": 247885
+        },
+        "latency_details": {
+            "query_latency_seconds": 290.9468368009984,
+            "processing_latency_seconds": 110.30009955999776,
+            "total_latency_seconds": 401.5291220729996
+        },
+        "steps": "23",
+        "cost": "$0.23474840000000002",
+        "status_description": "PASSED"
+    },
+    "LemmyNet__jerboa-pr_868": {
+        "instance_id": "LemmyNet__jerboa-pr_868",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 34 pass_to_pass tests and 2 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 2858,
+            "prompt_tokens": 116599,
+            "total_tokens": 122888
+        },
+        "latency_details": {
+            "query_latency_seconds": 301.3233021479973,
+            "processing_latency_seconds": 201.03197193201413,
+            "total_latency_seconds": 502.5481987819985
+        },
+        "steps": "17",
+        "cost": "$0.11140725",
+        "status_description": "PASSED"
+    },
+    "LemmyNet__jerboa-pr_894": {
+        "instance_id": "LemmyNet__jerboa-pr_894",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 34 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1961,
+            "prompt_tokens": 47105,
+            "total_tokens": 51462
+        },
+        "latency_details": {
+            "query_latency_seconds": 94.07028499300213,
+            "processing_latency_seconds": 124.3838021570009,
+            "total_latency_seconds": 218.69036102099926
+        },
+        "steps": "9",
+        "cost": "$0.04759775",
+        "status_description": "PASSED"
+    },
+    "LemmyNet__jerboa-pr_941": {
+        "instance_id": "LemmyNet__jerboa-pr_941",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 34 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1578,
+            "prompt_tokens": 112162,
+            "total_tokens": 118963
+        },
+        "latency_details": {
+            "query_latency_seconds": 190.77815223799917,
+            "processing_latency_seconds": 136.95089546300733,
+            "total_latency_seconds": 328.1061638430001
+        },
+        "steps": "14",
+        "cost": "$0.10445300000000002",
+        "status_description": "PASSED"
+    },
+    "LemmyNet__jerboa-pr_946": {
+        "instance_id": "LemmyNet__jerboa-pr_946",
+        "score": 0.0,
+        "status": "AGENT_FAILED_TEST",
+        "diagnostics": "Verifying 34 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nMust Pass test failed: 'testDebugUnitTest#Test testSensitiveDataIsNotLogged(com.jerboa.LoggingRedactionTest)'\nTest attempt 1: AGENT_FAILED_TEST\nRunning test attempt: 2\nMust Pass test failed: 'testDebugUnitTest#Test testSensitiveDataIsNotLogged(com.jerboa.LoggingRedactionTest)'\nTest attempt 2: AGENT_FAILED_TEST\nRunning test attempt: 3\nMust Pass test failed: 'testDebugUnitTest#Test testSensitiveDataIsNotLogged(com.jerboa.LoggingRedactionTest)'\nTest attempt 3: AGENT_FAILED_TEST",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 2257,
+            "prompt_tokens": 284822,
+            "total_tokens": 307322
+        },
+        "latency_details": {
+            "query_latency_seconds": 529.288164941001,
+            "processing_latency_seconds": 96.203337275987,
+            "total_latency_seconds": 625.8110047180016
+        },
+        "steps": "17",
+        "cost": "$0.2819767000000001",
+        "status_description": "Agent created a patch that fails the tests"
+    },
+    "LemmyNet__jerboa-pr_947": {
+        "instance_id": "LemmyNet__jerboa-pr_947",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 34 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1381,
+            "prompt_tokens": 109529,
+            "total_tokens": 117258
+        },
+        "latency_details": {
+            "query_latency_seconds": 250.38722570699974,
+            "processing_latency_seconds": 130.20192869500897,
+            "total_latency_seconds": 380.9717690330035
+        },
+        "steps": "15",
+        "cost": "$0.10630415000000001",
+        "status_description": "PASSED"
+    },
+    "LemmyNet__jerboa-pr_985": {
+        "instance_id": "LemmyNet__jerboa-pr_985",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 36 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1353,
+            "prompt_tokens": 353497,
+            "total_tokens": 360053
+        },
+        "latency_details": {
+            "query_latency_seconds": 238.32684653699835,
+            "processing_latency_seconds": 100.1481279879954,
+            "total_latency_seconds": 338.806062716998
+        },
+        "steps": "18",
+        "cost": "$0.25061325",
+        "status_description": "PASSED"
+    },
+    "MohamedRejeb__compose-rich-editor-pr_357": {
+        "instance_id": "MohamedRejeb__compose-rich-editor-pr_357",
+        "score": 0.0,
+        "status": "AGENT_FAILED_TEST",
+        "diagnostics": "Verifying 73 pass_to_pass tests and 2 fail_to_pass tests.\nRunning test attempt: 1\nMust Pass test failed: 'testDebugUnitTest#Test testBrEncodeDecode(com.mohamedrejeb.richeditor.parser.html.RichTextStateHtmlParserTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testBrEncodeDecode2(com.mohamedrejeb.richeditor.parser.html.RichTextStateHtmlParserTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testHtmlWithBrAndImage(com.mohamedrejeb.richeditor.parser.html.RichTextStateHtmlParserTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testParsingSimpleHtmlWithBrBackAndForth(com.mohamedrejeb.richeditor.parser.html.RichTextStateHtmlParserTest)'\nTest attempt 1: AGENT_FAILED_TEST\nRunning test attempt: 2\nMust Pass test failed: 'testDebugUnitTest#Test testBrEncodeDecode(com.mohamedrejeb.richeditor.parser.html.RichTextStateHtmlParserTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testBrEncodeDecode2(com.mohamedrejeb.richeditor.parser.html.RichTextStateHtmlParserTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testHtmlWithBrAndImage(com.mohamedrejeb.richeditor.parser.html.RichTextStateHtmlParserTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testParsingSimpleHtmlWithBrBackAndForth(com.mohamedrejeb.richeditor.parser.html.RichTextStateHtmlParserTest)'\nTest attempt 2: AGENT_FAILED_TEST\nRunning test attempt: 3\nMust Pass test failed: 'testDebugUnitTest#Test testBrEncodeDecode(com.mohamedrejeb.richeditor.parser.html.RichTextStateHtmlParserTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testBrEncodeDecode2(com.mohamedrejeb.richeditor.parser.html.RichTextStateHtmlParserTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testHtmlWithBrAndImage(com.mohamedrejeb.richeditor.parser.html.RichTextStateHtmlParserTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testParsingSimpleHtmlWithBrBackAndForth(com.mohamedrejeb.richeditor.parser.html.RichTextStateHtmlParserTest)'\nTest attempt 3: AGENT_FAILED_TEST",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 3961,
+            "prompt_tokens": 407038,
+            "total_tokens": 426143
+        },
+        "latency_details": {
+            "query_latency_seconds": 578.9183438420005,
+            "processing_latency_seconds": 192.84648876000574,
+            "total_latency_seconds": 772.062856671997
+        },
+        "steps": "24",
+        "cost": "$0.4091904000000001",
+        "status_description": "Agent created a patch that fails the tests"
+    },
+    "MohamedRejeb__compose-rich-editor-pr_363": {
+        "instance_id": "MohamedRejeb__compose-rich-editor-pr_363",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 77 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 3472,
+            "prompt_tokens": 1204972,
+            "total_tokens": 1233685
+        },
+        "latency_details": {
+            "query_latency_seconds": 673.0550411279983,
+            "processing_latency_seconds": 90.02585722100412,
+            "total_latency_seconds": 764.5004265169991
+        },
+        "steps": "51",
+        "cost": "$0.8036519",
+        "status_description": "PASSED"
+    },
+    "MohamedRejeb__compose-rich-editor-pr_367": {
+        "instance_id": "MohamedRejeb__compose-rich-editor-pr_367",
+        "score": 0.0,
+        "status": "AGENT_FAILED_TEST",
+        "diagnostics": "Verifying 86 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nMust Pass test failed: 'testDebugUnitTest#Test testBold(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testBoldWithItalic(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testBoldWithNestedItalic(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testEncodeMarkdownWithImage(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testEncodeMarkdownWithSpacesInsideStyling(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testLineThrough(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nTest attempt 1: AGENT_FAILED_TEST\nRunning test attempt: 2\nMust Pass test failed: 'testDebugUnitTest#Test testBold(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testBoldWithItalic(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testBoldWithNestedItalic(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testEncodeMarkdownWithImage(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testEncodeMarkdownWithSpacesInsideStyling(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testLineThrough(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nTest attempt 2: AGENT_FAILED_TEST\nRunning test attempt: 3\nMust Pass test failed: 'testDebugUnitTest#Test testBold(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testBoldWithItalic(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testBoldWithNestedItalic(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testEncodeMarkdownWithImage(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testEncodeMarkdownWithSpacesInsideStyling(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testLineThrough(com.mohamedrejeb.richeditor.parser.markdown.RichTextStateMarkdownParserEncodeTest)'\nTest attempt 3: AGENT_FAILED_TEST",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 2029,
+            "prompt_tokens": 651446,
+            "total_tokens": 677724
+        },
+        "latency_details": {
+            "query_latency_seconds": 645.8454296440068,
+            "processing_latency_seconds": 92.63842717398802,
+            "total_latency_seconds": 738.736972343002
+        },
+        "steps": "28",
+        "cost": "$0.5658424999999999",
+        "status_description": "Agent created a patch that fails the tests"
+    },
+    "MohamedRejeb__compose-rich-editor-pr_379": {
+        "instance_id": "MohamedRejeb__compose-rich-editor-pr_379",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 94 pass_to_pass tests and 2 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 2409,
+            "prompt_tokens": 232425,
+            "total_tokens": 250400
+        },
+        "latency_details": {
+            "query_latency_seconds": 443.32960834699406,
+            "processing_latency_seconds": 143.93518107400087,
+            "total_latency_seconds": 587.6238766969982
+        },
+        "steps": "19",
+        "cost": "$0.28587515",
+        "status_description": "PASSED"
+    },
+    "MohamedRejeb__compose-rich-editor-pr_403": {
+        "instance_id": "MohamedRejeb__compose-rich-editor-pr_403",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 106 pass_to_pass tests and 2 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 6667,
+            "prompt_tokens": 1795059,
+            "total_tokens": 1829449
+        },
+        "latency_details": {
+            "query_latency_seconds": 1071.1702634199828,
+            "processing_latency_seconds": 138.67005973797131,
+            "total_latency_seconds": 1211.1979949069973
+        },
+        "steps": "68",
+        "cost": "$1.2727427500000004",
+        "status_description": "PASSED"
+    },
+    "MohamedRejeb__compose-rich-editor-pr_523": {
+        "instance_id": "MohamedRejeb__compose-rich-editor-pr_523",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 186 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 3700,
+            "prompt_tokens": 521809,
+            "total_tokens": 545112
+        },
+        "latency_details": {
+            "query_latency_seconds": 576.3652107429953,
+            "processing_latency_seconds": 129.4554060180053,
+            "total_latency_seconds": 706.268923787
+        },
+        "steps": "32",
+        "cost": "$0.55871395",
+        "status_description": "PASSED"
+    },
+    "airbnb__lottie-android-pr_2427": {
+        "instance_id": "airbnb__lottie-android-pr_2427",
+        "score": 0.0,
+        "status": "AGENT_FAILED_TEST",
+        "diagnostics": "Verifying 207 pass_to_pass tests and 5 fail_to_pass tests.\nRunning test attempt: 1\nMust Pass test failed: 'testDebugUnitTest#Test testLerpWithOutOfBoundsNegativeProgress(com.airbnb.lottie.model.content.GradientColorTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testLerpWithOutOfBoundsPositiveProgress(com.airbnb.lottie.model.content.GradientColorTest)'\nTest attempt 1: AGENT_FAILED_TEST\nRunning test attempt: 2\nMust Pass test failed: 'testDebugUnitTest#Test testLerpWithOutOfBoundsNegativeProgress(com.airbnb.lottie.model.content.GradientColorTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testLerpWithOutOfBoundsPositiveProgress(com.airbnb.lottie.model.content.GradientColorTest)'\nTest attempt 2: AGENT_FAILED_TEST\nRunning test attempt: 3\nMust Pass test failed: 'testDebugUnitTest#Test testLerpWithOutOfBoundsNegativeProgress(com.airbnb.lottie.model.content.GradientColorTest)'\nMust Pass test failed: 'testDebugUnitTest#Test testLerpWithOutOfBoundsPositiveProgress(com.airbnb.lottie.model.content.GradientColorTest)'\nTest attempt 3: AGENT_FAILED_TEST",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 2686,
+            "prompt_tokens": 216588,
+            "total_tokens": 228908
+        },
+        "latency_details": {
+            "query_latency_seconds": 271.436715222997,
+            "processing_latency_seconds": 56.58548011300445,
+            "total_latency_seconds": 329.987894119
+        },
+        "steps": "20",
+        "cost": "$0.23352860000000003",
+        "status_description": "Agent created a patch that fails the tests"
+    },
+    "android__nowinandroid-pr_553": {
+        "instance_id": "android__nowinandroid-pr_553",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 116 pass_to_pass tests and 2 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1109,
+            "prompt_tokens": 89188,
+            "total_tokens": 93583
+        },
+        "latency_details": {
+            "query_latency_seconds": 110.6698207820009,
+            "processing_latency_seconds": 216.3545722289964,
+            "total_latency_seconds": 330.4622364390016
+        },
+        "steps": "13",
+        "cost": "$0.09176210000000001",
+        "status_description": "PASSED"
+    }
+}

@@ -1,0 +1,68 @@
+diff --git a/sentry-android-core/src/main/java/io/sentry/android/core/internal/util/SentryFrameMetricsCollector.java b/sentry-android-core/src/main/java/io/sentry/android/core/internal/util/SentryFrameMetricsCollector.java
+index fed9dd5b2..2666eb44f 100644
+--- a/sentry-android-core/src/main/java/io/sentry/android/core/internal/util/SentryFrameMetricsCollector.java
++++ b/sentry-android-core/src/main/java/io/sentry/android/core/internal/util/SentryFrameMetricsCollector.java
+@@ -45,6 +45,7 @@ public final class SentryFrameMetricsCollector implements Application.ActivityLi
+       new ConcurrentHashMap<>();
+   private boolean isAvailable = false;
+   private final WindowFrameMetricsManager windowFrameMetricsManager;
++  private final Object lock = new Object();
+ 
+   private @Nullable Window.OnFrameMetricsAvailableListener frameMetricsAvailableListener;
+   private @Nullable Choreographer choreographer;
+@@ -282,16 +283,18 @@ public final class SentryFrameMetricsCollector implements Application.ActivityLi
+ 
+   @SuppressLint("NewApi")
+   private void stopTrackingWindow(final @NotNull Window window) {
+-    if (trackedWindows.contains(window)) {
+-      if (buildInfoProvider.getSdkInfoVersion() >= Build.VERSION_CODES.N) {
+-        try {
+-          windowFrameMetricsManager.removeOnFrameMetricsAvailableListener(
+-              window, frameMetricsAvailableListener);
+-        } catch (Exception e) {
+-          logger.log(SentryLevel.ERROR, "Failed to remove frameMetricsAvailableListener", e);
++    synchronized (lock) {
++      if (trackedWindows.contains(window)) {
++        if (buildInfoProvider.getSdkInfoVersion() >= Build.VERSION_CODES.N) {
++          try {
++            windowFrameMetricsManager.removeOnFrameMetricsAvailableListener(
++                window, frameMetricsAvailableListener);
++          } catch (Exception e) {
++            logger.log(SentryLevel.ERROR, "Failed to remove frameMetricsAvailableListener", e);
++          }
+         }
++        trackedWindows.remove(window);
+       }
+-      trackedWindows.remove(window);
+     }
+   }
+ 
+@@ -305,17 +308,19 @@ public final class SentryFrameMetricsCollector implements Application.ActivityLi
+ 
+   @SuppressLint("NewApi")
+   private void trackCurrentWindow() {
+-    Window window = currentWindow != null ? currentWindow.get() : null;
+-    if (window == null || !isAvailable) {
+-      return;
+-    }
++    synchronized (lock) {
++      Window window = currentWindow != null ? currentWindow.get() : null;
++      if (window == null || !isAvailable) {
++        return;
++      }
+ 
+-    if (!trackedWindows.contains(window) && !listenerMap.isEmpty()) {
++      if (!trackedWindows.contains(window) && !listenerMap.isEmpty()) {
+ 
+-      if (buildInfoProvider.getSdkInfoVersion() >= Build.VERSION_CODES.N && handler != null) {
+-        trackedWindows.add(window);
+-        windowFrameMetricsManager.addOnFrameMetricsAvailableListener(
+-            window, frameMetricsAvailableListener, handler);
++        if (buildInfoProvider.getSdkInfoVersion() >= Build.VERSION_CODES.N && handler != null) {
++          trackedWindows.add(window);
++          windowFrameMetricsManager.addOnFrameMetricsAvailableListener(
++              window, frameMetricsAvailableListener, handler);
++        }
+       }
+     }
+   }

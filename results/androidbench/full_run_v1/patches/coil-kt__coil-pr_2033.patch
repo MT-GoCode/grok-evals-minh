@@ -1,0 +1,104 @@
+diff --git a/coil-core/src/commonMain/kotlin/coil3/Uri.common.kt b/coil-core/src/commonMain/kotlin/coil3/Uri.common.kt
+index df8290ac..9f77fd96 100644
+--- a/coil-core/src/commonMain/kotlin/coil3/Uri.common.kt
++++ b/coil-core/src/commonMain/kotlin/coil3/Uri.common.kt
+@@ -60,8 +60,8 @@ private fun parseUri(rawData: String): Uri {
+     while (index < data.length) {
+         when (data[index]) {
+             ':' -> {
+-                if (pathStartIndex == -1 &&
+-                    authorityStartIndex == -1 &&
++                if (authorityStartIndex == -1 &&
++                    pathStartIndex == -1 &&
+                     index + 2 < data.length &&
+                     data[index + 1] == '/' &&
+                     data[index + 2] == '/') {
+@@ -71,16 +71,18 @@ private fun parseUri(rawData: String): Uri {
+             }
+             '/' -> {
+                 if (pathStartIndex == -1) {
+-                    pathStartIndex = index
++                    if (authorityStartIndex == -1 || index >= authorityStartIndex) {
++                        pathStartIndex = index
++                    }
+                 }
+             }
+             '?' -> {
+-                if (pathStartIndex != -1 && queryStartIndex == -1) {
++                if (queryStartIndex == -1 && (pathStartIndex != -1 || authorityStartIndex != -1)) {
+                     queryStartIndex = index + 1
+                 }
+             }
+             '#' -> {
+-                if (pathStartIndex != -1 && fragmentStartIndex == -1) {
++                if (fragmentStartIndex == -1 && (pathStartIndex != -1 || authorityStartIndex != -1)) {
+                     fragmentStartIndex = index + 1
+                 }
+             }
+@@ -103,24 +105,33 @@ private fun parseUri(rawData: String): Uri {
+     if (authorityStartIndex != -1) {
+         scheme = data.substring(0, authorityStartIndex - 3)
+ 
+-        if (pathStartIndex != -1) {
+-            authority = data.substring(authorityStartIndex, pathStartIndex)
+-        }
++        val authorityEndIndex = minOf(
++            if (pathStartIndex != -1) pathStartIndex else Int.MAX_VALUE,
++            if (queryStartIndex != -1) queryStartIndex - 1 else Int.MAX_VALUE,
++            if (fragmentStartIndex != -1) fragmentStartIndex - 1 else Int.MAX_VALUE,
++            data.length,
++        )
++        authority = data.substring(authorityStartIndex, authorityEndIndex)
+     }
+ 
+-    val queryEndIndex = minOf(
+-        if (fragmentStartIndex == -1) Int.MAX_VALUE else fragmentStartIndex - 1,
+-        data.length,
+-    )
+     val pathEndIndex = minOf(
+-        if (queryStartIndex == -1) Int.MAX_VALUE else queryStartIndex - 1,
+-        queryEndIndex,
++        if (queryStartIndex != -1) queryStartIndex - 1 else Int.MAX_VALUE,
++        if (fragmentStartIndex != -1) fragmentStartIndex - 1 else Int.MAX_VALUE,
++        data.length,
+     )
+-
+     if (pathStartIndex != -1) {
+-        path = data.substring(pathStartIndex, pathEndIndex)
++        if (pathStartIndex <= pathEndIndex) {
++            path = data.substring(pathStartIndex, pathEndIndex)
++        }
++    } else if (authorityStartIndex != -1) {
++        path = ""
+     }
+-    if (queryStartIndex != -1) {
++
++    val queryEndIndex = minOf(
++        if (fragmentStartIndex != -1) fragmentStartIndex - 1 else Int.MAX_VALUE,
++        data.length,
++    )
++    if (queryStartIndex != -1 && queryStartIndex <= queryEndIndex) {
+         query = data.substring(queryStartIndex, queryEndIndex)
+     }
+     if (fragmentStartIndex != -1) {
+@@ -138,8 +149,18 @@ private fun String.percentDecode(): String {
+     while (index < length) {
+         if (get(index) == '%' && index + 2 < length) {
+             val hex = substring(index + 1, index + 3)
+-            bytes[size] = hex.toInt(16).toByte()
+-            index += 3
++            val value = try {
++                hex.toInt(16)
++            } catch (e: NumberFormatException) {
++                -1
++            }
++            if (value != -1) {
++                bytes[size] = value.toByte()
++                index += 3
++            } else {
++                bytes[size] = '%'.code.toByte()
++                index++
++            }
+         } else {
+             bytes[size] = get(index).code.toByte()
+             index++

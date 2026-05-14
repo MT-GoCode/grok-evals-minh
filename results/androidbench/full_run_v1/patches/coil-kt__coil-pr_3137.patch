@@ -1,0 +1,14 @@
+diff --git a/coil-network-core/src/commonMain/kotlin/coil3/network/NetworkFetcher.kt b/coil-network-core/src/commonMain/kotlin/coil3/network/NetworkFetcher.kt
+index e05dac67..d2041595 100644
+--- a/coil-network-core/src/commonMain/kotlin/coil3/network/NetworkFetcher.kt
++++ b/coil-network-core/src/commonMain/kotlin/coil3/network/NetworkFetcher.kt
+@@ -199,9 +199,6 @@ class NetworkFetcher(
+         }
+ 
+         return networkClient.value.executeRequest(request) { response ->
+-            if (response.code !in 200 until 300 && response.code != HTTP_RESPONSE_NOT_MODIFIED) {
+-                throw HttpException(response)
+-            }
+             block(response)
+         }
+     }

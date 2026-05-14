@@ -1,0 +1,46 @@
+diff --git a/feature/floor-map/src/main/java/io/github/droidkaigi/confsched2023/floormap/section/FloorMap.kt b/feature/floor-map/src/main/java/io/github/droidkaigi/confsched2023/floormap/section/FloorMap.kt
+index cfbc4e7a..f4e5c96f 100644
+--- a/feature/floor-map/src/main/java/io/github/droidkaigi/confsched2023/floormap/section/FloorMap.kt
++++ b/feature/floor-map/src/main/java/io/github/droidkaigi/confsched2023/floormap/section/FloorMap.kt
+@@ -2,10 +2,14 @@ package io.github.droidkaigi.confsched2023.floormap.section
+ 
+ import androidx.annotation.DrawableRes
+ import androidx.compose.foundation.Image
++import androidx.compose.foundation.layout.Box
+ import androidx.compose.foundation.layout.Column
+ import androidx.compose.foundation.layout.Spacer
+ import androidx.compose.foundation.layout.fillMaxWidth
+ import androidx.compose.foundation.layout.height
++import androidx.compose.foundation.layout.heightIn
++import androidx.compose.foundation.rememberScrollState
++import androidx.compose.foundation.verticalScroll
+ import androidx.compose.material3.MaterialTheme
+ import androidx.compose.material3.Surface
+ import androidx.compose.material3.Text
+@@ -47,12 +51,20 @@ fun FloorMap(
+             color = MaterialTheme.colorScheme.primary,
+         )
+         Spacer(modifier = Modifier.height(8.dp))
+-        Image(
+-            painter = painterResource(id = uiState.floorMapResId),
+-            contentDescription = "",
+-            contentScale = ContentScale.FillWidth,
+-            modifier = Modifier.fillMaxWidth(),
+-        )
++        val scrollState = rememberScrollState()
++        Box(
++            modifier = Modifier
++                .fillMaxWidth()
++                .heightIn(max = 400.dp)
++                .verticalScroll(scrollState),
++        ) {
++            Image(
++                painter = painterResource(id = uiState.floorMapResId),
++                contentDescription = "",
++                contentScale = ContentScale.FillWidth,
++                modifier = Modifier.fillMaxWidth(),
++            )
++        }
+     }
+ }
+ 

@@ -1,0 +1,44 @@
+diff --git a/app/src/main/java/com/jerboa/ui/components/login/Login.kt b/app/src/main/java/com/jerboa/ui/components/login/Login.kt
+index cdd781e..46882a1 100644
+--- a/app/src/main/java/com/jerboa/ui/components/login/Login.kt
++++ b/app/src/main/java/com/jerboa/ui/components/login/Login.kt
+@@ -102,6 +102,7 @@ fun LoginForm(
+     var instance by rememberSaveable { mutableStateOf("") }
+     var username by rememberSaveable { mutableStateOf("") }
+     var password by rememberSaveable { mutableStateOf("") }
++    var totp2faToken by rememberSaveable { mutableStateOf("") }
+     val instanceOptions = DEFAULT_LEMMY_INSTANCES
+     var expanded by remember { mutableStateOf(false) }
+     var wasAutofilled by remember { mutableStateOf(false) }
+@@ -112,6 +113,7 @@ fun LoginForm(
+     val form = Login(
+         username_or_email = username.trim(),
+         password = password.take(60),
++        totp_2fa_token = if (totp2faToken.isNotBlank()) totp2faToken.trim() else null,
+     )
+ 
+     Column(
+@@ -182,6 +184,11 @@ fun LoginForm(
+             password = password,
+             onValueChange = { password = it },
+         )
++        MyTextField(
++            label = stringResource(R.string.login_2fa_token),
++            text = totp2faToken,
++            onValueChange = { totp2faToken = it },
++        )
+         Button(
+             enabled = isValid && !loading,
+             onClick = { onClickLogin(form, instance) },
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+index 63cc08d..1326d4c 100644
+--- a/app/src/main/res/values/strings.xml
++++ b/app/src/main/res/values/strings.xml
+@@ -182,6 +182,7 @@
+     <string name="login_instance_placeholder">ex: lemmy.ml</string>
+     <string name="login_login">Login</string>
+     <string name="login_password">Password</string>
++    <string name="login_2fa_token">Enter 2FA Token if enabled</string>
+     <string name="login_view_model_incorrect_login">Incorrect Login</string>
+     <string name="login_view_model_is_not_a_lemmy_instance">%1$s is not a Lemmy Instance</string>
+     <string name="look_and_feel_activity_show_content_for_collapsed_comments">Show content for collapsed comments</string>

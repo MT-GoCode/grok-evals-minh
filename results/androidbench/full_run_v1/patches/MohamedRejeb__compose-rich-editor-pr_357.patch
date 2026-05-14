@@ -1,0 +1,32 @@
+diff --git a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/html/RichTextStateHtmlParser.kt b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/html/RichTextStateHtmlParser.kt
+index 6e08923..41fb583 100644
+--- a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/html/RichTextStateHtmlParser.kt
++++ b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/html/RichTextStateHtmlParser.kt
+@@ -159,13 +159,21 @@ internal object RichTextStateHtmlParser : RichTextStateParser<String> {
+                     // name == "br"
+                     stringBuilder.append(' ')
+ 
++                    val currentLast = richParagraphList.lastOrNull()
++                    val lastIndexBefore = richParagraphList.lastIndex
++                    val isAlreadyLineBreak = lastIndexBefore >= 0 && lastIndexBefore in lineBreakParagraphIndexSet
+                     val newParagraph =
+-                        if (richParagraphList.isEmpty())
+-                            RichParagraph()
+-                        else
+-                            RichParagraph(paragraphStyle = richParagraphList.last().paragraphStyle)
+-
+-                    richParagraphList.add(newParagraph)
++                        if (currentLast == null || !currentLast.isBlank() || isAlreadyLineBreak) {
++                            val np =
++                                if (richParagraphList.isEmpty())
++                                    RichParagraph()
++                                else
++                                    RichParagraph(paragraphStyle = richParagraphList.last().paragraphStyle)
++                            richParagraphList.add(np)
++                            np
++                        } else {
++                            currentLast
++                        }
+ 
+                     if (richParagraphList.lastIndex > 0)
+                         lineBreakParagraphIndexSet.add(richParagraphList.lastIndex - 1)

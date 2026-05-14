@@ -1,0 +1,12 @@
+diff --git a/appyx-navigation/common/src/commonMain/kotlin/com/bumble/appyx/navigation/node/Node.kt b/appyx-navigation/common/src/commonMain/kotlin/com/bumble/appyx/navigation/node/Node.kt
+index 5d1c605ae..87972d023 100644
+--- a/appyx-navigation/common/src/commonMain/kotlin/com/bumble/appyx/navigation/node/Node.kt
++++ b/appyx-navigation/common/src/commonMain/kotlin/com/bumble/appyx/navigation/node/Node.kt
+@@ -307,6 +307,7 @@ abstract class Node<NavTarget : Any>(
+         plugins
+             .filterIsInstance<SavesInstanceState>()
+             .forEach { it.saveInstanceState(writer) }
++        appyxComponent.saveInstanceState(writer)
+         return writer.savedState
+     }
+ 

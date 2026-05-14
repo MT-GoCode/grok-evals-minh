@@ -1,0 +1,36 @@
+diff --git a/pager/src/main/java/com/google/accompanist/pager/Pager.kt b/pager/src/main/java/com/google/accompanist/pager/Pager.kt
+index f3734cd..4097412 100644
+--- a/pager/src/main/java/com/google/accompanist/pager/Pager.kt
++++ b/pager/src/main/java/com/google/accompanist/pager/Pager.kt
+@@ -255,6 +255,18 @@ internal fun Pager(
+             .collect { state.onScrollFinished() }
+     }
+ 
++    // When the layout info changes for any reason (e.g. dataset re-order
++    // with stable keys), update the currentPage to the new visible page
++    // index if we are not currently scrolling.
++    LaunchedEffect(state) {
++        snapshotFlow { state.currentLayoutPageInfo?.index }
++            .collect { index ->
++                if (index != null && !state.isScrollInProgress) {
++                    state.onScrollFinished()
++                }
++            }
++    }
++
+     val pagerScope = remember(state) { PagerScopeImpl(state) }
+ 
+     // We only consume nested flings in the main-axis, allowing cross-axis flings to propagate
+diff --git a/pager/src/main/java/com/google/accompanist/pager/PagerState.kt b/pager/src/main/java/com/google/accompanist/pager/PagerState.kt
+index 30a6f8d..a31e8cc 100644
+--- a/pager/src/main/java/com/google/accompanist/pager/PagerState.kt
++++ b/pager/src/main/java/com/google/accompanist/pager/PagerState.kt
+@@ -78,7 +78,7 @@ class PagerState(
+ 
+     private var _currentPage by mutableStateOf(currentPage)
+ 
+-    private val currentLayoutPageInfo: LazyListItemInfo?
++    internal val currentLayoutPageInfo: LazyListItemInfo?
+         get() = lazyListState.layoutInfo.visibleItemsInfo.lastOrNull { it.offset <= 0 }
+ 
+     private val currentLayoutPageOffset: Float

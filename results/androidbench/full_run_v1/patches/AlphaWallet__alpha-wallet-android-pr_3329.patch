@@ -1,0 +1,44 @@
+diff --git a/app/src/main/java/com/alphawallet/app/service/DeepLinkService.java b/app/src/main/java/com/alphawallet/app/service/DeepLinkService.java
+index 694a0558b..fe8ff6229 100644
+--- a/app/src/main/java/com/alphawallet/app/service/DeepLinkService.java
++++ b/app/src/main/java/com/alphawallet/app/service/DeepLinkService.java
+@@ -5,6 +5,7 @@ import static com.alphawallet.app.entity.WalletPage.WALLET;
+ import static com.alphawallet.app.ui.HomeActivity.AW_MAGICLINK_DIRECT;
+ 
+ import android.content.Intent;
++import android.net.Uri;
+ import android.text.TextUtils;
+ 
+ import com.alphawallet.app.analytics.Analytics;
+@@ -36,6 +37,31 @@ public class DeepLinkService
+ 
+         importData = Utils.universalURLDecode(importData);
+ 
++        // Handle awallet://openURL?q=<Payload> (and similar https://aw.app/openURL?q=) by extracting the inner payload
++        // This allows any supported deep link type to be provided in the openURL wrapper format
++        if (importData.contains("openURL?q="))
++        {
++            try
++            {
++                Uri uri = Uri.parse(importData);
++                String qParam = uri.getQueryParameter("q");
++                if (!TextUtils.isEmpty(qParam))
++                {
++                    String host = uri.getHost();
++                    String path = uri.getPath();
++                    if ((host != null && host.equals("openURL")) ||
++                        (path != null && path.endsWith("openURL")))
++                    {
++                        importData = qParam;
++                    }
++                }
++            }
++            catch (Exception e)
++            {
++                // ignore parsing error, proceed with original
++            }
++        }
++
+         if (checkSmartPass(importData))
+         {
+             return new DeepLinkRequest(DeepLinkType.SMARTPASS, importData);

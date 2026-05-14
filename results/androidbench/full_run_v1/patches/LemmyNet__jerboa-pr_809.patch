@@ -1,0 +1,44 @@
+diff --git a/app/src/main/java/com/jerboa/ui/components/community/CommunityActivity.kt b/app/src/main/java/com/jerboa/ui/components/community/CommunityActivity.kt
+index 1427bd4..5479cec 100644
+--- a/app/src/main/java/com/jerboa/ui/components/community/CommunityActivity.kt
++++ b/app/src/main/java/com/jerboa/ui/components/community/CommunityActivity.kt
+@@ -128,7 +128,7 @@ fun CommunityActivity(
+     val loading = communityViewModel.postsRes == ApiState.Loading || communityViewModel.fetchingMore
+ 
+     val pullRefreshState = rememberPullRefreshState(
+-        refreshing = loading,
++        refreshing = communityViewModel.postsRes == ApiState.Loading,
+         onRefresh = {
+             when (val communityRes = communityViewModel.communityRes) {
+                 is ApiState.Success -> {
+@@ -211,7 +211,7 @@ fun CommunityActivity(
+         },
+         content = { padding ->
+             Box(modifier = Modifier.pullRefresh(pullRefreshState)) {
+-                PullRefreshIndicator(loading, pullRefreshState, Modifier.align(Alignment.TopCenter))
++                PullRefreshIndicator(communityViewModel.postsRes == ApiState.Loading, pullRefreshState, Modifier.align(Alignment.TopCenter))
+                 // Can't be in ApiState.Loading, because of infinite scrolling
+                 if (loading) {
+                     LoadingBar(padding = padding)
+diff --git a/app/src/main/java/com/jerboa/ui/components/home/HomeActivity.kt b/app/src/main/java/com/jerboa/ui/components/home/HomeActivity.kt
+index af9f9a2..d8baf6e 100644
+--- a/app/src/main/java/com/jerboa/ui/components/home/HomeActivity.kt
++++ b/app/src/main/java/com/jerboa/ui/components/home/HomeActivity.kt
+@@ -202,7 +202,7 @@ fun MainPostListingsContent(
+     }
+ 
+     val pullRefreshState = rememberPullRefreshState(
+-        refreshing = loading,
++        refreshing = homeViewModel.postsRes == ApiState.Loading,
+         onRefresh = {
+             homeViewModel.resetPage()
+             homeViewModel.getPosts(
+@@ -217,7 +217,7 @@ fun MainPostListingsContent(
+     )
+ 
+     Box(modifier = Modifier.pullRefresh(pullRefreshState)) {
+-        PullRefreshIndicator(loading, pullRefreshState, Modifier.align(Alignment.TopCenter))
++        PullRefreshIndicator(homeViewModel.postsRes == ApiState.Loading, pullRefreshState, Modifier.align(Alignment.TopCenter))
+         // Can't be in ApiState.Loading, because of infinite scrolling
+         if (loading) {
+             LoadingBar(padding = padding)

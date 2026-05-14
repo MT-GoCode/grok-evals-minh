@@ -1,0 +1,13 @@
+diff --git a/decompose/src/commonMain/kotlin/com/arkivanov/decompose/router/stack/StackNavigatorExt.kt b/decompose/src/commonMain/kotlin/com/arkivanov/decompose/router/stack/StackNavigatorExt.kt
+index 7cbd82f9..4dab21ae 100644
+--- a/decompose/src/commonMain/kotlin/com/arkivanov/decompose/router/stack/StackNavigatorExt.kt
++++ b/decompose/src/commonMain/kotlin/com/arkivanov/decompose/router/stack/StackNavigatorExt.kt
+@@ -96,7 +96,7 @@ inline fun <C : Any> StackNavigator<C>.popWhile(
+     crossinline onComplete: (isSuccess: Boolean) -> Unit,
+ ) {
+     navigate(
+-        transformer = { stack -> stack.dropLastWhile(predicate) },
++        transformer = { stack -> stack.dropLastWhile(predicate).ifEmpty { listOf(stack.last()) } },
+         onComplete = { newStack, oldStack -> onComplete(newStack.size < oldStack.size) },
+     )
+ }

@@ -1,0 +1,33 @@
+diff --git a/decompose/src/commonMain/kotlin/com/arkivanov/decompose/lifecycle/MergedLifecycle.kt b/decompose/src/commonMain/kotlin/com/arkivanov/decompose/lifecycle/MergedLifecycle.kt
+index 3f257e8..1b13d33 100644
+--- a/decompose/src/commonMain/kotlin/com/arkivanov/decompose/lifecycle/MergedLifecycle.kt
++++ b/decompose/src/commonMain/kotlin/com/arkivanov/decompose/lifecycle/MergedLifecycle.kt
+@@ -35,7 +35,7 @@ class MergedLifecycle private constructor(
+     }
+ 
+     private class CallbacksImpl(
+-        private val registry: Lifecycle.Callbacks,
++        private val registry: LifecycleRegistry,
+         private val setState: (Lifecycle.State) -> Unit,
+         private val getOtherState: () -> Lifecycle.State,
+     ) : Lifecycle.Callbacks {
+@@ -60,7 +60,13 @@ class MergedLifecycle private constructor(
+         }
+ 
+         override fun onDestroy() {
+-            onDown(Lifecycle.State.INITIALIZED, registry::onDestroy)
++            if (registry.state == Lifecycle.State.INITIALIZED) {
++                registry.onCreate()
++            }
++            if (registry.state != Lifecycle.State.DESTROYED) {
++                registry.onDestroy()
++            }
++            setState(Lifecycle.State.INITIALIZED)
+         }
+ 
+         private fun onUp(state: Lifecycle.State, call: () -> Unit) {
+@@ -78,4 +84,3 @@ class MergedLifecycle private constructor(
+         }
+     }
+ }
+-

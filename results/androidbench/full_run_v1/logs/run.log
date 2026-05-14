@@ -1,0 +1,440 @@
+2026-05-14 01:40:31,915 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 01:40:31,916 - minisweagent - INFO - ======================================================================
+2026-05-14 01:40:31,917 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 01:40:31,918 - minisweagent - INFO - ======================================================================
+2026-05-14 01:40:31,919 - minisweagent - INFO - Preparing to run 1 instances with 1 workers.
+2026-05-14 01:44:46,853 - minisweagent - INFO - Instance AlphaWallet__alpha-wallet-android-pr_3329 finished successfully.
+2026-05-14 01:44:46,869 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 02:09:59,244 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 02:09:59,245 - minisweagent - INFO - ======================================================================
+2026-05-14 02:09:59,246 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 02:09:59,247 - minisweagent - INFO - ======================================================================
+2026-05-14 02:09:59,249 - minisweagent - INFO - Preparing to run 1 instances with 1 workers.
+2026-05-14 02:11:33,591 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 02:11:33,593 - minisweagent - INFO - ======================================================================
+2026-05-14 02:11:33,593 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 02:11:33,594 - minisweagent - INFO - ======================================================================
+2026-05-14 02:11:33,596 - minisweagent - INFO - Preparing to run 1 instances with 1 workers.
+2026-05-14 02:13:29,356 - minisweagent - INFO - Instance AntennaPod__AntennaPod-pr_6838 finished successfully.
+2026-05-14 02:13:29,371 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 02:13:46,675 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 02:13:46,676 - minisweagent - INFO - ======================================================================
+2026-05-14 02:13:46,677 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 02:13:46,678 - minisweagent - INFO - ======================================================================
+2026-05-14 02:13:46,680 - minisweagent - INFO - Preparing to run 1 instances with 1 workers.
+2026-05-14 02:16:49,850 - minisweagent - INFO - Instance DroidKaigi__conference-app-2023-pr_896 finished successfully.
+2026-05-14 02:16:49,867 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 02:17:07,537 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 02:17:07,538 - minisweagent - INFO - ======================================================================
+2026-05-14 02:17:07,539 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 02:17:07,539 - minisweagent - INFO - ======================================================================
+2026-05-14 02:17:07,541 - minisweagent - INFO - Preparing to run 1 instances with 1 workers.
+2026-05-14 02:30:14,348 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_991 finished successfully.
+2026-05-14 02:30:14,366 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 02:30:34,705 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 02:30:34,707 - minisweagent - INFO - ======================================================================
+2026-05-14 02:30:34,707 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 02:30:34,708 - minisweagent - INFO - ======================================================================
+2026-05-14 02:30:34,710 - minisweagent - INFO - Preparing to run 1 instances with 1 workers.
+2026-05-14 02:42:30,228 - minisweagent - INFO - Instance MohamedRejeb__compose-rich-editor-pr_319 finished successfully.
+2026-05-14 02:42:30,247 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 02:42:47,136 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 02:42:47,137 - minisweagent - INFO - ======================================================================
+2026-05-14 02:42:47,138 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 02:42:47,139 - minisweagent - INFO - ======================================================================
+2026-05-14 02:42:47,140 - minisweagent - INFO - Preparing to run 1 instances with 1 workers.
+2026-05-14 02:46:41,913 - minisweagent - INFO - Instance MohamedRejeb__compose-rich-editor-pr_335 finished successfully.
+2026-05-14 02:46:41,931 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 02:46:59,561 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 02:46:59,563 - minisweagent - INFO - ======================================================================
+2026-05-14 02:46:59,564 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 02:46:59,564 - minisweagent - INFO - ======================================================================
+2026-05-14 02:46:59,566 - minisweagent - INFO - Preparing to run 1 instances with 1 workers.
+2026-05-14 02:50:21,841 - minisweagent - INFO - Instance android_snippets_1 finished successfully.
+2026-05-14 02:50:21,857 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 02:50:39,385 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 02:50:39,387 - minisweagent - INFO - ======================================================================
+2026-05-14 02:50:39,388 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 02:50:39,389 - minisweagent - INFO - ======================================================================
+2026-05-14 02:50:39,390 - minisweagent - INFO - Preparing to run 1 instances with 1 workers.
+2026-05-14 02:57:10,524 - minisweagent - INFO - Instance coil-kt__coil-pr_2669 finished successfully.
+2026-05-14 02:57:10,537 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 02:57:27,936 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 02:57:27,937 - minisweagent - INFO - ======================================================================
+2026-05-14 02:57:27,938 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 02:57:27,939 - minisweagent - INFO - ======================================================================
+2026-05-14 02:57:27,940 - minisweagent - INFO - Preparing to run 1 instances with 1 workers.
+2026-05-14 03:00:08,826 - minisweagent - INFO - Instance thunderbird__thunderbird-android-pr_7103 finished successfully.
+2026-05-14 03:00:08,843 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 03:00:26,220 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 03:00:26,224 - minisweagent - INFO - ======================================================================
+2026-05-14 03:00:26,225 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 03:00:26,226 - minisweagent - INFO - ======================================================================
+2026-05-14 03:00:26,228 - minisweagent - INFO - Preparing to run 1 instances with 1 workers.
+2026-05-14 03:04:46,510 - minisweagent - INFO - Instance thunderbird__thunderbird-android-pr_7190 finished successfully.
+2026-05-14 03:04:46,522 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 03:05:05,763 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 03:05:05,766 - minisweagent - INFO - ======================================================================
+2026-05-14 03:05:05,767 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 03:05:05,767 - minisweagent - INFO - ======================================================================
+2026-05-14 03:05:05,769 - minisweagent - INFO - Preparing to run 1 instances with 1 workers.
+2026-05-14 03:10:10,713 - minisweagent - INFO - Instance thunderbird__thunderbird-android-pr_8020 finished successfully.
+2026-05-14 03:10:10,731 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 06:25:30,829 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 06:25:30,830 - minisweagent - INFO - ======================================================================
+2026-05-14 06:25:30,831 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 06:25:30,832 - minisweagent - INFO - ======================================================================
+2026-05-14 06:25:30,832 - minisweagent - INFO - Skipping instance AlphaWallet__alpha-wallet-android-pr_3329 because patch file out/full_run_v1/patches/AlphaWallet__alpha-wallet-android-pr_3329.patch already exists.
+2026-05-14 06:25:30,833 - minisweagent - INFO - Skipping instance AntennaPod__AntennaPod-pr_6838 because patch file out/full_run_v1/patches/AntennaPod__AntennaPod-pr_6838.patch already exists.
+2026-05-14 06:25:30,834 - minisweagent - INFO - Skipping instance DroidKaigi__conference-app-2023-pr_896 because patch file out/full_run_v1/patches/DroidKaigi__conference-app-2023-pr_896.patch already exists.
+2026-05-14 06:25:30,836 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_991 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_991.patch already exists.
+2026-05-14 06:25:30,837 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_319 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_319.patch already exists.
+2026-05-14 06:25:30,838 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_335 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_335.patch already exists.
+2026-05-14 06:25:30,839 - minisweagent - INFO - Skipping instance android_snippets_1 because patch file out/full_run_v1/patches/android_snippets_1.patch already exists.
+2026-05-14 06:25:30,839 - minisweagent - INFO - Skipping instance coil-kt__coil-pr_2669 because patch file out/full_run_v1/patches/coil-kt__coil-pr_2669.patch already exists.
+2026-05-14 06:25:30,840 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7103 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7103.patch already exists.
+2026-05-14 06:25:30,841 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7190 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7190.patch already exists.
+2026-05-14 06:25:30,842 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_8020 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_8020.patch already exists.
+2026-05-14 06:25:30,843 - minisweagent - INFO - Preparing to run 9 instances with 4 workers.
+2026-05-14 06:27:17,639 - minisweagent - INFO - Instance Automattic__pocket-casts-android-pr_3970 finished successfully.
+2026-05-14 06:28:24,549 - minisweagent - INFO - Instance CatimaLoyalty__Android-pr_1524 finished successfully.
+2026-05-14 06:29:56,699 - minisweagent - INFO - Instance Automattic__pocket-casts-android-pr_1114 finished successfully.
+2026-05-14 06:30:58,668 - minisweagent - INFO - Instance Automattic__pocket-casts-android-pr_757 finished successfully.
+2026-05-14 06:32:58,341 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_1122 finished successfully.
+2026-05-14 06:36:37,796 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_1114 finished successfully.
+2026-05-14 06:38:37,581 - minisweagent - INFO - Instance CatimaLoyalty__Android-pr_1588 finished successfully.
+2026-05-14 06:39:20,517 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_1068 finished successfully.
+2026-05-14 06:46:22,240 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_1198 finished successfully.
+2026-05-14 06:46:22,290 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 06:55:48,240 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 06:55:48,242 - minisweagent - INFO - ======================================================================
+2026-05-14 06:55:48,243 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 06:55:48,243 - minisweagent - INFO - ======================================================================
+2026-05-14 06:55:48,244 - minisweagent - INFO - Skipping instance AlphaWallet__alpha-wallet-android-pr_3329 because patch file out/full_run_v1/patches/AlphaWallet__alpha-wallet-android-pr_3329.patch already exists.
+2026-05-14 06:55:48,245 - minisweagent - INFO - Skipping instance AntennaPod__AntennaPod-pr_6838 because patch file out/full_run_v1/patches/AntennaPod__AntennaPod-pr_6838.patch already exists.
+2026-05-14 06:55:48,246 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_1114 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_1114.patch already exists.
+2026-05-14 06:55:48,247 - minisweagent - INFO - Skipping instance CatimaLoyalty__Android-pr_1524 because patch file out/full_run_v1/patches/CatimaLoyalty__Android-pr_1524.patch already exists.
+2026-05-14 06:55:48,248 - minisweagent - INFO - Skipping instance CatimaLoyalty__Android-pr_1588 because patch file out/full_run_v1/patches/CatimaLoyalty__Android-pr_1588.patch already exists.
+2026-05-14 06:55:48,248 - minisweagent - INFO - Skipping instance DroidKaigi__conference-app-2023-pr_896 because patch file out/full_run_v1/patches/DroidKaigi__conference-app-2023-pr_896.patch already exists.
+2026-05-14 06:55:48,249 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1068 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1068.patch already exists.
+2026-05-14 06:55:48,250 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1114 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1114.patch already exists.
+2026-05-14 06:55:48,251 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1198 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1198.patch already exists.
+2026-05-14 06:55:48,252 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_991 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_991.patch already exists.
+2026-05-14 06:55:48,253 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_319 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_319.patch already exists.
+2026-05-14 06:55:48,254 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_335 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_335.patch already exists.
+2026-05-14 06:55:48,255 - minisweagent - INFO - Skipping instance android_snippets_1 because patch file out/full_run_v1/patches/android_snippets_1.patch already exists.
+2026-05-14 06:55:48,256 - minisweagent - INFO - Skipping instance coil-kt__coil-pr_2669 because patch file out/full_run_v1/patches/coil-kt__coil-pr_2669.patch already exists.
+2026-05-14 06:55:48,256 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7103 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7103.patch already exists.
+2026-05-14 06:55:48,257 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7190 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7190.patch already exists.
+2026-05-14 06:55:48,258 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_8020 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_8020.patch already exists.
+2026-05-14 06:55:48,259 - minisweagent - INFO - Preparing to run 12 instances with 4 workers.
+2026-05-14 06:58:02,556 - minisweagent - INFO - Instance Automattic__pocket-casts-android-pr_757 finished successfully.
+2026-05-14 07:02:33,172 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_809 finished successfully.
+2026-05-14 07:06:13,612 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_894 finished successfully.
+2026-05-14 07:06:19,615 - minisweagent - INFO - Instance Automattic__pocket-casts-android-pr_3970 finished successfully.
+2026-05-14 07:06:27,245 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_868 finished successfully.
+2026-05-14 07:11:45,270 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_941 finished successfully.
+2026-05-14 07:12:52,678 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_947 finished successfully.
+2026-05-14 07:15:32,646 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_946 finished successfully.
+2026-05-14 07:17:25,024 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_985 finished successfully.
+2026-05-14 07:17:33,173 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_1122 finished successfully.
+2026-05-14 07:25:46,032 - minisweagent - INFO - Instance MohamedRejeb__compose-rich-editor-pr_357 finished successfully.
+2026-05-14 07:28:18,257 - minisweagent - INFO - Instance MohamedRejeb__compose-rich-editor-pr_363 finished successfully.
+2026-05-14 07:28:18,697 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 07:43:46,858 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 07:43:46,865 - minisweagent - INFO - ======================================================================
+2026-05-14 07:43:46,866 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 07:43:46,866 - minisweagent - INFO - ======================================================================
+2026-05-14 07:43:46,867 - minisweagent - INFO - Skipping instance AlphaWallet__alpha-wallet-android-pr_3329 because patch file out/full_run_v1/patches/AlphaWallet__alpha-wallet-android-pr_3329.patch already exists.
+2026-05-14 07:43:46,868 - minisweagent - INFO - Skipping instance AntennaPod__AntennaPod-pr_6838 because patch file out/full_run_v1/patches/AntennaPod__AntennaPod-pr_6838.patch already exists.
+2026-05-14 07:43:46,869 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_1114 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_1114.patch already exists.
+2026-05-14 07:43:46,871 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_3970 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_3970.patch already exists.
+2026-05-14 07:43:46,872 - minisweagent - INFO - Skipping instance CatimaLoyalty__Android-pr_1524 because patch file out/full_run_v1/patches/CatimaLoyalty__Android-pr_1524.patch already exists.
+2026-05-14 07:43:46,873 - minisweagent - INFO - Skipping instance CatimaLoyalty__Android-pr_1588 because patch file out/full_run_v1/patches/CatimaLoyalty__Android-pr_1588.patch already exists.
+2026-05-14 07:43:46,874 - minisweagent - INFO - Skipping instance DroidKaigi__conference-app-2023-pr_896 because patch file out/full_run_v1/patches/DroidKaigi__conference-app-2023-pr_896.patch already exists.
+2026-05-14 07:43:46,875 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1068 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1068.patch already exists.
+2026-05-14 07:43:46,876 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1114 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1114.patch already exists.
+2026-05-14 07:43:46,877 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1122 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1122.patch already exists.
+2026-05-14 07:43:46,878 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1198 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1198.patch already exists.
+2026-05-14 07:43:46,879 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_809 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_809.patch already exists.
+2026-05-14 07:43:46,880 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_868 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_868.patch already exists.
+2026-05-14 07:43:46,881 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_894 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_894.patch already exists.
+2026-05-14 07:43:46,882 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_941 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_941.patch already exists.
+2026-05-14 07:43:46,883 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_947 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_947.patch already exists.
+2026-05-14 07:43:46,884 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_985 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_985.patch already exists.
+2026-05-14 07:43:46,885 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_991 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_991.patch already exists.
+2026-05-14 07:43:46,886 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_319 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_319.patch already exists.
+2026-05-14 07:43:46,887 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_335 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_335.patch already exists.
+2026-05-14 07:43:46,888 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_357 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_357.patch already exists.
+2026-05-14 07:43:46,889 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_363 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_363.patch already exists.
+2026-05-14 07:43:46,890 - minisweagent - INFO - Skipping instance android_snippets_1 because patch file out/full_run_v1/patches/android_snippets_1.patch already exists.
+2026-05-14 07:43:46,891 - minisweagent - INFO - Skipping instance coil-kt__coil-pr_2669 because patch file out/full_run_v1/patches/coil-kt__coil-pr_2669.patch already exists.
+2026-05-14 07:43:46,892 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7103 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7103.patch already exists.
+2026-05-14 07:43:46,893 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7190 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7190.patch already exists.
+2026-05-14 07:43:46,894 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_8020 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_8020.patch already exists.
+2026-05-14 07:43:46,895 - minisweagent - INFO - Preparing to run 13 instances with 4 workers.
+2026-05-14 07:50:20,552 - minisweagent - INFO - Instance Automattic__pocket-casts-android-pr_757 finished successfully.
+2026-05-14 07:53:36,638 - minisweagent - INFO - Instance MohamedRejeb__compose-rich-editor-pr_379 finished successfully.
+2026-05-14 07:54:14,757 - minisweagent - INFO - Instance LemmyNet__jerboa-pr_946 finished successfully.
+2026-05-14 07:56:08,007 - minisweagent - INFO - Instance MohamedRejeb__compose-rich-editor-pr_367 finished successfully.
+2026-05-14 08:01:38,746 - minisweagent - INFO - Instance airbnb__lottie-android-pr_2427 finished successfully.
+2026-05-14 08:06:03,337 - minisweagent - INFO - Instance MohamedRejeb__compose-rich-editor-pr_523 finished successfully.
+2026-05-14 08:07:10,465 - minisweagent - INFO - Instance android__nowinandroid-pr_553 finished successfully.
+2026-05-14 08:10:39,721 - minisweagent - INFO - Instance android__nowinandroid-pr_720 finished successfully.
+2026-05-14 08:10:44,215 - minisweagent - INFO - Instance MohamedRejeb__compose-rich-editor-pr_403 finished successfully.
+2026-05-14 08:16:10,350 - minisweagent - INFO - Instance arkivanov__Decompose-pr_388 finished successfully.
+2026-05-14 08:16:45,913 - minisweagent - INFO - Instance MohamedRejeb__compose-rich-editor-pr_445 finished successfully.
+2026-05-14 08:16:51,310 - minisweagent - INFO - Instance arkivanov__Decompose-pr_394 finished successfully.
+2026-05-14 08:17:50,358 - minisweagent - INFO - Instance android_androidify_gradleplugin finished successfully.
+2026-05-14 08:17:50,403 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 08:33:16,418 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 08:33:16,420 - minisweagent - INFO - ======================================================================
+2026-05-14 08:33:16,421 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 08:33:16,422 - minisweagent - INFO - ======================================================================
+2026-05-14 08:33:16,423 - minisweagent - INFO - Skipping instance AlphaWallet__alpha-wallet-android-pr_3329 because patch file out/full_run_v1/patches/AlphaWallet__alpha-wallet-android-pr_3329.patch already exists.
+2026-05-14 08:33:16,424 - minisweagent - INFO - Skipping instance AntennaPod__AntennaPod-pr_6838 because patch file out/full_run_v1/patches/AntennaPod__AntennaPod-pr_6838.patch already exists.
+2026-05-14 08:33:16,425 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_1114 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_1114.patch already exists.
+2026-05-14 08:33:16,426 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_3970 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_3970.patch already exists.
+2026-05-14 08:33:16,427 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_757 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_757.patch already exists.
+2026-05-14 08:33:16,428 - minisweagent - INFO - Skipping instance CatimaLoyalty__Android-pr_1524 because patch file out/full_run_v1/patches/CatimaLoyalty__Android-pr_1524.patch already exists.
+2026-05-14 08:33:16,429 - minisweagent - INFO - Skipping instance CatimaLoyalty__Android-pr_1588 because patch file out/full_run_v1/patches/CatimaLoyalty__Android-pr_1588.patch already exists.
+2026-05-14 08:33:16,430 - minisweagent - INFO - Skipping instance DroidKaigi__conference-app-2023-pr_896 because patch file out/full_run_v1/patches/DroidKaigi__conference-app-2023-pr_896.patch already exists.
+2026-05-14 08:33:16,431 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1068 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1068.patch already exists.
+2026-05-14 08:33:16,432 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1114 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1114.patch already exists.
+2026-05-14 08:33:16,433 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1122 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1122.patch already exists.
+2026-05-14 08:33:16,433 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1198 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1198.patch already exists.
+2026-05-14 08:33:16,434 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_809 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_809.patch already exists.
+2026-05-14 08:33:16,435 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_868 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_868.patch already exists.
+2026-05-14 08:33:16,436 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_894 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_894.patch already exists.
+2026-05-14 08:33:16,437 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_941 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_941.patch already exists.
+2026-05-14 08:33:16,438 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_946 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_946.patch already exists.
+2026-05-14 08:33:16,439 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_947 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_947.patch already exists.
+2026-05-14 08:33:16,440 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_985 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_985.patch already exists.
+2026-05-14 08:33:16,441 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_991 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_991.patch already exists.
+2026-05-14 08:33:16,441 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_319 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_319.patch already exists.
+2026-05-14 08:33:16,442 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_335 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_335.patch already exists.
+2026-05-14 08:33:16,443 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_357 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_357.patch already exists.
+2026-05-14 08:33:16,444 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_363 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_363.patch already exists.
+2026-05-14 08:33:16,446 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_367 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_367.patch already exists.
+2026-05-14 08:33:16,447 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_379 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_379.patch already exists.
+2026-05-14 08:33:16,448 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_403 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_403.patch already exists.
+2026-05-14 08:33:16,449 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_523 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_523.patch already exists.
+2026-05-14 08:33:16,450 - minisweagent - INFO - Skipping instance airbnb__lottie-android-pr_2427 because patch file out/full_run_v1/patches/airbnb__lottie-android-pr_2427.patch already exists.
+2026-05-14 08:33:16,451 - minisweagent - INFO - Skipping instance android__nowinandroid-pr_553 because patch file out/full_run_v1/patches/android__nowinandroid-pr_553.patch already exists.
+2026-05-14 08:33:16,452 - minisweagent - INFO - Skipping instance android_snippets_1 because patch file out/full_run_v1/patches/android_snippets_1.patch already exists.
+2026-05-14 08:33:16,453 - minisweagent - INFO - Skipping instance coil-kt__coil-pr_2669 because patch file out/full_run_v1/patches/coil-kt__coil-pr_2669.patch already exists.
+2026-05-14 08:33:16,454 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7103 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7103.patch already exists.
+2026-05-14 08:33:16,455 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7190 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7190.patch already exists.
+2026-05-14 08:33:16,456 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_8020 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_8020.patch already exists.
+2026-05-14 08:33:16,457 - minisweagent - INFO - Preparing to run 17 instances with 4 workers.
+2026-05-14 08:37:30,465 - minisweagent - INFO - Instance android_androidify_gradleplugin finished successfully.
+2026-05-14 08:37:30,528 - minisweagent - INFO - Instance android__nowinandroid-pr_720 finished successfully.
+2026-05-14 08:37:30,757 - minisweagent - INFO - Instance MohamedRejeb__compose-rich-editor-pr_445 finished successfully.
+2026-05-14 08:37:30,917 - minisweagent - INFO - Instance arkivanov__Decompose-pr_388 finished successfully.
+2026-05-14 19:37:11,052 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 19:37:11,062 - minisweagent - INFO - ======================================================================
+2026-05-14 19:37:11,063 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 19:37:11,064 - minisweagent - INFO - ======================================================================
+2026-05-14 19:37:11,064 - minisweagent - INFO - Preparing to run 4 instances with 4 workers.
+2026-05-14 19:37:54,936 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 19:37:54,938 - minisweagent - INFO - ======================================================================
+2026-05-14 19:37:54,939 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 19:37:54,940 - minisweagent - INFO - ======================================================================
+2026-05-14 19:37:54,941 - minisweagent - INFO - Skipping instance AlphaWallet__alpha-wallet-android-pr_3329 because patch file out/full_run_v1/patches/AlphaWallet__alpha-wallet-android-pr_3329.patch already exists.
+2026-05-14 19:37:54,943 - minisweagent - INFO - Skipping instance AntennaPod__AntennaPod-pr_6838 because patch file out/full_run_v1/patches/AntennaPod__AntennaPod-pr_6838.patch already exists.
+2026-05-14 19:37:54,944 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_1114 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_1114.patch already exists.
+2026-05-14 19:37:54,945 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_3970 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_3970.patch already exists.
+2026-05-14 19:37:54,947 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_757 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_757.patch already exists.
+2026-05-14 19:37:54,948 - minisweagent - INFO - Skipping instance CatimaLoyalty__Android-pr_1524 because patch file out/full_run_v1/patches/CatimaLoyalty__Android-pr_1524.patch already exists.
+2026-05-14 19:37:54,949 - minisweagent - INFO - Skipping instance CatimaLoyalty__Android-pr_1588 because patch file out/full_run_v1/patches/CatimaLoyalty__Android-pr_1588.patch already exists.
+2026-05-14 19:37:54,950 - minisweagent - INFO - Skipping instance DroidKaigi__conference-app-2023-pr_896 because patch file out/full_run_v1/patches/DroidKaigi__conference-app-2023-pr_896.patch already exists.
+2026-05-14 19:37:54,951 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1068 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1068.patch already exists.
+2026-05-14 19:37:54,952 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1114 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1114.patch already exists.
+2026-05-14 19:37:54,953 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1122 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1122.patch already exists.
+2026-05-14 19:37:54,954 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1198 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1198.patch already exists.
+2026-05-14 19:37:54,956 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_809 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_809.patch already exists.
+2026-05-14 19:37:54,957 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_868 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_868.patch already exists.
+2026-05-14 19:37:54,959 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_894 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_894.patch already exists.
+2026-05-14 19:37:54,960 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_941 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_941.patch already exists.
+2026-05-14 19:37:54,961 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_946 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_946.patch already exists.
+2026-05-14 19:37:54,962 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_947 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_947.patch already exists.
+2026-05-14 19:37:54,963 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_985 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_985.patch already exists.
+2026-05-14 19:37:54,964 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_991 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_991.patch already exists.
+2026-05-14 19:37:54,965 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_319 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_319.patch already exists.
+2026-05-14 19:37:54,968 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_335 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_335.patch already exists.
+2026-05-14 19:37:54,970 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_357 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_357.patch already exists.
+2026-05-14 19:37:54,971 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_363 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_363.patch already exists.
+2026-05-14 19:37:54,972 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_367 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_367.patch already exists.
+2026-05-14 19:37:54,973 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_379 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_379.patch already exists.
+2026-05-14 19:37:54,975 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_403 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_403.patch already exists.
+2026-05-14 19:37:54,976 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_523 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_523.patch already exists.
+2026-05-14 19:37:54,977 - minisweagent - INFO - Skipping instance airbnb__lottie-android-pr_2427 because patch file out/full_run_v1/patches/airbnb__lottie-android-pr_2427.patch already exists.
+2026-05-14 19:37:54,978 - minisweagent - INFO - Skipping instance android__nowinandroid-pr_553 because patch file out/full_run_v1/patches/android__nowinandroid-pr_553.patch already exists.
+2026-05-14 19:37:54,980 - minisweagent - INFO - Skipping instance android_snippets_1 because patch file out/full_run_v1/patches/android_snippets_1.patch already exists.
+2026-05-14 19:37:54,981 - minisweagent - INFO - Skipping instance coil-kt__coil-pr_2669 because patch file out/full_run_v1/patches/coil-kt__coil-pr_2669.patch already exists.
+2026-05-14 19:37:54,982 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7103 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7103.patch already exists.
+2026-05-14 19:37:54,984 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7190 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7190.patch already exists.
+2026-05-14 19:37:54,985 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_8020 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_8020.patch already exists.
+2026-05-14 19:37:54,986 - minisweagent - INFO - Preparing to run 21 instances with 4 workers.
+2026-05-14 19:39:05,309 - minisweagent - INFO - Instance android__nowinandroid-pr_720 finished successfully.
+2026-05-14 19:40:58,629 - minisweagent - INFO - Instance arkivanov__Decompose-pr_388 finished successfully.
+2026-05-14 19:44:34,317 - minisweagent - INFO - Instance arkivanov__Decompose-pr_388 finished successfully.
+2026-05-14 19:45:03,286 - minisweagent - INFO - Instance arkivanov__Decompose-pr_646 finished successfully.
+2026-05-14 19:53:39,424 - minisweagent - INFO - Instance MohamedRejeb__compose-rich-editor-pr_445 finished successfully.
+2026-05-14 19:54:09,254 - minisweagent - INFO - Instance android_androidify_gradleplugin finished successfully.
+2026-05-14 19:55:15,161 - minisweagent - INFO - Instance arkivanov__Decompose-pr_394 finished successfully.
+2026-05-14 19:58:00,301 - minisweagent - INFO - Instance android__nowinandroid-pr_720 finished successfully.
+2026-05-14 19:58:36,969 - minisweagent - INFO - Instance badoo__Reaktive-pr_735 finished successfully.
+2026-05-14 20:02:26,832 - minisweagent - INFO - Instance badoo__Reaktive-pr_764 finished successfully.
+2026-05-14 20:02:53,202 - minisweagent - INFO - Instance android_androidify_gradleplugin finished successfully.
+2026-05-14 20:02:53,527 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 20:03:30,006 - minisweagent - INFO - Instance badoo__Reaktive-pr_786 finished successfully.
+2026-05-14 20:05:21,978 - minisweagent - INFO - Instance badoo__Reaktive-pr_763 finished successfully.
+2026-05-14 20:12:33,087 - minisweagent - INFO - Instance MohamedRejeb__compose-rich-editor-pr_445 finished successfully.
+2026-05-14 20:12:37,771 - minisweagent - INFO - Instance braintree__braintree_android-pr_1323 finished successfully.
+2026-05-14 20:13:44,174 - minisweagent - INFO - Instance bitfireAT__davx5-ose-pr_1504 finished successfully.
+2026-05-14 20:13:59,569 - minisweagent - INFO - Instance bitfireAT__davx5-ose-pr_1512 finished successfully.
+2026-05-14 20:16:47,652 - minisweagent - INFO - Instance bumble-tech__appyx-pr_638 finished successfully.
+2026-05-14 20:16:58,330 - minisweagent - INFO - Instance bumble-tech__appyx-pr_425 finished successfully.
+2026-05-14 20:17:58,728 - minisweagent - INFO - Instance bumble-tech__appyx-pr_694 finished successfully.
+2026-05-14 20:18:10,929 - minisweagent - INFO - Instance cahier-adaptive-1 finished successfully.
+2026-05-14 20:21:03,652 - minisweagent - INFO - Instance chrisbanes__haze-pr_250 finished successfully.
+2026-05-14 20:21:08,289 - minisweagent - INFO - Instance coil-kt__coil-pr_1964 finished successfully.
+2026-05-14 20:22:37,581 - minisweagent - INFO - Instance coil-kt__coil-pr_2121 finished successfully.
+2026-05-14 20:22:39,628 - minisweagent - INFO - Instance coil-kt__coil-pr_2033 finished successfully.
+2026-05-14 20:22:39,690 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 20:38:09,037 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 20:38:09,039 - minisweagent - INFO - ======================================================================
+2026-05-14 20:38:09,040 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 20:38:09,040 - minisweagent - INFO - ======================================================================
+2026-05-14 20:38:09,041 - minisweagent - INFO - Skipping instance AlphaWallet__alpha-wallet-android-pr_3329 because patch file out/full_run_v1/patches/AlphaWallet__alpha-wallet-android-pr_3329.patch already exists.
+2026-05-14 20:38:09,042 - minisweagent - INFO - Skipping instance AntennaPod__AntennaPod-pr_6838 because patch file out/full_run_v1/patches/AntennaPod__AntennaPod-pr_6838.patch already exists.
+2026-05-14 20:38:09,043 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_1114 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_1114.patch already exists.
+2026-05-14 20:38:09,044 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_3970 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_3970.patch already exists.
+2026-05-14 20:38:09,045 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_757 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_757.patch already exists.
+2026-05-14 20:38:09,046 - minisweagent - INFO - Skipping instance CatimaLoyalty__Android-pr_1524 because patch file out/full_run_v1/patches/CatimaLoyalty__Android-pr_1524.patch already exists.
+2026-05-14 20:38:09,047 - minisweagent - INFO - Skipping instance CatimaLoyalty__Android-pr_1588 because patch file out/full_run_v1/patches/CatimaLoyalty__Android-pr_1588.patch already exists.
+2026-05-14 20:38:09,048 - minisweagent - INFO - Skipping instance DroidKaigi__conference-app-2023-pr_896 because patch file out/full_run_v1/patches/DroidKaigi__conference-app-2023-pr_896.patch already exists.
+2026-05-14 20:38:09,049 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1068 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1068.patch already exists.
+2026-05-14 20:38:09,050 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1114 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1114.patch already exists.
+2026-05-14 20:38:09,051 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1122 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1122.patch already exists.
+2026-05-14 20:38:09,052 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1198 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1198.patch already exists.
+2026-05-14 20:38:09,053 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_809 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_809.patch already exists.
+2026-05-14 20:38:09,054 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_868 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_868.patch already exists.
+2026-05-14 20:38:09,055 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_894 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_894.patch already exists.
+2026-05-14 20:38:09,056 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_941 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_941.patch already exists.
+2026-05-14 20:38:09,057 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_946 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_946.patch already exists.
+2026-05-14 20:38:09,058 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_947 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_947.patch already exists.
+2026-05-14 20:38:09,058 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_985 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_985.patch already exists.
+2026-05-14 20:38:09,059 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_991 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_991.patch already exists.
+2026-05-14 20:38:09,060 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_319 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_319.patch already exists.
+2026-05-14 20:38:09,061 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_335 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_335.patch already exists.
+2026-05-14 20:38:09,062 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_357 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_357.patch already exists.
+2026-05-14 20:38:09,063 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_363 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_363.patch already exists.
+2026-05-14 20:38:09,064 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_367 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_367.patch already exists.
+2026-05-14 20:38:09,065 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_379 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_379.patch already exists.
+2026-05-14 20:38:09,066 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_403 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_403.patch already exists.
+2026-05-14 20:38:09,067 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_445 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_445.patch already exists.
+2026-05-14 20:38:09,069 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_523 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_523.patch already exists.
+2026-05-14 20:38:09,070 - minisweagent - INFO - Skipping instance airbnb__lottie-android-pr_2427 because patch file out/full_run_v1/patches/airbnb__lottie-android-pr_2427.patch already exists.
+2026-05-14 20:38:09,071 - minisweagent - INFO - Skipping instance android__nowinandroid-pr_553 because patch file out/full_run_v1/patches/android__nowinandroid-pr_553.patch already exists.
+2026-05-14 20:38:09,072 - minisweagent - INFO - Skipping instance android__nowinandroid-pr_720 because patch file out/full_run_v1/patches/android__nowinandroid-pr_720.patch already exists.
+2026-05-14 20:38:09,072 - minisweagent - INFO - Skipping instance android_snippets_1 because patch file out/full_run_v1/patches/android_snippets_1.patch already exists.
+2026-05-14 20:38:09,073 - minisweagent - INFO - Skipping instance arkivanov__Decompose-pr_388 because patch file out/full_run_v1/patches/arkivanov__Decompose-pr_388.patch already exists.
+2026-05-14 20:38:09,074 - minisweagent - INFO - Skipping instance badoo__Reaktive-pr_735 because patch file out/full_run_v1/patches/badoo__Reaktive-pr_735.patch already exists.
+2026-05-14 20:38:09,075 - minisweagent - INFO - Skipping instance badoo__Reaktive-pr_763 because patch file out/full_run_v1/patches/badoo__Reaktive-pr_763.patch already exists.
+2026-05-14 20:38:09,076 - minisweagent - INFO - Skipping instance badoo__Reaktive-pr_764 because patch file out/full_run_v1/patches/badoo__Reaktive-pr_764.patch already exists.
+2026-05-14 20:38:09,077 - minisweagent - INFO - Skipping instance badoo__Reaktive-pr_786 because patch file out/full_run_v1/patches/badoo__Reaktive-pr_786.patch already exists.
+2026-05-14 20:38:09,078 - minisweagent - INFO - Skipping instance coil-kt__coil-pr_2669 because patch file out/full_run_v1/patches/coil-kt__coil-pr_2669.patch already exists.
+2026-05-14 20:38:09,079 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7103 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7103.patch already exists.
+2026-05-14 20:38:09,080 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7190 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7190.patch already exists.
+2026-05-14 20:38:09,081 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_8020 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_8020.patch already exists.
+2026-05-14 20:38:09,082 - minisweagent - INFO - Preparing to run 21 instances with 4 workers.
+2026-05-14 20:40:05,407 - minisweagent - INFO - Instance arkivanov__Decompose-pr_646 finished successfully.
+2026-05-14 20:45:44,349 - minisweagent - INFO - Instance bitfireAT__davx5-ose-pr_1512 finished successfully.
+2026-05-14 20:46:42,606 - minisweagent - INFO - Instance android_androidify_gradleplugin finished successfully.
+2026-05-14 20:47:16,266 - minisweagent - INFO - Instance arkivanov__Decompose-pr_394 finished successfully.
+2026-05-14 20:48:23,039 - minisweagent - INFO - Instance bitfireAT__davx5-ose-pr_1504 finished successfully.
+2026-05-14 20:50:12,019 - minisweagent - INFO - Instance braintree__braintree_android-pr_1323 finished successfully.
+2026-05-14 20:52:53,248 - minisweagent - INFO - Instance bumble-tech__appyx-pr_638 finished successfully.
+2026-05-14 20:58:51,817 - minisweagent - INFO - Instance cahier-adaptive-1 finished successfully.
+2026-05-14 20:59:03,649 - minisweagent - INFO - Instance bumble-tech__appyx-pr_694 finished successfully.
+2026-05-14 21:02:01,896 - minisweagent - INFO - Instance coil-kt__coil-pr_1964 finished successfully.
+2026-05-14 21:06:22,461 - minisweagent - INFO - Instance bumble-tech__appyx-pr_425 finished successfully.
+2026-05-14 21:07:04,125 - minisweagent - INFO - Instance chrisbanes__haze-pr_710 finished successfully.
+2026-05-14 21:08:37,306 - minisweagent - INFO - Instance coil-kt__coil-pr_2945 finished successfully.
+2026-05-14 21:10:04,899 - minisweagent - INFO - Instance chrisbanes__haze-pr_250 finished successfully.
+2026-05-14 21:13:30,846 - minisweagent - INFO - Instance coil-kt__coil-pr_2121 finished successfully.
+2026-05-14 21:13:50,557 - minisweagent - INFO - Instance getsentry__sentry-java-pr_2891 finished successfully.
+2026-05-14 21:13:59,455 - minisweagent - INFO - Instance getsentry__sentry-java-pr_4582 finished successfully.
+2026-05-14 21:14:06,255 - minisweagent - INFO - Instance coil-kt__coil-pr_2033 finished successfully.
+2026-05-14 21:14:27,243 - minisweagent - INFO - Instance coil-kt__coil-pr_3137 finished successfully.
+2026-05-14 21:16:30,082 - minisweagent - INFO - Instance getsentry__sentry-java-pr_4262 finished successfully.
+2026-05-14 21:18:23,419 - minisweagent - INFO - Instance google__accompanist-pr_903 finished successfully.
+2026-05-14 21:18:23,493 - minisweagent - INFO - All tasks have been processed.
+2026-05-14 21:33:50,156 - minisweagent - INFO - File logging enabled. Logs will be saved to: out/full_run_v1/logs/run.log
+2026-05-14 21:33:50,165 - minisweagent - INFO - ======================================================================
+2026-05-14 21:33:50,166 - minisweagent - INFO - Outputs will be saved to: /home/minh/androidbench/vendor/AndroidBench/out/full_run_v1
+2026-05-14 21:33:50,167 - minisweagent - INFO - ======================================================================
+2026-05-14 21:33:50,168 - minisweagent - INFO - Skipping instance AlphaWallet__alpha-wallet-android-pr_3329 because patch file out/full_run_v1/patches/AlphaWallet__alpha-wallet-android-pr_3329.patch already exists.
+2026-05-14 21:33:50,169 - minisweagent - INFO - Skipping instance AntennaPod__AntennaPod-pr_6838 because patch file out/full_run_v1/patches/AntennaPod__AntennaPod-pr_6838.patch already exists.
+2026-05-14 21:33:50,170 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_1114 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_1114.patch already exists.
+2026-05-14 21:33:50,171 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_3970 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_3970.patch already exists.
+2026-05-14 21:33:50,172 - minisweagent - INFO - Skipping instance Automattic__pocket-casts-android-pr_757 because patch file out/full_run_v1/patches/Automattic__pocket-casts-android-pr_757.patch already exists.
+2026-05-14 21:33:50,173 - minisweagent - INFO - Skipping instance CatimaLoyalty__Android-pr_1524 because patch file out/full_run_v1/patches/CatimaLoyalty__Android-pr_1524.patch already exists.
+2026-05-14 21:33:50,174 - minisweagent - INFO - Skipping instance CatimaLoyalty__Android-pr_1588 because patch file out/full_run_v1/patches/CatimaLoyalty__Android-pr_1588.patch already exists.
+2026-05-14 21:33:50,175 - minisweagent - INFO - Skipping instance DroidKaigi__conference-app-2023-pr_896 because patch file out/full_run_v1/patches/DroidKaigi__conference-app-2023-pr_896.patch already exists.
+2026-05-14 21:33:50,176 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1068 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1068.patch already exists.
+2026-05-14 21:33:50,177 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1114 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1114.patch already exists.
+2026-05-14 21:33:50,178 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1122 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1122.patch already exists.
+2026-05-14 21:33:50,178 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_1198 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_1198.patch already exists.
+2026-05-14 21:33:50,179 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_809 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_809.patch already exists.
+2026-05-14 21:33:50,180 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_868 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_868.patch already exists.
+2026-05-14 21:33:50,181 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_894 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_894.patch already exists.
+2026-05-14 21:33:50,186 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_941 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_941.patch already exists.
+2026-05-14 21:33:50,187 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_946 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_946.patch already exists.
+2026-05-14 21:33:50,188 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_947 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_947.patch already exists.
+2026-05-14 21:33:50,189 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_985 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_985.patch already exists.
+2026-05-14 21:33:50,190 - minisweagent - INFO - Skipping instance LemmyNet__jerboa-pr_991 because patch file out/full_run_v1/patches/LemmyNet__jerboa-pr_991.patch already exists.
+2026-05-14 21:33:50,191 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_319 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_319.patch already exists.
+2026-05-14 21:33:50,192 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_335 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_335.patch already exists.
+2026-05-14 21:33:50,193 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_357 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_357.patch already exists.
+2026-05-14 21:33:50,194 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_363 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_363.patch already exists.
+2026-05-14 21:33:50,195 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_367 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_367.patch already exists.
+2026-05-14 21:33:50,196 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_379 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_379.patch already exists.
+2026-05-14 21:33:50,197 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_403 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_403.patch already exists.
+2026-05-14 21:33:50,198 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_445 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_445.patch already exists.
+2026-05-14 21:33:50,199 - minisweagent - INFO - Skipping instance MohamedRejeb__compose-rich-editor-pr_523 because patch file out/full_run_v1/patches/MohamedRejeb__compose-rich-editor-pr_523.patch already exists.
+2026-05-14 21:33:50,200 - minisweagent - INFO - Skipping instance airbnb__lottie-android-pr_2427 because patch file out/full_run_v1/patches/airbnb__lottie-android-pr_2427.patch already exists.
+2026-05-14 21:33:50,201 - minisweagent - INFO - Skipping instance android__nowinandroid-pr_553 because patch file out/full_run_v1/patches/android__nowinandroid-pr_553.patch already exists.
+2026-05-14 21:33:50,202 - minisweagent - INFO - Skipping instance android__nowinandroid-pr_720 because patch file out/full_run_v1/patches/android__nowinandroid-pr_720.patch already exists.
+2026-05-14 21:33:50,203 - minisweagent - INFO - Skipping instance android_androidify_gradleplugin because patch file out/full_run_v1/patches/android_androidify_gradleplugin.patch already exists.
+2026-05-14 21:33:50,204 - minisweagent - INFO - Skipping instance android_snippets_1 because patch file out/full_run_v1/patches/android_snippets_1.patch already exists.
+2026-05-14 21:33:50,205 - minisweagent - INFO - Skipping instance arkivanov__Decompose-pr_388 because patch file out/full_run_v1/patches/arkivanov__Decompose-pr_388.patch already exists.
+2026-05-14 21:33:50,205 - minisweagent - INFO - Skipping instance arkivanov__Decompose-pr_394 because patch file out/full_run_v1/patches/arkivanov__Decompose-pr_394.patch already exists.
+2026-05-14 21:33:50,209 - minisweagent - INFO - Skipping instance arkivanov__Decompose-pr_646 because patch file out/full_run_v1/patches/arkivanov__Decompose-pr_646.patch already exists.
+2026-05-14 21:33:50,210 - minisweagent - INFO - Skipping instance badoo__Reaktive-pr_735 because patch file out/full_run_v1/patches/badoo__Reaktive-pr_735.patch already exists.
+2026-05-14 21:33:50,211 - minisweagent - INFO - Skipping instance badoo__Reaktive-pr_763 because patch file out/full_run_v1/patches/badoo__Reaktive-pr_763.patch already exists.
+2026-05-14 21:33:50,212 - minisweagent - INFO - Skipping instance badoo__Reaktive-pr_764 because patch file out/full_run_v1/patches/badoo__Reaktive-pr_764.patch already exists.
+2026-05-14 21:33:50,213 - minisweagent - INFO - Skipping instance badoo__Reaktive-pr_786 because patch file out/full_run_v1/patches/badoo__Reaktive-pr_786.patch already exists.
+2026-05-14 21:33:50,214 - minisweagent - INFO - Skipping instance bitfireAT__davx5-ose-pr_1504 because patch file out/full_run_v1/patches/bitfireAT__davx5-ose-pr_1504.patch already exists.
+2026-05-14 21:33:50,215 - minisweagent - INFO - Skipping instance braintree__braintree_android-pr_1323 because patch file out/full_run_v1/patches/braintree__braintree_android-pr_1323.patch already exists.
+2026-05-14 21:33:50,216 - minisweagent - INFO - Skipping instance bumble-tech__appyx-pr_425 because patch file out/full_run_v1/patches/bumble-tech__appyx-pr_425.patch already exists.
+2026-05-14 21:33:50,217 - minisweagent - INFO - Skipping instance bumble-tech__appyx-pr_638 because patch file out/full_run_v1/patches/bumble-tech__appyx-pr_638.patch already exists.
+2026-05-14 21:33:50,218 - minisweagent - INFO - Skipping instance bumble-tech__appyx-pr_694 because patch file out/full_run_v1/patches/bumble-tech__appyx-pr_694.patch already exists.
+2026-05-14 21:33:50,219 - minisweagent - INFO - Skipping instance cahier-adaptive-1 because patch file out/full_run_v1/patches/cahier-adaptive-1.patch already exists.
+2026-05-14 21:33:50,220 - minisweagent - INFO - Skipping instance chrisbanes__haze-pr_250 because patch file out/full_run_v1/patches/chrisbanes__haze-pr_250.patch already exists.
+2026-05-14 21:33:50,220 - minisweagent - INFO - Skipping instance coil-kt__coil-pr_2033 because patch file out/full_run_v1/patches/coil-kt__coil-pr_2033.patch already exists.
+2026-05-14 21:33:50,221 - minisweagent - INFO - Skipping instance coil-kt__coil-pr_2121 because patch file out/full_run_v1/patches/coil-kt__coil-pr_2121.patch already exists.
+2026-05-14 21:33:50,222 - minisweagent - INFO - Skipping instance coil-kt__coil-pr_2669 because patch file out/full_run_v1/patches/coil-kt__coil-pr_2669.patch already exists.
+2026-05-14 21:33:50,223 - minisweagent - INFO - Skipping instance coil-kt__coil-pr_3137 because patch file out/full_run_v1/patches/coil-kt__coil-pr_3137.patch already exists.
+2026-05-14 21:33:50,224 - minisweagent - INFO - Skipping instance getsentry__sentry-java-pr_2891 because patch file out/full_run_v1/patches/getsentry__sentry-java-pr_2891.patch already exists.
+2026-05-14 21:33:50,225 - minisweagent - INFO - Skipping instance getsentry__sentry-java-pr_4262 because patch file out/full_run_v1/patches/getsentry__sentry-java-pr_4262.patch already exists.
+2026-05-14 21:33:50,226 - minisweagent - INFO - Skipping instance google__accompanist-pr_903 because patch file out/full_run_v1/patches/google__accompanist-pr_903.patch already exists.
+2026-05-14 21:33:50,227 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7103 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7103.patch already exists.
+2026-05-14 21:33:50,228 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_7190 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_7190.patch already exists.
+2026-05-14 21:33:50,229 - minisweagent - INFO - Skipping instance thunderbird__thunderbird-android-pr_8020 because patch file out/full_run_v1/patches/thunderbird__thunderbird-android-pr_8020.patch already exists.
+2026-05-14 21:33:50,230 - minisweagent - INFO - Preparing to run 5 instances with 4 workers.
+2026-05-14 21:38:21,158 - minisweagent - INFO - Instance bitfireAT__davx5-ose-pr_1512 finished successfully.
+2026-05-14 21:39:34,442 - minisweagent - INFO - Instance coil-kt__coil-pr_1964 finished successfully.
+2026-05-14 21:42:10,613 - minisweagent - INFO - Instance getsentry__sentry-java-pr_4582 finished successfully.

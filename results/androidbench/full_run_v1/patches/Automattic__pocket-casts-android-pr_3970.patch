@@ -1,0 +1,58 @@
+diff --git a/modules/services/servers/src/main/java/au/com/shiftyjelly/pocketcasts/servers/CleanAndRetryInterceptor.kt b/modules/services/servers/src/main/java/au/com/shiftyjelly/pocketcasts/servers/CleanAndRetryInterceptor.kt
+index 3c28faf06..1328f02ea 100644
+--- a/modules/services/servers/src/main/java/au/com/shiftyjelly/pocketcasts/servers/CleanAndRetryInterceptor.kt
++++ b/modules/services/servers/src/main/java/au/com/shiftyjelly/pocketcasts/servers/CleanAndRetryInterceptor.kt
+@@ -3,13 +3,13 @@ package au.com.shiftyjelly.pocketcasts.servers
+ import okhttp3.Interceptor
+ import okhttp3.Response
+ 
+-internal class CleanAndRetryInterceptor(
++class CleanAndRetryInterceptor(
+     private val headersToRemove: List<String>,
+ ) : Interceptor {
+     override fun intercept(chain: Interceptor.Chain): Response {
+         val originalRequest = chain.request()
+         val response = chain.proceed(originalRequest)
+-        return if (response.isSuccessful || response.isRedirect) {
++        return if (response.isSuccessful || response.isRedirect || response.code == 304) {
+             response
+         } else {
+             response.close()
+diff --git a/modules/services/ui/src/main/java/au/com/shiftyjelly/pocketcasts/ui/di/UiModule.kt b/modules/services/ui/src/main/java/au/com/shiftyjelly/pocketcasts/ui/di/UiModule.kt
+index 5ebc1f4e9..ebf0f9fd4 100644
+--- a/modules/services/ui/src/main/java/au/com/shiftyjelly/pocketcasts/ui/di/UiModule.kt
++++ b/modules/services/ui/src/main/java/au/com/shiftyjelly/pocketcasts/ui/di/UiModule.kt
+@@ -1,6 +1,7 @@
+ package au.com.shiftyjelly.pocketcasts.ui.di
+ 
+ import android.content.Context
++import au.com.shiftyjelly.pocketcasts.servers.CleanAndRetryInterceptor
+ import coil.ImageLoader
+ import coil.disk.DiskCache
+ import dagger.Module
+@@ -8,6 +9,7 @@ import dagger.Provides
+ import dagger.hilt.InstallIn
+ import dagger.hilt.android.qualifiers.ApplicationContext
+ import dagger.hilt.components.SingletonComponent
++import okhttp3.OkHttpClient
+ import javax.inject.Singleton
+ 
+ @Module
+@@ -19,6 +21,17 @@ class UiModule {
+     internal fun provideCoilImageLoader(@ApplicationContext context: Context): ImageLoader {
+         return ImageLoader.Builder(context)
+             .crossfade(true)
++            .okHttpClient {
++                OkHttpClient.Builder()
++                    .addInterceptor { chain ->
++                        val request = chain.request().newBuilder()
++                            .header("User-Agent", "Pocket Casts")
++                            .build()
++                        chain.proceed(request)
++                    }
++                    .addInterceptor(CleanAndRetryInterceptor(listOf("User-Agent")))
++                    .build()
++            }
+             .diskCache {
+                 DiskCache.Builder()
+                     .directory(context.cacheDir.resolve("ImageCache"))

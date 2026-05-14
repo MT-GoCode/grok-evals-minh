@@ -1,0 +1,33 @@
+diff --git a/wear/src/main/kotlin/au/com/shiftyjelly/pocketcasts/wear/networking/PocketCastsNetworkingRules.kt b/wear/src/main/kotlin/au/com/shiftyjelly/pocketcasts/wear/networking/PocketCastsNetworkingRules.kt
+index 1273f984..276bdb83 100644
+--- a/wear/src/main/kotlin/au/com/shiftyjelly/pocketcasts/wear/networking/PocketCastsNetworkingRules.kt
++++ b/wear/src/main/kotlin/au/com/shiftyjelly/pocketcasts/wear/networking/PocketCastsNetworkingRules.kt
+@@ -55,24 +55,14 @@ object PocketCastsNetworkingRules : NetworkingRules {
+         networks: Networks,
+         requestType: RequestType,
+     ): NetworkStatus? {
+-
+-        // Always prefer Wifi if it is active
+-        networks.networks.firstOrNull { it.networkInfo is NetworkInfo.Wifi }?.let {
+-            return it
+-        }
+-
+         return when (requestType) {
+             DownloadRequest -> {
+-                // For downloads force LTE as the backup to Wifi, to avoid slow downloads.
+-                networks.networks.firstOrNull {
+-                    it.networkInfo.type == NetworkType.Cell
+-                }
++                // For downloads: wifi > cellular > bluetooth
++                networks.networks.prefer(NetworkType.Wifi, NetworkType.Cell, NetworkType.BT)
+             }
+             LiveRequest -> {
+-                // For live streaming, assume a low bandwidth and use power efficient BT
+-                networks.networks.firstOrNull {
+-                    it.networkInfo.type == NetworkType.BT
+-                }
++                // For streaming: bluetooth if available, fallback to wifi, then cellular
++                networks.networks.prefer(NetworkType.BT, NetworkType.Wifi, NetworkType.Cell)
+             }
+             else -> networks.networks.firstOrNull()
+         }

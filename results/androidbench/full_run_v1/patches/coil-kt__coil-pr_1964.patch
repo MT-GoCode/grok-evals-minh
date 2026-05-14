@@ -1,0 +1,36 @@
+diff --git a/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt b/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt
+index 284bece9..0c61269d 100644
+--- a/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt
++++ b/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt
+@@ -77,6 +77,7 @@ import kotlinx.coroutines.launch
+  * @param filterQuality Sampling algorithm applied to a bitmap when it is scaled and drawn into the
+  *  destination.
+  */
++@Stable
+ @Composable
+ @NonRestartableComposable
+ fun rememberAsyncImagePainter(
+@@ -123,6 +124,7 @@ fun rememberAsyncImagePainter(
+  * @param filterQuality Sampling algorithm applied to a bitmap when it is scaled and drawn into the
+  *  destination.
+  */
++@Stable
+ @Composable
+ fun rememberAsyncImagePainter(
+     model: Any?,
+@@ -308,6 +310,7 @@ class AsyncImagePainter internal constructor(
+     /**
+      * The current state of the [AsyncImagePainter].
+      */
++@Stable
+     sealed interface State {
+ 
+         /** The current painter being drawn by [AsyncImagePainter]. */
+@@ -340,6 +343,7 @@ class AsyncImagePainter internal constructor(
+         /**
+          * A state transform that does not modify the state.
+          */
++@Stable
+         val DefaultTransform: (State) -> State = { it }
+     }
+ }

@@ -1,0 +1,37 @@
+diff --git a/app/src/main/kotlin/at/bitfire/davdroid/repository/DavCollectionRepository.kt b/app/src/main/kotlin/at/bitfire/davdroid/repository/DavCollectionRepository.kt
+index c8fc42f5..33aa1f88 100644
+--- a/app/src/main/kotlin/at/bitfire/davdroid/repository/DavCollectionRepository.kt
++++ b/app/src/main/kotlin/at/bitfire/davdroid/repository/DavCollectionRepository.kt
+@@ -20,6 +20,8 @@ import at.bitfire.dav4jvm.property.carddav.NS_CARDDAV
+ import at.bitfire.dav4jvm.property.webdav.DisplayName
+ import at.bitfire.dav4jvm.property.webdav.NS_WEBDAV
+ import at.bitfire.dav4jvm.property.webdav.ResourceType
++import at.bitfire.dav4jvm.exception.GoneException
++import at.bitfire.dav4jvm.exception.NotFoundException
+ import at.bitfire.davdroid.R
+ import at.bitfire.davdroid.db.AppDatabase
+ import at.bitfire.davdroid.db.Collection
+@@ -170,14 +172,20 @@ class DavCollectionRepository @Inject constructor(
+             .build()
+             .use { httpClient ->
+                 runInterruptible(Dispatchers.IO) {
+-                    DavResource(httpClient.okHttpClient, collection.url).delete {
+-                        // success, otherwise an exception would have been thrown → delete locally, too
++                    try {
++                        DavResource(httpClient.okHttpClient, collection.url).delete {
++                            delete(collection)
++                        }
++                    } catch (_: NotFoundException) {
++                        // collection not found on server (already deleted) → still delete locally
++                        delete(collection)
++                    } catch (_: GoneException) {
++                        // collection gone on server (already deleted) → still delete locally
+                         delete(collection)
+                     }
+                 }
+             }
+     }
+-
+     suspend fun getSyncableByTopic(topic: String) = dao.getSyncableByPushTopic(topic)
+ 
+     fun get(id: Long) = dao.get(id)

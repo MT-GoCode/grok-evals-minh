@@ -1,0 +1,28 @@
+diff --git a/feature/account/setup/src/main/kotlin/app/k9mail/feature/account/setup/ui/AccountSetupViewModel.kt b/feature/account/setup/src/main/kotlin/app/k9mail/feature/account/setup/ui/AccountSetupViewModel.kt
+index b8908f22e..a684b24ff 100644
+--- a/feature/account/setup/src/main/kotlin/app/k9mail/feature/account/setup/ui/AccountSetupViewModel.kt
++++ b/feature/account/setup/src/main/kotlin/app/k9mail/feature/account/setup/ui/AccountSetupViewModel.kt
+@@ -74,7 +74,7 @@ class AccountSetupViewModel(
+                 }
+             }
+ 
+-            SetupStep.OUTGOING_CONFIG -> changeToSetupStep(SetupStep.INCOMING_VALIDATION)
++            SetupStep.OUTGOING_CONFIG -> changeToSetupStep(SetupStep.INCOMING_CONFIG)
+             SetupStep.OUTGOING_VALIDATION -> {
+                 if (state.value.isAutomaticConfig) {
+                     changeToSetupStep(SetupStep.AUTO_CONFIG)
+@@ -83,7 +83,13 @@ class AccountSetupViewModel(
+                 }
+             }
+ 
+-            SetupStep.OPTIONS -> changeToSetupStep(SetupStep.OUTGOING_VALIDATION)
++            SetupStep.OPTIONS -> {
++                if (state.value.isAutomaticConfig) {
++                    changeToSetupStep(SetupStep.AUTO_CONFIG)
++                } else {
++                    changeToSetupStep(SetupStep.OUTGOING_CONFIG)
++                }
++            }
+         }
+     }
+ 

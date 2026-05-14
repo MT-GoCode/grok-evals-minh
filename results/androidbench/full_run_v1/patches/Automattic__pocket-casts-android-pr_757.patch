@@ -1,0 +1,39 @@
+diff --git a/app/src/main/java/au/com/shiftyjelly/pocketcasts/ui/MainActivity.kt b/app/src/main/java/au/com/shiftyjelly/pocketcasts/ui/MainActivity.kt
+index 39df2b67..7e983530 100644
+--- a/app/src/main/java/au/com/shiftyjelly/pocketcasts/ui/MainActivity.kt
++++ b/app/src/main/java/au/com/shiftyjelly/pocketcasts/ui/MainActivity.kt
+@@ -129,6 +129,11 @@ import kotlin.coroutines.CoroutineContext
+ import au.com.shiftyjelly.pocketcasts.localization.R as LR
+ import au.com.shiftyjelly.pocketcasts.views.R as VR
+ import com.google.android.material.R as MR
++import android.Manifest
++import android.content.pm.PackageManager
++import android.os.Build
++import androidx.activity.result.contract.ActivityResultContracts
++import androidx.core.content.ContextCompat
+ 
+ private const val SAVEDSTATE_PLAYER_OPEN = "player_open"
+ private const val SAVEDSTATE_MINIPLAYER_SHOWN = "miniplayer_shown"
+@@ -204,9 +209,22 @@ class MainActivity :
+         }
+     }
+ 
++    private val requestNotificationPermissionLauncher = registerForActivityResult(
++        ActivityResultContracts.RequestPermission()
++    ) { isGranted: Boolean ->
++        if (isGranted) {
++            Timber.i("Notification permission granted")
++        }
++    }
++
+     override fun onCreate(savedInstanceState: Bundle?) {
+         Timber.d("Main Activity onCreate")
+         super.onCreate(savedInstanceState)
++        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
++            ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
++            requestNotificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
++        }
++
+         theme.setupThemeForConfig(this, resources.configuration)
+ 
+         val showOnboarding = !settings.hasCompletedOnboarding() && !settings.isLoggedIn()

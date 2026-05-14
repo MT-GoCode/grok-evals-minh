@@ -1,0 +1,23 @@
+diff --git a/gradle/libs.versions.toml b/gradle/libs.versions.toml
+index e6420dc4..a28b9414 100644
+--- a/gradle/libs.versions.toml
++++ b/gradle/libs.versions.toml
+@@ -1,5 +1,5 @@
+ [versions]
+-kotlin = "1.9.10"
++kotlin = "1.9.20"
+ kotlinx-coroutines = "1.7.3"
+ detekt = "1.22.0"
+ 
+diff --git a/includedBuild/gradleConfiguration/src/main/kotlin/com/badoo/reaktive/configuration/DarwinPlugin.kt b/includedBuild/gradleConfiguration/src/main/kotlin/com/badoo/reaktive/configuration/DarwinPlugin.kt
+index a5170ebf..319db994 100644
+--- a/includedBuild/gradleConfiguration/src/main/kotlin/com/badoo/reaktive/configuration/DarwinPlugin.kt
++++ b/includedBuild/gradleConfiguration/src/main/kotlin/com/badoo/reaktive/configuration/DarwinPlugin.kt
+@@ -18,7 +18,6 @@ class DarwinPlugin : Plugin<Project> {
+             iosSimulatorArm64().disableIfUndefined(Target.IOS)
+             watchosArm32().disableIfUndefined(Target.WATCHOS)
+             watchosArm64().disableIfUndefined(Target.WATCHOS)
+-            watchosX86().disableIfUndefined(Target.WATCHOS)
+             watchosX64().disableIfUndefined(Target.WATCHOS)
+             watchosSimulatorArm64().disableIfUndefined(Target.WATCHOS)
+             tvosArm64().disableIfUndefined(Target.TVOS)

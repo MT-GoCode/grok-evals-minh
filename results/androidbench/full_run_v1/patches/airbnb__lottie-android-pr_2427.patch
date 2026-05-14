@@ -1,0 +1,53 @@
+diff --git a/lottie/src/main/java/com/airbnb/lottie/animation/keyframe/GradientColorKeyframeAnimation.java b/lottie/src/main/java/com/airbnb/lottie/animation/keyframe/GradientColorKeyframeAnimation.java
+index 2ce54d8d..681262f3 100644
+--- a/lottie/src/main/java/com/airbnb/lottie/animation/keyframe/GradientColorKeyframeAnimation.java
++++ b/lottie/src/main/java/com/airbnb/lottie/animation/keyframe/GradientColorKeyframeAnimation.java
+@@ -25,7 +25,19 @@ public class GradientColorKeyframeAnimation extends KeyframeAnimation<GradientCo
+   }
+ 
+   @Override GradientColor getValue(Keyframe<GradientColor> keyframe, float keyframeProgress) {
+-    //noinspection DataFlowIssue
++    if (keyframe.startValue == null || keyframe.endValue == null) {
++      throw new IllegalStateException("Missing values for keyframe.");
++    }
++
++    if (valueCallback != null) {
++      //noinspection ConstantConditions
++      GradientColor value = valueCallback.getValueInternal(keyframe.startFrame, keyframe.endFrame, keyframe.startValue,
++          keyframe.endValue, keyframeProgress, getLinearCurrentKeyframeProgress(), getProgress());
++      if (value != null) {
++        return value;
++      }
++    }
++
+     gradientColor.lerp(keyframe.startValue, keyframe.endValue, keyframeProgress);
+     return gradientColor;
+   }
+diff --git a/lottie/src/main/java/com/airbnb/lottie/model/content/GradientColor.java b/lottie/src/main/java/com/airbnb/lottie/model/content/GradientColor.java
+index 3485d583..25d8a557 100644
+--- a/lottie/src/main/java/com/airbnb/lottie/model/content/GradientColor.java
++++ b/lottie/src/main/java/com/airbnb/lottie/model/content/GradientColor.java
+@@ -76,4 +76,23 @@ public class GradientColor {
+     float fraction = (position - startPosition) / (endPosition - startPosition);
+     return GammaEvaluator.evaluate(fraction, startColor, endColor);
+   }
++
++  @Override
++  public boolean equals(Object o) {
++    if (this == o) {
++      return true;
++    }
++    if (o == null || getClass() != o.getClass()) {
++      return false;
++    }
++    GradientColor that = (GradientColor) o;
++    return Arrays.equals(positions, that.positions) && Arrays.equals(colors, that.colors);
++  }
++
++  @Override
++  public int hashCode() {
++    int result = Arrays.hashCode(positions);
++    result = 31 * result + Arrays.hashCode(colors);
++    return result;
++  }
+ }

@@ -1,0 +1,134 @@
+{
+    "MohamedRejeb__compose-rich-editor-pr_445": {
+        "instance_id": "MohamedRejeb__compose-rich-editor-pr_445",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 116 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 5512,
+            "prompt_tokens": 2378571,
+            "total_tokens": 2428200
+        },
+        "latency_details": {
+            "query_latency_seconds": 1303.3358411590452,
+            "processing_latency_seconds": 522.7685501559463,
+            "total_latency_seconds": 2076.8098190549936
+        },
+        "steps": "59",
+        "cost": "$2.2207966499999996",
+        "status_description": "PASSED"
+    },
+    "android__nowinandroid-pr_720": {
+        "instance_id": "android__nowinandroid-pr_720",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 102 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 2928,
+            "prompt_tokens": 565126,
+            "total_tokens": 583779
+        },
+        "latency_details": {
+            "query_latency_seconds": 384.50124949800374,
+            "processing_latency_seconds": 862.1097411130759,
+            "total_latency_seconds": 1248.442856545007
+        },
+        "steps": "31",
+        "cost": "$0.5223424",
+        "status_description": "PASSED"
+    },
+    "arkivanov__Decompose-pr_388": {
+        "instance_id": "arkivanov__Decompose-pr_388",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 392 pass_to_pass tests and 2 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1407,
+            "prompt_tokens": 192553,
+            "total_tokens": 202846
+        },
+        "latency_details": {
+            "query_latency_seconds": 279.48781506998057,
+            "processing_latency_seconds": 116.85334069702367,
+            "total_latency_seconds": 397.81914803700056
+        },
+        "steps": "18",
+        "cost": "$0.22798535000000003",
+        "status_description": "PASSED"
+    },
+    "badoo__Reaktive-pr_735": {
+        "instance_id": "badoo__Reaktive-pr_735",
+        "score": 0.0,
+        "status": "AGENT_NO_PATCH",
+        "diagnostics": "Agent failed to generate patch files. Agent exit status: Submitted",
+        "job_name": "local run",
+        "used_tokens": null,
+        "latency_details": null,
+        "steps": "0",
+        "cost": "$0.0",
+        "status_description": "Agent provided no patch. We start with this status."
+    },
+    "badoo__Reaktive-pr_763": {
+        "instance_id": "badoo__Reaktive-pr_763",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 3299 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1904,
+            "prompt_tokens": 183601,
+            "total_tokens": 192493
+        },
+        "latency_details": {
+            "query_latency_seconds": 570.5420569310227,
+            "processing_latency_seconds": 99.09314222003741,
+            "total_latency_seconds": 670.16096714999
+        },
+        "steps": "26",
+        "cost": "$0.16524485000000003",
+        "status_description": "PASSED"
+    },
+    "badoo__Reaktive-pr_764": {
+        "instance_id": "badoo__Reaktive-pr_764",
+        "score": 1.0,
+        "status": "PASSED",
+        "diagnostics": "Verifying 3299 pass_to_pass tests and 1 fail_to_pass tests.\nRunning test attempt: 1\nTest attempt 1: PASSED",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1117,
+            "prompt_tokens": 73217,
+            "total_tokens": 76569
+        },
+        "latency_details": {
+            "query_latency_seconds": 88.02229913497285,
+            "processing_latency_seconds": 341.24039202797576,
+            "total_latency_seconds": 430.3615343020065
+        },
+        "steps": "18",
+        "cost": "$0.049098050000000004",
+        "status_description": "PASSED"
+    },
+    "badoo__Reaktive-pr_786": {
+        "instance_id": "badoo__Reaktive-pr_786",
+        "score": 0.0,
+        "status": "AGENT_FAILED_TEST",
+        "diagnostics": "Verifying 3398 pass_to_pass tests and 3 fail_to_pass tests.\nRunning test attempt: 1\nMust Pass test failed: 'testDebugUnitTest#Test calls_ErrorCallback_WHEN_errorTransformer_thrown_exception(com.badoo.reaktive.utils.TryCatchTest)'\nMust Pass test failed: 'testDebugUnitTest#Test calls_ErrorCallback_WHEN_errorTransformer_thrown_exception(com.badoo.reaktive.utils.TryCatchWithOnSuccessTest)'\nMust Pass test failed: 'testDebugUnitTest#Test calls_reaktiveUncaughtErrorHandler_WHEN_errorTransformer_thrown_exception(com.badoo.reaktive.utils.TryCatchAndHandleTest)'\nTest attempt 1: AGENT_FAILED_TEST\nRunning test attempt: 2\nMust Pass test failed: 'testDebugUnitTest#Test calls_ErrorCallback_WHEN_errorTransformer_thrown_exception(com.badoo.reaktive.utils.TryCatchTest)'\nMust Pass test failed: 'testDebugUnitTest#Test calls_ErrorCallback_WHEN_errorTransformer_thrown_exception(com.badoo.reaktive.utils.TryCatchWithOnSuccessTest)'\nMust Pass test failed: 'testDebugUnitTest#Test calls_reaktiveUncaughtErrorHandler_WHEN_errorTransformer_thrown_exception(com.badoo.reaktive.utils.TryCatchAndHandleTest)'\nTest attempt 2: AGENT_FAILED_TEST\nRunning test attempt: 3\nMust Pass test failed: 'testDebugUnitTest#Test calls_ErrorCallback_WHEN_errorTransformer_thrown_exception(com.badoo.reaktive.utils.TryCatchTest)'\nMust Pass test failed: 'testDebugUnitTest#Test calls_ErrorCallback_WHEN_errorTransformer_thrown_exception(com.badoo.reaktive.utils.TryCatchWithOnSuccessTest)'\nMust Pass test failed: 'testDebugUnitTest#Test calls_reaktiveUncaughtErrorHandler_WHEN_errorTransformer_thrown_exception(com.badoo.reaktive.utils.TryCatchAndHandleTest)'\nTest attempt 3: AGENT_FAILED_TEST",
+        "job_name": "local run",
+        "used_tokens": {
+            "completion_tokens": 1520,
+            "prompt_tokens": 130318,
+            "total_tokens": 137714
+        },
+        "latency_details": {
+            "query_latency_seconds": 167.55840350300423,
+            "processing_latency_seconds": 123.96407924799132,
+            "total_latency_seconds": 292.01306101999944
+        },
+        "steps": "17",
+        "cost": "$0.12050430000000001",
+        "status_description": "Agent created a patch that fails the tests"
+    }
+}

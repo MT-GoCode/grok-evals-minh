@@ -1,0 +1,24 @@
+diff --git a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/markdown/MarkdownUtils.kt b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/markdown/MarkdownUtils.kt
+index 812add3..5a29661 100644
+--- a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/markdown/MarkdownUtils.kt
++++ b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/markdown/MarkdownUtils.kt
+@@ -58,6 +58,7 @@ private fun encodeMarkdownNodeToRichText(
+         MarkdownTokenTypes.EXCLAMATION_MARK -> onText("!")
+         MarkdownTokenTypes.EMPH -> onText("*")
+         GFMTokenTypes.TILDE -> onText("~")
++        GFMTokenTypes.DOLLAR -> onText("$")
+         MarkdownElementTypes.STRONG, GFMElementTypes.STRIKETHROUGH -> {
+             onOpenNode(node)
+             val children = node.children.toMutableList()
+@@ -101,6 +102,11 @@ private fun encodeMarkdownNodeToRichText(
+             onText(node.getTextInNode(markdown).removeSurrounding("`").toString())
+             onCloseNode(node)
+         }
++        GFMElementTypes.INLINE_MATH -> {
++            onOpenNode(node)
++            onText(node.getTextInNode(markdown).toString())
++            onCloseNode(node)
++        }
+         MarkdownElementTypes.INLINE_LINK -> {
+             onOpenNode(node)
+             val text = node

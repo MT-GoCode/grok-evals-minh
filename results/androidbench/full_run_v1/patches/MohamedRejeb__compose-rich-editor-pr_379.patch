@@ -1,0 +1,108 @@
+diff --git a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/markdown/RichTextStateMarkdownParser.kt b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/markdown/RichTextStateMarkdownParser.kt
+index 063d459..4e2226d 100644
+--- a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/markdown/RichTextStateMarkdownParser.kt
++++ b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/parser/markdown/RichTextStateMarkdownParser.kt
+@@ -339,7 +339,20 @@ internal object RichTextStateMarkdownParser : RichTextStateParser<String> {
+         // Check if span is empty
+         if (richSpan.isEmpty()) return ""
+ 
+-        // Convert span style to CSS string
++        // Build the entire inner content (text + children) as a string first
++        val innerBuilder = StringBuilder()
++        innerBuilder.append(decodeMarkdownElementFromRichSpan(richSpan.text, richSpan.richSpanStyle))
++        richSpan.children.fastForEach { child ->
++            innerBuilder.append(decodeRichSpanToMarkdown(child))
++        }
++        val innerContent = innerBuilder.toString()
++
++        // Extract leading and trailing whitespace from the inner content
++        val leadingWhitespace = innerContent.takeWhile { it.isWhitespace() }
++        val trailingWhitespace = innerContent.takeLastWhile { it.isWhitespace() }
++        val trimmedInner = innerContent.trim()
++
++        // Convert span style to markdown markers
+         val markdownOpen = mutableListOf<String>()
+         val markdownClose = mutableListOf<String>()
+ 
+@@ -363,23 +376,22 @@ internal object RichTextStateMarkdownParser : RichTextStateParser<String> {
+             markdownClose += "</u>"
+         }
+ 
+-        // Append markdown open
+-        stringBuilder.append(markdownOpen.joinToString(separator = ""))
+-
+-        // Apply rich span style to markdown
+-        val spanMarkdown = decodeMarkdownElementFromRichSpan(richSpan.text, richSpan.richSpanStyle)
+-
+-        // Append text
+-        stringBuilder.append(spanMarkdown)
+-
+-        // Append children
+-        richSpan.children.fastForEach { child ->
+-            stringBuilder.append(decodeRichSpanToMarkdown(child))
++        if (markdownOpen.isNotEmpty()) {
++            // Append leading whitespace before formatting markers
++            stringBuilder.append(leadingWhitespace)
++            // Append open markers
++            stringBuilder.append(markdownOpen.joinToString(separator = ""))
++            // Append trimmed inner content
++            stringBuilder.append(trimmedInner)
++            // Append close markers (reversed order)
++            stringBuilder.append(markdownClose.reversed().joinToString(separator = ""))
++            // Append trailing whitespace after formatting markers
++            stringBuilder.append(trailingWhitespace)
++        } else {
++            // No formatting markers, output inner content as-is
++            stringBuilder.append(innerContent)
+         }
+ 
+-        // Append markdown close
+-        stringBuilder.append(markdownClose.reversed().joinToString(separator = ""))
+-
+         return stringBuilder.toString()
+     }
+ 
+@@ -485,7 +497,7 @@ internal object RichTextStateMarkdownParser : RichTextStateParser<String> {
+     /**
+      * Returns the markdown line start text from the first [RichSpan].
+      * This is used to determine the markdown line start text from the first [RichSpan] spanStyle.
+-     * For example, if the first [RichSpan] spanStyle is [H1SpanStyle], the markdown line start text will be "# ".
++     * For example, if the first [RichSpan] spanStyle is [H1SpanStyle], the markdown line start text will be "// ".
+      */
+     private fun getMarkdownLineStartTextFromFirstRichSpan(firstRichSpan: RichSpan): String {
+         if ((firstRichSpan.spanStyle.fontWeight?.weight ?: 400) <= 400) return ""
+@@ -493,22 +505,22 @@ internal object RichTextStateMarkdownParser : RichTextStateParser<String> {
+ 
+         return if (fontSize.isEm) {
+             when {
+-                fontSize >= H1SpanStyle.fontSize -> "# "
+-                fontSize >= H1SpanStyle.fontSize -> "## "
+-                fontSize >= H1SpanStyle.fontSize -> "### "
+-                fontSize >= H1SpanStyle.fontSize -> "#### "
+-                fontSize >= H1SpanStyle.fontSize -> "##### "
+-                fontSize >= H1SpanStyle.fontSize -> "###### "
++                fontSize >= H1SpanStyle.fontSize -> "// "
++                fontSize >= H1SpanStyle.fontSize -> "#// "
++                fontSize >= H1SpanStyle.fontSize -> "##// "
++                fontSize >= H1SpanStyle.fontSize -> "###// "
++                fontSize >= H1SpanStyle.fontSize -> "####// "
++                fontSize >= H1SpanStyle.fontSize -> "#####// "
+                 else -> ""
+             }
+         } else {
+             when {
+-                fontSize.value >= H1SpanStyle.fontSize.value * 16 -> "# "
+-                fontSize.value >= H1SpanStyle.fontSize.value * 16 -> "## "
+-                fontSize.value >= H1SpanStyle.fontSize.value * 16 -> "### "
+-                fontSize.value >= H1SpanStyle.fontSize.value * 16 -> "#### "
+-                fontSize.value >= H1SpanStyle.fontSize.value * 16 -> "##### "
+-                fontSize.value >= H1SpanStyle.fontSize.value * 16 -> "###### "
++                fontSize.value >= H1SpanStyle.fontSize.value * 16 -> "// "
++                fontSize.value >= H1SpanStyle.fontSize.value * 16 -> "#// "
++                fontSize.value >= H1SpanStyle.fontSize.value * 16 -> "##// "
++                fontSize.value >= H1SpanStyle.fontSize.value * 16 -> "###// "
++                fontSize.value >= H1SpanStyle.fontSize.value * 16 -> "####// "
++                fontSize.value >= H1SpanStyle.fontSize.value * 16 -> "#####// "
+                 else -> ""
+             }
+         }

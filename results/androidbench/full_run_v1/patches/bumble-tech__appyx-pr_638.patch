@@ -1,0 +1,18 @@
+diff --git a/appyx-components/stable/backstack/common/src/commonMain/kotlin/com/bumble/appyx/components/backstack/ui/parallax/BackStackParallax.kt b/appyx-components/stable/backstack/common/src/commonMain/kotlin/com/bumble/appyx/components/backstack/ui/parallax/BackStackParallax.kt
+index a6144a6e..24743ab8 100644
+--- a/appyx-components/stable/backstack/common/src/commonMain/kotlin/com/bumble/appyx/components/backstack/ui/parallax/BackStackParallax.kt
++++ b/appyx-components/stable/backstack/common/src/commonMain/kotlin/com/bumble/appyx/components/backstack/ui/parallax/BackStackParallax.kt
+@@ -41,11 +41,13 @@ class BackStackParallax<InteractionTarget : Any>(
+     private val bottom = TargetUiState(
+         offsetMultiplier = -0.2f,
+         colorOverlay = ColorOverlay.Target(0.7f),
++        alpha = Alpha.Target(0f),
+     )
+ 
+     private val top = TargetUiState(
+         offsetMultiplier = 0f,
+         shadow = Shadow.Target(25f),
++        alpha = Alpha.Target(1f),
+     )
+ 
+     override fun State<InteractionTarget>.toUiTargets(): List<MatchedTargetUiState<InteractionTarget, TargetUiState>> {

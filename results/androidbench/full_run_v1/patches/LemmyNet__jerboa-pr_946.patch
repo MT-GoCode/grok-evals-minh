@@ -1,0 +1,35 @@
+diff --git a/app/src/main/java/com/jerboa/api/Http.kt b/app/src/main/java/com/jerboa/api/Http.kt
+index 9cb1d4b..7488634 100644
+--- a/app/src/main/java/com/jerboa/api/Http.kt
++++ b/app/src/main/java/com/jerboa/api/Http.kt
+@@ -267,20 +267,23 @@ interface API {
+             val interceptor = HttpLoggingInterceptor()
+             interceptor.level = HttpLoggingInterceptor.Level.BODY
+             val client: OkHttpClient = OkHttpClient.Builder()
+-                .addInterceptor { chain ->
+-                    val requestBuilder = chain.request().newBuilder()
+-                        .header("User-Agent", "Jerboa")
+-                    val newRequest = requestBuilder.build()
+-                    chain.proceed(newRequest)
+-                }
+                 .addInterceptor { chain ->
+                     // based on https://stackoverflow.com/a/76264357
+                     val request = chain.request()
+                     val invocation = request.tag(Invocation::class.java)
+                     val disableLog = invocation?.method()?.getAnnotation(DisableLog::class.java)
+                     val shouldLogBody: Boolean = disableLog == null
++                    val originalLevel = interceptor.level
+                     interceptor.setLevel(if (shouldLogBody) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE)
+-                    chain.proceed(request)
++                    val response = chain.proceed(request)
++                    interceptor.setLevel(originalLevel)
++                    response
++                }
++                .addInterceptor { chain ->
++                    val requestBuilder = chain.request().newBuilder()
++                        .header("User-Agent", "Jerboa")
++                    val newRequest = requestBuilder.build()
++                    chain.proceed(newRequest)
+                 }
+                 // this should probably be a network interceptor,
+                 .addInterceptor { chain ->

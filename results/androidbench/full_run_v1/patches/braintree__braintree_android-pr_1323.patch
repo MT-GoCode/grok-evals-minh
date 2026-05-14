@@ -1,0 +1,20 @@
+diff --git a/ThreeDSecure/src/main/java/com/braintreepayments/api/threedsecure/ThreeDSecureClient.kt b/ThreeDSecure/src/main/java/com/braintreepayments/api/threedsecure/ThreeDSecureClient.kt
+index 0bc00989b..f52d548ae 100644
+--- a/ThreeDSecure/src/main/java/com/braintreepayments/api/threedsecure/ThreeDSecureClient.kt
++++ b/ThreeDSecure/src/main/java/com/braintreepayments/api/threedsecure/ThreeDSecureClient.kt
+@@ -349,10 +349,11 @@ class ThreeDSecureClient internal constructor(
+                                     threeDSecureResult.threeDSecureNonce
+                                 )
+                             )
+-                        }
+-                        threeDSecureResult.threeDSecureNonce?.let {
+-                            braintreeClient.sendAnalyticsEvent(ThreeDSecureAnalytics.JWT_AUTH_SUCCEEDED)
+-                            callbackTokenizeSuccess(callback, ThreeDSecureResult.Success(it))
++                        } else {
++                            threeDSecureResult.threeDSecureNonce?.let {
++                                braintreeClient.sendAnalyticsEvent(ThreeDSecureAnalytics.JWT_AUTH_SUCCEEDED)
++                                callbackTokenizeSuccess(callback, ThreeDSecureResult.Success(it))
++                            }
+                         }
+                     } else if (error != null) {
+                         braintreeClient.sendAnalyticsEvent(

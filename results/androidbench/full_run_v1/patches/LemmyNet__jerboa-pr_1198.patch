@@ -1,0 +1,86 @@
+diff --git a/app/src/main/java/com/jerboa/ui/components/common/InputFields.kt b/app/src/main/java/com/jerboa/ui/components/common/InputFields.kt
+index 52bb28f..f5a3b37 100644
+--- a/app/src/main/java/com/jerboa/ui/components/common/InputFields.kt
++++ b/app/src/main/java/com/jerboa/ui/components/common/InputFields.kt
+@@ -23,6 +23,7 @@ import androidx.compose.material.icons.outlined.FormatItalic
+ import androidx.compose.material.icons.outlined.FormatListBulleted
+ import androidx.compose.material.icons.outlined.FormatQuote
+ import androidx.compose.material.icons.outlined.FormatStrikethrough
++import androidx.compose.material.icons.outlined.VisibilityOff
+ import androidx.compose.material.icons.outlined.Image
+ import androidx.compose.material.icons.outlined.Link
+ import androidx.compose.material.icons.outlined.Preview
+@@ -157,6 +158,29 @@ fun MarkdownTextField(
+                     onValueChange = onTextChange,
+                 )
+             },
++            onSpoilerClick = {
++                val spoilerStart = "::: spoiler Title\n"
++                val spoilerEnd = "\n:::"
++                val selStart = text.selection.start
++                val selEnd = text.selection.end
++                val altered: String
++                val cursor: TextRange
++                if (selStart == selEnd) {
++                    var alt = text.text.insert(selStart, spoilerStart)
++                    alt = alt.insert(selStart + spoilerStart.length, spoilerEnd)
++                    val curPos = selStart + spoilerStart.length
++                    cursor = TextRange(curPos)
++                    altered = alt
++                } else {
++                    var alt = text.text.insert(selStart, spoilerStart)
++                    alt = alt.insert(selEnd + spoilerStart.length, spoilerEnd)
++                    val startPos = selStart + spoilerStart.length
++                    val endPos = selEnd + spoilerStart.length
++                    cursor = TextRange(startPos, endPos)
++                    altered = alt
++                }
++                onTextChange(TextFieldValue(altered, cursor))
++            },
+             onQuoteClick = {
+                 simpleMarkdownSurround(
+                     "> ",
+@@ -433,6 +457,7 @@ fun MarkdownHelperBar(
+     onQuoteClick: () -> Unit,
+     onBoldClick: () -> Unit,
+     onItalicsClick: () -> Unit,
++    onSpoilerClick: () -> Unit,
+     onCodeClick: () -> Unit,
+     onStrikethroughClick: () -> Unit,
+     onSubscriptClick: () -> Unit,
+@@ -485,6 +510,15 @@ fun MarkdownHelperBar(
+                 tint = MaterialTheme.colorScheme.onBackground.muted,
+             )
+         }
++        IconButton(
++            onClick = onSpoilerClick,
++        ) {
++            Icon(
++                imageVector = Icons.Outlined.VisibilityOff,
++                contentDescription = stringResource(R.string.markdownHelper_insertSpoiler),
++                tint = MaterialTheme.colorScheme.onBackground.muted,
++            )
++        }
+         IconButton(
+             onClick = onItalicsClick,
+         ) {
+@@ -571,6 +605,7 @@ fun TextMarkdownBarPreview() {
+         onQuoteClick = {},
+         onBoldClick = {},
+         onItalicsClick = {},
++        onSpoilerClick = {},
+         onCodeClick = {},
+         onStrikethroughClick = {},
+         onSubscriptClick = {},
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+index 8d5578e..b728310 100644
+--- a/app/src/main/res/values/strings.xml
++++ b/app/src/main/res/values/strings.xml
+@@ -210,6 +210,7 @@
+     <string name="markUnread">Mark as unread</string>
+     <string name="markdownHelper_formatBold">Format as bold text</string>
+     <string name="markdownHelper_formatItalic">Format as italic text</string>
++    <string name="markdownHelper_insertSpoiler">Insert spoiler</string>
+     <string name="markdownHelper_formatStrikethrough">Format as strikethrough text</string>
+     <string name="markdownHelper_formatSubscript">Format as subscript text</string>
+     <string name="markdownHelper_formatSuperscript">Format as superscript text</string>

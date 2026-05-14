@@ -1,0 +1,13 @@
+diff --git a/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.kt b/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.kt
+index 0c6273c4..531be5ae 100644
+--- a/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.kt
++++ b/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.kt
+@@ -160,7 +160,7 @@ private fun rememberAsyncImagePainter(
+     contentScale: ContentScale,
+     filterQuality: FilterQuality,
+ ): AsyncImagePainter {
+-    val request = requestOf(state.model)
++    val request = requestOf(state.model).newBuilder().defaults(state.imageLoader.defaults).build()
+     validateRequest(request)
+ 
+     val painter = remember { AsyncImagePainter(request, state.imageLoader) }

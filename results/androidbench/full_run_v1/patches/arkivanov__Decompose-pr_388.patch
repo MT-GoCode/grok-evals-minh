@@ -1,0 +1,24 @@
+diff --git a/decompose/src/commonMain/kotlin/com/arkivanov/decompose/router/children/ChildrenNavigator.kt b/decompose/src/commonMain/kotlin/com/arkivanov/decompose/router/children/ChildrenNavigator.kt
+index 231d47c..d33eb2d 100644
+--- a/decompose/src/commonMain/kotlin/com/arkivanov/decompose/router/children/ChildrenNavigator.kt
++++ b/decompose/src/commonMain/kotlin/com/arkivanov/decompose/router/children/ChildrenNavigator.kt
+@@ -186,8 +186,8 @@ internal class ChildrenNavigator<out C : Any, out T : Any, N : NavState<C>>(
+             val child = item as? Created ?: continue
+             if (item.configuration !in newConfigurations) {
+                 child.backHandler.stop()
+-                child.instanceKeeperDispatcher.destroy()
+                 child.lifecycleRegistry.destroy()
++                child.instanceKeeperDispatcher.destroy()
+             }
+         }
+     }
+@@ -204,8 +204,8 @@ internal class ChildrenNavigator<out C : Any, out T : Any, N : NavState<C>>(
+                             Status.DESTROYED -> {
+                                 val savedState = item.stateKeeperDispatcher.save()
+                                 item.backHandler.stop()
+-                                item.instanceKeeperDispatcher.destroy()
+                                 item.lifecycleRegistry.destroy()
++                                item.instanceKeeperDispatcher.destroy()
+ 
+                                 ChildItem.Destroyed(configuration = item.configuration, savedState = savedState)
+                             }

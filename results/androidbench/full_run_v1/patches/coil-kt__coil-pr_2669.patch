@@ -1,0 +1,15 @@
+diff --git a/coil-core/src/androidMain/kotlin/coil3/transition/CrossfadeDrawable.kt b/coil-core/src/androidMain/kotlin/coil3/transition/CrossfadeDrawable.kt
+index 1a494d51..2dab8b35 100644
+--- a/coil-core/src/androidMain/kotlin/coil3/transition/CrossfadeDrawable.kt
++++ b/coil-core/src/androidMain/kotlin/coil3/transition/CrossfadeDrawable.kt
+@@ -150,8 +150,8 @@ class CrossfadeDrawable @JvmOverloads constructor(
+     }
+ 
+     override fun onBoundsChange(bounds: Rect) {
+-        start?.let { updateBounds(it, bounds) }
+-        end?.let { updateBounds(it, bounds) }
++        start?.let { it.bounds = bounds }
++        end?.let { it.bounds = bounds }
+     }
+ 
+     override fun onLevelChange(level: Int): Boolean {

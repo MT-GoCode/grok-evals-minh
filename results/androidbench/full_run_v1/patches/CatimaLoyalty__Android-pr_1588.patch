@@ -1,0 +1,199 @@
+diff --git a/app/src/main/java/protect/card_locker/LoyaltyCardEditActivity.java b/app/src/main/java/protect/card_locker/LoyaltyCardEditActivity.java
+index 3a55f895..e12bb73a 100644
+--- a/app/src/main/java/protect/card_locker/LoyaltyCardEditActivity.java
++++ b/app/src/main/java/protect/card_locker/LoyaltyCardEditActivity.java
+@@ -2,7 +2,6 @@ package protect.card_locker;
+ 
+ import android.annotation.SuppressLint;
+ import android.app.Activity;
+-import android.app.DatePickerDialog;
+ import android.app.Dialog;
+ import android.content.ActivityNotFoundException;
+ import android.content.Context;
+@@ -29,7 +28,6 @@ import android.view.WindowManager;
+ import android.widget.ArrayAdapter;
+ import android.widget.AutoCompleteTextView;
+ import android.widget.Button;
+-import android.widget.DatePicker;
+ import android.widget.EditText;
+ import android.widget.FrameLayout;
+ import android.widget.ImageView;
+@@ -49,7 +47,6 @@ import androidx.appcompat.widget.Toolbar;
+ import androidx.core.content.ContextCompat;
+ import androidx.core.content.FileProvider;
+ import androidx.exifinterface.media.ExifInterface;
+-import androidx.fragment.app.DialogFragment;
+ 
+ import com.google.android.material.chip.Chip;
+ import com.google.android.material.chip.ChipGroup;
+@@ -58,6 +55,13 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+ import com.google.android.material.floatingactionbutton.FloatingActionButton;
+ import com.google.android.material.snackbar.Snackbar;
+ import com.google.android.material.tabs.TabLayout;
++
++import com.google.android.material.datepicker.CalendarConstraints;
++import com.google.android.material.datepicker.CompositeDateValidator;
++import androidx.fragment.app.FragmentManager;
++import com.google.android.material.datepicker.DateValidatorPointBackward;
++import com.google.android.material.datepicker.DateValidatorPointForward;
++import com.google.android.material.datepicker.MaterialDatePicker;
+ import com.jaredrummler.android.colorpicker.ColorPickerDialog;
+ import com.jaredrummler.android.colorpicker.ColorPickerDialogListener;
+ import com.yalantis.ucrop.UCrop;
+@@ -1024,14 +1028,12 @@ public class LoyaltyCardEditActivity extends CatimaAppCompatActivity implements
+                     if (!lastValue.toString().equals(getString(chooseDateOptionStringId))) {
+                         dateField.setText(lastValue);
+                     }
+-                    DialogFragment datePickerFragment = DatePickerFragment.newInstance(
+-                            loyaltyCardField,
++                    DatePickerFragment.showDatePicker(getSupportFragmentManager(), loyaltyCardField,
+                             (Date) dateField.getTag(),
+                             // if the expiry date is being set, set date picker's minDate to the 'valid from' date
+                             loyaltyCardField == LoyaltyCardField.expiry ? (Date) validFromField.getTag() : null,
+                             // if the 'valid from' date is being set, set date picker's maxDate to the expiry date
+                             loyaltyCardField == LoyaltyCardField.validFrom ? (Date) expiryField.getTag() : null);
+-                    datePickerFragment.show(getSupportFragmentManager(), "datePicker");
+                 }
+             }
+ 
+@@ -1382,37 +1384,16 @@ public class LoyaltyCardEditActivity extends CatimaAppCompatActivity implements
+         // Nothing to do, no change made
+     }
+ 
+-    public static class DatePickerFragment extends DialogFragment
+-            implements DatePickerDialog.OnDateSetListener {
++    public static class DatePickerFragment {
+ 
+         public interface OnDatePickListener {
+             void onDatePicked(@NonNull LoyaltyCardField textFieldToEdit, @NonNull Date newDate);
+         }
+ 
+         private static final String TEXT_FIELD_TO_EDIT_ARGUMENT_KEY = "text_field_to_edit";
+-        private static final String CURRENT_DATE_ARGUMENT_KEY = "current_date";
+-        private static final String MIN_DATE_ARGUMENT_KEY = "min_date";
+-        private static final String MAX_DATE_ARGUMENT_KEY = "max_date";
+         private static final String PICK_DATE_REQUEST_KEY = "pick_date_request";
+         private static final String NEWLY_PICKED_DATE_ARGUMENT_KEY = "newly_picked_date";
+ 
+-        LoyaltyCardField textFieldEdit;
+-        @Nullable
+-        Date minDate;
+-        @Nullable
+-        Date maxDate;
+-
+-        public static DatePickerFragment newInstance(@NonNull LoyaltyCardField textField, @Nullable Date currentDate, @Nullable Date minDate, @Nullable Date maxDate) {
+-            Bundle args = new Bundle();
+-            args.putSerializable(TEXT_FIELD_TO_EDIT_ARGUMENT_KEY, textField);
+-            args.putSerializable(CURRENT_DATE_ARGUMENT_KEY, currentDate);
+-            args.putSerializable(MIN_DATE_ARGUMENT_KEY, minDate);
+-            args.putSerializable(MAX_DATE_ARGUMENT_KEY, maxDate);
+-            DatePickerFragment fragment = new DatePickerFragment();
+-            fragment.setArguments(args);
+-            return fragment;
+-        }
+-
+         public static void registerDatePickListener(@NonNull AppCompatActivity activity, @NonNull OnDatePickListener listener) {
+             activity.getSupportFragmentManager().setFragmentResultListener(
+                     PICK_DATE_REQUEST_KEY,
+@@ -1422,63 +1403,61 @@ public class LoyaltyCardEditActivity extends CatimaAppCompatActivity implements
+                             (Date) Objects.requireNonNull(result.getSerializable(NEWLY_PICKED_DATE_ARGUMENT_KEY))));
+         }
+ 
+-        @NonNull
+-        @Override
+-        public Dialog onCreateDialog(Bundle savedInstanceState) {
+-            Bundle args = requireArguments();
+-            textFieldEdit = (LoyaltyCardField) args.getSerializable(TEXT_FIELD_TO_EDIT_ARGUMENT_KEY);
+-            minDate = (Date) args.getSerializable(MIN_DATE_ARGUMENT_KEY);
+-            maxDate = (Date) args.getSerializable(MAX_DATE_ARGUMENT_KEY);
++        public static void showDatePicker(@NonNull FragmentManager fragmentManager, @NonNull LoyaltyCardField textField, @Nullable Date currentDate, @Nullable Date minDate, @Nullable Date maxDate) {
++            MaterialDatePicker.Builder<Long> builder = MaterialDatePicker.Builder.datePicker();
+             // Use the current date as the default date in the picker
+             final Calendar c = Calendar.getInstance();
+ 
+-            Date date = (Date) args.getSerializable(CURRENT_DATE_ARGUMENT_KEY);
+-            if (date != null) {
+-                c.setTime(date);
++            if (currentDate != null) {
++                c.setTime(currentDate);
++            }
++
++            builder.setSelection(c.getTimeInMillis());
++
++            CalendarConstraints.Builder constraintsBuilder = new CalendarConstraints.Builder();
++            if (minDate != null) {
++                long minMillis = minDate.getTime();
++                constraintsBuilder.setStart(minMillis);
++                constraintsBuilder.setValidator(DateValidatorPointForward.from(minMillis));
++            }
++            if (maxDate != null) {
++                long maxMillis = maxDate.getTime();
++                constraintsBuilder.setEnd(maxMillis);
++                constraintsBuilder.setValidator(DateValidatorPointBackward.before(maxMillis));
+             }
+ 
+-            int year = c.get(Calendar.YEAR);
+-            int month = c.get(Calendar.MONTH);
+-            int day = c.get(Calendar.DAY_OF_MONTH);
++            builder.setCalendarConstraints(constraintsBuilder.build());
+ 
+-            // Create a new instance of DatePickerDialog and return it
+-            DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), this, year, month, day);
+-            datePickerDialog.getDatePicker().setMinDate(minDate != null ? minDate.getTime() : getDefaultMinDateOfDatePicker());
+-            datePickerDialog.getDatePicker().setMaxDate(maxDate != null ? maxDate.getTime() : getDefaultMaxDateOfDatePicker());
+-            return datePickerDialog;
++            MaterialDatePicker<Long> picker = builder.build();
++            picker.addOnPositiveButtonClickListener(selection -> {
++                Calendar cal = Calendar.getInstance();
++                cal.setTimeInMillis(selection);
++                cal.set(Calendar.HOUR_OF_DAY, 0);
++                cal.set(Calendar.MINUTE, 0);
++                cal.set(Calendar.SECOND, 0);
++                cal.set(Calendar.MILLISECOND, 0);
++
++                Date newDate = new Date(cal.getTimeInMillis());
++
++                Bundle result = new Bundle();
++                result.putSerializable(TEXT_FIELD_TO_EDIT_ARGUMENT_KEY, textField);
++                result.putSerializable(NEWLY_PICKED_DATE_ARGUMENT_KEY, newDate);
++                fragmentManager.setFragmentResult(PICK_DATE_REQUEST_KEY, result);
++            });
++            picker.show(fragmentManager, "datePicker");
+         }
+ 
+-        private long getDefaultMinDateOfDatePicker() {
++        private static long getDefaultMinDateOfDatePicker() {
+             Calendar minDateCalendar = Calendar.getInstance();
+             minDateCalendar.set(1970, 0, 1);
+             return minDateCalendar.getTimeInMillis();
+         }
+ 
+-        private long getDefaultMaxDateOfDatePicker() {
++        private static long getDefaultMaxDateOfDatePicker() {
+             Calendar maxDateCalendar = Calendar.getInstance();
+             maxDateCalendar.set(2100, 11, 31);
+             return maxDateCalendar.getTimeInMillis();
+         }
+-
+-        public void onDateSet(DatePicker view, int year, int month, int day) {
+-            Calendar c = new GregorianCalendar();
+-            c.set(Calendar.YEAR, year);
+-            c.set(Calendar.MONTH, month);
+-            c.set(Calendar.DAY_OF_MONTH, day);
+-            c.set(Calendar.HOUR_OF_DAY, 0);
+-            c.set(Calendar.MINUTE, 0);
+-            c.set(Calendar.SECOND, 0);
+-            c.set(Calendar.MILLISECOND, 0);
+-
+-            long unixTime = c.getTimeInMillis();
+-
+-            Date date = new Date(unixTime);
+-
+-            Bundle result = new Bundle();
+-            result.putSerializable(TEXT_FIELD_TO_EDIT_ARGUMENT_KEY, textFieldEdit);
+-            result.putSerializable(NEWLY_PICKED_DATE_ARGUMENT_KEY, date);
+-            getParentFragmentManager().setFragmentResult(PICK_DATE_REQUEST_KEY, result);
+-        }
+     }
+ 
+     private void doSave() {

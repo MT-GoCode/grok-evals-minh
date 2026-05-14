@@ -1,0 +1,23 @@
+diff --git a/sentry-android-core/src/main/java/io/sentry/android/core/AndroidOptionsInitializer.java b/sentry-android-core/src/main/java/io/sentry/android/core/AndroidOptionsInitializer.java
+index 6465381a8..81e887df6 100644
+--- a/sentry-android-core/src/main/java/io/sentry/android/core/AndroidOptionsInitializer.java
++++ b/sentry-android-core/src/main/java/io/sentry/android/core/AndroidOptionsInitializer.java
+@@ -12,6 +12,7 @@ import io.sentry.ILogger;
+ import io.sentry.ISentryLifecycleToken;
+ import io.sentry.ITransactionProfiler;
+ import io.sentry.NoOpConnectionStatusProvider;
++import io.sentry.transport.NoOpTransportGate;
+ import io.sentry.NoOpContinuousProfiler;
+ import io.sentry.NoOpTransactionProfiler;
+ import io.sentry.ScopeType;
+@@ -163,7 +164,9 @@ final class AndroidOptionsInitializer {
+     options.addEventProcessor(new ScreenshotEventProcessor(options, buildInfoProvider));
+     options.addEventProcessor(new ViewHierarchyEventProcessor(options));
+     options.addEventProcessor(new AnrV2EventProcessor(context, options, buildInfoProvider));
+-    options.setTransportGate(new AndroidTransportGate(options));
++    if (options.getTransportGate() instanceof NoOpTransportGate) {
++      options.setTransportGate(new AndroidTransportGate(options));
++    }
+ 
+     // Check if the profiler was already instantiated in the app start.
+     // We use the Android profiler, that uses a global start/stop api, so we need to preserve the

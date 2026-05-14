@@ -1,0 +1,35 @@
+diff --git a/sentry-android-core/src/main/java/io/sentry/android/core/internal/gestures/SentryGestureListener.java b/sentry-android-core/src/main/java/io/sentry/android/core/internal/gestures/SentryGestureListener.java
+index 2493f5b5f..833c466f8 100644
+--- a/sentry-android-core/src/main/java/io/sentry/android/core/internal/gestures/SentryGestureListener.java
++++ b/sentry-android-core/src/main/java/io/sentry/android/core/internal/gestures/SentryGestureListener.java
+@@ -206,29 +206,7 @@ public final class SentryGestureListener implements GestureDetector.OnGestureLis
+     final @Nullable String viewIdentifier = target.getIdentifier();
+ 
+     if (activeTransaction != null) {
+-      if (target.equals(uiElement)
+-          && eventType.equals(activeEventType)
+-          && !activeTransaction.isFinished()) {
+-        options
+-            .getLogger()
+-            .log(
+-                SentryLevel.DEBUG,
+-                "The view with id: "
+-                    + viewIdentifier
+-                    + " already has an ongoing transaction assigned. Rescheduling finish");
+-
+-        final Long idleTimeout = options.getIdleTimeout();
+-        if (idleTimeout != null) {
+-          // reschedule the finish task for the idle transaction, so it keeps running for the same
+-          // view
+-          activeTransaction.scheduleFinish();
+-        }
+-        return;
+-      } else {
+-        // as we allow a single UI transaction running on the bound Scope, we finish the previous
+-        // one, if it's a new view
+-        stopTracing(SpanStatus.OK);
+-      }
++      stopTracing(SpanStatus.OK);
+     }
+ 
+     // we can only bind to the scope if there's no running transaction

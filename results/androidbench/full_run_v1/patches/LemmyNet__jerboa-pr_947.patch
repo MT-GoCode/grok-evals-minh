@@ -1,0 +1,37 @@
+diff --git a/app/src/main/java/com/jerboa/ui/components/home/Home.kt b/app/src/main/java/com/jerboa/ui/components/home/Home.kt
+index acc953f..73e8e00 100644
+--- a/app/src/main/java/com/jerboa/ui/components/home/Home.kt
++++ b/app/src/main/java/com/jerboa/ui/components/home/Home.kt
+@@ -186,20 +186,18 @@ fun DrawerContent(
+         )
+     }
+ 
+-    if (!showAccountAddMode) {
+-        DrawerItemsMain(
+-            myUserInfo = myUserInfo,
+-            onClickListingType = onClickListingType,
+-            onCommunityClick = onCommunityClick,
+-            onClickProfile = onClickProfile,
+-            onClickInbox = onClickInbox,
+-            onClickSaved = onClickSaved,
+-            unreadCount = unreadCount,
+-            onClickSettings = onClickSettings,
+-            onClickCommunities = onClickCommunities,
+-            blurNSFW = blurNSFW,
+-        )
+-    }
++    DrawerItemsMain(
++        myUserInfo = myUserInfo,
++        onClickListingType = onClickListingType,
++        onCommunityClick = onCommunityClick,
++        onClickProfile = onClickProfile,
++        onClickInbox = onClickInbox,
++        onClickSaved = onClickSaved,
++        unreadCount = unreadCount,
++        onClickSettings = onClickSettings,
++        onClickCommunities = onClickCommunities,
++        blurNSFW = blurNSFW,
++    )
+ }
+ 
+ @Composable

@@ -1,0 +1,3011 @@
+diff --git a/gradle/build-logic/.gradle/8.13/executionHistory/executionHistory.bin b/gradle/build-logic/.gradle/8.13/executionHistory/executionHistory.bin
+new file mode 100644
+index 0000000000000000000000000000000000000000..33314a717c61819c1045bb97230a8bed422d0063
+GIT binary patch
+literal 74171
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/.gradle/8.13/executionHistory/executionHistory.lock b/gradle/build-logic/.gradle/8.13/executionHistory/executionHistory.lock
+new file mode 100644
+index 0000000000000000000000000000000000000000..a6d60a44aa1401f7473bacc77b39b857d4e5af59
+GIT binary patch
+literal 17
+TcmZQp$T{yR&|7N500C?OB_aa+
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock b/gradle/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+new file mode 100644
+index 0000000000000000000000000000000000000000..2adf3c98443578dc45ac1b870f8fb62820fb1e0f
+GIT binary patch
+literal 17
+UcmZR!@m@PeZE5}@1_+P_04&V|%K!iX
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/.gradle/buildOutputCleanup/cache.properties b/gradle/build-logic/.gradle/buildOutputCleanup/cache.properties
+new file mode 100644
+index 0000000..eadeb58
+--- /dev/null
++++ b/gradle/build-logic/.gradle/buildOutputCleanup/cache.properties
+@@ -0,0 +1,2 @@
++#Thu May 14 20:42:51 GMT 2026
++gradle.version=8.13
+diff --git a/gradle/build-logic/.gradle/buildOutputCleanup/outputFiles.bin b/gradle/build-logic/.gradle/buildOutputCleanup/outputFiles.bin
+new file mode 100644
+index 0000000000000000000000000000000000000000..c791b4479ce486bb64417042a976c775ca5ac845
+GIT binary patch
+literal 18749
+zcmeI%KS%;m9Ki8s4N-{-6<A19wx}QoH3bO{+R!3Gv=y~AWQ$AD6yZ`d)Y2bvX-aDm
+zG6x|dX9uaa$_m;nDQc>-d%vVL8X~?A?(XruyT`rHdLgBpj(0s&V{|p9%n(2T0R#|0
+z009ILKmY**5I_I{1Q0*~0R#|0;J*mOjE%IJn{j%Z>JxiHDZka2*p_BygXNLAA@g>)
+zApZ}NkJ)*DpqA2oTKaxv{AF>i=rVi6BR#$DwufAiW8GV%AEpKe%9(0aud^vV?>lh&
+zZkBs=k4nFK+KR5kFEe_bZt0zOldslVHLIUbO7AQBhfmKg>RU8M_*r@^k@I+)V{f`A
+zq>pX%7S6YGUfqLVefR#l|75g7_q6n><icJoyXw%rBt8C+FCE?PwCi4xE?1>26Xre6
+z2q1s}0tg_000IagfB*srAb<b@2q1s}0tg_000IagfB*srAb<b@2q1s}0tg_000Iag
+hfB*sr{H{R2SgzGLEc#HkZ>669b}>Hi2VeO4)(08{%gO)%
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/.kotlin/sessions/kotlin-compiler-13890710105060965472.salive b/gradle/build-logic/.kotlin/sessions/kotlin-compiler-13890710105060965472.salive
+new file mode 100644
+index 0000000..e69de29
+diff --git a/gradle/build-logic/convention/build.gradle.kts b/gradle/build-logic/convention/build.gradle.kts
+new file mode 100644
+index 0000000..d81826e
+--- /dev/null
++++ b/gradle/build-logic/convention/build.gradle.kts
+@@ -0,0 +1,31 @@
++import org.gradle.api.Plugin
++import org.gradle.api.Project
++import org.gradle.kotlin.dsl.apply
++
++plugins {
++    `kotlin-dsl`
++    `java-gradle-plugin`
++}
++
++gradlePlugin {
++    plugins {
++        register("androidApplication") {
++            id = "androidify.androidApplication"
++            implementationClass = "com.google.samples.apps.androidify.buildlogic.AndroidApplicationConventionPlugin"
++        }
++        register("androidLibrary") {
++            id = "androidify.androidLibrary"
++            implementationClass = "com.google.samples.apps.androidify.buildlogic.AndroidLibraryConventionPlugin"
++        }
++        register("androidComposeLibrary") {
++            id = "androidify.androidComposeLibrary"
++            implementationClass = "com.google.samples.apps.androidify.buildlogic.AndroidComposeLibraryConventionPlugin"
++        }
++    }
++}
++
++dependencies {
++    implementation("com.android.tools.build:gradle:8.13.1")
++    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.21")
++    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin-api:2.2.21")
++}
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/META-INF/convention.kotlin_module b/gradle/build-logic/convention/build/classes/kotlin/main/META-INF/convention.kotlin_module
+new file mode 100644
+index 0000000000000000000000000000000000000000..3aa63618ce3a770e72020d4f312e3de7744d8bea
+GIT binary patch
+literal 24
+YcmZQzU|?ooU|<Ad4j={tB?c`900FE3SpWb4
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$1$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$1$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..e9834751bb7c5e9304ad5aaacc06d34795885ad7
+GIT binary patch
+literal 2553
+zcmcguZBtuC6n^&dl5n{#Ar+*EwQ6V~R4&jeYOt14u&Loipr}P#H}@`K;bt#$_a?$8
+z`7Qneby}r<a2P-Oqa4pBDZM&$#yX6X$?nP7v(Gtu&a-Fp$DhCc24EIG!&hEdbt_?5
+z352V8buSRw<$HTHC_f6NFSicda!m$)5LTq;&Nj8PdwYTOcq~IT7pl5YMp_AK6{&Kx
+zJ2=QqnokOh;k(jq7za|hJN2q7RV*UK1GmJhWuF(4Yg;wt8652{w4}+Ik_oRBN;3|M
+zPP)Dh+(Zm_#1^jwF@>@vD<_!um5d8F3k-uV4j_eghD(X{Q-VmLlc94)65LIO>PRD|
+zvrJi`6h;-d5^<l3V2-yEg*(EF3!@w4INp{zH^E@%jP&SR8E-SJo_!DwY&c!8aE@W%
+zMG-mZMvpPdFtm>pM>ia#k+so*3#2dsGCVx<*pi&0dUoX^;R#t65v50}dbleXrkizn
+zNv@a-UuYyY=O;;&#^B$1aYEdpiX*AC^mGbC41M0V@OGENc&QcyD?H*=K@4ZOI#Sx<
+zb?ydSRovxrqnruNngOX$fgN1J8#Z3YWjae$sx^N%jkg$9&iY=akYmVl&l6hb0$J7@
+zBGPo*=z{)_j6Nj=MF&@K)y6PJ7<!*4jS?*?B1$38kgD^bCYHAt`iXQ2kd{%w!8N>N
+zV+`XAQ!n2$QlJagrA55hsDN>EiW5_<DO~TyByLcJTU6U0kA;rMqnc788gDhod#3rU
+zHdJZ6$1p_L>tt3`I*w{pYM71Y*|Z=QCEX>s@jgB<-acfw@n1S2!<8g(i-yVkwNwrU
+zaM7k~O%1NQ)eX%FQn<yCE-tOD&o0f)Gn{+YuN%G9!EMZS(K~X7!P=W7dL@$9LZ*^F
+z+p{QQ?(>+_4YsQFHhO`W8Pa9|1KTx18!hfjBT+>xpFnfRhmL)GXj>V}wgxN`GslO6
+z)&$F26V_e(_wPHcwAtlPQS38Zh3cRh)-;`jKp&j-HG1BPQlQ>({a<#S`TbZ>(+E}L
+z$`9ZRhT#@f67SeQ-_r5jn7Zm*=u>~omO_sQ8$6P{9Ef!@Fk~pF+o6Bbcc}aJl%x_%
+zwQ5;JEhDFBm^l}4t%Wg|S6&cmYCp}*MEo^bQ9Q0iglMmYwa60-(!gINe#WvYHl&v1
+zZ&s<W$y<#HB1;D)I0Y+{F)s%|Gd&KbhV)Ityb_xv-KN=SGWoG5IG?}v1ikt8U+~J0
+zq@({IG+u75qYwS`i!AXf;Zgk>QV;F_n&d7Eb_VFCZ?B<i3!bB$Bw%<f``QuS9Lql@
+zCy&vaeftQbM{u9wT?=E`>8B`IFg`6jr13oY>?D6f<SR#TCXW6l&`BJ_7{m<4VZ3+H
+z-w29lmP|h)l{wfgGB=)`{Ma!jf5yi@Vg3jD-E`2|I6z+l*f{}quz*i!y#tTPK1(}3
+zrx}E8@XY)TjqRlU5}YKHz;a`L0FUNr+IyFF7dO#X#JwUuEuw_QB9^dR#0oy!1k+f>
+Q+9ujH)-~>H%xDb!1!0@g;Q#;t
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$1$2.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$1$2.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..6fdd035141efd3dcb22b0b7926578a8234a328e6
+GIT binary patch
+literal 2641
+zcmcguZC4vb6n<t2BrMw!Vv7`NTQP0((sqGrs|KNI1e=-y0*$s*>tr*8fz58t?k2+V
+z3qQf%;4e^5tLO(0$B+Ifk9U$Z4J}kYa6CDgxtW=J=b3w-c_x4V^T(e6vRG$$V!2hb
+z;<^=Em_D!8Y~h={R-?u#d#)_Y^&PWRmv-59E7CHvt<h|)W=o3)(sgpK(-4lbmh5^(
+zI&t#0cjA-unF@n3)C*f~U`xl`Y*bC@1j2K;Z5DX7ROXrPx%IkZsW`ql-?k>F3kqHv
+zN(%>}lV;hs&751UNn0$|nm(OK4;>j~W-<(;M{gTOh~Yxl{2^P1(Z|p?Eh*d#Lp9Mv
+za*~P46kM-jRy<y&)T=`+dG4mLf=seV8wVTGk54e@ab-RIP6itc%O?-QfDWS{8cs2c
+z9EHfh00z~fC_^ZbPZkYC5Yy3%w`f2CWccR9v2`<v>e(Onge7D{c$6OLG~6x0aJ^NR
+zV=+YK^-MFJabi^$cOn=)NQVwf^G@JN$Cs8L#(9Rb)`qaQ7TjQ=Zre-T<5fX)X1JOt
+zZ1M&-ZSGXe#Zt41T_Y<hNQLTZ-~uk{cn6ml29!rpcs?;cf^mkWlfH>z#Hps-vV`x)
+zZCUc$yS3mj{O~_=`jBkAK4jnuuIjjq1l`_OF30_s*$N{?YzW-;aTq2JNq_QHE_VgU
+z7`TS(I?}koknRLZyq2THcvq3elgS9^MvirpU~aqSQF^I{MQ+!HfvHx3Z!#o~D_voH
+zz%cBKV8yL_mQcDz%36}P40aeUCf;-s#i`r)Z~(XPQ7gzQ_bMVd5X3;HwPczhb$mr-
+zxN>M>RZb32-M|RW=_C(#h}LaYRWcmLU4}@0VP!SDkeg#T^+N5N8g1ZH%=IIOc?PXE
+z$q?&eMEepk488DqAOc?I0VgHUs*N6cznE$wssRJrQbrF=ZcAlRp|mmujqmRo`u?u2
+zMKxU;(a4PM?~ZB{ETv6o_w>Jh?9(F3t2{;6r@7-gJ5{&tljKv-$0vOyUrJgSUoqT#
+zlX`W%v2)vjAQf_*riP5*F~jBmeu-~v1*Fb7w@f-2E4UW7i`<jEWQ$eRFhnV*8*aHH
+zWTfJQ1?h-|dbK3H_97$iIKs=>-1miAFy~md>yw_foarX6$cn>*x<?W97KP{OU1m79
+zT&Mp9RZ*0_r2Vpv;|9&Y3_d1^EWMQAFtlh?y+8o<^vI|h(l-M2+I&scUFy|HG?jji
+z)2VCEF_a4ZhBH6Y7(F`FUTV$bEQaY9t;E|DkLuU72Fd>^+5H;yC@?_ZAw}1A`0o)S
+z3z$vE#`f@TI`xb;d4{3bdwWRk!F&{(+{637<6{j+&V8amq0#UywWkS9AI30_^Ozx}
+zR|tn&TXYc4VwC1s6IU-u9U;vUrdb+NN4`VL6(%E<-p8$9k^Kdq{Y1Z88}v1gHrf@~
+z=ma)!4|$sJ1*i2f@_0l&D7K2H`VzGv8eM}$mP&28**}4x{x<pEC-2YK(33|Yj|X`y
+eU@?y+e38d8R@T6Ltm5GsLOzN<zVtEUW8_~TzwoI5
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..812218a0ee0b39dd0528df3b80d9618378c899f4
+GIT binary patch
+literal 2669
+zcmcgue^VPp7=HE$1deM7v_(p5tu}2TR1RnrH3+3C*l746q0yFV-P|o<$>lC{cZp^E
+zL%x7t!cU-1YpKpSjDPx}9N)c!5NBXI%%FeV?tAa<zWdz!KKtzb_4jXo0GLOa;j!ga
+z%#!Do9AO5$QguXN@@kbD*Y-VW%gr6LSd)(JcqM6>^9}EOwdzQVhthL1o?92LvR0j1
+zNxDf|?d&8clap~UhVOD^FLb19Zr3ZObVK30+%a>!QnY!xeQdMlS}IClE;g;nnVbUG
+z1kyl3*raI(j@gD_;aMo$fR?u6J#=N5o=r0hAHR7VF@`H`<3|99ql=+yMpC$0hRR5U
+z=QNX*&Ut>xEcx7~^s7%>^}TIjh3U}(Z5(dNAUVOHCzbW|TN!RKterjx13HWzXgI?#
+zbQ~fBz35Yu5)84C>}bJ2HwJWc;v6{?K!zu$j_r_5RL!2GFDxPJ!l&d&x9*h%!|g^@
+zPQVhC+rB8JNy~FLWvS+iZVdmM4K1o>-O!grFDr=SGQ$OHOIYP)FI=uU&MNnLMG&VM
+zZjR)(d7YaMcT46<F)Cu4C$EB(sH_IA;4K|*;wsgZ=v|eL$lK*^yu+}1+GjD2B*Or=
+zED;1rM;3#E@YO+K`2K(7@)2ps8n}U*I<8}cq5m*(lx$HFejF)=c%3^nv9if9NOWrp
+z(wvkwa0~D17{fTj_{o$a4mwt60ug3f6;Rt8v5BhK6mIuo5_gE;r(K~#ek;9vU!AEQ
+z9n<)L;Mro6*BpYVILdHs<TY{`vFjtG71o*m7VA_TvpVJ!%(IjdMdFoeq}~QyD-nWw
+z3==2SZ-yJ~HE15A_S!dH28M7^Cox)N=xu7a68$(HFmz{^^Xv1=nFY$>LCT^V!N8~Z
+ztOr@-7_{mn9gVhvHzN}r57sP+klQ@uq&!-s-a$7eQ%$#Oz`)AN=%B%8Qdz_(&8DEq
+z{ar)f-_^B*rfWkQnTh?~VQqq?v<dBj{^yTfTDMwdPZ9PR?t1P{#j6E$!BEi7==Nl|
+zG;*8{D?)yarwrF$e;1FJL(=AqXOm72<UETz1@22;bi}%97!vf2Tb|w0G1Bn9oOH!<
+ztx^<zbCQvDUEyaO9t1*7Sa2=J3rNlyi%FOBvgGoRWRx^5@6~)uED|FaF0R$+&!8d-
+zGLW?2yz6>l^wSVvf{NEk9~_64NT~Y<pq{Q6l~a1?9MFs+S@)<{o<wTw1<s~!y+D5|
+z_7dlRCLe=E?bXIOE?|(}XeQpEc$Ck`>ZA2G**zNc1kg)QzoJhw{0{^}qv55oflGUM
+zdo1;wHhGTzfopph-GliG?`atO9n+5vMqc8>eZ*hk<H$eP=D!>HGa3{&4T9PM#L$KF
+zxJ>BoU>G^le}#Flv1tqQ5{=y_%nE5I{kRbJc|y5BE|rA4G+m)IQe*p={1u=4f~BA6
+zy|GDG^s(pK0voNs29~ix<DJ-~`NNbd6$cc1y4lY)`x5mrlH_l&MV3msjCzi3>Zd8j
+rDn<Ex107kcWs%Qf9S^f8;EOE2#G?(c0FSY;fmnbi0lo@wKfusGKWFc)
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$2$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$2$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..e90a31003c98bcda20328c6cd681cb89fd8a36c2
+GIT binary patch
+literal 2812
+zcmcguTT>iG6#ja+>@rMbL5T!4Az?^hi5Vb9VwR9B2xgNFAQ04$i@h_=(l9%-H8Z=0
+zH(q@AH~0%QmBhpci}KMQWqEp7Hmg8Er6?b!`%GWHbNZaG&*{JZ{{0UCS!^&ovi*`(
+z^!=hMtdN(=t_Uq&E>q(<fiE4owq+G6(sf+FC~YgdJDM$*U1{@3`rfqfRfVUd1-DX^
+zo=LmiEpyZyGe;9(3_s>K{m7M`wNWiu(u+jkao5W8Qo-Sw#<{hMXDgi0nypEr6L~)<
+zS{ouN1YFWY4XGG#hwODi*SZ&D->sIW{Zd)FBA7477<J?ao{Tb+8HV1&%}Ah`;cUbF
+z0j4C-%FsF?32u_1G?+hW$7SNP){e%@(pm`o4Pi%_p%qdbt;^6HVbDz_J^evO>kNx0
+zZ-fCIMjJGoV(2-{A_MK{P>WIw&4an26$43h>1e_GG@uM*cyi*lH8P9h*=7d97P2Y=
+za*y<?{-$8KIr#33QGV`@-D^^88_ASJ@4xv`r*Y1U0wSig!vsF2?e@B`H|P9luHw22
+zJm4ikd}p{cnBU-4Zn@kmTJwcCtPLYe3ZzJZHgFc_bbNw7hU@Q2{RA#B7)24$tyty(
+z2@K}o(0_wj4*aTgM4)(97D2R?F<@e#9sRh-Fm#mmI(Pzu6byC!xJS2_;o6ZQsP8rF
+z+empD!)+MCWkTE7vpk6_3=1cH)e@ka)WdCCgrVumLbxJ=kZj+L1H(`M<Ly3x2K$E$
+zjNz(|QGCX5_1KYl>)ixCr_`|)_;o_uYGmXd|BfFx3fFafp<^6382Xe&4T)<Xvl5tK
+zXbKe(yBqb^Zi3?dByP3iCT=s_IMRwkb3VhxgWwzdS<`5s2WNCjU|%w{*Ydt96bZ~S
+zBy)31%h|c<8HQ7P^(n3*2JRr&hOcm!K`W0kbnQoG=-k_LUqsyD5vN?Gm8wltahYn8
+zssRJrR6-L?K9fo!N@@;)nmgNuzO$`sDNWaUG!j!g+r8QdOKT(A9sSRrTeYOx<&2T-
+z6WsH?t&(2}sVEWX!;`)$Z<B5Uj~J$on_p`Wg<1`pc@_!ElD-$`xE?%V7&!VVab=ST
+z(>(1vl-RrSzRleg9!Oqr#j<J`Qsm-w->D~BDmxu{>4~{YsUU*dA|vN{BA9l07z(vu
+z#<N{Nq<p)(nX=82EP6bu1cazB`IW#Hv-FZ+II~!xhfPVW$WW5LtmpYr{N@QULfmN~
+ze<z@&QmSME)KgVdA*C+~RUSD>Q`D=GRC@R&-b-J8iOzKMZ}{L>8e=F>+qXN9Zk(n+
+zT8R${kHQ&C9kkyjxlMzf0@~^8RP3$6KPEFYnjRSL`sg*z55K`BhUfS+{eqOeKxdcr
+z8rNPS^9ETBN~Z>gTE+cVT%d&CAKP$x7o={(0D8%C7He*yw-ectC9Tsmqz-kPmMg7B
+zdUyx@uQ2l*_kO8^x5mbwZvZyxzy|WTPxCDhw7!>){+N0Yw!%~WIMskOoo|i)nrZea
+ziX<r~uE+iNkkpS8#vGx{uc9f3g&e-lVG&C?EaO2AEBIy=EX23?ZWYZT9)?&AF%_cc
+EAB_1kL;wH)
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$2.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$2.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..7ce7826e9a5bdab9dc3f1ff91ae9734d964a40e2
+GIT binary patch
+literal 2241
+zcmb_dTT>iG6#ja+EDRG_&_qH)Br*xhf*HWOONbi;vu3j(w<^Udt9PbZ8fLq<W@gv$
+z#<M@eU!YblmR4DmkNzmj)3Y0bC8<2X!*rkNKIc29Pk-n1-~asnCx9Zh7{2v&-K%L`
+z3xyZ+dLtCE#~TeAR1j$y$lXJ)+LU1s>YDVuVtcjNXoS+|iPUOItCmnkS__*ssa&!S
+z58XL;J_E+^WBEWQp;X>}tL{mah)D6!EAx6a;DytByG`XAl-OJ8NOKEi9o4*jkyIlt
+zX`_Qwi+DiM265;;OtCvbtwnlY_{s9)M5vgMPT;qcObUwyhS68Yl0i4ajZ^z)#FIfU
+zL+^qlxJ8C~u6)tCE2IbRoR2r8*Ev#QYMUG<dop%s8En@`-~S+!J%;s*55j>BrymwB
+zF^s$_A_oH)G)h^9?p$eV+d&_OZS>$xS}*}Je0Sloy(AaiX1^N=U&xk-C^=HK^nqZw
+zpF1aMOsWUd47<KoyRz1dL?1@~OO6vFmsAoFHKiYCaGl|@zbE{IicTucFkIsiuM1*4
+z!(^_!&s*FJxvF`qRYTLlsg(@_QlndTa0Bny7{fSa@1oiDGI{P?2Je~+>$fohm*MWY
+z3N3@%lrsvqAwv<ZHqtU?n8>}RzS9HeFlA#Bd4_xEyg7#3XQX-RRGvGTcQAshHgWe3
+z!$7CxO^?Wcs;jS5+1M;rmX;YVy@)?;AP(m7em~~$0fW_;V;KHFGQ-ddn@1wy0Z%v)
+z)vC9;sNXU(^qBz+?7#?JwE0*Xi9A~Yfx5>>j(vP&TUpDtMl2Gu$48^qEX!N7)&u*m
+zpL(r6V-?I(><e6Jby(NUnEDZcu3a=`GFV~gNjo~jwRUNp*`6FcK#Aej>)(ev2MINZ
+zB^^+)4wtph!)+c(UJb>j85pvZxjh}6R1Y<h!Ln4M(yUiS)KPLuN{MJG<Z&#F!m{#1
+z9a9mtjj1_o$eQ8_6)!c+4c&}<u|n)*xVqk?*QzeIWh}{GQ7N6I4_S;^qC^j+F#{``
+zHBAtpnfjc$Df*~hNTW>BeVWZmHb4CoZ{%m5VkqDJ9B=(XYYdNQ9B=RAGOo}cY2t0d
+zqgzU)L9(xq+;73o0t5678B%uOw<rvYw#TN2ul<Ib(|=&%oBR`U^aMlCaqAeFXP7p=
+zEUeOKsN9R2xDGe<eWh)D;(H9Em?7WBV-LN86ho1`y+=#tFrSmU@#f^Gk1_cS-mm!Z
+zXZml0_ohLQp8|GHfE|2<k7>ULYotHi!2w}U(7&0#rm-7e;w!9^WRkX#&JVFkv$6ez
+qtUujBR|%h$P$*#mcS~5ry%NP$+yRRz*-Ja<j`2l|<rp(DM*anK?QoU=
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$3$1$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$3$1$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..be20d6de545f109a908d630b9bc4d10d9e7e7a81
+GIT binary patch
+literal 2012
+zcmcIkTXWk)6#iCmY{yZ_1=1z~%FS);q>bVhD8->*g53&iC&XzO8irvbsm{jo%A=J$
+z&0Bs8zktgOrDcZ6@W_v1I4e6L3;`w&dC>0B**)L6?03%Ze?0#cKn2?jUpqn9Y6n5v
+z_bkP`J>OFn@AYVrZWstxJU*~?W8u4g&=!tW8E7lLo-Z68i9oIevhPVPZTN9p$UIs5
+z2l-O|HhrZG7{fum6GXm{)_%Wh2^o2z<i1ts-CdWLPoF)GrK6FQRU1mB)w&LF7|b9N
+ziceUs@~urz1##$jYJ)o+PQKeGXb+``%J<3)^Z)KTgA~KnQ|D*6&mhf^UKIp)k71-x
+zq>`lyc5&N87P%ZoF;0qTPbh|Ol29+MmXu9e$bQiA7)pin)kViWk=JqN!{e%DG4=QS
+zPoBn>Q7EJmj>_Ogh8btib2`l+YR105!9(8l=nWYb3iW;7=a$c9+gjh<_nfGFO4HIH
+z?Xs@b3@+#J60R`ZIL~utFvl?7_M++&$B$i)iab>)4qU{M@U4~?l})^iSH>}qR~ZV8
+z>Q?2Z-K<%CFH{MW?po`u`*xyhRGN0J+S*!f)UtSu;ZhR)F;E6?&<k_drG(E&toX>p
+zTgZ>&O<ZGGK41A6uAc>Ys#wGFnV7(24hD*p_>h{K%NZ;&WbI~atI}MnQs~ERlMvm+
+zO)QV$1}p}nS7Mm{Co-9@I@E+jWX;_%?c{B3_`(=T?^0!tAsb%AT^@1bo6+r$(4=5`
+z$?63RtfPeyI(#Cuv_g_gKJ!P1X71=PXG|J7W7Z&X^5}5hSYeCCit!-#+qY>WtF7Ey
+zl-eqnfjsC2v7)vj(626X3}sLwYW!En{53!{TPN^<;nBrKl)<MA*ZzN$E_WgtE^C2H
+z4L@BE9PV%PQ1D&f+tLelbX`cV8FzQRaHyH2$J-0slP0B(F>NWmaLwmR=?0ppO2-cr
+zb>`qI!&pnSC6D5e5Ob|$qSl0lpWBRSuy?&}p#=G>NEt-Q%vV?;&WzH#(R|08CJ_-K
+zMIRB1G!2sSbc3E2>BZDjnBSAc(4^HIXmKgAnbLfxo7$p5yFvTR()9Gtm|c2?tCaWa
+z&v4zq7aG98I<1<xX%uOkEGB@L2S!6cGRG7a$jJuX9VJ==lNIt(AeHv=5nb0_%*CZ6
+z%>RVNAF%Qr{SUy?Npyu%z~%|Ci4tznc^0=%vb>UD0pq{G`0^><`4M+?q~sZ&(>jk4
+ze3tyr;{I^g&VgBM(wZWzjTT7;-P}s{Iv&z~ha9~}D0g=-V&i=qWgDybz{Wj%Xj2lE
+V9WaHDv9^Ph!Y2w<g$0F)KLPju4|xCp
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$3$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$3$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..c0f50185a1857a7f78a7f98a2d057e5b20a84c20
+GIT binary patch
+literal 2003
+zcmcIkZEqVz5PtUT_$^oLxU@|IltM0z6GJa<fC4t5#w7Hp>jqLHK@ehncXc*C?^$<e
+ztNE7S!Y_a#QC=iu@sS@@b@uE;MiiPavE<pg*_~%*XP()=pZ@+QfI7Zl_}2D&X2<tC
+zo@<7@*Z17e<o!Mg=>)!T#KR-AJrJJb`5j@K^|7_y?|Z`Lk?>{1mqS-7ZO0pQgfz(8
+zJ2EQ9hEYj_G4z{VKk|e$4~IQd$jA*O_sk~mwH;oa-g`KZw!#U`?TJ>YHC1|(RK|Hw
+zcEWT*&)ng5ms7ybDacn+MAgkI!{UEOOe4u~b!z`PQPW5<q-uiTHW?D7)jft}$y(jh
+zkwGqp8O)L)IuIelcX5X2RY1B+O30z#bs0*fGZjN6n>SQ)M*pNj8O;6j(x+{(WE2P)
+z3Oh{WBEu#7z_q(AKWYs;Z-)oG=Tg5IR!Yr7KIEpyWyieVK6LG<I%U~aAf2iz&?Q{X
+z;bmN*%A6;&6t@-_GFEH%LA}-3V)*`C8(~zcI$pu6SuEl;hNUymGL6?6vVj}=gTQu)
+zDodpoustr|8+daT*RaH}e5QUgTz^h;R;Ri%>6eZ?3OQ(4VVIo^fSQ;zRv9jwq!!PR
+zx@tL#HN3^3^(zd;f5TDnYc`EF&4?O{tU|6R$Ct9CZ7|H8K;CmB?(m2cnYG?9K`#$e
+zBBKNtSXU_t+I%FGwoaNuF^$o&o*NzKw1Sq?<~33aqvJ(wovmr>+MV2AKcuvb@^Ws{
+zeQI3#@~GzzLYi0t{pS40mqvqO<Nt<n>UG?D6uC5BzKnaD2N8Ao#c$}1ZbT1E!*^)x
+zi%s9=-X0GGZ+q?oC1}8#Lb|O%uk8jCOM$9<;5(-?OMKHUDczvq@i0{M%Wp~B^Ftcc
+z@lhh@uINY}4FW>U?Z!0S77Bjh%K^RUJ$Fxpg5uSs^rQH(53x?oouLBL(~bqzZR%K(
+z{=@*X+#$`N6VwBw){;-4|3n&tMN%JIaUu4ZQ*5M@%HuAr8m$-0#p17+FF(fB5z@cG
+z(4gEkd`?pFD}@q@D93P@$1W2%a>g8%Da2hmJ45UP3U!KcolGjmZ91-E=xgN>uKj}2
+zW4!$%eUHIYac(P9!1^h$jvFv(KSOsvx#N`>3z+=_+SgBT^Jl!HGNs69l3YXrpT^(w
+zlY{eQQ@?rKBblV#ZL~<!=;Zx){R}&_-l9P763Tn~NLaXK;e87q;6n>l)GU02&3&*C
+SALI5uk|F9LJ_)fLBL56vs1!v2
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$3.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$1$3.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..db077cfd9b551a3379cc41adbcef36596920a916
+GIT binary patch
+literal 2005
+zcmcIkZEqVz5PtUT_$@ART-qinltP`vNlMOcfC4t5#w66>x~3_SAP8xFce!kQ-nH(|
+zQ6s+Ox9|&~NR$@|S$yP2A!g4`WJFOFiCFUN-0sdZvorI|pMU-OJAfJ<F??mIp6M#(
+zdX5?JUf**9llS{1r0pwVi~VD>GZ3EbDOXr#ZM0kK_dQ|pP$*ef^2m`|YkLD%$O2h=
+z$AxlXBMHXvZL_OFPe}9dsAmcpI=<wd+2p;B%`1~<`vYldl)&5`YvpQF2R9C66a~d5
+zOgr$*i3qlygpLfz^bGF{DZ<KTg<;{pohK1zxG{15oB)zYFeIvi;5Hdz#g$!#c(Jjv
+zn?(wl45lzm8{vTn7`~2zy_ihWOA<mJsjkDYQ9N%}bks8i9c95%a$mRu-$`NipRYeF
+zO+$vhpmbV65|<gSSO<>PZK<#|@VqwndC#F5GAtLHhx~|}9+$59uyg2GVP#@xM}xQ(
+zovAChn!(GsMk%_uUMrN7m}f{eT04(xt@;+jHy2osLb;N~b-a?s0$ycUKVO?B@ft(A
+z&#f*ezPJpxiZ38Sl*iZc#x!o?7DMU09l)^koN}#9)N5S9EM}0)z`!!Y^q3o(Oi8RT
+zTsn<1qL)s<S{kdk&0zG)4EcY<Q9-H}k)P<J8I#t?Wo`IUnzRju*;B{|PRMN@a_V%W
+zcNC-P#I#6h0S4C9N{kMl2(6V!v&m;+c#_QwPclZ%$QW}5sk!0Ff>C0tM#;FJ`Qy8U
+zk<wQ79ePidOC^tcY7h{a3AFuxw__4@hN)=&F<dV;mG7Fa&utp5dTh0Q712bKVhh_0
+zi!Yw0>)nthOkLT;{Crbc+}q{8;2qC-tOXIfDWuaH^g50|-pNre50rhzRhmuNhLnz9
+z_jnLE^f|L7El&m1d!wt=jXT1XJfy+Ekl9fK-*UEvhM#{lpxNGYc10k_UrkCCMq@uf
+ziAp#{X{0fad0kVgOPu~xXWD6yR-hY{X(U$T&yf9rG=@(}W=FfY6xqz`o}-)E;xk$e
+zS}(8V^FL#5?I~^yk^BV(1KQl63xMvT1eTG<?FjDb$Ycyh#+bz-xoFbeDe5sGS0f)w
+zw55IAqwCs7c6Dutn?IrW6mNb{-y`ru6x-4SaP|y1i*=ZEo}#y(zVTXw1x)`2<I88b
+z^CRBUk&<UTAekRK1LkN}=-(V#B;)uPpWq>B24ZMO>wSDq>s@m2Hd(*3hgbu58+f;Y
+f_warL6;vDe0GoSY0Y1dNJ;Vdl0(=x;F~H2<q5T^#
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$lambda$0$$inlined$configure$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$lambda$0$$inlined$configure$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..38ea0b72e7e5f179db676f868029526294d964b7
+GIT binary patch
+literal 1312
+zcmcgs-%k@k5dQXB+EPKJ_yYvQAE!bUjuI11N=O<4Nn^z-gcqK+ch_U#x_i03Ht^Oz
+z$5)>;KA46_|0v_!wbqKnC*#Y^?3dY@*_m(l+xIVD0aUQY5ZS6_c}jV{YiZsJd{<jM
+z2uMgLRKgL>bF0x7zT+!T*jA;FR)WA6Hjjjo+e&s^8C!L~?FnhpZU5Z#d8^@YbKNwB
+z^o4XC(^j%6ymsiCr7Rf3yP66;%L}<fsd*r*&~5sz9a#tGf%~?(S&J(hRM9UX@p80p
+zjilc>i(IKGdwHwOu=v-IS)>_WjJTYth-$Oqki$6io`_Sy;SkZUqbxEE<HHv)>@8oe
+zK1g1#uLxAG4f33HT2`|y?YLRm+8tP>^2*@^au{dGYzir&Er!%`j9tS-9%GnfNJqy)
+zGjx)k{O@T|U#EXQ;f)({hew<+qt!_fi&!jju>b=*CHzdpr**QN5<{`qoy_;Td1Kbd
+z8#$xMdfi-pw%6Ur719OcRj<3wE<R+8i_e)<d}D*5boGS#v>2U=86`|HDa+F3ar{mu
+zDmULB!YU1$p?-CWVel(SFv8#=see^a|JRF@#eIgcWSbb~|KM9aR424833(pk5yQ;o
+z2Cbb&#GGyAxC~P@qV!(7)o{ZD-tY-2)RfKrLmrCwJOC%El9<2kbFE$C+tiM<eWiu;
+zXzs_#p&i&4p5zg2F?DobwL{z86>+$^_ig$FTJE9Hg5p)AR8jIjXp~?Oiw6XWNlip~
+zLPskm4C%4rCtUwXhJmLfGYPnWWwK*ea=;XBBzlEpo-l(nFoz<^G#<djGqMb%@I29v
+uu}b<Sc}~;q!Vywc%v5o+id(o%Chk-*i@75(jk}mXLRw=%V^QOt#?lX8sDi%$
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$lambda$0$$inlined$configure$2.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$lambda$0$$inlined$configure$2.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..b4f26a61cf8503137de154d177c9f6358eeea63b
+GIT binary patch
+literal 1327
+zcmc(f-%k@k5XZlJEp4eFQv3k|;*V3I3P*{FCM6^dfux~gBZL=Tyxwh(h3oF+_S(Q(
+z{~TX^()eH+9{r<?b4RI&jZY@N%*@Ws&g{;7_P+o4`VBw@D-4mNT9&7j=W|Qjt-$Bn
+zvV(wxbVDUv(LA#nZQ;AV@`PhmF1(c>@P%VXLdi`fJ6y(A-EVtBnzY+LGkv?&aBXwd
+zG==nq<gV!`*%V$o<mOryjNwB~g`VYwwo9e$Kv*Gf`rL`E{j-3-Ypy4sk9pJxZ6URF
+zq9V$38SiS}+DSb96V*d?Oq;h(BQ7-^ro2&RnEz{qEYb|Gu7vbU#JLA~=z0;==i$Jk
+zccLsZ45Nb!G3+j0zf6!cLk~$*uJ!92cUo4nEuFY`+S=}0rSj6j7;+e8$gB$~q78=B
+zV(hztu{=gF&XA6dgl6c}{>SjBualQoc*`T(wIiE+Myrz|s8}p=u>b=*A^)j}SF2>X
+zC5B?JJD%@#^TxE1H*!Xi^}4zIbg#RXE2Im?n_hR7oqx<2=U+0Zc*hz;Y50ULD7iWn
+zGfKcQsmj9jas18}9XEe5gk>5wLw$IOLGqyxTmgE(_^%Vx|Mh6Hc*ro4JT8XWKX~i&
+zpTP4NPZ*}IH)!P~B62pB%NZtWg!FE^)!^a2-SEj%s42(x5A0CH>%McWDvA6}-`1KF
+zZxdV6@s$?Rqq!d`m)^jh@T48lqo$7Tsdnh_Z4sxNdEcggLW>^=Eht|_N);u)3yl&C
+zqPP!83^jrBjFwgm4C#^LXWaZmhJoiKGl_E!i)6>46o3ibO7s%RJoyaLzzm8c(|80E
+zFUT^G!plTI#WLyF6gf$|3x`NmF;&IwD(>JenYdTQG-eLLH11>e5NVA$jd_g+8Vf%G
+DBQ=Qy
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$lambda$0$$inlined$configure$3.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$apply$lambda$0$$inlined$configure$3.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..49b2b1cc5866ee71a476e74381d4e8e915478476
+GIT binary patch
+literal 1312
+zcmcgs-%k@k5dQXB+EPKJ_yYvQAE!bUj-rVsB_s{Oq_JWZ!V6E^yX&!V-M!pi8+hxV
+z<Eu{^A56oef0S|VT5Cn(lksI{_RH+d?94a&?faLn04i8xh-}reJf%F}wKQ)9zN;-B
+z1SF&rD&dIcnbl|u-|>|vY^%~oD?#83n@2*)Z6!OdjIFxg_JlO)wtr^&ywz~Hxo(<5
+z`a-&nX)D<jUORNnXIU_YcQqAymKSn|Qu9Dqq1*IbJF@oA0{3lmvldr2sG?s&;^k=H
+z8cDx%8o5$a_VQMlVezjavq&>MA8|QR5!GhJA%}73JrSpZ!y%$yM_FVT#)mIp*j>I@
+zeUQ9fUlOQX8{|3ew5(=Z+HteA^=e?1$}0yG$YGozvniyAwir^&F?IzLd5mF_AsrnF
+z&Cp4D^1r7=eVzXKgg0))9UgJQj8-Q_EMl?9#R3fMgz!@lpVrB8N({wbcQW7W=8ah+
+zZ{&<3>vePa*<N=eS4bC(m%Z*fJO7X|&Oc{T@r@0J(&ZEC(_(ZgW|T0+q%2Dp$MHLv
+zsN8&i2&*(~hWh0xhQTi-!3cwgr2bVw{a-Iq7IzuOl5Jv`|ATM!P#x2@B;>h|2MjY8
+z8?<&35p%Yc<1$Ruh|;_5R>KYVdBZ29P*XPd4|piz^8lQvN@D)D&$V`mZ&N$c_LUaW
+zqq!d`hjw63c#=o7#njO~)edd<m59U5y>HVe&~gui78I`{rHYdOL8AnNSUey|Oll&^
+zBRX0!VMvb^KjG>}G7LN>nMuF}ER!9(k^`o2Ezv6^^Mo0sfjJaOrg0A@o{(iAg{O&r
+vh*i=r$a9)*7Y>oCVy24gRouW$GI6VlS<D@RY23#AA<`NP8jBitG?sn<Zp?zi
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$inlined$sam$i$org_gradle_api_Action$0.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$inlined$sam$i$org_gradle_api_Action$0.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..845f390e93c02e472a03fddf1e15bc21c287fa1c
+GIT binary patch
+literal 1216
+zcmc&zT~8B16g{&ow3I5Ph>9P8P@x~nf}%00F=>b-jTMQQ`rrc@c86u?bf($eHuYa=
+zqVeOwAK;HN-l3&IB=OOQ-nsYo+%tF1z5Dam_a6Xic+AlAOxq2N36yXn-tH(7xxCXM
+zqy5lGUmm`954uwM$^_DLYlCd9(^1mnu{3(i=$_El+g05_>VnitYT*}%tsn~~4EBSN
+z`%3Kdj@++#7Fk$NfidKcd5^n_>%e_=a4ftyg#^PamAHcv>O{JOk`%@m7M}NGp`*dA
+zF{f+7Q6^ez#SEKgid!b8PFz1y?g&NQp09gB*QOb!8$<j{5p$o%yvpFTdkGSXS(CN~
+z46J1x>eJ~<>wREIA9nT0yBHQvS&n;c_cR^3+e5$xk&Zu=TE@>9mW%%amzrtJFw74-
+zvz$`LBGg>DbsdM2wD6)7u9Irsk?>kOCf?~PwaY`^76fEiEjG@pTs@Q7vm`;a)Xd@r
+zZe}otTMUV!jb|~RK@tmD%;3rd9Nb|@#z!(@=r{h)){uHB(HCAf7WCo^URG-Usn!J(
+zNMV&`Aa&2Qh-Bp=k~8`Y_OhBq3FS!?QK7ka)*14DV@RDX;}d7TVLYyyJe2%Ei8t2J
+zuG3l_8GkexQZZZCw7^@6N0Fd#>bdrmiD(=HC_`q?bVE;UOG_~Kx=UYKTQp@PiLs`&
+ziBCSjD7QhwNz!VLgXQveTC|o9#k06dr%TZjIvqN5mHf4@xLy8&#d75{mOfIBVV$f+
+z(*IaSflljL9)=C_#~203P2(<BC}jyZhlJVkCoEOI;huxH=gG1ovMlanjVhCPK(!h2
+s>}8;Bdq_5k39_5?bCAL#I_C+IK?0NSkf@VRxKzhwOx3BY={oYi0n$@MFaQ7m
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$libsVersion$$inlined$getByType$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$libsVersion$$inlined$getByType$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..71f2f38c5f0c1cc47127cf15b228731281599238
+GIT binary patch
+literal 1318
+zcmchX-%ry}6vw}}8`~&DWcULV#2;1J6v~K+CL@@+V6r%65waJa?%J+g=-S$QN8oLL
+zj;}sxd@u`-{!zx$vCKIapNuc(oO^nEetz2TKfZngP{szs2P<fsZV<ShV@lo*Jx7{6
+z3`zKQ6bM_i&dp{=c(xa~!ZOR3-f|dv!s1E<ekJfv9Y40}UdI)_;fbbfIFTfeVF=$7
+zzGEA%qh6gKoQIB4OoK5T)Pl%0-H6+imxscPoR;TU%8c*qwYJ9}^GJynx0Eyop(|W*
+zDoO61DaVg<m3B%DD}RleMv~##$d!{oQF*2<J#!d``ca%}j)orjMx~Krm>xF4@N#Xu
+z!m!`HoDis#uO0JKZhG8z&AsL^wOPs{gK37;w(y18VMwgy8(GXCt78hY3`un)B!jH|
+z_w~>e=WBz(ymb_}Y0%`;+NTL(hQ%Ti3ox(~@}G(Lv`Lm-WGM8yvwE+qYm1t$WwZk8
+zbu;>6ue+7WC3D(~UU!pSd`xK<Us8$qjV*@a<b7OnFuDUn_0cdW%j)>>f2W7a)h|0(
+zr`0mlC#M(&pSbc7WQP?0s-XU__mak4hMAFXhhhB>#_Cbfr)PwxeH97cE#<3O+{Xik
+zh4H~{oG8Mn64(yIT#dkf*J(GM=zupp^5klP#k~fPM0_4NvsIt?uXtQahajBW^(`-u
+zl!kaX3T*lk_J!+n)rlyAz8`cV%Xuy0a7*ty^ebpP4Iu@^EBk(+`hN+DA~ZsK08UIg
+z0rZHDW(*SPslsPm`9y|>$0SpI=Q7sFj<3=M%;9QZ=Sk}1(?|nLD3DCz9t=DoOG5%r
+x`}!f)Nk6BX^YnJ^5Q!=ls<>9gb=)8mH>+60(jl0{E!;jtQes(RMdFUc>QA)yg{}Yq
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$libsVersionString$$inlined$getByType$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin$libsVersionString$$inlined$getByType$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..c7780af6151b3e6ea2c11b87cc3abd51c7795cec
+GIT binary patch
+literal 1353
+zcmc&!&rcIk5dPk_v}G+K#UG#`{#X^Nu#}i+Qi7?CCXH1ZA-!;V-Q6w^w!52suSjqG
+zbG&-ecrXn||0v^Z+tgBsClfC-^S+&(nK$#z`}ynp4*(@>FnqFtmgxq8>p7<6t<ZC%
+z$-|I@Z%2W!MYCfz+QPHFz!jER8la^x^n}Hg2>f#3pE!PO)x5SVe8UqBS$85y$exOX
+z?;3{iJ>fgH;X3MdXTK9VMj;KxuwM-#*K{LpQ+6H-Gjf`qV<|KC*==r5e&&%9O>QY^
+z4il8Q;#8P?bE+Ia&RE<jGA#c!Y8pv~=VLC%fuizETYBaw4&6#|syP}V@|{W}#V|d(
+z1jDP<$qK`M59B3*ifh#)e!@+U`>wg$IHGG7v&dkYA+;@hp>`M&t84Wvt{|&p3Ns8z
+zbtoi5r~03UM7^A=4%_qIQQW3>6Q;FJ62u=Ci%cxQz>Wz&74d14EW5yv?{#PNURT!^
+zG+oPRdDiP@^o3q`E0as+w3of^COi9_($2o667e5f428?5GGN2_Bn;Ijh(TFaCP#3d
+zLsYIlxWPINn4xxgic#=O2R}yK5tsi|Q2W=@N#h<h{=yzH>|EemEeiTf8spYr>CVw@
+z2xajA4;khs`?+zfh->A*b{J->#QG2IR>O(*dBY<lR}C!g)p;c1^AOBdd|HmO$E9?L
+zp|fv%%L^neJJIAYuxU;9gzIzFjwph@7qlbGc`M>@iyzzcTC|+Hkb>fsd_PeAheV<P
+zjd(xgQ@jSmtH*RSV}6mI%74YxFJx$VLNe6{m#|89>`D%p#kIa(BdHUnkp>o#Cz-^3
+z7<fvSh6JAV^&_m4enFmd^mpz6i3;W`xL&~x+$0mXDp<hc0hq*X+&Mr}Vo73I;;zKX
+EZ?ET*jQ{`u
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..0609de04027aa557156f4ad156df2b16e3629705
+GIT binary patch
+literal 7637
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$1$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$1$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..8be1c401dcb67b5bb753f677f692abccba7ab458
+GIT binary patch
+literal 2435
+zcmcgtZEqVz5PtUJ#LneP9G8YPw55P)6Q|^o7Rrl5!F3aAaGX#l<|UMBeYd%6eBQI}
+z&ZZGxB7O?L08k5o4=CazKMFBxyQz^<sgVe>Zg;#p^UUnb?6ZIU{revP3iyWMffF=s
+zF9<we*b#5Gd=c5a)uKVUVIW<(y=T|k(s%v9la5{Jtrml3D~Lo{)<Yid6$8}~Dwcs-
+z_uHOSSpx9)vWxnc1Y`KF+z4V{Dtounw55tgsJL&Jd9&{F{NUbpTR9phvRC@j;!;^h
+z*pH?c3I!-_HzI_d|2txvxBZyH*p}WA-lmdq{#Kr0`q|EtNHAO)*gqzKBt{rUmL$R5
+zVrb2D<N1#>mM;gPXL})csSNsb>tV1foH##QBj53kjIs+1W>!lNzLoI~!{({PVZnqo
+z3Ik^trk)j)g)xk4r8GlgrZii#kV3}9FwW9~j*)?%MtFmbMTH&BhQblDBSK1&RGpw9
+z7;f|mbb^M_IX>G>ZPp#^q!gzA-5f`qTT*c-RV1A#i3<$poE_mbDnVRn`~Er)c~ek}
+zGhCf1@A3|}eXcxvt==u@z)DqvcvNBwm+*>-i?~eZXi8Oe8!5cTP(6janM9T$!yQLN
+zQP!9Bs3yXQZXCn+|8Hj>lZcXqE4XUn4a_i1JWU;?TX-T&BFB*IaKA0qwiza=^9Dfr
+zN_h*{@TQ45%rnfNj5?B_OEwybc(q#t?cx{*x?b0DV+@OUi(%oU^u%yw5VhYHgD2@P
+zS(w6klWy6&3}bzY(wvsW`wXd4rMgk56qgy!JR#67;aOP12cyV?xXNfPQmqG$&_|}^
+zKCxL9F?V^)={6b7&Jeu{Ob;nNfPpo%FhrXVrIsi^hD)H?!+py<+&7K1VH#5giRr`r
+zX=8!qj0NMa`R5NKMoL?`*D3ZTt^&2!4B8RJM4<Oip{<`XLlWx@_H&TH^21or9S&6Y
+z22SA~!_0F%Z}W|qXs#Hz#5S37;BddjL&@vD*w6z*nzFhRxJOJtbU0p?N>tj-x(NG9
+zR!J!l7JVK?LMtpQ#}6VRgq|@qVpV#I$L)|1&1%pN9kC)c{P}xrdTg7bCL>Ay3Q7er
+z@4lK?pmrIi6enS%)0)Zwnu)D-73oVs)AlAww`tZZ>D=67ypX&07!$d~uXyn%T4Siu
+zc)7QabC{%mq=}aZk1E)e#>xJ3l1B}gX<&@L3Ei-L_)R280xr&FUOvF9bGb+4<Pjz^
+zuODFc0QPTq+kp0E;0qdcn~xCw1%lANCws<6zAs`LH_5m5I7}}(#ZVyCcW6l;<|9(q
+z-mKi*Ar^nZdq3mDAL)M&e54!n<N&aB1Z<IQf%b>-CFy6#;xn2-*cwmIU(uML)hf0~
+z(n<TeJ8$4V%{qeHWL@0CPziTRST11&AD3_!r4l~Dr(0kV%2?e(B0?p?T7;Vsrv3p9
+CnysM#
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$1$2.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$1$2.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..995c7c61f452f417fcd5e7ded05c4aadeef10cde
+GIT binary patch
+literal 1896
+zcmcIkZEqVz5PtUT*okw+PD;}xlv2QLodj}83KVb%I3}S7t`nLP2_l5n=Z&-RdDpr-
+zTaEaV-@-58MWTgDDB>eO3Nd@W7$X&_`B0s1cXoE?nc10V_OHKx{{uh;4;a4lbjN9F
+z-SUMK@=n(mp~Jgf8dNjTvMCQwoJLRjO<%X9=TrvTs_t}kC~C41@ZhAXRbQw`YPIY4
+zT2d7Wz&|Oj(zlicWB9(-){!rjbKLJZQbi(A+;?ic(`fSY=-y#Zc?KtRwi9V}y=Edz
+zq8Wrj0ZOMC62id$ripJ`@TeDvaESMnl2Li1%rO7|&a+4}Tp!tgMgUo47&7aU;5Hai
+zrG<Tlbje-Vw=s@f4r7=kMRX)X1|A3d0@F#?$w<}LZNYG-bkWq9&@UHFsKvOZ=Q$h4
+z)PK`3tdXmtK&nuBVHTGeu6RenYu9yD@A>{N4|qpVF&S=`YRA0K9iOX~v(q>hUQ`~@
+z>=}?&*`(|WW^#BLR~e@Mwb<0!7hGjA$B^xFzbAGM8D>h~ER298hsriy!L=Ob@hZde
+z#ki5hYYe$iL<xV5k7sx=alVc>CUFCAGOS!Q%M7<hQIm9xUL{f4$fJ;hh1(312?-5r
+zvshplck6o(EA{FY!=>{Ui79Pk32#kc5pOeC-BpI^kt-y~WWMfE!x3c-ODBwzHDmbF
+z1WE5u^3Ngfi-<RQ#EDo|r=Ox{ftg|43}9ewBcy2aku=f@Nlo%uJUg{>XQw%<VCAe?
+zi^Rg&>AbbV7OfTQUhdByGS;}UYOc}M*16K^q@#NwH4uS*YpV9bnk0))8Jy?njjczK
+zAZlwB6Elx(hSGDrZ_Dk7I=-r#)P&PD?Qwsf2a-2@@z4wm`I=Os-s?0(kZ1~&=Of)5
+zwhX-$wyTr~sy+`xLCgG>@_ZdqpA3#NOzg>)iXSy1?Vj!hp4gTKe(ph!UfYh?m!Two
+z6{U2<<7X2qRNgU4F+IDOGxesLrRgUQkj5pcNGGTY$SkHG!~TgRhR<oV2U=W;ZKe!0
+z>7=o6X|`ydTAH4Ig4w0?6I}ldMGMB*!WT3eer2dH3%C}8%?u0@Ffyg@CON3l*)d`t
+zP^gfHTck1`KB42rgT1(Ph8w@4^fQ)!r1bzi6Gt{b0&EX~Z8&siqB~ZHH@q5S0h3Q*
+zef=1Be!;sYQu2)ZG)~j@R=l1~4$h)Z>ojRU!wyLnQrL~>d-#&(yX4?Kvc7wOl#BOW
+heBk0klwGXjBNrR^_y8=VOH>Y!4zU@c8scV%{67TZ?z;d0
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$1$3.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$1$3.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..8b182f9773e87bf4f1bb36e73a94b2a81ac7db2d
+GIT binary patch
+literal 2661
+zcmcguZC4vb6n<uTNm#Ze#1<)4Xfd`)XuHsAs|KMdf=x{+HV~~?ak3f0z-BjRcN5|G
+zh5z6`@E2%LtLO(0$B+Ifk9V?Z8d~V#L-FKf=4NK@ooDWS=9&ES@1K7G$YPyg&2p<|
+z#dRyTFnwOF*}^w@twxPg_FP$(>pNztF72}IR-|QS!_hgnT62AomnDyTJ9Dnn5KbUn
+zXUVQtq?4ck_D*7oJ~tv@4E6k$8`#n@Hyc$`I)U&UZku^tEtPqub8fxvSSpThF0`zv
+z>AXVNLK8wEfYL1cwy9u9TRf;WecF*$92sP0G7KX}ZyP~3!)V9+AzMe#%g{S5DclT0
+zE!jl!hI5t4yI#etc)UynQ0H3m+)ZHxnN*SX4mPBpm}Jls%3AwD1{(}3CxXL(4x<km
+zPB9E01<F7_2GpV$Lw7QlDjJ9)uA>KU(SX9pz)u2RC#9&ceF;xkLN<g)Ns>;(-4YB}
+z!vY<PDk{5Ynn_I%y*fw~#mGTkwCS320#7==wEPI(VK{4T2y1K64HoORy~I6U6~t?X
+z%gOvEZ*bG*PQ`psYSyx2q@aRSsJaG5F{a~PTwv%|9!25#MExkn848N?Z<uKjB&f37
+zvV`v^Y+3SK8-|D&e)@m;eMnAT9WrnUmvy|4Bwgm0F3P<ZIg21ooCw_3i5MmiDMIRH
+zQg;N%7`TF~Iwo+9VWJ%<`AV9S;~k|MPo<)u+j+i|3iI1Fk1|Y^EONUp3|tS(e1jo*
+zTqTR(Lxv$=1O>P5SwhJi4`fN&GT31lOTO+TidnbtQ9o|t<1olF_bMVd5X3+xTr$m&
+zKEA**TskzdDkldBZ(tbbbkd32MDCWzDpii)4ns7zSXj<3&doENdM^G=$u{sA=KC;*
+z1qQ7)#SrgcMC&Rs3_ka{F9KfX0Vh4ss*Nss(U@wYssRJrQbrd|ZcAlRp|mmuP3-R)
+z`u?u2#WY<T*2s+Q?~Z7bEUisyclE!2?$x5ot9+fXPjkn0cB*dOrx$>NK0bkq`9j+w
+z_?p3dos6|!-1+T5kQBL2Q%HvK4Uy|uPxG~{fP{L^Et6ix^RC71BKIUO*<x8W3^B^;
+zhFfk68VUM9UOHm2UM&f)waCahj_~Ge?)yS5n0GAO^-0%4XS$08S#fw!_b8$sl6Zk0
+zYKC(U>-0yVDvHvVv|rY7+<>S}FFq!TE<Kdu2((yCJw^ca^xmi{(l-kA@H{5#4)tmz
+zmY#Tq)9EYEFqrQC9cO-}F^2D`y%5ghEQaV8t;E|Dk1E)-2FQPn>^=>84CtrtpdxH5
+z{Ez4+3z(gVpWnm9iS$$2<S7Q@@9iPA2lG*UY7Za$flo9XIrpgsg+{~o)Sf0Zy%@td
+z;hMq4Cc>d`i#EbpjL;nYAEWg>BzA-}OPFS9NFDh$EmxR~^u#`H{)X%meEtjl4map+
+z9&NNEu+a`|;4X4B-vdtT<K*#(dQfZ?PxU2gyJ>V47FjB_<!1ja1ogMb_a1qFv5Kx7
+k@;ThkVG$2<Si+Y%JVap?%*QfTR?+RF=;JFNGd_m@1L+(1=l}o!
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..9f3391b54f3e072c4c91b7a56ce885bd02a5a6d4
+GIT binary patch
+literal 2941
+zcmcgu-**#56#iyuyX|(NX@yz}B0_|aBHI?UYAR47wb9U40+m`3C%e;hn$2w7-30o^
+z@&E9}zd$%3MbGi{_~;+y@y;e~<2i8bgYjW!?#_=p-`xA%d*{!;e*GQ593qDMZcuY7
+zK~V996Y*Nz7m>s3b!wCs2GW!3TTZzlea{an(skxqqxqm#4<b>N<&cM4`9L*=ie;dd
+z{YFKqG%4`6(o^Xv6O7?uu^Pm_RL*9z=13KbP;uWW@><#Bxz4%uhH|x*$eC|TQ?o^l
+zuZ^Vzgy2cXi%3K3^qY@jp(5J0r|Yhgaqeo4Vf^(6o9JOU)iM8y!%g%t^vz0Aca@=@
+zNwECKw#pTQu;Nrg?vVrZ&6dMpQ@C;N!U~-oZ^$S;$zY|m^x&b4HyG}A1&0j__5chV
+zW*B=NC>w(q(u-0IJ(<FV6&w8+vCxY*Xh36Rc+d@a`;;QL4x~fj3fUAPnMkT;P!$YL
+z%RL9Aini`hV$`%7sC8LsgrXng|D?noR|_f*C2`D+Oq^sm=57eLx){WZ4c}kpA+HG{
+zHN*K#ag#T><8xJUmdc46J4Q-cNrfD1;}qVu@D@&!XNli+>5GzA?Z+90QWxUUM4DlQ
+zyRL|$v@griiU@VUF#PcUa{3j<DA+iM^A_GkhGBT$d}MM_5uu4JgW2SMLoBT`j1uQM
+zl(ZM+Y+S^97AA0sA$#zIVS+;Ia3tdVo)7d9uQ)*aY#NsbF@-C{@GkghpWr%cexT!O
+zz`_hZB!r$==MA4wYN9fn&HPK!Oepp-avJVz*Wpf^pzPRRSS;O{Tg=~N;N49C>1p!!
+zb<7Rm8g7tvlIk=scuXN2+4!_|Z^F@KH(fUInS}-Ip(8{H9mGrZq<q=<yanP5hKq?Y
+z4w#h~&ULb{okBVp-yX6thT|6H;U$K_b`jH6&%~ExkzINubx_-?G=ST<!(h~>C=qn<
+zyRD8QZ+Fiv5p$2noYJgOYaXI!0@F>uZot5*S~x_LkEE6;fDDh6rgt9O*3M(gNEwzf
+zW{{ZLc|2}RvaB&_ELea1)MxbTUEVYSp5-b~TeYAO5phUqZ}MJXIFWf>-O=&44&r|1
+zKo5{h)tJgrKJch6j1&Wx`zt(@yzGlRx?xDsH8%opFLzVf8Y)U978|v)2-}P7f>I*P
+z`#g$-UT{;neh^U#Z*8VJRFV~y@Q(6$DQJYQm?su69KYS5=TJ?o$Vk$8b4mp<PpE-O
+za#}Cl*@Tfw>5>ajPgPZ$l|Bl4TCqve4eIqsDm(EUN3s{6V>sLM0!N?F7(<oX)2(?N
+z!zlgHO1w$>$fSuhMEiY`2Mky#V359HO`Ep*9|?v*)2kCBC${m<MD`gS@(jZxXSZ=-
+z8_r9-Z(!m#%&hLtyue30Fkj*m8h?s>BF`sl7CP1xlJTMejnhDl+EF^Hk5HZ@=?cb)
+zkf(4DXOcUNwm|INVU^}@(H%7MUV6dNUFHb&A`NMyT&Lw4wVj>V!PGBUeu}$4(|_xr
+zzU1;pI~3b{ifydmE1K_xqV;Fcljs5Io}qu;Uu*XZ?LMHshYHgM>Lh7re4q3ZA@wt)
+r>mF%aUBjUQzAj*`fNyZWfN$}jfbYQ9z#^34uAwJ_7ePe06=CdeXthfW
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$2$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$2$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..e23bb23eae36ed28ffeda3950c85d02a4bb7bc37
+GIT binary patch
+literal 2836
+zcmcgu-BKJy6#jbn*=3lR1x+NV5zUY+OUwW<60?K^keE$2fPvr-BKFQSOT+B+*39f0
+z?zr&@d;_0AQ%Ov`uqZEmD9h8svRQ>xs8r#_bf4*;@0{-QopbuHzkmM&z!Wwa)?8I_
+z%1V`e;Y7Sr^+n|HYL%M63zhWb`nFT5N#FBTS-Q^D-sp^~R8=I3vJ~=gdqxFy5yVmj
+z3x2IE1DgQ+ZF|%nvqw{43_ljPRP4*Z*{oL_8N?zCxbGBsrR4E^>)d)Ra5YZk+-gXp
+z6Gau4olOywDoGO!q;kkTGTDoK=Wc?1r(V%kNneEX)dZu7{2-8VelpL{|8g@@XlFRv
+zGJl9EDReS)PDp~AWT<9~$8dM~<hYH~@v3wdLbWN}I6t&Zy5kKQ*&__5t);aeWW2%f
+z;8^UiV8ZHxffEdUFEh$QH%{tB8HV<3VQASx8oeeu@Fopt8yWa<nAb`%a%`6!3RlRw
+z2<eh!P*+=m;d=J<siSZERC38SIk}ZpY4rb_C`~>Wf;c3GN;gX3UE1z$2zP5v#d9^^
+zU*I9H2qHeig=}$?*SX{KpzO?-66dyzENYN4x!b~7yl>(?3@}`M-55yWLk6oXVhWEX
+z9+JRdXNUgl&uXaZ(i5R(TUCVdcHV-G!ET(xd4{1^X>Wq3kR@m6IOG9^F~gNtx}dq&
+zZf+yxIShAU2p0)$bKmkbE-@?~L(HW>A=SrSS45HR%Tlx~!idb@a|Ods|8JxpLWYAw
+z7RGSd#3(*yxO`;)ytv~OKA|+S9;zlSZnW}ppM^(vA35zRJ~c6pYYYS0qLw6ffL|$0
+zFtkOQj;C7nHsV3Ee-bykaUC}quD#NVmzDsA^M}E=+-F0hg+81yDU*H1(A_8lx^AR!
+ziy>W@TU?r&o0(-ev0tu|qGI7T3SIadcNmQ7C`0c-WQLyoJ@-V+Jsxw)SVpDZMm3n}
+zCaoJVuq`dL(d0v^C1R!F5vaYpW0|`<rjapBqt75Qv%Ax8jIf+BV%#?W{JGOe>s{U$
+z**?Jo6>L{jEutDlpsU9aFfX!i3g0qJA2rc7UJs3uHv2FZlrB|}B)dL*$B;eJ`{L3T
+z(WZSyd6eXPi^}ExG7lv$`C>^o3>muU4dpeHE>)qEMHz^>TBRhy#v-c_1R|XAc@zn~
+zU^Z}l6;bZp+f12fQI-Q9*Fr)x7ga5E#VvYXFr2wxqt{MFEXzoezNsKkF;AWx7$F9A
+z(5<InWHP#f0@PEH)Q+Vu4P7lcNz>HpkxXv*3Es$Ee1e`_`)_#bR~lm|Q9H0Vk5f2J
+zf3y;B6COD=kxtTnm*g%3W(Me{uSavZ0l!LS7&JXN-22Wmd@%eR7Z@JlqugUs_82|A
+z&NEzjiu`j-8PGZnc+~0$=)`$S{udG(PVa#<Z5Tv9S<Vv89rU0gTc$|s3=Qc+-K6DO
+ztCbtx#kr@LeT2KeG{HL);|E)SttPOABJR<A2L!F}r=zb@55m@Xx*w-{kfZah(_cHy
+zuAxklzQm2B{~nV1al)7*l=&636|hji7X{qMVgXBdP{1<2Tmg&l6~10UdxUQytVEcO
+G(Dx6KCp{nl
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$2.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$2.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..530abe69c621687899637bef5e7842cae701f3a8
+GIT binary patch
+literal 2262
+zcmcIlTTdHD6#izp7?w>jv`GmGX<9bH7@7rouL-H+LgU6UGzO#!Rnd4on1S_-wYzr1
+z8_)e2{RM56OVvmf>SKRY)iY~{P?e~akRNvD>|DO{&6)3<`SY*eeg}}p7Q=VGZg_RA
+z>w)kh-e?9Q@_4gJjjDxO*5vM?S8d6l7U;V4y?kf1pc_pciIS{_JUlFD)fOt2T5SZa
+zx>PO!1c&aTyOaWB_@Q*5<3K8JzuoYpibbe+;FWlzTI0FXbGt3&8<faf>spJ;B^}ni
+zeG!u*NfTY9ddO=;xE2N8{RF$qYa`VA!jD%U$3jJfbOOJnWSm>cF-*RmOA7rA*G|o!
+z!6$`5hQVb?a4QVWOsNOq%Oz*-9+5Yt*F9BkcAI?1dopqt7;M*AkG_}j9>Z2ocsQ`(
+z48y_&hKbjaaxj8Xvnb8bpDE66I~c;ajRCw#1BN5Rqh8Q^r82tKVK)@MkZloCh@@)k
+z1Ho`Nb58Y`fR83|c73gOWxW-OAx!>LB`1n5syHN#N<T{BD#Jy8PxuFA9hX}{u)#y#
+z5F~wunM`S)x49Q^Rrl7bMz6V3BNYQur@MA=4e!{P!gUH@4`lW#e(qul@0n{GwlNKt
+z;r6+bE`^&EHe%eAfe6=|NlG(JXZ|DClQU;9YhwmkhCAoHJcgTRM0)mAsJp>;FoDZ9
+zDfkw{NH_gWy-0!5Y^YeSZ05^_RfY>M`6tE1!4f_g#v(psu$qeu<Nrox7<;+rfrxpH
+z$DFikHQIetewk^8OalgXV2nPRd@PMco~;^zy2nS3eSBnFY0I`IEHcx_N0Zh9%UTQ8
+zJ^POz2dyEqtF}bkm$}mFu%TNK)g}V1^guN!tT7BE1)kwbC&A7vRSxc<$dLJ8FUGBd
+zn2JR~*C=bpOWNnbHV-AQ24d4R3~7qrp01sw5fzoul2oGHYE(toUE~y%5@8|WQ6$WQ
+zRpkddqHOAHrYcd9b;V=KVyd4N-3ooNMjB<f{IEsuS3_*eNRq$2Qaa{|Zm~eZ7@%OL
+zV5QThAOh4=%`^8!A7u@#D3NuSdNY#F&OOB&+4-j!%l1FVTR+nn!vkuscjj>sm*|gH
+z;%&mCyGpE4+FvGn*n*t~M(7(e((J--5e<u`r{>15{EBzyUSRs$>=SbI1Y^%};~1%D
+zm@~dCtW#?QJ%}5)icI4BQfKpt?<q`To_rgR1N1Huhdg<EpN7m~zM$pCo0FY8#>_K#
+zzu=>v=)VI#n2>f)0Xrwa4nD>wG(Uh1T0h>!0bx(mzv;iBwjW>NYdj>&1g(<v_pwR6
+t+50K&{%i+*MSNaFu83vaE@B0Dio`3w0~S%R3p?nK@MVP62=fsp{s#VTc{l(7
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$3$1$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$3$1$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..6065a0197cc50edf7d963129a392a8835430d7ca
+GIT binary patch
+literal 2027
+zcmcIkTW=dh6#i!8*p9O$7n(K+P;RDiF3rX*P>Msr7`t7toe-x%5Fs?)ojMb*XQRDX
+z&0Bs8zkrKGDV0#fBR>jpX6=L^0wNE2*fVF(%zWoE-#Nek@yo9O%GhDxj^DF7zTfeL
+z74qJJCqj!K9FS0M;7eCNKD64g^jy#HNXIG<tQEg^;D@3v+W`*_E57Or6-i%hdT~dp
+zJOOxz`C|SKeZ>qI!(qMaN1jyHe!pi)6^TG`&#LoY+vTORdyiw~Xr$1p4YlHWUB@_#
+zXAlg9C@nYitSu4xao~t>lRI5bzB{LAkCco`_e%`(|L!`26vK@(`{%gNAkC0omjrj8
+zVWhA~RZA7@#T^q_<Z>9rI2ocn88SFYsFzw!N+>N=-|q^BV&P(?(V<V|b*TB^q;OeG
+z{k;UIuVbqykSdf;n8Aw-GtQoHx=lZ7#-6vy1Ktz#j0_8f`abV-%j2qJZM64=6P3<b
+zS{kHN(&d`LwH&VEI>X9EUNnO_hVhPws!tp*b_LaWs<1e45l7OqS|Tc$cnL3$V;-+C
+z6dKj-@-4erv-%<k6EfYiHd+tt#MUS`?OL_9z1pZ{@hZcWB>EGe3|^;4=B`T#pOe_)
+zS0>&>ejIP$Er!*Lm7n3}d5~v{H7uWr2~6f-V386ZvQyJJgJp)S-E3`_o0Tese$qJ!
+z*G=5Q>KImFF&GC$hUtGI)Ae<S`jEJ+={u&Kysa<3Fh<(DRM`{AhKRV!BTjrXdi@ca
+z7fg$+7GPjqt&Gs-6REW|(p>VHKRz;Z$45D1(#RRJ2C0+BNAt!STQb&+hq>RrO&eK#
+z%e_sht#jq8!=4|9)L8`j%_R?`3~I!V|7x1Q#)u~D1RgSceW^iZ@F|7#zsBlnH=;pP
+z@m=ct>ALT5Z-)nxw>`0~1+{ivD$$I4Z4nGDlk|#vzI)oO)H<fEln5#w4@2Ea6IJDS
+zen>4kILa{Ak{!jPI3UDaE19k}sp03gVjA*2u_HrC{>n=E5l?0{)`&c#^nf($F{jx?
+zj7ZT(3?oZ}v^<@lH%59X^%Um!q%kx}ngc7YBzLAX@#&<#(V*3!b!K^b`e)28Kf?{m
+z`?Y7dY2XVDU|@r!W^kHZUd3txcx`ZL2uRm4g#~i5NoPli-@s&<ycEc!y?jK+wHI?~
+z`55y*Vd)2~eMkQT@N^R0${Aqu6xc)&w`o6%JEvJ*Pq2XT=P<r}ig$j*T^%WT#^)sG
+zF@n#M|5-d3uG%>;i!G8Vvf5~oX3)v)WUb>7t#`@MdxUat7b7;_w^6dOjt^|y$A>m0
+XQQid$@i8j9NQL+$L^Z@hh>1S|1ZWkf
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$3$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$3$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..f9726681f71838552867ff2632459db490cbac7f
+GIT binary patch
+literal 2017
+zcmcIkZEqVz5PtUT_$@AWT-rJTN+FlliAyhTfdV$6#w66#bpt7pP=wI>?&@rOw`<*<
+zqvl(F3%>x0M0t^r#YcV=V)pDrMij`GSn}-L?CvwOGtbN)fBy0tfF?d?_{LVg)mN(T
+zxmL*iq34Dc9}Y=KCs4u>PmZkKNO+E?`ogxF6KhNPLlwFm(F=HR)Kc=$m61?#+Z*+T
+zGzq{vGHd1?vz7*97<L9K@`SVw4t-0=$PFa-tPb~k4zJJdJsC+`<Am1MRI4>QI>Ko*
+zlTau?VL72^ZF76T$zlH#<Vz`{`bM2$>EAu3kz}|!v;P9GX`~oZ4MA`l42jC>E<>`?
+zUfs<jgIo@Cm?uNDFG2<$M|h4or01lBJX8ahp;9?hK6JbVQ^#ixPm+|u!r$M0T8Xxd
+z0wF_ThiP17xMc6U_Moex?#T1DdBA;_O2%-b(mCLV-14~WTaS7Nt{v59EIS&cU)MRh
+zgv&X+j4PC!bLN+3*djxw-Q9WI?6x);?DH;%S*z#q3SP}(39m6MpMjrgyv~pf+)#}I
+z+a=B{SN@0gaT?#ioAbDaWrmeARh{Ab3re&)Q=@6s@+hE~gMk|i^V3eyt&_$o!-bR3
+z;%3rMt!A-?n+(RV#!&hv9Ob`ZQ-4#l=>EuR<eI+tQkJwk3=1ca58a46JmN%Y!#_;W
+z6k=Lrv;YGeXeB|LPleXjNpr}jIX=$k#>Y9MXylBtL27Y)ykxAiHDlelpZopWl#$W5
+zoZIxC2A4`6`DzqW>k{bK=SsmeS`5~Ib>(zQZa$4%>M<qb(iT8et(<9`-Wo(SYg)>o
+z_Ahmm&AnY72;TGD$68RMcZ77iBfsYcQ%jNZysw<o-X+H6+fuqg%j03F30T;awx>dB
+z*vV0%=Z@%09*qJ*%<aTP-4Ysp@rw}+ci-I=p&)-vDOJSdDUEe1?;NF=raTsPy{TqN
+z`V$Apa-TGlPEZw)T1!4h{(I6G+9dN6D=x%$7BnB}q`vWhR)f}y)l%svl&jBhb&T}S
+zFb(MI20kOH8J5CLlwiehmnT=IaC8|9SRoe==<FQv4=6Ut$8|DkANT0E_K{z!j&bcr
+zRG#6j@9291o{D3u&H(36f%CXUE{X8;_LDbWiLrqBUtxUp9JhbK+d5M6j1I{qB=AZ6
+zU7j8+lTH81ct|oyyIbgzX3)t;@%kyYX}wF1-XWBC_mF7gZX55l@jgCiqmD)!A7Wz<
+UEW}5+w})hiW{8hNtb{211-s@N3IG5A
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$3.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$1$3.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..740633f87045ba5f1adc604420861cdca1f05a7e
+GIT binary patch
+literal 2007
+zcmcIkZEqVz5PtUT_$^nGxU@}DD22MMW0zjs0tIYBjY+7%bwgbup$MV%-Q}|JdDpr-
+zo90`73%>x0M0t@ai;w&$#O&FLj3}c05KEq&+ueC)c4nUW^RM5Y0jT34!#B3-Tb@#$
+z?^+@64}3SY_+UUnI)M_7*gLekL*YBV@`P>GC%X;RAE?l6iEhAy!-kS0S4Kj~ZGY$q
+zSs(!auuv)7PJ=Og*XpUr7t%Ty^(`SIH;~-7TD;$Ncy;z{Zzyez5?WhRtx{|0_@=Q;
+z0-^AP<%EPV@xJ*ua%D(nCs<!e5mh&;46Fa`IE^I3rJ3{RI8P(Rkg5rS+h9l(*LE0^
+z#pc?Mi41Z%%we83qJ0rEd>aRPYKf%Bq=X!)p37hrUnVI!=!Jp~vS2H@C%j?cX0Y_n
+z$DdTCDWgD8HtjHtvkd3#eb?@_Rn#8({x%PI-=*>~Trai`_=sCRm!9>Yd*Iqpb!Mld
+zLA<I?)H$5b;Z<Cq44rDH6)I`0Fl3tT&ZBy}vB|(sw<3i~)x<@-mc=SwXDGdRpQiB!
+zLw3OJ9w)MR3|ET(!-6=IZ{n?aT*eiK8!uCThHK9$*4j+9ru8$ifW;gPTxXb{5<@d7
+zjWvcd#}UTd(ho0ZQNj%dV^Cqp{~L~KQL~Bl#2rnStVXVA!&kDT-DX%ihP>}a+~E<Y
+z9yj`<1WhKUMMeuSu%1>Dbof|kZJjiSd=|z>W^R0xGZu}Uv22jKI6hi6)>+9|H}2*B
+z_&#N1w3Ty<-c#dJ$-}-HhQwq7?VLh0rqN)Si)SCh#bQeZp5+DHp~<R8)^?y`o@iEV
+zVvC{pLc{cCFQOsSP!2Ia-%>XBcX%Lp*LNRjLF8@;>9&Xct{Y5u7Ad3q$~oaHjVH4y
+zr5iMS9)>P`E^JEMS0Q!Z<SO-JM|hG)G#nUm9W@MWcS~sam4`zb?R|Gggo6ClrBo4*
+zr!>~7kaLtwn(|oDm8I$==}*<BohE4ox<UCys+4>R^GDJcJ|}5Tc5x=QS<;<HH?_qV
+zv>LRYE$8#UV7dGRm&Qo{ih==cZqNll_fiUF<S7IVcYb0rg(G7u;VQXk(b*hz8n9R=
+zAJ=G0`?yQjwGXpY9^>-QC_cg4KhXCCJQc@QngKRXfKA+lMdulEeEh}>F%~fYJB+WN
+z;?_@iM@LGYai3&<>I_(>NuhtsXp>ChQ+$R8q!~zHJ6`YMOIq)cgLldLy<H@lxYNY@
+hO?-e4o2a7J#7EfJ1q<;p?(QNPq8{Rt5LZJi{0$xb918#d
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$lambda$0$$inlined$configure$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$lambda$0$$inlined$configure$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..a5bcef7a42dff4d981418d45ae7ec60c6703536d
+GIT binary patch
+literal 1317
+zcmc(f-%k@k5XZlJEp4eFQv3me;*V3I3P*{FCM6`Kfuyk@5yA^k+q><taNTWguSnne
+z=lJTA#s|~z=pSXAyVi<Gd^5hx%ueQJW@kQo-@bqO3Sa}v4DVgtbbPJ-KsbgsTY)eR
+zZ?#A$FVxbLjgC`q%fJh?FI{J&@2%)&OB+#>^^k|1idLsWMN+HXpzTX#Q-Yvl2fSJL
+zxV>WAQUy{8&vvzHNWUElyOafE*skf&cl?lhRGqh^6N*M4+{oGQw8Y!SS}ksF&`7_F
+zB+4^^Gbp`z771mja(TVXaPP0_vPd($ybyAtBkIeE(+%^`T_R4+hC`2e6J?QM7#()c
+zu(NQv^Hy?mb48+ZZBXa<wCOb3%8dtQoUMUXDlZ<4A%{_h%$ig(T4zWt#J+17%VPxN
+z4C&}d8ir0XkN>bN8tvrITWpJndpzRgvzn(V;)ul}7Yi`36Y`(Q__RWnS7Ipky5sp?
+zH*ZZ_c`IiXS+ASRPxrd3xk9>Nz3z2a*!hQyb^bY%ioaN8C|$jzJ{1=iV@C-nHdUFw
+zypi8oqIUEBJuK0_8FsHOF-(3X2NwVyGX1NAy?^kOvUtESlDsE|**~b;4fQd-mjt0l
+zc+4<$c}B}85%E*eo?w`$5!gHJW?h8)ydIFJP}43C4tOZz^T0V)Rm6WK;Km4|Zemlp
+zfi_b4wE83M(M#BqzTy$RV;bt7ZilYel5x73cWwF&G{u25lJadRr6Zo;juI?ldB8}F
+zHnH-Qj!w)B>5<|mT>nUhg=Zu)iE|DMWXGWtfC=14^diYT`7F}F42mSvcnBNM$+D2b
+yi$p)c66seIIZ0m^4w0&2s*0Oc+`?@#ai@xD%p8Il+{Nr6(gt$|_YCeE%>Mw(zl6#F
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$lambda$0$$inlined$configure$2.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$lambda$0$$inlined$configure$2.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..c401270fa69e755c20bc3c0b025d3f593c026da7
+GIT binary patch
+literal 1336
+zcmc(f-%k@k5XZlJEp4eFQv3k|;*V3I3J1hQlM)irK+;%|2;qenw|CoP;kw)0UXi}_
+z&+*kKjSr^b(Lc&Kca)0Q_-1^WnVp-R*`4|9egE<G8-NWgF??`!!|}ED1K}9nXa>SK
+zyxAn7yiiL|*4s|4B?B+ezI2_9b8lHUn%an}tc5&mm$f<(Dw1051T9}Gn-T<VJK&9)
+z$L(d?mMV}+c($umUHYw1*sEDEhWAw+`i>uRkE-*gbV5-Ngc~_~?WTBJUrRn8iHNF5
+zWt?LjQJ#x<&jilv#M3*}PN<J)^X6$Jl%d0v)=Lbtf31*3n&HKzkY0&6cRvqZFQWP)
+z?0d}XD2oikaQ{LK+w)g1(@dIS1|%v~dv%UZ8cw~X+_-nf+3Hy<rG@<w<S@*TS(8de
+z>kO&+*mn&hc?@BcAsrn`!_cn&r}<H9$1iU2Mnv4>5htJ3I7ty&EEc&~fPo#8|5V1S
+zWwN{#hGMrfn(ub<)})oUa#oRbJGuO1x3iinqzl%oZfBXDeau*AUoxq9$120h;31uZ
+za(OUzl(1t{mAR`E`5iAhZvK1@i!^VBoxvsg$p><9iRnJ(zfQ3G52lmFeTJdri7`z7
+zL0#_^BnUmkBZi5qJz6@Bh@Z0d1jAUBz}{{(Y9id@wSYW@s&;v>&qEond(M%HBL2$(
+zH%1V3W1Gqiw2{iE(I0A$Uc#>Q6_4m?Q&V?!D|E${jMGiMYtf&fA@-$_ly5^R9q|Nr
+ztiU3cdyK?r6Dv<>>BP*C9x8su^-pA2cuF#pIA<_Vb{t9p7{iT3FObZW&ms*>p-3`~
+z2e9#sEDI?-PxNCfl72~%<FvbQfK&w&72K@g7H*S?I~7b~>Hy5(E~XEVHkdJ(HMnOm
+F_Y)KBjI#g$
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$lambda$0$$inlined$configure$3.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$apply$lambda$0$$inlined$configure$3.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..3e32fffacdd993ff7709fe4c5fd8a6412c9146d5
+GIT binary patch
+literal 1317
+zcmc(f-%k@k5XZlJEp4eFQv3k|;*V3I3P;gIlM)irK+;%{2;qgN?cMcQxZ7=RuSnne
+z=lJTA#s|~z=pSXAyVi=>_-1^WnVrnd%+7rFzJ34l6~HD|7~b0|uso$a-?cOkn!c+o
+z-fWVPPN;+<8f~lI629XrPuSLG&s$MJQ)#y*>LCx?6(!GH83`r#{FW!ANeTS6>GPoO
+zaC6l(h4h7V9n)5_A-q=TnlG|o3_CRydX^V*hpO|YutK-tyLMz9w43hR#(FJouHQ(n
+zizLd?zSS?ibso7=Q|0nTnPL8~>9R;Oyu1{0sv_#kiqj49&|M-<&4vSyeiLPpVHh2B
+z&#=3Awex0jb3G(cxz?|9au!&PmbBwRX=}T0mC8$pW5{8YA+s)|h&C8fi?Qz-#_|}!
+zI72!*7Mh`*%;P^Si$**7^A<a9#2p@S@)^Ndia27i$i)H-?3DcHB0jB><&+qT-OhNv
+z+sPZ#M&8I7Mb_=)^3&bUTCR{T7_YmXRd(?qV_baBq~b5u7)ryJ)T83^V$3K3#iS|=
+zS2yxIOVn<@w})lgH^biW5`*MJIk*JyfazZy?EizOl*N69k>ouw%>F^$UZ_s!y(9=d
+z#3P2Ot20_TjfkI$a$JUq8iBpr3hHin!0SGF3N>YO|B#0wKKGqtRZ09;e6F=i)J<$j
+z+gDmhk5+%I9C``+!jn9rcT7XwSFO-?w?&+8=3R?^1A%)ew4i*OQmTk2xT6GvSne|t
+zqfM+lp`#TuLwcn63D-Z8Vc;prOyZowBH3{$1z-X<61_w+Pd<Y*FoPn=G#<djGqMb%
+y@I29vu}u0EMNZP!g(IY@n5yDt6}NDkOx&qr8Z$>=8h0^!gtW$-#=OQojfEfD?S#$%
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$inlined$sam$i$org_gradle_api_Action$0.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$inlined$sam$i$org_gradle_api_Action$0.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..1ea706e0479848d71e813a21ab4e6c6c104875ef
+GIT binary patch
+literal 1222
+zcmc&zT~AX%5Ix%#T1u5tM8yw4sL&7Pf}%00F(C~kjTMQQ`rrfE-n(3uZg-n|ZyShz
+zN)wGA5B>mulyTOU2C<2cK6G|wdgkoxnYllHe)|q!3y&F2UDI}aV|*o?kheQZgbwd?
+z$Y?Jx(vyd$PO~eOr;IOMXRDvBns&#8qAr^O4^FE__k@n5(R-@vOP!ZmNiDoQ5$0vy
+z1pa{^a8HQ?-jN4eu0`h8lVA+lW8UMA;@Wp!HjjlHB@t(sr4pxKLd{60Uy{Ta!@~AS
+zBy>m&bZf-vnqZg-*IE(7=DFgQiKr9D3zaiOji`H0*QOYz>jV4?5pj=4yuuJ`_u`}#
+zvnFK?7+A|X)MxBOTJJqW>aeSSzl&k<jODo3cFxkFvoio}5b5|+sb%zxVY%=xaIulX
+z48#1OGs`J;Bm&KqQ`1o(Neeej;yS739tpR#Yogt*QhPk$Z9zbW)k6KE%9V4OeM{n3
+zij53z;AR?gxWy1J*mxH6X(X_a!3?fUAci{(iReg%4DagyZE;Azq&N|7Hxl&d5sxc2
+z{uFG)5RzD>F-YArEh1SNMRHD}{%Te-D55lp0?IV{&N@TxZwv`kH6C&1>c-`&!2`*g
+zO1!p))}1!%$aurykdT?0rX8*-9)^O#scr2l6VgQbP=@rr=?1RYk(OZYRhK@rwrI#u
+z662QECgS#c3bPwDp9F2^I9N7k2S%G2qj(lq>2xT1LT8N5Y&m!B3vQP_W3g2JgryIZ
+zV^}9^k@P>7k*CvomWN@3{4quWveUSW6-rsc%>iMi^bt$tuecY(n~P+bAz23Zu||~%
+xJfPY%dG<2U!aXFLzy#S%`o)mMBRb~^kwzSoZxOGNPPkOVWlYtmtLYkYzW~M`Mx+1$
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$libsVersion$$inlined$getByType$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$libsVersion$$inlined$getByType$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..bc412e87c724ab8b8a4ff4d2d2c95b5ce37b4cd6
+GIT binary patch
+literal 1327
+zcmc&!&2JJx6#vaafl_KM^`q6+`hi-|c1vTT2~ABUnh?=8(s1c%V2ACr%MRHYNV)On
+zc=e?5U`UVtQO38FAR_T*yuA13w{PF)Z|3`tuipUdV~fGmRnvBray?;d-fVe7+q~5x
+z;X8qnj%;-8T3dRKr(9XL_b<_+YPOUXWmyY&&@C#zBYY#3f9SPc>1RAy(^U~@LNXcY
+zd(sz9#uesO_o&+vnS30K;i#+v*LDN$P-@<ib|4y_s2e-<IcV%oe&&IZ4PH0e9)>P*
+z!>KC$`rHUV%vIPcFs%JGY8+99XJamB%20W>qdj{Rhx##`Y7Rz-erw{0G0cvdV0gJP
+zSz&9?y`B=NkS(9`4!1q-yY@ltl-ew$kiaZMY*+fy>@h?(vegvkkV;|(^9)gQA~i#&
+z{698CgIp{RXY)=N?$E3Wvzna<F^7dB5ehJ{Gs4ehc-kh*$us2oz4>Inm$a6xq?NF8
+ztlvu{m;1e)L^_(bUi5q0?BZk0y7&@{gn#TX<fpIXk_zK%$d~~;GL&U~a{j*)h{{b~
+zcCbm?WjLIkVibJp*2h>oBJ!^aD*s?LaolB?8@oXan}0CvFi-;yjj^g?0_nSjY$=8N
+zc)+kUIlHYhL!>GyM=&guiQezq&6)^~c+DduT~>AORe2!8^AJpxe7Xfik83T6iVLs(
+zx~DXyAxfMmhwei~x;{7UfFdL-svXqD8ySXM`Ou~Zp((0TONzJe`^xa}h0w^uB7zUO
+z6Y`xn^oWjj$R*M<xzD)ri3|&mNyY}?DmKUtUC99pxH`~Tl1aiW(!dIGB%`>844#l>
+zA%dp^{Scd^pOfbz{hdBWq=cmsu9a{dH^{`z5|*)Y45o1lw~rCkSk+k5xTCTD6Nz()
+ATmS$7
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$libsVersionString$$inlined$getByType$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin$libsVersionString$$inlined$getByType$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..dd4487c1165fb792a6e68721a82f029d7d94ac07
+GIT binary patch
+literal 1362
+zcmc&!-%k@k5dQXB+ER;1@dqe~KdM3%juI11N-)@9(pZI9(ifh#z3s7Zy=`u{gc=|E
+z=lJTA#s|~z=pSXAYnxi2@y+-$GyC1#%<RlJ`}5cL9{{$o#_+MG8n&yH>j_))M$;48
+z=FKJv-wBj-WW8-yThenp<;t49-A4<m(NtQLWHsPHyP*6N;Tx&^J+I|TKjX=&u82Sr
+zQZ|9~-AqRMp7e#2afNx^-fuTWCKm@|*e|KTwcUU_Q~+;EI}mkG)Qlba?AA9ge&&IZ
+zbzU>t9waDm!>KmCb83ViX3THp85aK<HI695^AVS0WvD#c(VjhwL$@-VY7T~oerw{0
+zF-#6G!SHJNVuj6K5A>Ko`IXWUKjF5=eb?Tt9?>=PDI_q-5Zjc#G+PXj<&{bbSCC3#
+z0#gi8b0{^#r_%qM6SZ@uH0aPfVYovbC(LS`M2JN!6p2uPfgKZmD#Oz{Sx$~2+wDvx
+zyPc#pXC<wKm1W&dB01OXY$VdrwDq#vS!ZXTW7gTXSS0*ogCRG5FnvOd4kKfF9LZ3Y
+zrHfNIPa`Tf*}uUm&6r_te2QW4v9llH?vT!ZDk%Sh0mX5TdVgt~7`864ZZA+hK8-M}
+zzk26LH-J)jfQJmT7hAe^Y>06M<p_r95^?{1t5FrfKCgO&q)V#Cy$TOxcpiYMqE9PQ
+z@VM53csjk~*F2?Z<%ubW%AsW`OV{V76;Om^S+#<icq7Ab^B-FDW;8@aYDw|7eP0<K
+zJ|Y@9Sj7GTrNU((YCWc-9a4<+MD{DLej&rc6OyqWxPWD{LsxRZG_LjZ3dtm47HMD}
+zS&~uQM+Q&HvJk<uo_>T?(l5w!hW<_;AX3C^5!Z{jftzIFRuOZUKLFFXjXMX3YAk3h
+JYTVUW`V9rKmpcFe
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..e4380c6695de2f687f697290b100e5eff1b8fdc5
+GIT binary patch
+literal 7772
+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
+LbADd4_W$DFn=tCh
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$1$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$1$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..f9d0e9a656855362b5862015defc3f295b7a08c9
+GIT binary patch
+literal 2379
+zcmcgte^VPp7=HE$TsW>0QbCHPwi;Uqm4jC6k6<;WV51>m1F;r=%;s(rmR$CjyGtzN
+zKYSKHfjVtP|8N-p^g}tmo1_?Ls3SAzWN!D(?!M3a?E7nf|Kpcm0p#%&!vi;HI`tr^
+z`@)HMbI%u%!}s=RP+k~FPuBLGYD@Z_AJnDm<h!dySq*u(zZ|HxP_YcuhTp17l_5=k
+zKeMQRCK$uF#YPbOQaQWrrXy7>LdAWj$eUG<=lb_*E#+#Q$XV@4i%UgKtw*EFftX3h
+ziwL1>|E{R<mLC(1nyeq=Z7CV&Zs!=Lo^RYlg5gr%{s{z33^5EXNrJo0AZI#!&dOD}
+zVi4AyddNL;yuQ{(80-o+&dpZHXuKn%%mRaz(bCu7$asgLbhZR+Sg?m-;2gu`^VrxJ
+z!KglzVo1ysW-B(5NLv`hd0Noq7#^M}ul^jO7!GGb;R@LnA-P4WcF+(EH@mSoMQ&)X
+zp6@s_<Mk&^5>tQAgX1JEs5q1=l5S+;BEz`5Biu$Qh)XTs-{2u{3d&}NYcs`N-sX<a
+zRoz*yc0$;<Qq~}K3aX7uc*VjrF4H}lQkA_%60b6xsqai=7}DHzMHFRxS&b?pjHs%p
+z5dWv_J>lvF8&`47!t0n}82igv<X}-3p@}Sm+2(#rtk)POD9QRjdWUj0uHy|0bC_qC
+zKV4riL4`CNiFmE!b#3AV13E%CaB~EUc#~nF6P8ot7sJ(l)LtU=-=w!>V-goEDyVlD
+zMtc26H!KtHF(eD6@@BrYyuxtqS$FJoGaE~Ie;7GXBQo|DDad_S=pmDHpXscLn0q|t
+zR6j<uJwUyl=^?2HFtCOe259q<)Dro}@CY<>bYNRY2bPgCEMw9jF?Dn>Wh}6)v0&V@
+ze*137NNO$b2612FDp32)pcN4(0<HWv4~dBl2IpVY`^uwOP`L)GQ*4vC&v50RU#s~>
+zOg(Hl@TjAti-F7i3J)c(`eIWL3@P&CPT(C^JN3HJqEw>PYF0(qJ7gD>65+DXqe$oj
+zE6VkQh>E_eOsQ9vb;aXWNQhQBXoap=l^XuS{T98QO;M4NBzt+Kf|z$6K`c;$43bk#
+z7^#%*(*VuXign!ROG5YLEt2lgtXERmxhHrbd;JN<vWcJY;t#Y&L80+-cOT=Jpnr4{
+zFA*NatRsz*{%0f)8?aKq2z_HZMSJjDNRR|f&!t~J#Fe@1V>0p>W9iopF?$H-XS`)V
+z+cNNgMxEG0WalE;(6%SK%Ez{+F@;-XTU#8Y2bwtK$=chrq%ZR!9oN?E?A#F+pW@vg
+z@xk}>zY9LpAwAv)Y##&Lq?@PxL3~c<)1>h!%^+-zr{{+>CTO*cZIZOpzUa)G_>yML
+s;0|doZ)2c<y9KNiu!@fgxQ9XkALEm4un0x0Z6gt(6k$EWtq7BU0;7+Xwg3PC
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$1$2.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$1$2.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..6b3c2e0ea11b5381e5f2f0891fc8292b15cf8a8b
+GIT binary patch
+literal 2605
+zcmcgtZC4vb6n<t2BrMw!VvD@gzF=(g(slv0RfEtpf=x{W78={4*2!iF1DoBP-3`L=
+z3qQbL;V)26tLO(0$B+Ifk9U$Z4J~l^!13hl%+1W)JI~zv%rpP|`{!Q(vRGqyY`HbF
+z>bg~1m_D!7ZQ+}|UZ=*Xc&@C-wH>qEkaop(tI{&Ft<i!kd)(W}xz3hw0_i$ScB3kt
+zIC<JT@hSREhrt*cg-tiGrDJYv)lBIG!gIK77I>{(;hFBawT5G<IKH{iwx(tZ3R)XR
+z3j-mOX2rM7oLj3)TP)U_KAlL992sP0GYn%#ZyQF4;bPbPAzO#h$Iv$;DcmfBOf-?4
+zR+2IW*Q=UUk5?$=>Of1LyCJL~lPuAu!MgP0lMH%XS<k+g!8$|nbO9L9Ve~`88HSOg
+z&=?rNpjs4V2qp5#l7R?fI(qRI4JdF7PfrzBH+!gt{c%rNLT(9<(juKLcT+IjXw~9G
+ztWfzp*GyxanAF9W2*wUlpu^0(6L`|`rR9flf#JNhF09R>8x$M1y~I6U6GUN#Yl*@J
+z-{PjtovOK5ZdR{rWLX8NQaue^#3dc?;4;I2@+b+<CzeMr!Ema%3nNao<d!9TKW@vi
+z-`=SOh2h8liNl9v;msifS8+|pdq~hteeE*bf0d;$QpAG5Z6AeU@{qJAU*~UEfQ*6b
+zxS=DBn+)krpu`*bNlbJVXCj%5fNtP;ck$=9>mH?+YFFZRLl~HD7506G#7Si;j1L)x
+zeGx3X4bKuv!+0Re(w4yv!==P=CsACwjgJO!3m><FtZ=U?f&)PeWLisR7*b7oo#>u0
+zTs<_gDkldhZeRqXI!VGEqH|k8mE?wTmm!ibF0W*Zxp{^&FO|Ki#|A#bd_QtnV9@GQ
+z46!aov@Z|C&`X~OBH$Gsa8dxRw$(%L6jMz^HDF+y%IKlVZK*6Olvbgj@%>#x-`~}>
+zsHSTp8ky1k-7#&FrL;-yp8oeweOg3$Ri+9140l{-r{*?%l6MMPQYAbseSalmVLWCq
+zk5jDnJ37A|2vQx_X==s@o-$lH{-wRS8ITI++zM%8tl(PQE^$xtvMp9r!w{uBuDg|v
+zXpveE7NjGJjapfF?L|i3afFw%x$g_LVBWE8*C*|2In(W1mQ{xb4UZz~E!r;7yUQ^8
+zutD#BO_ZcBX}_%FxB-!w9&k(&L3$~vVQA5)dT9Xa=`m4tqb~yWs(eG%UFy|HG?jjV
+zv#IMZFq8`Yj&r}z7{j;JUT)3fJcj8Xt;E|Dk80Mm2Fd>!+5H;yC@?_ZkfLZi{0|6`
+z1<a*m<9oQ0PCchho?|HX?jDkRFrUPx_VB?U_(a2zbDwHZXf%9B?O8(8hcQfG9J9F4
+zL^#~qqJwab=4T0^!qrRiMo6=SX^w`}k?+uQg~>>z_i^htWPioyKhyu#27S$=jdle#
+zI)M$`L!Rb)!D)SrJf2Vwiml?QzD#Y1Mpt2xrBYjI_FqF#f17;ollK>^=*gpy$AdhI
+eSj=MyU*_=;%d22MR`6&QAs;0lU-_8zG4db1z2WKr
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..7bd87394f84eb74a8802a79e02d70272dd3dca7e
+GIT binary patch
+literal 2617
+zcmcguZC4vb6n<uT2`t+ZXp5BA+S=HLfL(%B)F70mV51>mp|KUUPIf0@$Yz(byGhIO
+z3xB{r;V)26YpI^&;rP)X<?+rYgm?}pAJ7k(nY}Y}?=$y4^GyEu^OxTMETGCzw7i;G
+z@w|#7%z)Rn9TAv(dz%{9_C0CK@{U=mOUHJ+inPpyrZq21KKFOBp4$*^C_Q)8saK?%
+zpq<W6BArObz!;w9t6u0x*W7B<OzDQgce!Kcd97sgOy^v=?pn%AU@o;r>Djyj)&kK)
+zK)9r72jrm{eeqc++<>;VeLZw#n3>Bkj2$01hHi!{9rH&7kD-^LcUF?SIR=@Gu$)$s
+zGI`Ihm=&MflyY^XRo~kZR+t$tQqXWy28k&KJ)uTVp2~2Op>VnY4CpZWq2Ua}=y7Na
+z3}8?#iZgU4bK^w=eHhl!gL7n1;20jADy~EJPzC!FzOaOB2%nN7-G)~c3}&+uCuD`n
+z=U|k^gyp$qS*iP?4`Y9?ew&s#H}oaZ$qHh)%y7Zl6jrt1g@wA~ta6{%1o4;QW-`CU
+z8{BlbTQOHkQQ<l)YsyK5N@?H<-q7(nu2L<D%G=TrYj(8{Z!(-})?!F740Fp8L6C4{
+zDJTkGT?&S8|0muaar~Tt8@Q?CEhHI+4iiR678T*gkYb26xKkG^Wrh)=SBI0<qKtt_
+zyscvbw-{0<SA!Vn`kV<wm~CfWg*YOBs?s#x89*AhiOed*X<hO|E-Nj3Pu-n<9W!{J
+zpxL6#>kh$FoMgD3{1+*V*z_SX3g_&9hjTiHIUVx~;@K8qSGFTnHt4B{qTgkhjL3V!
+z8^~~@Gw-eI(pl@4$-pQs>LfNx3<E7~R$?B*eTKeVVQqb(kX@wQ9i%E!dIO)}(|+WT
+zXVA9ObPYO+-11EHJJ_=<LT>Yrle%cNMi;$+Of`L~0RyY5K^ILvlWIgP(rj{?*xxnu
+z{asy)Yq~b7(J;QhJEl#sls2W^*MI-MSL;)|>}kS2%U#disd@E)9u9Ka6TOHGmy*Zn
+ztRmspc*1b)pWoJ7)sS>I>)E7(!+Fo*PLcbPmmIOK8iqKXZ_~5eT1EOin3t|7)N3W-
+zw-y;W*A;%&;XxqOf<@PIynrODxtVl#O;%hUl2npzt$B6d5=$gq3>P2N>7}oUq6{R(
+zTX0=3<PkkEMTP63!^WV+<LYezsHf*c<&%EIeOghX(Ov45C7zmifwQT}7Z^%)zr^_;
+z$;Mz&d$l=_3mBm<T8Y=lALTL{4bpy_#{C-fI50rJAw`{*`|k*bM$^j^!<Y7OZ6fuY
+zf;`92@bx{6@4<Y9cQs7>ikZg;GcWPMK4P!%QDmR*u-}R7Sq%!C20`sGy3vdCxJ>A7
+zQ_wugyTUxu4BE!Lj4|9J%nE4_{TU(b3xsl!OezU?Xt_dZq$c)}{uv+tgykRTyBVZ6
+zI_$X)$41++fdW=&z6WJmKSrrien7rwTK#;huTbAj^7{=oX{3@aqn=}n`Wf=EN?tzO
+oKvxbAa#+h@9S?IT;`1CH;qeAofG@DIf$jib2KXw#y#S+s0h|fiWB>pF
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$2$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$2$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..8620b76f2c3815d5493b8411c34cc72cb6b3032e
+GIT binary patch
+literal 2780
+zcmcgu-&Yey6#i!Uk+7^K&|;Cc3c4r+>jKtd4WdAyMq{Lcsg+tg*&V{bW;bVdlgb+}
+zed}M*zo7M~)jsra`q)3Jr+1bR(*lL#;q+l=?#_?z-nsXid*{!;e)}E34AvPQ+J4z8
+z`F_b2R>;d0SA-U?RH*Tsz?Y6(-L#5T={l}olD0LoGn$jdfCrm%zE=}oBz<qut(K%`
+z(oT2N95*M-@dOyd54jCLa;0aj*UFakA`y7pwQ{^%ba<wDZnf&!3MaG{>eBdB&JRk~
+zx`;@Xq=`CGDc}y->V&R!C&s>AE6@4migZPAuM%T4kRNz5%1mb%`VTfEfmVjoP4oMh
+zl0Z8{`;;WOX$Co*J5Hx%;&axI#VgWU4E%LrN12fVDUH@-XpS-Hrjnj~FQYYv{P7xK
+zK!?!*4JR1-4zk8TC%V+46hrH9cBEh+i5?woc$Ws0aSV@+)vjhXQ4BlGK-faoL_ltl
+zUd`VS4A+O>o+Zk^y|G(Oif1!{lIZ^@CmPhvdQm`Rly;cFhqT>Z6ZS^lkMdR5UE~2T
+z3*tD#h2h*fuW`%eUdg&wjKkS9vZO#t6kr3VaYn~S7+|>iwscS6EQ3)J5#5Ak9+1Fb
+z4v+jhkd?r%Nk;^VUlkEVn;8QphB|Q$=NU#0)7}72V3>lTt{nI1#xh(vGz5*kW@8&E
+zPh+$LBe+Ot>${dGaf#trS(E_Xo<45dA`DGe7Q=!FLb7`&1`I#`Pq%rW@b4WmFoDZD
+z#_<Wm<s(PrjaL)+lv2fN;5UeHqnU}jygPcpC`?!JnT|<ZV;E2tH6^M&j7ngNp(RuV
+z>}}RtzX6Kx)40)z>$u5q?NBQY%<l~6_k(ZpXI-O#KAh4iX?@PnS<msRC?v4Jkj&<n
+zmS^&F^9(0;Yf)S=4BSGt17F}agH{=5=-G?R(7n6ou86q9BThL=E7w}6vNF{qRRadL
+zp@bHid@7YhbkrOIHMh46eS1sSQkt&yX(Xn$xB9g)me$6!TlybAwQEVW%b6hCr?}^P
+zn`OTmQUM~+!f{rhH;FcZZy08enp5kKfqK1~e;NtOjJ_A=wLW~yF!<lkg-aVml-4=l
+zp+w%3^KI@Hcp!Pv70aq&NReyTe5a9Esl;^Uq$l##a!~~JMMl>1L@?*_FcfORyl1<9
+zNcnYVGi8@0S@L*P4G2+R@~eR@7U;FWaO!@Q9xr84kf9`fGoI&1Jbpo7j5yOqeojD3
+zrBrzYsHY03LP=i|suXgPW~o;rsr2Xzypz880^RA>U-8~AG{#V*c3@{7y*NpKv=Z+V
+z9)&TMx@f;ma)$;z1$5Hatyo)!e@td*G(9xh^T8_&j=shPhG+OV{hX9NM|Y3)3Rhkt
+z^BOZ6luiu}wTkoY7^DP$Hn!p94oJg>A@q~wEY{pc?<2BhhP2MnkUG>&TCTJj>CtVR
+zdx`mHxbt%ZygfF4pb6M$02|2RF3q<=(E5Hl`eW)r*a}bela%w*biP&kYo*yID3PR`
+zxEA-{K~g_S7<oduw}O@|7PI&=i~Cs0Vi^yzDB!CVun-UN^$J=;JPNTAVm3tI-$UFc
+ADF6Tf
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$2.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$2.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..d1ee4b647b88de134e89a35c9c20b13ec624743f
+GIT binary patch
+literal 2213
+zcmb_d+fo}x5IwV81j{-I5<3_hUxH$UAYLH%2;;~K#ENA>ETEF&AvM|^#K3AswYyTx
+z8_)TSd_j`(B^6hts66JQQt4UAGO6I?0Umaycc%MvPtWO|KmYpecK`)!F>HIf;nuaT
+z2f~ebqZx?E<;^Ay$`7^l<?f+dYstV5bX|IGp|e_+wUCF0MXlOG#Zs${pjDSDLzcl|
+zW-+sr0%Q20e4yh%DtEu#aHWbxsCeL(d86j@{K>uDmhucr<gRt4#pSXN>+ZgY$&sXu
+zE>b<@K1J$Bf%_oA?gq3G>V4tGtB+%$B0}oHZz&n)SMm&#ua6~#euir&_D_i?g+YeF
+zWl3-=3^H3j&%EW6!*<Wco6_wbCqKJQPUAfpWfmChjFG<kUdDS2mGce2femLE7A`PM
+zye=9CBN#PGX@>r6X?EMe5XNl`;7wXE!7+Suu5rC06y4x(CKR5KZ4pvZq-yH}!Ei5o
+zMxvM$k0zPTcv|hsdMgw|nEWRpdgLvsI3zksFG}Gm!$ogTcn1|7S6V@^!9(5<#Bzq2
+zY<Zuzxf^g*ch_r%n)wqeRRdC|+jVda*KJJU24(I%8TBf0nZ*>|F&8y#V;UKTJ7+4a
+z6mC(zDAcA5M7Z8e%9dd|`#<%Z95#zt8#Bl;+&$y1G2A*O#j_`J+|9a!30$^`v$q*W
+zx+QLULJCw-L#0Y}vrs9nGF*5Wf6_1<EaClOEaC$OtGUQ9{%>T4v6nUvMa+F3b0VqL
+zX!lWXWo8&M0~pwW5&CHJu{08SwtNE393MIM@sVw%E!&!~NK79eO<D^qXDwLw?LU4T
+zw1$k8zeKSwbEVZ`L$@O8KLmQNb(X>!!$8u#8Lo6n>eP1R;66$WH~;$`xP1^)LnvyW
+z3Us`zJsxcHQ1V(JHqF40ri|@rzgIETI7Z7-iAt+c6Jb}$DJdnwV!)$F7==~k1v;X_
+z=@?T(sLHzHF%>K|$Et3Ho>(JRGF*PtqF1RQwq+#AUqLAy^Mt8bASw({`ckmcY18xo
+znyIgu8={Zugfz+|-J{v8q;qpm@kVa`DaLaB&+*pJw8rp|#v7e|T*M{%BTc+bcyv37
+zG)ndrl7}tWX<&rDF+;{K{1$~_(e~8b_?2IAbM6JEzs)@%M^7;J9Pb_@^$c^ymxXm2
+z4TT5E<5enR<NH#_xaWHclb9#p#^V6Jb`(Q_yuC+D<}ja=y7A`Z=8iG*4DK)Z@F)83
+zfDa}?Uq1ot^ne|FgpX-|02`z~-o*i7Pt(7dzoxMtU*an~BFQAJn#>QdNwcy2gseZ^
+nL0<`<m5?uC8Fxxp!QB$YRoDTGDA~mw^hfw2!fJ&12orw;epzK6
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$3$1$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$3$1$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..11fac67ee48df095a590cdb63e4cf17e857ebbe8
+GIT binary patch
+literal 1992
+zcmcIkZBrXn6n^d!k`T5AP+Evut;Ui-%O<T_YY>f?w5v%#LQ#ufZg#iflFeOaUoy=%
+zev7}rml<ny#$o*Ek8(VB6A(x23?KNg=bk<Hp69%uKmYpmcK}uFGCa1tzR~r(uIm^9
+z?;pBOVDQ63BGUFfVT&h2qZ0|&cD=5!jOs|*5FMZU!wpXk92p8vZn;rc$UJGf!+be^
+zm%efejA7X5d7&$$aWLo`LWYhnxob3dzhm>t*}Er^v=mZc)W=+Tt)ZM7J2LWud=rKp
+zxW={<c#&^8!4|iAoNRYb(H=<=R@N&Fx&JqvLW1G?nfr6hr;ubwt_gx$XP77yDP4(z
+zS=`l;Mka$vOp_qo7Xib!v8$JpM~WmV<iP7W4CTVba-w|B=9Q0m|0H8+%>Fy})3TT{
+z^o0zB6{PSo!@RZcSiP1Pwj$Tv;y&*?R6mBLLgRoBxZ!fyH8wj3julqUNZJadTTywM
+z$JGp8!8L|k7b#^5iwx6UC#*fS+{kt)!Lx<p$V3zh*JwLoMaQdnZ5lbe&QNI9cB;3{
+zR^1pleh_!jePgrzz>H<hYRjzG+B>VwdKzyqT#3Cu0ZQQpRhQc~1$<6m#m73{Mt&M^
+z;T?w6i>068=6R53k~L1Bjx1&}&`_kn$8D+lIE594wApI!R9hQ0a{Xjv;wIN|8>>^e
+z1%p95EHljg7n#)8EE+&+V%4`(%E-G)@uex^-lxo-KsKF_+dSmdZ(4saK^uZ8l2!x^
+ztf!a>x_l}WS0c_PoB87-J#&1N(Pp%awxAI^b9|K3N^DsxX%91he3#VHO3S`Op{;T0
+z$zk7%0vag-{ra-jPYQKvix*AHKZ`?kY8DR}b}z@96h3FT@#59F+6!r!Y<M;e`CP-Z
+zxVy`J!8@+AqX<oLLrA9;^*fF~mdsGW_C5P_FlkD3Q%c9*aCs1@p~=>y<$3{4<LD{F
+zR9kc<4<nxtGwpbT)`fy!+>U6G_nlo42(nj|(hGUKk5QsNnWS3LKF6YJ94dZ-K58bC
+zG>Oa83o0j)%ZX>ue;|&bMN}V2aV6H7RXt8Gl}3|Jjn4U%xw&7ku<{(&DegC)<EDnM
+z6o7_JqN-VwD9{Qi#(-BxN@GA$$1Ik}$QHewq*exIs$``=B4y<hdakVK%PYso{fy-w
+zQTm?#N8riWyQMS0`YEuEGVaiQ8h1~lycS~t)4xIc<{94m3HOwzWEo!)&0zvx#QzI;
+zFg}%WU;*1i6C^d!CQhT5JMr1TBRcPqp$`b<{vIYwd}yL#VhtaeSjWdE1yS7t3-Bp6
+Q_K*nhS%6xAr2yH#0Vc=?M*si-
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$3$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$3$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..3ec1790d9ae4380bc00b1e26ca73d16abe4307a8
+GIT binary patch
+literal 1975
+zcmcIkZFAd15PnW}{1z2EE^VCvr6o$@Bv8dIP{1bCH3=1U-9U;52w%>U>Rc?JJd&Jg
+zzU8;@3!uzUUS=2%ANf&C_hctyhEnn+p7Gvl@Alcf-DmHwzkmA!KpkH&d~N%Ev+Mg^
+z&ox8dA9!wP^1*<FbOK*E;_;E$84Azw{I0Og`q<hOoqz{N4PPF*G7`Sr@rGR?4f6Dk
+zjEZr~sHDLd2F;!yc|w{8hkaAX$PFa-%qH)59A2H?dpwl3!U@goiB_pKRcezo#yL=C
+z!gNB<+~IbQQ^4*i$X8NC)y*oy!hc6hBgt@eYX1dM(?~I-YJ%W484~5yHbb&(t+sV!
+zkjr5Pvt)?&Mab}NoZ)#CkM5BY^3d<O4CV5f3ZW9s8!9nla8jKN=Kgu%(-v4V3WN-W
+z9j0-S;gY@Y+P#(^wT7Oz!vo%TsaFgu<>moD<fg}E*L>JHaP6o%W!Y6A-Kr|iC0x$o
+zRa~K}oEM`Mr{)<lR%`cBz17%a`0m^qU{tC)Uc>8IEZ_}>#WPSbjW-#xfgAe6z;=lq
+zi{<}ecwD&acxx8du*k4<ram()zo03rQ(c+#Nk<-q95k#j%uYzJrX-D3h6^XD#dD*s
+zx}L=v-e%AS6^7!!;i&L6n?{-DLXARJAy<^+D_PQRG0dGnK5!%M@Q4$Mwf<p(UK*xE
+zMhP&mo>CID`9vsfgEWU?8lz)9H#*K~1udtQG*Szr;{|Plt!W$Dz1*MQr?iana&FRn
+zYFzsAsP7L$no<I7pAYHMXfT*B8^Fm+xb-A*X`Fl+_cRY8=k=Grl{b13JtPg^p%E`O
+zeVco29ths?+($~#FgJyCTf=_G4JMWXRd(NZPUn+2rdv|FLBr!=s3@1;lD6lEG?e3`
+zM95vyl{^{-gqYinskto_{QQ?gdb#^<TZDq*)ur?!9zVg@poY#+QRxZCyy`G@DM^3o
+zI$7?KX3z<$J5p=OXV8Bnjlm+RkFB^6`^+f@(n;lUpH_|5i|fVWFDR`)#nlngzrxU<
+z+%<eoQgJGU6%>hz3hwgQWdcXen8Ol<xKDdC#5kZ(rx?p*QZeq(aTP;fTOZ-t&nQ2|
+zJ3r9(7(5l{wmb!_p91T+0h9JKboY}xUWu`Q+25gk^9(nC!n-O{ii{@71tjok{9T$H
+zERjw9N_aprNxR!<k*3kfhw=Iuc4)m#f!-sO_xF&naNEKM7CyvB7OJRO_!ygeU?D!i
+QojoK&)I;12u@oZz9N#Jk%>V!Z
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$3.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$1$3.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..d30cfd337179d31052736c10b9b3b7ff0c274951
+GIT binary patch
+literal 1965
+zcmcIkZEqVz5PtUT_$@ART-qinl$JWFW0zjs0tIYBjY+7%bwg7uAfMKEm&?ZIUF+^_
+zns50n`~oNv<wZgkANf&;*|QTFQC=#wmOMK*JM+x!y#4;i&%Xkw;{ij*Qhn1^%Jm#G
+z;QfK;1STI0h)CO4!WR2SW_Kt&+f%Nv%=$#y5?!DBM-3%Mjtqs8JKoS0vOt#JQK3?}
+zl>}q>y46#mC!~2e>YGA_jxV`qws^m5^Xlx~{!m&PB`~+AT&331flY&$L_l!~(+&t>
+z;(hB;=*WP~PO(0hBCKv!8CL$;aT0NcOEdRRah^niAyE?qx5*GIu6G#X#pZe^ixe^$
+z%we7c;eiMkzK8;S{u!iKB!nEPp2J`kpCubQ+J%CSu3#y-FWjN;q_FtcSD%)nDMMdS
+z8m%CSvkd2~1IOyMRoEVS-VXP9-=VrOTr0K?`G}hym#%rgd+1nUbw;wQLENg&&^esX
+z;ALE()V!G9DpZnKW=J*LyASK_#umd@FQ^8EN;Qj%cqNS$yvk7e|1FusYYgcDw|boB
+z!ezKx{Evo@a(4x<&*L(#GF*R_iZiS|r9A61^_f;Iiv{E|FmR1wemVnsXp&fGICBzV
+zG)DU2<uppT&R`5G4EevqQ4wku4LFU7o{Y3cu4u!T(!||jSUiEe=Y-tmA*Zf3`lA?a
+zAErr46ELuzW@2>tNN8?@IGcPH#>d&r_&8(ajEu2l5StqxuNWJwWNa9BGrxV4FjCse
+zzDe(?ajE1{Ukw8qS^|BpO_4-{VJ_Nl3>S+n<-4ZqbDP$tUQ0W^ibg^Yz!tU{uKfF^
+zywMA3gEW*))17ZAi+dgJ3*Pmdhnmm;w}f=s!+zKCr;;4y@Icw8GfBHA+mzDr8y*h=
+zhdvj!q~)oA`fZ|09k?r8$wOKI44GXu^etywX!zv^L)zPYry~ME{_0YykVh*R8&tYE
+zN*}FoEbCfQJ>vAI`jVtcT!Azw!$_3kPmukNIEGJ%W+zgdiEI{iuaTy<_>@kA&a>rw
+z{zoj8ALG&($)8X#pv?_Z0Ce{xu!cO!5#0HS$rO%^v4~Z2(IVYB>MbBwCm(Ah(mw8x
+zy7rMRmB+aJ1B#FF#<%o60Z&A+t<C^vPl2<z0h8`i^!AfCUWl-O`Cnjs`2;t=$D2A*
+z@{D^#^HXQQ672^4TSA*?93SCh+$YXJ3_H<z7oX92n;g7F)^G12*2L{5-f7}pyw^k(
+awI<%j<{nsp4{&D>@c{Jz9|l+ru<$3R;tI|H
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$lambda$0$$inlined$configure$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$lambda$0$$inlined$configure$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..8a4eabd1f6806e3f59b3869b540be4f18e1412e9
+GIT binary patch
+literal 1296
+zcmchW-%k@k5XZlJEp4eFQv3k|;*V3I3P*{FCM6_<K+;%{2;qgN?cMfRxb8N$S3=+V
+z=lJTA#s|~z=pSXAyVi=>_+)&UnVrne%+7rF+xIVD0c>K0q3P;|<7@2)!ZEzj41{rb
+zvq?gEp_ZPkx1Cx`240|j={lP|Z&lVp9=5l%Iu|OETI~ldUn-k!25mdwjhe^pRoj*-
+zkV<&At5se4tx(vdEEvOXRfoRghuovGyeXYf)C1v0&SASL-qqKuaaa8gdgYTS&je1t
+z^!7z0l%dMyjWWahU(;ogW_Wca<V;7@mlLNO<e|4joSF>>9`iQJBEv8`=$>J3@p|XY
+z<mF~aqH?ug=k&bc)LY7p2W6a{zEvtO9gQJ}QHIRAR5IFNNG-;`8yL%D1mg_p=tLTZ
+zFqy~y+!D=n@@M<IBH|v8IQgu`d5XwkvB<>&4D5{j7cxGrlI4{cirvn5zT3%L(^lTf
+zSw+_E<nq(q&RVXJE?956omF=EA!A*B&ZOcSYYe5~+v(wObt86^5Moo6h3l*M9U^Ks
+z-&?>kEt+9}c!@#sp#WSVcL4LR4*uy{vUtcalKdcs**`ej5A`YikOZ2?c)~DseK;#;
+z5fQVcJ;5+hC6xDCjhYA#c`YDMp{iXT9Pv=b=e~2SqKNpdfEy!-vx#lx2HHsF)6P${
+zN9-R+U-5{3E=}`5w?bF!$T;21`xbrthB%T&Qoc>4bi@<DQG!ME_Th+OCP<#q(TQOp
+zJyQIHn;*%r@SJ2Oan50p>^PJHFo9c%ULu(%pG6v&L6Kw{k6_~kSr$@wndqljCjFWs
+pC+T+K7^w=TD!5(29o!`o_bQmi%rTh3eas#sZ7^prZ}7li;RnR(d@}$5
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$lambda$0$$inlined$configure$2.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$lambda$0$$inlined$configure$2.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..f600c54abfb33d453e2e2938925becc9e574786d
+GIT binary patch
+literal 1315
+zcmchX-%k@k5XZlJEp4eFQv3k|;*V3I3P*{FCM6_<K+;f=2;qenw|CoP;kw)0UI~5c
+zpW~}f8Xru<qkoif?kE+p@yYlyGdrD~nVtDuzyJ994Zu2<7@DqbIKI|?ARNOR%|IB3
+zH=87s7i#IrdfTbBWZ(tbm#(vZ;jPMA$iw!AR;NNmQmfsd<x6GL&7f@uyixPGy=>c3
+z1yTvmcD1TYzZD95B@4#zp{hgQ@k8!WS>BXRDC&W5BWJ(e6z}S*$<N0kqAF4u=R`-8
+z=Q7?ifwP@>dfn`X`j{?no<%|#YNotaW|;kJg)GtxudamjO2oPQdFXi&)fZvkW45C#
+zG7Q802Qlo-Uw=$98HO2<s9f#UIX-PT^_Ftu*%@c6XO+qe2P4Q~m?5(&m5kOHQuDFz
+z21fE2!YD&JI+BJVtp4xC(M-oL+kYz}?(v9|&uW~e2qqSbTr9xAPRM^I<I^%(UWuXD
+z?TqHToxC+^<*l4mWZh0KKiTc9<O=D6^`_fdX6GL>*7=uAD!#G8P#V0Q3qr1L#EueZ
+zY^pMMeHFiRMeXJ<7O+T*X4oBEqMv*q09Rn{^Zl!Xf4Y_|9x@Ci9~Hy&ADs2LPoQ~>
+zCkzwUhqH7N5iuLu6AWWjLV2gvsEKf&*8=hss@mnj0S{$-?m0&)iiqC`xG{n_8{1TF
+zpp8^M?fgi4#QvW26_4m+rfKf!R_KZ?8K;|i-=hD5hB%N$QoePibi@<DQG!ME_TY$N
+zCP<#q(TQOpJyiURo1e(A@SJ2Oan4|#>^PJHFos)+ULct#pG6v&LXl(|k6_~kSr$@w
+xndqljB>kEq$LV(A5UC0#D!5(29o!`o_bQmg)FGI`eM}!BZ7^dnYw*Be?k8vJgd6|>
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$lambda$0$$inlined$configure$3.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$apply$lambda$0$$inlined$configure$3.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..4c2d77584bf05bd4dd656e17a3ad7cc9df9af9c4
+GIT binary patch
+literal 1296
+zcmchW-%k@k5XZlJEp4eFQv3k|;*V3I3P;gIlM)g_Flj7Egz&=C_HKJDTz8w>E1_@w
+zbA0tl<AZ5<^p7&mU28>bd@{bw%uZ%!W@kS8?faLn05-A0&~$af@wN5?;TYa%2EsVJ
+z*(9O7P)kqN+fJ<|1253Nbe+wfw<>EP58GQ>oe335t@eVJFO^L<gSH*;M$O~)s%=XZ
+zNF_Ym)v7N2Rw(QjSulp3st$d}54lHWc~d%}s0YH0oP%~#ysNKQ<F5K0^vWkuo(Y_O
+z>Fx7KC_|OY8)b(1zoyF~&G7P4$f=H~FDFhn$U|?5I5is%JmzhbMTTK?&^^QM;?>TZ
+z$;-`<MCEF~&dFKBskf9H56U=i`c|pDbU20_Mj0~eQpsq8A+;F$u3;>X5sWjWqho0p
+z!ek!*b4xVS$)D}-h=_YU;^ea$XDK3w#Ud9AFtAhdpUe2PN|sk*D0VyJ`EDm~O<Q>@
+zXBAnulgm$cJ8QW@x?sKTc2?QNhm3XcIg^TStTB{^Z>NXD<&D@;LWoUO7Ot-1cZjIn
+zd~X5Ev}lIC;UxyihXQbk+yTtLI{2q+$>Ki4Nb-XiX8+)9FVrXWLlS5n;t|8t)#0q1
+zMnue(_5{O3l~CSoHEJR};I)7}g{pRWaL7X$pZm_SiX!5-0&a{T&L*~%8)zeyPdh)>
+z9<jeKeZ?dCxirmv-3ndtM#kx8-nZ!EH^iYdlJadTr6ZmIjuI@Qw+}}QGePo%j!p~<
+z>5<|mT>nUhg{LGliE|E%WXGWtfC=14^b*ND`7F}F42mSvcmNyE$g+^a^F%+!GU-<o
+qIZ3w*M@UsLRl&^)Zs9hWxKqJ2W{$uN?qc=`X@fa~d4qcf3qJtU?tC`@
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$inlined$sam$i$org_gradle_api_Action$0.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$inlined$sam$i$org_gradle_api_Action$0.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..f81ba569461c1dbc4708821f254782c94c320348
+GIT binary patch
+literal 1208
+zcmcgrT~AX%5Ix%#T1u5tM8yw4sL&7Pf}%00F=>b-jTMQQ`rrfE-n*2g+ui2gZ3F*G
+z6OA7a{s4cJan_awk;FG2Iy*Bxb9VO3+#f%`eFsp*V}{T-9j|3fO9?OHovsp*$GcrJ
+zItYyn<iUy8>`4_U(~`bd9c1gW8S?OC%jmw)RvNvldM&B*QY)!NkSC_R%$u;a-wJu4
+z#6IuJ{i^Sf`Sm0iL-vUGxu>{pd9RvB!naAp8D^=(8<bEN(i@Z{F~+d){MZT|5d+<7
+zIb9QuGSOPwGHjkHZW~LTctNDR5$b}v7j$ikVY)uVzZ8}S-0})TtkaK^NX(g(GhkqC
+z=TM)qW9hv245@>j{{1e7#Z#7}e#bjaN8a`jutB8bPo<Xj8N+hnU*KXRg&BtVVP}q0
+zYAZs`l~>a?l%$0pC2^fp^ACmJ-Z6Hkr_?SFc}EbCVYN^{uX5!~X3vqdD#b<yH*hnJ
+zIox817hF7x`7{z($Y2InCJ@6NhJ-zo5reJ&|BWH#lHyqSJuB$77rd(2_*1D1)K6lS
+z^q0DC+C;K)5y=^C20K~Fpor2W3MkXeyXy?OzcHlDmI;V6S2sRa4IWC~RN{>@wCA)^
+zhb9<Jg%r%xG%fFz;!z|hoO-T(Wg;5I0LqZwGriCk+tLxtz3$N$))5UENn)&OZ7g>m
+zQk31G!6axc$HB5WHz``l7{#-=N~cHB6FOsbX3M#2UvRth8H=UzCoFxS9K$+Uhot|p
+zj69vrb36<i<c~25ke$X|tWe4kZVm}ErH@!Df5p8R-kvARjL0&$k2R`H-~rX9$#a*1
+pHtiwV1SZIC(l3T29?>~Zh&1Aue1~|Abi$<?E@P@jT}{`J`vpv)K<WSh
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$libsVersion$$inlined$getByType$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$libsVersion$$inlined$getByType$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..157554c9c32a3dcebf3101994c240d2d18041579
+GIT binary patch
+literal 1306
+zcmchX&rcIU6vw}_Eo~`9r1%3A#2>5DDl8=?nv`I$(WJ2o5z-5%X?ME}Y-gICDWSLi
+zIbJ<!JeY=~f0XfUX=<&FC*$S4H*aU(&(H4nA78%#*u@4zv#y$suaqBnj^@o);Aw}q
+zS|p?!D&dMo$EmeN;0DSUb!Yd|TM@O8hn<p=XPz`d$^D@13uy<UrmJ44$z$6>210tS
+z?R(}`=djcA>_QTZ;jp4Y-|<84Qcm6yPUtlPuWp>^&R%1C{4o!WXz;qx&LDJ&8&2iu
+z*XPEQQLf@nkzwVpQIm)>JR7-kstlFqxH@o#ai|}|spfF#(Qi!>35Mxm6AUlc#w%>~
+zyVnx}6?2sne#V`EOW)b6olu*_3{se8NNfu!%nn0rEmzH82AMRbFv}1($3iox%70xA
+zO>n+47|J`(aF>QmKC5{aBUV@>Qjq`yJ0<_Qh)$bixdn!NuRELWb<@_Om9|n=p7pw^
+z^kT2OmCDAm){9<ulU;mFSQlRsvFMF0hQj1sTrw~^f7|r2uqn&x_~3shhssS~cCb!s
+zW!RsbVi<hlx<_yw68x)zf4Y+-?lR1bd@~H|f3US5sy;O%937ZYNWYjXXK)`67#7Bd
+zwsC3*qmptxhPes>{l49-dEp_i1?0(ARGkM^9*XEZaAwMqxGx1<YmeZYdoAmM(v*f+
+zI94uw0SCgD+_XcAkUmiDu<pGPQMjcKZTbZ?y{gcH;_XVQ43GW^8U<K{^Z=TOaDwL%
+z9i0dw(o^}*xble%3y(=A`p#vnksV#73z);zzRr<Mlg}azEFn)aj(f22ge(g&Jnid;
+vSSS6QZqC!&*(1ctSSaIK8P{=xOx!GE5lcs48n<x!2yu;NjTMbM8mm76A5(zE
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$libsVersionString$$inlined$getByType$1.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin$libsVersionString$$inlined$getByType$1.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..ece3978c69087b6c86003f217ad19f5175fb6c4d
+GIT binary patch
+literal 1341
+zcmc&!-%k@k5dQXB+ER;1@dqe~KTd@z93>{2lwgox(pZHE=?hQW-u76y-Zr;eLf`u5
+z`0A6!2h;HAA7z|tn_5calZh`gv)|3l%+7qXKYxAy0bm<z47#f7j;EC83rF*M!x!4&
+zjRuLp4V83dt>sjj(szC3$*Qy6Lrby}^02j|f-?~qse*mK>B+$MWkr`os0leRp$t6R
+zmVqw=;o6=sZ(E10hOqNVFowgD3O&aQxl5UOLpq_T`J!r^$Y-y%Ir^E0M%H-MXs4fG
+zhZ{~s>D_Z9f+%BQtH7}M*QiOv8D0*#oGL@*Ij;7dK^(f3;Z$=tK=gZ)M1o;*a0!Mt
+z%cB)Gx;@Zi0u@$DC;W^%J`X%+uW~}yEM$<vBtv3T2GVRX#Fkge8C*jqjR{OK#LcnP
+z49(Ji7!dVwrqplE2VuBNttQN>pT&qbEE1_mfPtM7elDZaI$3U>A=hb7r917kHD{%*
+zl$B$hb}BvBX>X*m@vQZ_(_Uv6pA*)_w?r)ZV}l_-ej+_43{Sx}U2@ozWofkim-$2G
+zrh7M7rQtH{k54fOK6dCsq#f}1PX+&UGD$q3reE0~hOH|++YeQjK|`GCE!!oU^`Q(N
+z;W5MPXfM}J4RLHoxq@N3L~Q@qtXD*M$SXb}*^;Vqzsy4!o%>*>7|>Ge_*`p2%$(j0
+zs=m^+<V2BU<<fc_NH5@~8B&Dwfog_T@lHnJ=07#*m8grd)RN+D2Z1s?dNwrju!!${
+zE=BYwPCccg6LE|5MD8oDe<8!dGm?oexPWD{BUf_3G;VbD3duBK7HMD}Ig)WagpKE9
+zS%~39S3kij=~v`ALw{$F5G!J~h?_;+!fi5fr-(VsAAxDy#l0iMH5N1$HSTLH{RVBr
+Bj-&tp
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin.class b/gradle/build-logic/convention/build/classes/kotlin/main/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..72a32596904b3f097faef0f8dacc6a575258b9df
+GIT binary patch
+literal 7525
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab
+new file mode 100644
+index 0000000000000000000000000000000000000000..cbd68350558f35f6f9a3b8d870e630160b3100a3
+GIT binary patch
+literal 4096
+zcmbR3vzw0r2$(?x3<y9NGk{bB5dQ}PkO;CGMj#)AVE`n@3gsY+!{qVN=YZxv04nhO
+z@c;iYpyrbM5c}}y8I>Cifzc2c4S~@R7!85Z5Eu=C(GVC7fzc2c4S~@R7!85Z5FkDT
+E0J-=Q-~a#s
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream
+new file mode 100644
+index 0000000000000000000000000000000000000000..c95b5d74a6128119d1990ed8e3b7d2a487d61c18
+GIT binary patch
+literal 4096
+zcmeH^Jr2S!3`V~b!5J!62Ck6)fC_0-Xp7X_^Blnd6N06KE5)^)*!lb-saK_hy{o}a
+zYIC&Js2e+5bqeHqybC*%;xn?Uj_iql!ba+?Dv%v=G!h5=fvkDGYI-K>Yt~T<*-|rp
+zBolL&Hs4vioh@<?ySJjtOW}_5pQ;aZnbBf;H|U)tT~|M!O=8RvoEq&>U&1M{7JWPA
+jdG%BNHWv@*pA&EbPQVE`0Vm)DoPZN>0#3jQ{7>Kk+F^nx
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..c0fe830897e73c9c3fa7e09ca1954548fae50a4d
+GIT binary patch
+literal 8
+McmZQz00E|X00620p#T5?
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..a9f80ae0249093f1db8b14f71053acce35747e3d
+GIT binary patch
+literal 8
+LcmZQz0D~C-0H6Sw
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at
+new file mode 100644
+index 0000000000000000000000000000000000000000..6c33680f9d396d1d20b0a4752c1e730627bda596
+GIT binary patch
+literal 12184
+zcmeHN%}(1u5S~ZL!PgQB>aD62P!UL_LQru<OR@=W9oyPCP}B#g#Gk0zC+e}sK2g8%
+zmY-cOY9OIX#!j?Zd%a$J#xvi{H*uRbwd!fp+ST36^jaI4Y3*n;ibsV`i%m5;+E)3#
+zO2&Gx$c!53pKl1CkJP1v6pirJXl?pL85J0dDaGCp$Lv-Y<3o%L&}aBfFu#p66h`xM
+zkIz=v&dYTa&hL@I+!%dKeLBVQLmFc{!AMfB665-9>Ns;d<r;hkU94B2&v1Ob{5{51
+z)7!BftTM*E@EtDQlY}rsid@lOohHy<L@&$c%6cqXR+hP5@~(LDUI~4^j5|XhLJxgJ
+z%V<&Q$rgJw#v@41zTe0A0G@8({Z)Io7Nj3WvitH|d}X~v(1d{&4$urV#t5ph$A}xF
+z??4MTSjpOSeMT}K`u-vr4_5;A-{6Cb557G}w*6Jl&n4UbYQXkC3&MVzJKyDbR^Dp7
+zYy92yci#uj1=$4W0*ByJ`-t@hz2!ooOlg1_1+9T4d_c>CnbJ4$n%RR6478LYOM0r7
+zUQMi}ZF&oBcjyIe(R<nelePJ(%TkvdPJMu!H$(O|=KSsVI+O6>#25U3B%J9s6Z;HC
+zr|Dg3hMaa97#AN)$rbWpDt;nNx_=Y$(;7%z4NLWq+D|U)A+;Z3=P{5>gIKOl&#Ex-
+zT^tTPS9wByjHn-Ogh~|+Zg2+Y7c_m_knatCJdqzoL&b|P;^M=kC5#3KLO9@i#XJ^z
+zrpvNsTh90)&VR!CS+JtUuh(4E=+EK9nWl`9FT6Z1$qBtlU_{DTEmcUB(@!MNggwt$
+z5%UWHdU-A?E)nN^zmVwvA-di8zkOrKfBq6}+$RqbZ9GJx=ke{1$K{#TyzHTW{u_U`
+Z{_NZOR{`-nO#PnvANHkKjVu@${sU>z6Dj}z
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i
+new file mode 100644
+index 0000000000000000000000000000000000000000..63fa324d635b291efb0c4d4d17ea68bbc60b05f3
+GIT binary patch
+literal 32768
+zcmeIup%H*E5Cp)?qzOu(B)Y($P)H;-Pz4IXOd6mfzJQ1bM8v+lKXJ1ur<@!C0t5&U
+z=u}{fUFDjmPUo3LfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7dX
+zgTN7;bs3(9stN%D1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfIvlHk8Hfp
+MxAGDZAn>!m2Z)&n1poj5
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..131e265740f37d77b7c4a3676d2a7704ca3e4a29
+GIT binary patch
+literal 8
+McmZQz0D%Su009U9fdBvi
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab
+new file mode 100644
+index 0000000000000000000000000000000000000000..3208ed8afe10752c7e795139d05156d3a346eaaa
+GIT binary patch
+literal 4096
+zcmbR3vzw0r2$(?x3<y9NGk{bB5dQ}PkO;CGMj#)AVE`n@3gsY+!{qVN=YZxf0V+5R
+zr2T-JPeAR%r)N}dGz3ONU^E0qLtr!nMnhmU1V%$(Gz3ONU^E0qLtr!nMni!35C8z1
+C7!xr7
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream
+new file mode 100644
+index 0000000000000000000000000000000000000000..a11a6ec71e443a089e38b3388d7ebca80f47c986
+GIT binary patch
+literal 4096
+zcmeH@K@Ng25JmrqxC3#^g2WRPMAM{FB4WbreRN^MPB(1)P1>3HOol&CQmbBBcU8I(
+zGjGyBH7lS_rJAV&`GmS<qb_>T8;Ma@t*D(A@`RGgl*rsl^{%%rGZKA0Q=Y`k_fvUa
+z{B`_jEmIb}L^SDqpvTS4ws&UNK@AQ%b`9M13#ZM2PJi_VNFNh00TVC*6EFc2FaZ-V
+L0TVER|0M7RN!ni>
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..edeb18b5ebfce1fcc6daaa35b6bba0c8f31a150f
+GIT binary patch
+literal 8
+McmZQz00G8V008s=>;M1&
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..a9f80ae0249093f1db8b14f71053acce35747e3d
+GIT binary patch
+literal 8
+LcmZQz0D~C-0H6Sw
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at
+new file mode 100644
+index 0000000000000000000000000000000000000000..fe2396404e73f4b5641921f056394d5241eaf8b8
+GIT binary patch
+literal 58
+zcmdOA@JLNeNi9+cN=?o$N>OmjFH#6dEh^3|E=kQR@klJr@J%cTOUx-v4KB$qN=#2>
+IWMF_G07?%M2LJ#7
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i
+new file mode 100644
+index 0000000000000000000000000000000000000000..0165f67f82919cf127dde562613d81af246370b7
+GIT binary patch
+literal 32768
+zcmeIuF%5t~5JkaD&J!I55I_hO5|BVii6Bg%;u2J_8fY$?%o_M_r_@r5BS3%v0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+zNd%7Qe1>UEk}Hz{0RjXF5FkK+009C72oNC9P2h~>{cTIP0K)_b5FkK+009C72oNAZ
+zfB*pk1PBlyKp?Te747%Dt%+ZdPJjRb0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+J1PJ^T_yAPU2a*5)
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..131e265740f37d77b7c4a3676d2a7704ca3e4a29
+GIT binary patch
+literal 8
+McmZQz0D%Su009U9fdBvi
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab
+new file mode 100644
+index 0000000000000000000000000000000000000000..532e4c0e7af3e86e73a3ab48bcc8dd20bc2711c3
+GIT binary patch
+literal 4096
+zcmbR3vzw0r2$(?x3<y9NGk{bB5dQ}PkO;CGMj#)AVE`n@3gsY+!{qVN=YZxf0V;U?
+z@Be>4pk^i@jZgik+-L}lhQMeDjE2By2#kinXb6mkz-S1JhQMeDjE2By2#kgRX(0dr
+De4G-A
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream
+new file mode 100644
+index 0000000000000000000000000000000000000000..a11a6ec71e443a089e38b3388d7ebca80f47c986
+GIT binary patch
+literal 4096
+zcmeH@K@Ng25JmrqxC3#^g2WRPMAM{FB4WbreRN^MPB(1)P1>3HOol&CQmbBBcU8I(
+zGjGyBH7lS_rJAV&`GmS<qb_>T8;Ma@t*D(A@`RGgl*rsl^{%%rGZKA0Q=Y`k_fvUa
+z{B`_jEmIb}L^SDqpvTS4ws&UNK@AQ%b`9M13#ZM2PJi_VNFNh00TVC*6EFc2FaZ-V
+L0TVER|0M7RN!ni>
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..edeb18b5ebfce1fcc6daaa35b6bba0c8f31a150f
+GIT binary patch
+literal 8
+McmZQz00G8V008s=>;M1&
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..a9f80ae0249093f1db8b14f71053acce35747e3d
+GIT binary patch
+literal 8
+LcmZQz0D~C-0H6Sw
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at
+new file mode 100644
+index 0000000000000000000000000000000000000000..192dd13389b32d469f04b1de8562cd72437aea3e
+GIT binary patch
+literal 728
+zcmd5&K?=e!5M1yheSv*L5u^u&qTqeothJgZHA#j3)T1Zg;UwrmPvXfyHoKGTWM*?J
+zg_XE$BaL+`TUwV@;(X_Wm{77mta;e69%UP><5q4n!ZOs5MZAz82I^9klP8CpoO)tl
+z2H6QWf%LPAT|Lkir$yB0k6jFONR>y;$OoV?Go-+2(XX)gGy$z?M6QA8#L}fdi?_E$
+z;)wq?V0kHA;QgoS3M?bEM7?w94fka6{Pz~4nK(9!Q3<VJpvI^ed!nz5UX#(|-y8kG
+F+5=ODmeBwJ
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i
+new file mode 100644
+index 0000000000000000000000000000000000000000..0165f67f82919cf127dde562613d81af246370b7
+GIT binary patch
+literal 32768
+zcmeIuF%5t~5JkaD&J!I55I_hO5|BVii6Bg%;u2J_8fY$?%o_M_r_@r5BS3%v0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+zNd%7Qe1>UEk}Hz{0RjXF5FkK+009C72oNC9P2h~>{cTIP0K)_b5FkK+009C72oNAZ
+zfB*pk1PBlyKp?Te747%Dt%+ZdPJjRb0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+J1PJ^T_yAPU2a*5)
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..131e265740f37d77b7c4a3676d2a7704ca3e4a29
+GIT binary patch
+literal 8
+McmZQz0D%Su009U9fdBvi
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab
+new file mode 100644
+index 0000000000000000000000000000000000000000..b778d4bf58492bc78fc06b62627c53ebc2bc035a
+GIT binary patch
+literal 4096
+zcmeH^y-Ss07>BPc_2frs)=ABeI_V-I5iSupM36&6lLQF~2{k%8h!hk!wg^Vx<RD@w
+z4K6K$5={mcq^6~%rdfHclOLJ=`W^IulYc-wH@xrly!ZV)?|pMUPp&;bf}=Y5N=4qz
+zB7Okwc_~LSvv-e6B%f3yYd3d4_U2Rd{W$9XcYDL~U#Y=|BW7V5RBlUe%*%hIp@VR1
+zOBy%?t-qza>F{_{s>p!B4Jj`ZUaw0p&G?%1AOgAOmBUc=OFEwgR})e+8=8JfksP@H
+zLwaU*u1d|h&>xpB*v5+$DPc~3mj;hQ;+xcCC)s9KKE%Fy&SP+KSt=`l>tEdeINVv1
+zM$NWG>Cp-3_$<{&p>IK|I|;+{QcWRD&PnHrVD*#dHKS%rF<koS{3&Rhm1fL`Gtx*2
+z^nQ@~O5xRe_bu~0)9zOeMP|aRowC2vaQmHf;|#P<x*mh46Rw+M<I>n!Sbw{7kNe$4
+es09PTKrj#t1Ovf9Fc1s`1HnKr5DfgE2L1v648AD<
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream
+new file mode 100644
+index 0000000000000000000000000000000000000000..817c36767aa0fb2b04311997a5a152ab3ce22a9b
+GIT binary patch
+literal 12288
+zcmeHM+fKqj5S@?dI|^S=edU1!LyS=gmr9zHww8;*ulLL@MTm`BN}3+JB<*&W%`#_Z
+z&RnR73}hyWETtn0j0x_M1emR4g4NW_R+vxloMKg<Vwp>Zy&=X>-eiZ>sci5ZVI?xB
+zggCb&{>fh7oDpH)45zFyCiwo|+_(7E_^>v>DI3TVVol_!@iKaQ{Y21(C%5Jjd8U+G
+z<>!^X3)$CXdXL~eOE74T(UTiop7DHTN(^4iF;|wx;93Y)Y{0$%Yig%00aitEjK#(l
+z#pnT521H|A8PIF=2r$!V6Jqp%E{_wc8O~UsKFJshx_cjM3!l_ZjJc*q>R-LRf4vgK
+zFkAn8=XWc+jlpf<hx*w&fvq&xOi`<jkV`U*w$3cdstfE`%N?q=2VChPtA5a;90E@U
+z#4$2z8N|aH5o^V-y+s1s1kyLw((IqX27h-0FC>x{_XJ~N>20**MxZ&K8-YgQI^$Cn
+zww`jJN}sc%;mswx9o|^S&9l7oX&2AbX1pG!agjH&=e^K`CeHoV5w(jq>UnkcfYmZ`
+z_3r4C#z%{>p4%h!Ys6i)D;hOcw$mCge>d_-C9my#*ksmxo|5RfN^g)g7~>_o0Va;C
+z?=kTuulTQ>FKQPiKhoNY$&d0nzRveZ<!XhW`S|!<#<lyu`qQ$(`J%XDE%Q(QiVoem
+g^*BuFK28Hp15N`@15N`@15N`@15N`@1OL^)7jfnCrT_o{
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..000552e9c6a058ba9d043861e420f67085ddc5e9
+GIT binary patch
+literal 8
+McmZQz00EUf009gD;Q#;t
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..b94f48dd598d0a3960e6c8d2cf1a6ab4e2e7a6a2
+GIT binary patch
+literal 8
+McmZQz00G7i008;`@&Et;
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at
+new file mode 100644
+index 0000000000000000000000000000000000000000..43a30e6bdc092d7111ed36acd8317288591ef522
+GIT binary patch
+literal 10467
+zcmeHNK~BRk5L}6m<OSpn6%y(JqzWYNZnBhs8wcA#>Q6ax;vI}vRFrZ-m1rX|mEzi)
+zc(ayw*E4o%nX79xRyW#&*jASzRtt@(OIiCocj@8U4R_9udYeOZD}6f?{Ca65pnMTU
+znWeK<ElDEo)Up-_S&!Ni?qu<wt<q}^=?eb=rAPnL%RxF=E1~UBA0REYURvl3=-=YH
+zmkp##8BzC;c+=9^J7?dXotcjE-UeE>7GB`_eXAGHGQyT(?>X$v93p3tj*7@+EHd4E
+zWnX4gED+m;go_53ejpK|8v;0DRKoDWT@GLx??$GcCr_pdZ7KvU01~QPVW>+`1cz%Q
+zzoJweD6qqn=rL!MuDiGG!5C$Xo@TF($%x5_$>`_KGy#Lb>VljaL!ievIAAhjGWxH{
+z=+*e><K+410SuHw17APwkt}Cz_mr6qNr(Kq&mS0TjI~K^IMN~MkaWo7eEY^&+l{pk
+D#3BeM
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i
+new file mode 100644
+index 0000000000000000000000000000000000000000..a9c493b070937d1753a06bfb0fbccbde0c54a9dc
+GIT binary patch
+literal 32768
+zcmeI%KS&#49LDhz9n@k`Iw)AsA%l}RiGu~HgQANCtsN>9qEL0PxYWfqe?%ij>KHO;
+zs2~{%YP&ep5FBhK$)FI?!KIK%tMuR4r-O@-XvCAdH{V;HT<-3@-|v&;?!s#|Tcs9@
+zV+CR*mKB^i`sUaIDGUJw5V$9SxXzP#oS46-({UOEZX^)WeY)z?*vgXfq4Gutxp=3n
+z`b?FzcDlF)BTJvs=W@JIvtwj)G=%^H2q1s}0tg_000IagfB*srAb<b@1qm!^?~gO>
+zlM&^rGS|UAZ8$%wf0k>zQ{K<2km1Edzf<a=4g?TDz%+q!%`^Es*B7dl0cD*ss5Gt5
+zLi^c}!`{02^S_0<+;;y)c}|a|y&cMT%2&$w%G-{|aR}rS@ag;In>%fcEB(r(GN8<N
+z4BHSu009ILKmY**ibo)%RtNmG(GBHuWlA}yEFJ+mMF0T=5I_I{w+d{jaBnF0{I6U4
+zqHY8bK)|g6KUDamw`<!@t-nq4BTu{RpZCoOV6(R8z^M*b>q^Px!x!d(uez{~00Qn4
+zIMMa&aCddoeU(!&0tg_000IaUi$If}SN>dl{r~rw1px#QKmY**5OAk}o@aiJN4r~;
+zzm(m|-^#mgCanQIVdjDF+SRo2BKrPSoIQzcDJzv3<pZT@ebNsC2wX4Fr{8~Rul@7D
+zmzDh0i@wd-&zI{Y0tg_000IagfB*srSk`Mjmw#^vk6?iS0tg_0fSm$q-EUr2hbQbj
+z2V*0E00JfmywUY?e>l);LND}SjzCPUEJr*gN#%<2L>W^mSZok@A=z}ae8`5O84`h<
+G0{;N5dUJCC
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..131e265740f37d77b7c4a3676d2a7704ca3e4a29
+GIT binary patch
+literal 8
+McmZQz0D%Su009U9fdBvi
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab
+new file mode 100644
+index 0000000000000000000000000000000000000000..4bb81c3f701d4fe041873ccee793ac8ece4d7abd
+GIT binary patch
+literal 4096
+zcmbR3vzw0r2v|S_3<y9N3xHGu5dQ}PAcdla5y%H&7y#*KhjNg`Ve<Isb3pT#02P${
+z`~Tk$s9F5)|NpOm^ugZ{d-3TVl^YF#(GVC7fzc2c4S~@R7!85Z5Eu=C(GVC7fzc2c
+L4S~@RARGb!%`_I+
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream
+new file mode 100644
+index 0000000000000000000000000000000000000000..01b61ec382affe88f7b086cc56c12358d7554af7
+GIT binary patch
+literal 4096
+zcmeH^K@Ng25Jmq9Jc^uwxMe}&0ZhSa8Y?9NCfwfFE==6%hJ_gtIy1kM;m<=-t6oWW
+zRk{)rXOyR!<WR>_P1KHjM9tZtvmW#YV$ek^YNv%fqQo*KFt<|u(OZ`pk-nZOGcj?0
+zDCd)}4sWex%7T}GCLK5QnBC;P6T5mfIOy2b@vdJuZ8miJtGAu@y0O;`+syUEo{9gp
+fP<trbV+4$V5ikNqzz7%tBVYuKfDtePe@oy6FlS`p
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..0b22d3c33d21485cd35ad10688b1db5c70f4283b
+GIT binary patch
+literal 8
+McmZQz00Aa0000&M4FCWD
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..93a595bd1bbabaf1bd4ee4909ac49e65e67fa3f4
+GIT binary patch
+literal 8
+LcmZQz0D}bp0H^?=
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at
+new file mode 100644
+index 0000000000000000000000000000000000000000..3b556633a594442425ad1bf744b76b771ca44b4b
+GIT binary patch
+literal 1121
+zcmd5)O-lnY5KYtWx^7k0BD#309z=Ud>9wa?kfl^9E%u)7#u&*aA)5-tf8)vj<3aG(
+zI9u@xZ$0h6%e;95naLvrC5&dwwx=xBHfvvL+nz96h{7@D5?b6}Q!}S>$!1Pl%GsNT
+z%6K{pag2Wu0FMCc9E1p}y|Ri?FK9JdxQn~BOYhmoQGFCejbq&PdVb_X#>wI6Ald>J
+zbf5xt8+e#tP@5(DtG@U<Fn$+J$EnT<*P2U43Yr_q3PO#6LuFQrOx&%=Vku-MH5Vxv
+ze5wOuq)4d~S`D>&gf{}4$R!u5kB-LLa>6am;7)1;`D(=f8dg8B)b&yQ{9=wgm@8MX
+zmhY(L%%P?fi(+2ds1?W!MRNvu|Cc;-Rw$0b^m~i<ia2|_nX^Nk8(pxmSXgRTRWtXs
+dBIe#~W^P4YJ%LY+Pz<O8YJdQ+j#JcG=MSpu4!!^Y
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i
+new file mode 100644
+index 0000000000000000000000000000000000000000..f0e326126a987bc99726105104989431726587c1
+GIT binary patch
+literal 32768
+zcmeIuu?;{_6o%24uz=c9Y@`y2MrjR3uz;vpLZwl7TX^E!1@8BskcTWd0t5&UAV7cs
+z0RjX*DKNz9qc4_E#)~FEfB*pk1PBlyK!5-N0t5&UAVA<1fhK-E_p*NFxu*mO5FkK+
+z009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBly
+zK!5-N0t5&UAV7cs0RqVhbg`(K+Bvx}K?Dd8An+@JF|NJ0_4?IlV+jx-K!5-N0t5&U
+SAV7cs0RjXF5FkJxS%C-Y;tX~G
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..131e265740f37d77b7c4a3676d2a7704ca3e4a29
+GIT binary patch
+literal 8
+McmZQz0D%Su009U9fdBvi
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab
+new file mode 100644
+index 0000000000000000000000000000000000000000..4e90ef8df469edfb6e5fe99343eb202c897820cd
+GIT binary patch
+literal 4096
+zcmbR3vzw0r2$(?x3<y9NGk{bB5dQ}PkO;CGMj#)AVE`n@3gsY+!{qVN=YZxv04iAg
+z`Tzf8K+Q4FAok(YGb%S40;3@?8UmvsFd71*Aut*OqaiRF0;3@?8UmvsFd71*AwYZx
+F002=j6D$A#
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream
+new file mode 100644
+index 0000000000000000000000000000000000000000..c95b5d74a6128119d1990ed8e3b7d2a487d61c18
+GIT binary patch
+literal 4096
+zcmeH^Jr2S!3`V~b!5J!62Ck6)fC_0-Xp7X_^Blnd6N06KE5)^)*!lb-saK_hy{o}a
+zYIC&Js2e+5bqeHqybC*%;xn?Uj_iql!ba+?Dv%v=G!h5=fvkDGYI-K>Yt~T<*-|rp
+zBolL&Hs4vioh@<?ySJjtOW}_5pQ;aZnbBf;H|U)tT~|M!O=8RvoEq&>U&1M{7JWPA
+jdG%BNHWv@*pA&EbPQVE`0Vm)DoPZN>0#3jQ{7>Kk+F^nx
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..c0fe830897e73c9c3fa7e09ca1954548fae50a4d
+GIT binary patch
+literal 8
+McmZQz00E|X00620p#T5?
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..a9f80ae0249093f1db8b14f71053acce35747e3d
+GIT binary patch
+literal 8
+LcmZQz0D~C-0H6Sw
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at
+new file mode 100644
+index 0000000000000000000000000000000000000000..cd0e68b49019d2a332d933860ac25d2bada33fbd
+GIT binary patch
+literal 9558
+zcmd^EQBJ}@5S<fv20r=?2=M@DV))R6h#|(Pq_itGmbPwN44%)!_~{XR(^7=kXqrmX
+zp(JIy%VwFkJ8x!QwnIZ@+Df;sl;vx?b?)odNa@fCBjrUyGkm%<gNf<JY8?66oU4y6
+z;WHwOd|FV4=4gF<yQI(y$;4=o^g{GayayQNH;-)6nCqZ*=#f?!ol%T;7b9-6ii34K
+zG}xItNY-#M&%!DZS|7ikCErW@tG5{&VU-xRI2a?kt-X!LdVgH(g+a&3Lv$z7Znj^p
+z?LF8Y3EOuU-m?IMY_tY-@feBcGgCb9!bYE2>VazxSP_GL3S)duO95CJ#Wt2SwlGEm
+zs5B5w@o1pu=%LW#Xyc$A09_U*cxPnB0`^IXv7op1v8M2e&q-pg=?nF*{@TAD1jMkk
+z{`t=DsqJYDZVErx&t3$a73Z26YSjsHiAI~&nR!`tju{c1qH4Rw6Kt~Tt5}p{;L$+r
+zA)^*Sd_-+}MmCPtnR<$f#791kIU~QH;N)ps;ij-CVEN(W_!M0v2g(J4#xeaZ8198w
+znlBrsf~`*jqHF|Q2FOOhfx5~NR)(#+94I4&R$_SbpMpqktdq^NOdK_fXMARIJ&xm|
+z+{m8EB~whC`%N@8i#P0fRm#M28M(ZGdK2TL`B?WNqdwd40*Dza5jR!bxD*vmliJ$0
+zTP9{VEH|R;O~sKkn>pnNLiV|ge9$$<_@9D7635y1B=IE^1&7WTJ{L)T#O0SHKgvq|
+lDsQ8T)e1lJ@%D|#q5D7k)1t=tBEP6Davu<iL${Zb{R_>w82tbM
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i
+new file mode 100644
+index 0000000000000000000000000000000000000000..63fa324d635b291efb0c4d4d17ea68bbc60b05f3
+GIT binary patch
+literal 32768
+zcmeIup%H*E5Cp)?qzOu(B)Y($P)H;-Pz4IXOd6mfzJQ1bM8v+lKXJ1ur<@!C0t5&U
+z=u}{fUFDjmPUo3LfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7dX
+zgTN7;bs3(9stN%D1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfIvlHk8Hfp
+MxAGDZAn>!m2Z)&n1poj5
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..131e265740f37d77b7c4a3676d2a7704ca3e4a29
+GIT binary patch
+literal 8
+McmZQz0D%Su009U9fdBvi
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab
+new file mode 100644
+index 0000000000000000000000000000000000000000..bdf584a84b58bf0b45e9b3a4c946653433feaad2
+GIT binary patch
+literal 4096
+zcmbR3vzw0r2pB;G3<y9N9YCr9i2nltNCa68h>eSnEDq8~2%LkOPe|RU{AdV_hQMeD
+jjE2By2#kinXb6mkz-S1JhQMeDjE2By2#kgRc_9D*#r_JH
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream
+new file mode 100644
+index 0000000000000000000000000000000000000000..2f0b1735fe7c95c424ece083a6833294c5d60c85
+GIT binary patch
+literal 4096
+zcmeIufe8R02mryBXbop+1)&f@DuniL5BVG6`biT@ov}o(%ZO*b8yH}K0R|XgfB^;=
+NV1NMz7+|2#zz47r2mk;8
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..2647ad19c9b8bf280c32bc0153a2addbdf0de579
+GIT binary patch
+literal 8
+LcmZQz00S`q03HAr
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..2a17e6e5bd9e7704741c2a3ae485eb2d2e302b87
+GIT binary patch
+literal 8
+LcmZQz0D}$y0FVHQ
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at
+new file mode 100644
+index 0000000000000000000000000000000000000000..725b89c15989bb23f2ac75b17080bf5258d7fae2
+GIT binary patch
+literal 294
+zcmbWvK?=e!5QX7_7wHM&8A?IAs8B4ppC)4*m}Z7aBJ|pxz=Au$O*fC9xA@M@fDq8y
+z8+x(OUc}l7EmJO-$^iL!1-%1ToQoJle4m=h%j%*?WONx;Wy}s#_esHo0zEdjRN}xA
+p$-D0RcB)Js3Q6iEy>@-CiEE@Z9|C(>RWgpW7})k}j)%-Y*ay34auomo
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i
+new file mode 100644
+index 0000000000000000000000000000000000000000..a685cceb0ae916d9d86fae067671530f0a818cf5
+GIT binary patch
+literal 32768
+zcmeIuF%bYD5Cg$5SV0$B(1{Ovu<#wlroJ?rmL4NOfB*pk1PBlyK!89&V7+#nJqs5p
+z0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZ
+zfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&U
+dAV7cs0RjXF5FkK+009C72oNAZfB=E-1uk!20@eTk
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..131e265740f37d77b7c4a3676d2a7704ca3e4a29
+GIT binary patch
+literal 8
+McmZQz0D%Su009U9fdBvi
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab
+new file mode 100644
+index 0000000000000000000000000000000000000000..54e90fda6d4408b31c80d565e6177fa09f054e1d
+GIT binary patch
+literal 4096
+zcmbR3vzw0r2$(?x3<y9NGk{bB5dQ}PkO;CGMj#)AVE`n@3gsY+!{qVN=YZx10u^in
+z(o2E#Jg9y6^o+`lhQMeDjE2By2#kinXb6mkz-S1JhQMeDjE2By2#kinXb2D=0s#71
+B67>K8
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream
+new file mode 100644
+index 0000000000000000000000000000000000000000..693939e5ff7e3e979bba9e0c76803a6ca07fdd08
+GIT binary patch
+literal 4096
+zcmeIuF$%*l429vINOuTXGX#19$99cCmV})Ia{DH9D|E@)r$Gn}|M1PxDiyOLnR=)$
+zxl?dIm!@W%_;t{-u_Up=k%rHAa2JkYWz*4g&w5?6Y=!lCD>zzp>v`g(g?4;5r(4Y*
+bu?GeM5P$##AOHafKmY;|fB*y_@OJ`lCAME3
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..468508e4e1f621a2d40bc2d630935695c13f9814
+GIT binary patch
+literal 8
+LcmZQz0E15e0Qvy)
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..a9f80ae0249093f1db8b14f71053acce35747e3d
+GIT binary patch
+literal 8
+LcmZQz0D~C-0H6Sw
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at
+new file mode 100644
+index 0000000000000000000000000000000000000000..d7dfed9fe73668442f4a7002f9fa954bb62caee7
+GIT binary patch
+literal 121
+zcmdOA@JLNeNi9+cN=?o$N>OmjFH#6dEh^3|E=kQR@klJr@J%cTOUx-v4KB$qN=#1`
+eV-U?RO4my-N=(T~)k`eM)C<TdP0!3DRU7~hDk?(&
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i
+new file mode 100644
+index 0000000000000000000000000000000000000000..0165f67f82919cf127dde562613d81af246370b7
+GIT binary patch
+literal 32768
+zcmeIuF%5t~5JkaD&J!I55I_hO5|BVii6Bg%;u2J_8fY$?%o_M_r_@r5BS3%v0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+zNd%7Qe1>UEk}Hz{0RjXF5FkK+009C72oNC9P2h~>{cTIP0K)_b5FkK+009C72oNAZ
+zfB*pk1PBlyKp?Te747%Dt%+ZdPJjRb0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+J1PJ^T_yAPU2a*5)
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..131e265740f37d77b7c4a3676d2a7704ca3e4a29
+GIT binary patch
+literal 8
+McmZQz0D%Su009U9fdBvi
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab
+new file mode 100644
+index 0000000..c393a51
+--- /dev/null
++++ b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab
+@@ -0,0 +1,2 @@
++3
++0
+\ No newline at end of file
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab
+new file mode 100644
+index 0000000000000000000000000000000000000000..23a508d987dc4f783ddca511d5aa76c2bfabc5b6
+GIT binary patch
+literal 4096
+zcmbR3vzw0r2$(?x3<y9NGk{bB5dQ}PkO;CGMj#)AVE`n@3gsY+!{qVN=YZxv04g{E
+zq>lkLAA;J4PtT~_Xb6mkz-S1JhQMeDjE2By2#kinXb6mkz-S1JhQMeDjD`U5ApijF
+CY7^W5
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream
+new file mode 100644
+index 0000000000000000000000000000000000000000..c95b5d74a6128119d1990ed8e3b7d2a487d61c18
+GIT binary patch
+literal 4096
+zcmeH^Jr2S!3`V~b!5J!62Ck6)fC_0-Xp7X_^Blnd6N06KE5)^)*!lb-saK_hy{o}a
+zYIC&Js2e+5bqeHqybC*%;xn?Uj_iql!ba+?Dv%v=G!h5=fvkDGYI-K>Yt~T<*-|rp
+zBolL&Hs4vioh@<?ySJjtOW}_5pQ;aZnbBf;H|U)tT~|M!O=8RvoEq&>U&1M{7JWPA
+jdG%BNHWv@*pA&EbPQVE`0Vm)DoPZN>0#3jQ{7>Kk+F^nx
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..c0fe830897e73c9c3fa7e09ca1954548fae50a4d
+GIT binary patch
+literal 8
+McmZQz00E|X00620p#T5?
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..a9f80ae0249093f1db8b14f71053acce35747e3d
+GIT binary patch
+literal 8
+LcmZQz0D~C-0H6Sw
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at
+new file mode 100644
+index 0000000000000000000000000000000000000000..9f383b5fab9d5332f3a4a6ffa2b7645a6d9f8af6
+GIT binary patch
+literal 67
+zcmdOA@JLNeNi9+cN=?o$N>OmjFH#6dEh^3|E=kQR@klJr@J%cTOUx-v4KB$qN=#2>
+MVE_Rz$p|Ky0PMOF6951J
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i
+new file mode 100644
+index 0000000000000000000000000000000000000000..63fa324d635b291efb0c4d4d17ea68bbc60b05f3
+GIT binary patch
+literal 32768
+zcmeIup%H*E5Cp)?qzOu(B)Y($P)H;-Pz4IXOd6mfzJQ1bM8v+lKXJ1ur<@!C0t5&U
+z=u}{fUFDjmPUo3LfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7dX
+zgTN7;bs3(9stN%D1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfIvlHk8Hfp
+MxAGDZAn>!m2Z)&n1poj5
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..131e265740f37d77b7c4a3676d2a7704ca3e4a29
+GIT binary patch
+literal 8
+McmZQz0D%Su009U9fdBvi
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab
+new file mode 100644
+index 0000000000000000000000000000000000000000..649b0e651f30145986ddc7f06de5926167bbfb64
+GIT binary patch
+literal 4096
+zcmbR3vzw0r2$(?x3<y9NGk{bB5dQ}PkO;CGMxZbd!vPbLJWRX+E{mUW4ro3|Pb`oI
+zne*}=#6JAGMrB7sU^E0qLtr!nMnhmU1V%$(Gz3ONU^E0qLtr!nMnhmU1c(g*0KWkf
+AZvX%Q
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream
+new file mode 100644
+index 0000000000000000000000000000000000000000..636f34a3cbe33411309e4121964a67a0624882df
+GIT binary patch
+literal 4096
+qcmeIu0Sy2E3<4mvf9Uu4AOh)v0RsjM7%*VKfB^#r3>Yx*d*A>+`v3$0
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..29ce11cc9c2acfbfd357e04485500314b13afbb5
+GIT binary patch
+literal 8
+LcmZQz00U+K01E&F
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..a9f80ae0249093f1db8b14f71053acce35747e3d
+GIT binary patch
+literal 8
+LcmZQz0D~C-0H6Sw
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at
+new file mode 100644
+index 0000000000000000000000000000000000000000..27a38776d7727bfa811ad505044198e88497b35c
+GIT binary patch
+literal 387
+zcmb`AK?=e!5Jhv8p1?UnDM%LzMZx_v8ROU_6DO(A+glM_>8_jq;eU7!Oi$=Yn-f`4
+z*X%``fwXX`lxmOVcEo(aFw?n;q9-xQN_ws*OM;>nB65OBYFNuk1TW$PLBW^<6~LU=
+zNKS<vUl$l>4lami3+-oZa}I3r4eY+?A<UlBZmMb?TMIjhSqdF^RMh2%b29g>o&RMo
+DEv%Jx
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i
+new file mode 100644
+index 0000000000000000000000000000000000000000..e9905b3d28cac38891f28b92f61f50d5f90de08c
+GIT binary patch
+literal 32768
+zcmeIuF$w@63<JPgKkw+1&Db}{1p*=CRoAYOlfBZL_V`T#1PBlyK!5-N0t5&UAV7cs
+z0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZ
+zfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&U
+aAV7cs0RjXF5FkK+009C72oNCfv%mv#837>x
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..131e265740f37d77b7c4a3676d2a7704ca3e4a29
+GIT binary patch
+literal 8
+McmZQz0D%Su009U9fdBvi
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab
+new file mode 100644
+index 0000000000000000000000000000000000000000..f68e1de76b9f40fffb6990139e4449b8fd204f7f
+GIT binary patch
+literal 4096
+zcmeIz`;$*)90%|x)-|+k+gfa^)+Xe#v2CpT&Xx^rRwc=7lGsYd7|9@^Tt*U-w04Xs
+z(d@{`<W^{NAD7LTb;)d|i~AUiTsE=aUOQ!`AN>LQ{P2C9Ip=(zdCup2-p^Uo`}=yq
+zXnse<?|&ouUw73CVUoj$QE}$~_f*_|>n{~nT+68vLd9ga&O5xVQEdJ+ckW^yw{Skc
+z<qoc78JDuD$@BRXXYn0Q<Q9%)4Qm+1Ob+KX4&_!3;yqPE7{DAp%X!S^Pt4+7Q6Xfo
+z4?FQwrtt_<*tl8<E!dyQT);#gWjy1mhY-VTM)4zFEssR@^E9j02;nHZb1x@zGk@eN
+z{>?(B*7Ur5i}_s3IlRDWY~|fd;82d@66Ud#gV~^V2>scY*__Qx?qNFX-RXJQi%l!8
+zGl5$f!<($h&UHd4ziA!3%rAJ7B|O5qbwk+AOm5^tuH^-;Vpk1O$k8m|H=NCLoW$h2
+zte-D&2=m#GhndBOdNG|jY{}_N<VD6a>u&4iSFFS8F(FjvSO%8x`i)4W%{|u70-on}
+zo@W2p5Ps(dma^f!Aspg(?q?}?vqM}6+qi(6d5P<pT|b1?T*(!TjSpcNM{o&uGM`Be
+zLYU8~oXwM*!515bFojz=fk}-*7{f^%$%}lQISJ~+)y!qwecms}u`iFYH!~7Lc!Hm^
+z8>=){KfcUV7O^#(+#f<S&SDbJFoBOh5JDV3V>GX@HlI$?&)mfFzax>vCLxq@3@>pX
+z&oM1oe{c?e<yjtOj|W32;Zhd!j;8X?TyEhyZe;XB`iFU3#Ud6mp_x2zA{VoS3)#GR
+z2=kc1_xS?Ha3u3ModdXpz4-&X@BmYIoJlNaETdcKA11TxdL+`8XPL!P4rDP$u!!$+
+zH9zK3F6RPn;tc-GaXiD}EMqQX9uA=oTQY-BF_pvFlpipjg{;jzyz!U5<9XI?slI%O
+z2lynn@ingHOn${e=5se^@f;^Iww3;33J0?npXHl;f*-Oyzh(>WV*)R*9_zQ3FSg^Q
+zGCAOJ4&xzC<Su@~@3?|1xSfl6oO5`MQ&_7_2&37AL)nr2`3!sV4R+#Gw&s_-pBos%
+zy^P`+UcDBHM5V|#8}lgBxtGs#Gskfi=kjwd=X~zuG@jsCR((YN_y7m8JF_{A-8h+T
+zna^adVH}HDlc#w7s_$o8`Cua+V<+xs4!7`Ce#`f`j0IfCwVcV{IDxg=g)o9`IEc@%
+zFW+V+3z)_tHsdKaWW7}TBhy%ZMecZ!Q~5hru!IM>gHey#-`I+U9LNGr=WMR#Bp&1_
+zmT?FZeaQQ<C$l(;>C9(KZf7D-Fq+Yig;0f$^YZ0LWCBle9gnb#yV;?={ef?DCD(Ha
+zPjDXVc94H&aty~ak83!97ucK4)8(J9FokoO#5IiNFRaecQU3qbk37phEahAlb03RX
+zt&{w-2bXdl7w`|xV294~&yP5qhndS3UF4r5nZX~K%9yV5&*vD=MXb#;ym3k1y2(FB
+c^H*-=0ZL=#sH{L`1u830S%Jz5+;#>20W{LbO8@`>
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream
+new file mode 100644
+index 0000000000000000000000000000000000000000..f7a6581928704833b49960822a84605d7b07304c
+GIT binary patch
+literal 20480
+zcmeHO>u=jO5GT+zsgpTPvu;ZV?14S7tyl$g1BL;60EwG+Zqp>Qoo!zgTXB`hk|)Vo
+z^WX18Q6x_$ZP60H4DN>l;obf2LGtb>lZ5OaOs9cAbW=YHpLv(=EJ!<1c<GPHqhU00
+z+;9{}{>ZtQ`N7C>r@k{v0zw{2Qb%u7FHAsup~OxnnoRw`JDp~ll7+kvkNu0-jc*S#
+zrO!P#oyA@?iRvEgG9A^dZ=JcrYj^C2i^H<l^O9&5551%s|IXM;kGqHcKfRa+@Oy2@
+z9Vy`0NkT#Vi=-CFh9BNU*B)8Pg6*KT`iUR*N7t*Vf0TMj+6|L5o=v<krAxUt3qvnn
+z4R8CUd*c?-bSh1WSVd$91muNo46wxjvUnH^w?}9X8_Snhq%pulyrlbSoNXFonDU}F
+z2B3C`Wx1*y#lA4skM@MI^aE)}t!jE}%5#>nezXO?(QkncUh70X`=$VM(`EorOqhX)
+zBG?Af@8uakiv(nz3qSDFTVf)gx-smTmE|{KcBWC{E!tzsdP<5=Em$3DL4zd00G5=j
+z<rb6xs+(RCthz1Lc5kpUWo$3nPmf{7)Qy$H)Jo-~O*=2%1R2ThWJ^Qpxr~J6GGruJ
+zDnUlF<&|Y5tWG{g5aqICB&;quMi9liHWET>+DKB7`HbYH5@RG+xcP;CCx`}`w4nRX
+zyJ}KR;GXw(7|cd+X82C8K+&r6jA$tK`9Xe4l6rJFL)}0x3P+u@U<T&~@+7ll97W^6
+za}swl4ZH-7Q&adam-R1i^Fvk;jr}1ZUop&1p50kus15rGgKY}$PB%=AeM8yMG%&4~
+zH<JM^nZ|lISSw|$a!60aa0)e6*@Du3cssbAnv0@sZECV&XPZLYO`}yN_nm+J^o?<x
+z)E^Yij5du^VH*;<U@hRHHEjW3TJ{#uKYkUZfgiE}p2g9XH%vtrVnO33Q$j3Y7yH}-
+z^gjD8&~Z~2GIe4#MlF$dEVv@2CJX5AW@nnyljq$R=e;8vlS~!xyllyX7e@n@y=^Jr
+z<-vl2doTxs(=3VG0;d(i0{A9a{#SSKyA8uBc2=V-*o|to1$;$Wx1fbpehbKXb6^3O
+zmi7Kh?ZT1{o1n^WM}<_}?I>7M-|Z;fo%@<$M-Oi$?7$b@gdKE!Lt#gs)KgeeAWl4X
+z6yVOnq7L3%*wZ2U3yV5<i(yBH=rSzg(?-J%KJPUw!e{M<9eC7n*ioTqI_xN7eTN<J
+zy!EhyO}mfdmAVhzhdA7JG>k3v8x12bX*3$vHs4`1tbn%`4dWI)MZ>WAW};z5QWw!Q
+zvS=R~M#g=E4RGEtSO6EDf(>xqA~XyxdIKB4v?*v9n0Es<aI-d`VO&)I8^%@?{)RQM
+zir+A5Ug{eLMV|p$S8zql30%0^M5JPhhQ-HQG%WI)JdCDMCMf1WCbIy_L%H|z$Q{s0
+z_Nd9T)DN8e4yFtDI5!WYDDd2nY+TbH0Kl8)vv8RGZuwM<(e{ROpg{0ZDGGdS^CU{&
+zWY@p=NKyCrfK*7tm<SOcL-FCGir{b>iwyre4-5ZOWTtlRy2E}PB$Pr^OPPW^f561t
+zFpTm$hiEA%$zn+;$--|H8HGT_pooTwjRi(U%44LWAlLVp>%%Ar;CCW=pI6=nO8VC8
+zS?XQ{UO!ulN&pcZHC=>9Nk{Qfawr0%<YN(1(((`~NtzhJy|CC%vOCY}7|C>12xPh{
+z1QJ~n0*PZ`2qeC_5J<Fg2qY2;L5t0@A0f}tuy7a+3qR#y<ep4WcqNmWGxAXGgFJ#v
+z-(sd;-As_}cw88d$A$H19GQ<O3i}bAIe^A;56}>Dp-5ga6e+j~Bd@(Vl5k{>Bz!58
+zkUM3f!lN<^bE-U?`&AxAuI;kfNxXk%UI@4Ck#{Ppa8N}RJ}RilO$A-yse+3+tDxlm
+zDhSBsZRT?7y-ks~C4z9YL=Zk=0&)+N6rN!Q<`f>x{lR0%m7ORaJLA|L!A&T5P(sKC
+zyCOA5;HU37%7b6}2d|&N@5}u`@4PcO?fpjH$FR-;Eld!rG%D`$e^g?T@A>2JEgzIP
+zi^~e~F4FUeNzn3a!93=#W)h-hl76Ar^59eLVm5w0)v~o=nH>E+I6CQfA+~zUC|?B+
+zGV8?2RjZb=@iVBFt$aIF%c#Bys%0<V`qVP2Z+L3icftF!<MS8Ylh<zOj^RDZVpe)n
+za4D<kT(xMTh1Ig4eXr$GqyQ~%ds@x@b^>dx!rIvdzC1H54GBv`TGMv$tsSyo+TL!Q
+z`j_r7g+ikLgtkCv`_d0bMV9$m2kw-tAa_G|;*H4DiUQJQBeDlet9SIrdAE1;tWf-T
+zDGoHDY3%xNAtVQY`sv3Wx7-Neeq2X-4<@%)3xF@7P6Thh{Oq+?dH(YS36t7hypA}Z
+zbQ=A(6imkBDAW=uPn(G0)NL%uv$?6HNXW*LJV%>I-i3S4!7cex6Hz=j<Q~-8sTac|
+znh(nYadhL4V4lexSUu!34cXxUM4C^zJz%{QeaR}#ot8!1IQ}%#dF7?>Jk<{qhXJu>
+zhT<*x0c1JA{ww+=26Sc@Q{eSRTs)awF1vLZN5$o6IztOgb%a+$miu9ei$c!H40J;{
+z{-cic*JS{?gSxw><Uah4hWxGzsO|<DL7jW4Ru{E+8BrHUQMl_uN?-VXsy4-nHLQ6d
+zSQl_^9%=v<Q&0n<b;aK()Id?pVGXpoZS`ZdNn}SKUiaX<#@>pr3@~TP&(%!n!?)zX
+v%O8Iz?5T%B*8kQKSVv$TfprAd5m-lH9f5TO))81oU>$*V1lAGwzeeCcD=U>h
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..8b3cacd2e9c3e4ce5a4a67651a45143ab26d57a4
+GIT binary patch
+literal 8
+McmZQz00Bo%005H!O8@`>
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..a0c7fa545470d395ea5e42e3f5d5fe907eed426a
+GIT binary patch
+literal 8
+McmZQz00GVu0080u(f|Me
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at
+new file mode 100644
+index 0000000000000000000000000000000000000000..4c20ca8c9cab8d6410dbd9dd9f455e28e083ea98
+GIT binary patch
+literal 3387
+zcmdOA@JLNeNi9+cN=?o$N>OmjFH#6dEh^3|E=kQR@klJr@J%cTOUx-v4KB$qN=#2>
+zVE_RL$pdBs2}U4h0*f(nfW*Lj1PfIiDi7H_TC-7YrUefY2Dn245hnOql$(Ixd~CAh
+zh6hrtF@o7l<eEeaeMqi@rrH4#frQP#l8`()U?eT#chpQ+c{>^sqandCsLI~a6giqA
+SM^hv)4M1DOqxoStg#-Y*TOVlv
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab_i b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab_i
+new file mode 100644
+index 0000000000000000000000000000000000000000..72d16c326d3de590c288326f645850a15b669edc
+GIT binary patch
+literal 32768
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len
+new file mode 100644
+index 0000000000000000000000000000000000000000..131e265740f37d77b7c4a3676d2a7704ca3e4a29
+GIT binary patch
+literal 8
+McmZQz0D%Su009U9fdBvi
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/last-build.bin b/gradle/build-logic/convention/build/kotlin/compileKotlin/cacheable/last-build.bin
+new file mode 100644
+index 0000000000000000000000000000000000000000..ff4afc13ffe93721ae7e59da2e7127055c7695ea
+GIT binary patch
+literal 18
+YcmZ4UmVvdLhk=1{o`!9u4+9VY05By3>i_@%
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin b/gradle/build-logic/convention/build/kotlin/compileKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin
+new file mode 100644
+index 0000000000000000000000000000000000000000..9225e791fcdf017f929d78eef28e34acb339a15d
+GIT binary patch
+literal 13369
+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
+Xh|g*C-V|cX$vbwPt;iKfD_8PAdli_}
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/build/kotlin/compileKotlin/local-state/build-history.bin b/gradle/build-logic/convention/build/kotlin/compileKotlin/local-state/build-history.bin
+new file mode 100644
+index 0000000000000000000000000000000000000000..5599667a71c489e262d8a0f7965ad3493a56d1d3
+GIT binary patch
+literal 31
+ccmZ4UmVvcgk^ur385kJnY1mf!K=}*|09G&q`2YX_
+
+literal 0
+HcmV?d00001
+
+diff --git a/gradle/build-logic/convention/src/main/kotlin/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin.kt b/gradle/build-logic/convention/src/main/kotlin/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin.kt
+new file mode 100644
+index 0000000..a677b31
+--- /dev/null
++++ b/gradle/build-logic/convention/src/main/kotlin/com/google/samples/apps/androidify/buildlogic/AndroidApplicationConventionPlugin.kt
+@@ -0,0 +1,57 @@
++package com.google.samples.apps.androidify.buildlogic
++
++import com.android.build.api.dsl.ApplicationExtension
++import org.gradle.api.JavaVersion
++import org.gradle.api.Plugin
++import org.gradle.api.Project
++import org.gradle.api.artifacts.VersionCatalogsExtension
++import org.gradle.kotlin.dsl.configure
++import org.gradle.kotlin.dsl.getByType
++import org.jetbrains.kotlin.gradle.dsl.JvmTarget
++import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
++
++class AndroidApplicationConventionPlugin : Plugin<Project> {
++    override fun apply(target: Project) {
++        with(target) {
++            pluginManager.apply("com.android.application")
++            pluginManager.apply("org.jetbrains.kotlin.android")
++
++            extensions.configure<ApplicationExtension> {
++                compileSdk = libsVersion("compileSdk")
++                defaultConfig {
++                    minSdk = libsVersion("minSdk")
++                    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
++                }
++
++                compileOptions {
++                    sourceCompatibility = JavaVersion.toVersion(libsVersionString("javaVersion"))
++                    targetCompatibility = JavaVersion.toVersion(libsVersionString("javaVersion"))
++                }
++            }
++
++            extensions.configure<KotlinAndroidProjectExtension> {
++                compilerOptions {
++                    jvmTarget.set(JvmTarget.fromTarget(libsVersionString("jvmTarget")))
++                }
++            }
++
++            extensions.configure<ApplicationExtension> {
++                packaging {
++                    resources {
++                        excludes.add("META-INF/versions/9/OSGI-INF/MANIFEST.MF")
++                    }
++                }
++            }
++        }
++    }
++
++    private fun Project.libsVersion(name: String): Int {
++        val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
++        return libs.findVersion(name).get().requiredVersion.toInt()
++    }
++
++    private fun Project.libsVersionString(name: String): String {
++        val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
++        return libs.findVersion(name).get().requiredVersion
++    }
++}
+diff --git a/gradle/build-logic/convention/src/main/kotlin/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin.kt b/gradle/build-logic/convention/src/main/kotlin/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin.kt
+new file mode 100644
+index 0000000..456dc33
+--- /dev/null
++++ b/gradle/build-logic/convention/src/main/kotlin/com/google/samples/apps/androidify/buildlogic/AndroidComposeLibraryConventionPlugin.kt
+@@ -0,0 +1,61 @@
++package com.google.samples.apps.androidify.buildlogic
++
++import com.android.build.api.dsl.LibraryExtension
++import org.gradle.api.JavaVersion
++import org.gradle.api.Plugin
++import org.gradle.api.Project
++import org.gradle.api.artifacts.VersionCatalogsExtension
++import org.gradle.kotlin.dsl.configure
++import org.gradle.kotlin.dsl.getByType
++import org.jetbrains.kotlin.gradle.dsl.JvmTarget
++import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
++
++class AndroidComposeLibraryConventionPlugin : Plugin<Project> {
++    override fun apply(target: Project) {
++        with(target) {
++            pluginManager.apply("com.android.library")
++            pluginManager.apply("org.jetbrains.kotlin.android")
++            pluginManager.apply("org.jetbrains.kotlin.plugin.compose")
++
++            extensions.configure<LibraryExtension> {
++                compileSdk = libsVersion("compileSdk")
++                defaultConfig {
++                    minSdk = libsVersion("minSdk")
++                }
++
++                buildFeatures {
++                    compose = true
++                }
++
++                compileOptions {
++                    sourceCompatibility = JavaVersion.toVersion(libsVersionString("javaVersion"))
++                    targetCompatibility = JavaVersion.toVersion(libsVersionString("javaVersion"))
++                }
++            }
++
++            extensions.configure<KotlinAndroidProjectExtension> {
++                compilerOptions {
++                    jvmTarget.set(JvmTarget.fromTarget(libsVersionString("jvmTarget")))
++                }
++            }
++
++            extensions.configure<LibraryExtension> {
++                packaging {
++                    resources {
++                        excludes.add("META-INF/versions/9/OSGI-INF/MANIFEST.MF")
++                    }
++                }
++            }
++        }
++    }
++
++    private fun Project.libsVersion(name: String): Int {
++        val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
++        return libs.findVersion(name).get().requiredVersion.toInt()
++    }
++
++    private fun Project.libsVersionString(name: String): String {
++        val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
++        return libs.findVersion(name).get().requiredVersion
++    }
++}
+diff --git a/gradle/build-logic/convention/src/main/kotlin/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin.kt b/gradle/build-logic/convention/src/main/kotlin/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin.kt
+new file mode 100644
+index 0000000..67595ad
+--- /dev/null
++++ b/gradle/build-logic/convention/src/main/kotlin/com/google/samples/apps/androidify/buildlogic/AndroidLibraryConventionPlugin.kt
+@@ -0,0 +1,56 @@
++package com.google.samples.apps.androidify.buildlogic
++
++import com.android.build.api.dsl.LibraryExtension
++import org.gradle.api.JavaVersion
++import org.gradle.api.Plugin
++import org.gradle.api.Project
++import org.gradle.api.artifacts.VersionCatalogsExtension
++import org.gradle.kotlin.dsl.configure
++import org.gradle.kotlin.dsl.getByType
++import org.jetbrains.kotlin.gradle.dsl.JvmTarget
++import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
++
++class AndroidLibraryConventionPlugin : Plugin<Project> {
++    override fun apply(target: Project) {
++        with(target) {
++            pluginManager.apply("com.android.library")
++            pluginManager.apply("org.jetbrains.kotlin.android")
++
++            extensions.configure<LibraryExtension> {
++                compileSdk = libsVersion("compileSdk")
++                defaultConfig {
++                    minSdk = libsVersion("minSdk")
++                }
++
++                compileOptions {
++                    sourceCompatibility = JavaVersion.toVersion(libsVersionString("javaVersion"))
++                    targetCompatibility = JavaVersion.toVersion(libsVersionString("javaVersion"))
++                }
++            }
++
++            extensions.configure<KotlinAndroidProjectExtension> {
++                compilerOptions {
++                    jvmTarget.set(JvmTarget.fromTarget(libsVersionString("jvmTarget")))
++                }
++            }
++
++            extensions.configure<LibraryExtension> {
++                packaging {
++                    resources {
++                        excludes.add("META-INF/versions/9/OSGI-INF/MANIFEST.MF")
++                    }
++                }
++            }
++        }
++    }
++
++    private fun Project.libsVersion(name: String): Int {
++        val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
++        return libs.findVersion(name).get().requiredVersion.toInt()
++    }
++
++    private fun Project.libsVersionString(name: String): String {
++        val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
++        return libs.findVersion(name).get().requiredVersion
++    }
++}
+diff --git a/gradle/build-logic/settings.gradle.kts b/gradle/build-logic/settings.gradle.kts
+new file mode 100644
+index 0000000..d703fd1
+--- /dev/null
++++ b/gradle/build-logic/settings.gradle.kts
+@@ -0,0 +1,19 @@
++pluginManagement {
++    repositories {
++        google()
++        mavenCentral()
++        gradlePluginPortal()
++    }
++}
++
++dependencyResolutionManagement {
++    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
++    repositories {
++        google()
++        mavenCentral()
++    }
++}
++
++rootProject.name = "build-logic"
++
++include(":convention")
+diff --git a/settings.gradle.kts b/settings.gradle.kts
+index 7e3f7b8..df3cdab 100644
+--- a/settings.gradle.kts
++++ b/settings.gradle.kts
+@@ -11,6 +11,8 @@ pluginManagement {
+         gradlePluginPortal()
+     }
+ }
++includeBuild("gradle/build-logic")
++
+ dependencyResolutionManagement {
+     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+     repositories {

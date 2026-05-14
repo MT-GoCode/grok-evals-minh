@@ -1,0 +1,82 @@
+diff --git a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/model/RichTextState.kt b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/model/RichTextState.kt
+index 3ee9f0a..db5f2c1 100644
+--- a/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/model/RichTextState.kt
++++ b/richeditor-compose/src/commonMain/kotlin/com/mohamedrejeb/richeditor/model/RichTextState.kt
+@@ -1858,13 +1858,31 @@ public class RichTextState internal constructor(
+                 minRichSpan.paragraph.children.clear()
+                 richParagraphList.remove(minRichSpan.paragraph)
+             } else {
+-                handleRemoveMinParagraphStartText(
+-                    removeIndex = minRemoveIndex,
+-                    paragraphStartTextLength = minParagraphStartTextLength,
+-                    paragraphFirstChildMinIndex = minParagraphFirstChildMinIndex,
+-                )
+-
+-                minRichSpan.paragraph.type = DefaultParagraph()
++                val paragraph = minRichSpan.paragraph
++                val type = paragraph.type
++                if (type is ConfigurableListLevel && type.level > 1) {
++                    // Backspace at the start of a list item: decrease list level (for nested) or exit list (when level==1)
++                    type.level = type.level - 1
++                    val prefixPos = minParagraphFirstChildMinIndex - minParagraphStartTextLength
++                    val oldPrefixLen = minParagraphStartTextLength
++                    val newPrefix = type.startText
++                    val oldText = textFieldValue.text
++                    val before = if (prefixPos > 0) oldText.substring(0, prefixPos) else ""
++                    val after = if (prefixPos + oldPrefixLen < oldText.length) oldText.substring(prefixPos + oldPrefixLen) else ""
++                    val newText = before + newPrefix + after
++                    val newSelPos = prefixPos + newPrefix.length
++                    tempTextFieldValue = tempTextFieldValue.copy(
++                        text = newText,
++                        selection = TextRange(newSelPos.coerceIn(0, newText.length))
++                    )
++                } else {
++                    handleRemoveMinParagraphStartText(
++                        removeIndex = minRemoveIndex,
++                        paragraphStartTextLength = minParagraphStartTextLength,
++                        paragraphFirstChildMinIndex = minParagraphFirstChildMinIndex,
++                    )
++                    paragraph.type = DefaultParagraph()
++                }
+             }
+         }
+ 
+@@ -1877,13 +1895,32 @@ public class RichTextState internal constructor(
+                 paragraphFirstChildMinIndex = maxParagraphFirstChildMinIndex,
+             )
+ 
+-            maxRichSpan.paragraph.type = DefaultParagraph()
++            val paragraph = maxRichSpan.paragraph
++            val type = paragraph.type
++            if (type is ConfigurableListLevel && type.level > 1) {
++                // Backspace at the start of a list item: decrease list level instead of exiting
++                type.level = type.level - 1
++                val prefixPos = maxParagraphFirstChildMinIndex - maxParagraphStartTextLength
++                val oldPrefixLen = maxParagraphStartTextLength
++                val newPrefix = type.startText
++                val oldText = textFieldValue.text
++                val before = if (prefixPos > 0) oldText.substring(0, prefixPos) else ""
++                val after = if (prefixPos + oldPrefixLen < oldText.length) oldText.substring(prefixPos + oldPrefixLen) else ""
++                val newText = before + newPrefix + after
++                val newSelPos = prefixPos + newPrefix.length
++                tempTextFieldValue = tempTextFieldValue.copy(
++                    text = newText,
++                    selection = TextRange(newSelPos.coerceIn(0, newText.length))
++                )
++            } else {
++                maxRichSpan.paragraph.type = DefaultParagraph()
+ 
+-            tempTextFieldValue = adjustOrderedListsNumbers(
+-                startParagraphIndex = maxParagraphIndex + 1,
+-                startNumber = 1,
+-                textFieldValue = tempTextFieldValue,
+-            )
++                tempTextFieldValue = adjustOrderedListsNumbers(
++                    startParagraphIndex = maxParagraphIndex + 1,
++                    startNumber = 1,
++                    textFieldValue = tempTextFieldValue,
++                )
++            }
+         }
+ 
+         // Remove spans from the max paragraph

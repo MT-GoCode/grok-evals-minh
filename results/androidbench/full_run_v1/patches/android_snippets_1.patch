@@ -1,0 +1,27 @@
+diff --git a/gradle/libs.versions.toml b/gradle/libs.versions.toml
+index d02cdf7..758c144 100644
+--- a/gradle/libs.versions.toml
++++ b/gradle/libs.versions.toml
+@@ -48,11 +48,11 @@ hilt = "2.57"
+ horologist = "0.8.1-alpha"
+ junit = "4.13.2"
+ ktlint = "1.5.0"
+-kotlin = "2.2.10"
++kotlin = "2.3.0"
+ kotlinCoroutinesOkhttp = "1.0"
+ kotlinxCoroutinesGuava = "1.10.2"
+ kotlinxSerializationJson = "1.9.0"
+-ksp = "2.2.10-2.0.2"
++ksp = "2.3.0-1.0.0"
+ lifecycleService = "2.9.2"
+ maps-compose = "6.7.2"
+ material = "1.14.0-alpha03"
+@@ -203,7 +203,7 @@ android-library = { id = "com.android.library", version.ref = "androidGradlePlug
+ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ gradle-versions = { id = "com.github.ben-manes.versions", version.ref = "gradle-versions" }
+ hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+-kotlin-android = "org.jetbrains.kotlin.android:2.2.10"
++kotlin-android = "org.jetbrains.kotlin.android:2.3.0"
+ kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+ android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "androidGradlePlugin" }
+ kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }

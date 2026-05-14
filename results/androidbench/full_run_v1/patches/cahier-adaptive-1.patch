@@ -1,0 +1,64 @@
+diff --git a/app/src/main/java/com/example/cahier/ui/TextNoteCanvasScreen.kt b/app/src/main/java/com/example/cahier/ui/TextNoteCanvasScreen.kt
+index 3f5e8df..46248c4 100644
+--- a/app/src/main/java/com/example/cahier/ui/TextNoteCanvasScreen.kt
++++ b/app/src/main/java/com/example/cahier/ui/TextNoteCanvasScreen.kt
+@@ -95,11 +95,11 @@ fun TextNoteCanvasScreen(
+ ) {
+     val uiState by canvasScreenViewModel.uiState.collectAsStateWithLifecycle()
+ 
+-    var titleState by remember {
++    var titleState by rememberSaveable(stateSaver = TextFieldValue.Saver) {
+         mutableStateOf(TextFieldValue(uiState.note.title))
+     }
+ 
+-    var bodyState by remember {
++    var bodyState by rememberSaveable(stateSaver = TextFieldValue.Saver) {
+         mutableStateOf(TextFieldValue(uiState.note.text ?: ""))
+     }
+ 
+@@ -125,10 +125,12 @@ fun TextNoteCanvasScreen(
+         titleState = titleState,
+         onTitleChange = {
+             titleState = it
++            canvasScreenViewModel.updateNoteTitle(it.text)
+         },
+         bodyState = bodyState,
+         onBodyChange = {
+             bodyState = it
++            canvasScreenViewModel.updateNoteText(it.text)
+         },
+         onExit = onExit,
+         imagePickerLauncher = imagePickerLauncher,
+diff --git a/app/src/main/java/com/example/cahier/ui/viewmodels/CanvasScreenViewModel.kt b/app/src/main/java/com/example/cahier/ui/viewmodels/CanvasScreenViewModel.kt
+index 9b7c31a..f829373 100644
+--- a/app/src/main/java/com/example/cahier/ui/viewmodels/CanvasScreenViewModel.kt
++++ b/app/src/main/java/com/example/cahier/ui/viewmodels/CanvasScreenViewModel.kt
+@@ -70,6 +70,28 @@ class CanvasScreenViewModel @Inject constructor(
+         }
+     }
+ 
++    fun updateNoteTitle(newTitle: String) {
++        viewModelScope.launch {
++            val currentNote = _uiState.value.note
++            if (currentNote.title != newTitle) {
++                val updatedNote = currentNote.copy(title = newTitle)
++                _uiState.update { it.copy(note = updatedNote) }
++                noteRepository.updateNote(updatedNote)
++            }
++        }
++    }
++
++    fun updateNoteText(newText: String) {
++        viewModelScope.launch {
++            val currentNote = _uiState.value.note
++            if ((currentNote.text ?: "") != newText) {
++                val updatedNote = currentNote.copy(text = newText)
++                _uiState.update { it.copy(note = updatedNote) }
++                noteRepository.updateNote(updatedNote)
++            }
++        }
++    }
++
+     fun addImage(localUri: Uri?) {
+         if (localUri == null) {
+             Log.w(TAG, "addImage called with null URI, ignoring.")

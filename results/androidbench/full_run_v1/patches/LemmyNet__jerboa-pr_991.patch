@@ -1,0 +1,309 @@
+diff --git a/app/src/main/java/com/jerboa/ui/components/community/list/CommunityList.kt b/app/src/main/java/com/jerboa/ui/components/community/list/CommunityList.kt
+index 3b61111..73e68d7 100644
+--- a/app/src/main/java/com/jerboa/ui/components/community/list/CommunityList.kt
++++ b/app/src/main/java/com/jerboa/ui/components/community/list/CommunityList.kt
+@@ -21,7 +21,10 @@ import androidx.compose.ui.graphics.Color
+ import androidx.compose.ui.res.stringResource
+ import androidx.compose.ui.text.input.ImeAction
+ import androidx.compose.ui.tooling.preview.Preview
++import androidx.compose.material3.DrawerState
+ import androidx.navigation.NavController
++import kotlinx.coroutines.CoroutineScope
++import kotlinx.coroutines.launch
+ import androidx.navigation.compose.rememberNavController
+ import com.jerboa.R
+ import com.jerboa.datatypes.sampleCommunityView
+@@ -37,6 +40,8 @@ fun CommunityListHeader(
+     navController: NavController = rememberNavController(),
+     search: String,
+     onSearchChange: (search: String) -> Unit,
++    drawerState: DrawerState? = null,
++    scope: CoroutineScope? = null,
+ ) {
+     TopAppBar(
+         title = {
+@@ -56,7 +61,22 @@ fun CommunityListHeader(
+                 )
+             }
+         },
+-        navigationIcon = { DefaultBackButton(navController) },
++        navigationIcon = {
++            if (drawerState != null && scope != null) {
++                IconButton(onClick = {
++                    scope.launch {
++                        drawerState.open()
++                    }
++                }) {
++                    Icon(
++                        Icons.Outlined.Menu,
++                        contentDescription = stringResource(R.string.home_menu),
++                    )
++                }
++            } else {
++                DefaultBackButton(navController)
++            }
++        },
+     )
+ }
+ 
+diff --git a/app/src/main/java/com/jerboa/ui/components/community/list/CommunityListActivity.kt b/app/src/main/java/com/jerboa/ui/components/community/list/CommunityListActivity.kt
+index 415175c..f2f0180 100644
+--- a/app/src/main/java/com/jerboa/ui/components/community/list/CommunityListActivity.kt
++++ b/app/src/main/java/com/jerboa/ui/components/community/list/CommunityListActivity.kt
+@@ -25,6 +25,7 @@ import com.jerboa.model.CommunityListViewModel
+ import com.jerboa.model.SiteViewModel
+ import com.jerboa.ui.components.common.ApiEmptyText
+ import com.jerboa.ui.components.common.ApiErrorText
++import androidx.compose.material3.DrawerState
+ import com.jerboa.ui.components.common.InitializeRoute
+ import com.jerboa.ui.components.common.LoadingBar
+ import com.jerboa.ui.components.common.addReturn
+@@ -47,6 +48,7 @@ fun CommunityListActivity(
+     selectMode: Boolean = false,
+     siteViewModel: SiteViewModel,
+     blurNSFW: Boolean,
++    drawerState: DrawerState? = null,
+ ) {
+     Log.d("jerboa", "got to community list activity")
+ 
+@@ -83,6 +85,8 @@ fun CommunityListActivity(
+                             )
+                         }
+                     },
++                    drawerState = drawerState,
++                    scope = scope,
+                 )
+             },
+             content = { padding ->
+diff --git a/app/src/main/java/com/jerboa/ui/components/home/BottomNavActivity.kt b/app/src/main/java/com/jerboa/ui/components/home/BottomNavActivity.kt
+index e3e9cbd..5ed5054 100644
+--- a/app/src/main/java/com/jerboa/ui/components/home/BottomNavActivity.kt
++++ b/app/src/main/java/com/jerboa/ui/components/home/BottomNavActivity.kt
+@@ -92,7 +92,7 @@ fun BottomNavActivity(
+     }
+ 
+     ModalNavigationDrawer(
+-        gesturesEnabled = selectedTab == BottomNavTab.Home,
++        gesturesEnabled = true,
+         drawerState = drawerState,
+         drawerContent = {
+             ModalDrawerSheet(
+@@ -156,6 +156,7 @@ fun BottomNavActivity(
+                             accountViewModel = accountViewModel,
+                             selectMode = false,
+                             siteViewModel = siteViewModel,
++                            drawerState = drawerState,
+                             blurNSFW = appSettings.blurNSFW,
+                         )
+                     }
+@@ -165,6 +166,7 @@ fun BottomNavActivity(
+                             navController = navController,
+                             accountViewModel = accountViewModel,
+                             siteViewModel = siteViewModel,
++                            drawerState = drawerState,
+                             blurNSFW = appSettings.blurNSFW,
+                         )
+                     }
+@@ -180,6 +182,7 @@ fun BottomNavActivity(
+                             siteViewModel = siteViewModel,
+                             useCustomTabs = appSettings.useCustomTabs,
+                             usePrivateTabs = appSettings.usePrivateTabs,
++                            drawerState = drawerState,
+                             blurNSFW = appSettings.blurNSFW,
+                         )
+                     }
+@@ -195,6 +198,7 @@ fun BottomNavActivity(
+                             siteViewModel = siteViewModel,
+                             useCustomTabs = appSettings.useCustomTabs,
+                             usePrivateTabs = appSettings.usePrivateTabs,
++                            drawerState = drawerState,
+                             blurNSFW = appSettings.blurNSFW,
+                         )
+                     }
+diff --git a/app/src/main/java/com/jerboa/ui/components/inbox/Inbox.kt b/app/src/main/java/com/jerboa/ui/components/inbox/Inbox.kt
+index ba81ae0..c72cd55 100644
+--- a/app/src/main/java/com/jerboa/ui/components/inbox/Inbox.kt
++++ b/app/src/main/java/com/jerboa/ui/components/inbox/Inbox.kt
+@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
+ import androidx.compose.material.icons.Icons
+ import androidx.compose.material.icons.outlined.DoneAll
+ import androidx.compose.material.icons.outlined.FilterList
++import androidx.compose.material.icons.outlined.Menu
+ import androidx.compose.material3.ExperimentalMaterial3Api
+ import androidx.compose.material3.Icon
+ import androidx.compose.material3.IconButton
+@@ -20,7 +21,10 @@ import androidx.compose.runtime.remember
+ import androidx.compose.runtime.setValue
+ import androidx.compose.ui.platform.LocalContext
+ import androidx.compose.ui.res.stringResource
++import androidx.compose.material3.DrawerState
+ import androidx.navigation.NavController
++import kotlinx.coroutines.CoroutineScope
++import kotlinx.coroutines.launch
+ import androidx.navigation.compose.rememberNavController
+ import com.jerboa.R
+ import com.jerboa.UnreadOrAll
+@@ -36,6 +40,8 @@ fun InboxHeader(
+     onClickMarkAllAsRead: () -> Unit,
+     unreadCount: Int? = null,
+     scrollBehavior: TopAppBarScrollBehavior,
++    drawerState: DrawerState? = null,
++    scope: CoroutineScope? = null,
+ ) {
+     var showUnreadOrAllOptions by remember { mutableStateOf(false) }
+ 
+@@ -58,7 +64,22 @@ fun InboxHeader(
+                 selectedUnreadOrAll = selectedUnreadOrAll,
+             )
+         },
+-        navigationIcon = { DefaultBackButton(navController) },
++        navigationIcon = {
++            if (drawerState != null && scope != null) {
++                IconButton(onClick = {
++                    scope.launch {
++                        drawerState.open()
++                    }
++                }) {
++                    Icon(
++                        Icons.Outlined.Menu,
++                        contentDescription = stringResource(R.string.home_menu),
++                    )
++                }
++            } else {
++                DefaultBackButton(navController)
++            }
++        },
+         actions = {
+             IconButton(onClick = {
+                 showUnreadOrAllOptions = !showUnreadOrAllOptions
+diff --git a/app/src/main/java/com/jerboa/ui/components/inbox/InboxActivity.kt b/app/src/main/java/com/jerboa/ui/components/inbox/InboxActivity.kt
+index 3639323..bd28284 100644
+--- a/app/src/main/java/com/jerboa/ui/components/inbox/InboxActivity.kt
++++ b/app/src/main/java/com/jerboa/ui/components/inbox/InboxActivity.kt
+@@ -43,6 +43,7 @@ import com.jerboa.ui.components.comment.replynode.CommentReplyNode
+ import com.jerboa.ui.components.common.ApiEmptyText
+ import com.jerboa.ui.components.common.ApiErrorText
+ import com.jerboa.ui.components.common.CommentReplyDeps
++import androidx.compose.material3.DrawerState
+ import com.jerboa.ui.components.common.InitializeRoute
+ import com.jerboa.ui.components.common.LoadingBar
+ import com.jerboa.ui.components.common.PrivateMessageDeps
+@@ -67,6 +68,7 @@ fun InboxActivity(
+     siteViewModel: SiteViewModel,
+     accountViewModel: AccountViewModel,
+     blurNSFW: Boolean,
++    drawerState: DrawerState? = null,
+ ) {
+     Log.d("jerboa", "got to inbox activity")
+ 
+@@ -133,6 +135,8 @@ fun InboxActivity(
+                         )
+                     }
+                 },
++                drawerState = drawerState,
++                scope = scope,
+             )
+         },
+         content = {
+@@ -167,6 +171,7 @@ fun InboxTabs(
+     scope: CoroutineScope,
+     padding: PaddingValues,
+     blurNSFW: Boolean,
++    drawerState: DrawerState? = null,
+ ) {
+     val transferPrivateMessageDepsViaRoot = navController.rootChannel<PrivateMessageDeps>()
+     val transferCommentReplyDepsViaRoot = navController.rootChannel<CommentReplyDeps>()
+diff --git a/app/src/main/java/com/jerboa/ui/components/person/PersonProfile.kt b/app/src/main/java/com/jerboa/ui/components/person/PersonProfile.kt
+index 18e0ba8..35cfbc4 100644
+--- a/app/src/main/java/com/jerboa/ui/components/person/PersonProfile.kt
++++ b/app/src/main/java/com/jerboa/ui/components/person/PersonProfile.kt
+@@ -28,7 +28,10 @@ import androidx.compose.ui.Modifier
+ import androidx.compose.ui.platform.LocalContext
+ import androidx.compose.ui.res.stringResource
+ import androidx.compose.ui.tooling.preview.Preview
++import androidx.compose.material3.DrawerState
+ import androidx.navigation.NavController
++import kotlinx.coroutines.CoroutineScope
++import kotlinx.coroutines.launch
+ import androidx.navigation.compose.rememberNavController
+ import com.jerboa.R
+ import com.jerboa.datatypes.samplePersonView
+@@ -162,6 +165,8 @@ fun PersonProfileHeader(
+     selectedSortType: SortType,
+     navController: NavController = rememberNavController(),
+     scrollBehavior: TopAppBarScrollBehavior,
++    drawerState: DrawerState? = null,
++    scope: CoroutineScope? = null,
+ ) {
+     var showSortOptions by remember { mutableStateOf(false) }
+     var showTopOptions by remember { mutableStateOf(false) }
+@@ -215,7 +220,22 @@ fun PersonProfileHeader(
+                 selectedSortType = selectedSortType,
+             )
+         },
+-        navigationIcon = { DefaultBackButton(navController) },
++        navigationIcon = {
++            if (drawerState != null && scope != null) {
++                IconButton(onClick = {
++                    scope.launch {
++                        drawerState.open()
++                    }
++                }) {
++                    Icon(
++                        Icons.Outlined.Menu,
++                        contentDescription = stringResource(R.string.home_menu),
++                    )
++                }
++            } else {
++                DefaultBackButton(navController)
++            }
++        },
+         actions = {
+             IconButton(onClick = {
+                 showSortOptions = !showSortOptions
+diff --git a/app/src/main/java/com/jerboa/ui/components/person/PersonProfileActivity.kt b/app/src/main/java/com/jerboa/ui/components/person/PersonProfileActivity.kt
+index c630308..185dc75 100644
+--- a/app/src/main/java/com/jerboa/ui/components/person/PersonProfileActivity.kt
++++ b/app/src/main/java/com/jerboa/ui/components/person/PersonProfileActivity.kt
+@@ -64,6 +64,7 @@ import com.jerboa.ui.components.common.ApiErrorText
+ import com.jerboa.ui.components.common.CommentEditDeps
+ import com.jerboa.ui.components.common.CommentReplyDeps
+ import com.jerboa.ui.components.common.ConsumeReturn
++import androidx.compose.material3.DrawerState
+ import com.jerboa.ui.components.common.InitializeRoute
+ import com.jerboa.ui.components.common.LoadingBar
+ import com.jerboa.ui.components.common.PostEditDeps
+@@ -101,6 +102,7 @@ fun PersonProfileActivity(
+     useCustomTabs: Boolean,
+     usePrivateTabs: Boolean,
+     blurNSFW: Boolean,
++    drawerState: DrawerState? = null,
+ ) {
+     Log.d("jerboa", "got to person activity")
+ 
+@@ -168,6 +170,8 @@ fun PersonProfileActivity(
+                         onBlockPersonClick = {},
+                         onReportPersonClick = {},
+                         navController = navController,
++                        drawerState = drawerState,
++                        scope = scope,
+                     )
+                 }
+                 is ApiState.Holder -> {
+@@ -217,6 +221,8 @@ fun PersonProfileActivity(
+                             }
+                         },
+                         navController = navController,
++                        drawerState = drawerState,
++                        scope = scope,
+                     )
+                 }
+                 else -> {}
+@@ -268,6 +274,7 @@ fun UserTabs(
+     useCustomTabs: Boolean,
+     usePrivateTabs: Boolean,
+     blurNSFW: Boolean,
++    drawerState: DrawerState? = null,
+ ) {
+     val transferCommentEditDepsViaRoot = navController.rootChannel<CommentEditDeps>()
+     val transferCommentReplyDepsViaRoot = navController.rootChannel<CommentReplyDeps>()

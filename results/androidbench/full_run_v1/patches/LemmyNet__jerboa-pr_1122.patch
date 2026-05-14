@@ -1,0 +1,61 @@
+diff --git a/app/src/main/java/com/jerboa/model/SiteViewModel.kt b/app/src/main/java/com/jerboa/model/SiteViewModel.kt
+index 90c85b4..2151422 100644
+--- a/app/src/main/java/com/jerboa/model/SiteViewModel.kt
++++ b/app/src/main/java/com/jerboa/model/SiteViewModel.kt
+@@ -110,6 +110,13 @@ class SiteViewModel : ViewModel() {
+         }
+     }
+ 
++    fun showScores(): Boolean {
++        return when (val res = siteRes) {
++            is ApiState.Success -> res.data.my_user?.local_user_view?.local_user?.show_scores ?: true
++            else -> true
++        }
++    }
++
+     fun enableDownvotes(): Boolean {
+         return when (val res = siteRes) {
+             is ApiState.Success -> res.data.site_view.local_site.enable_downvotes
+diff --git a/app/src/main/java/com/jerboa/ui/components/common/TimeAgo.kt b/app/src/main/java/com/jerboa/ui/components/common/TimeAgo.kt
+index b198ca9..99f3282 100644
+--- a/app/src/main/java/com/jerboa/ui/components/common/TimeAgo.kt
++++ b/app/src/main/java/com/jerboa/ui/components/common/TimeAgo.kt
+@@ -28,6 +28,8 @@ import com.jerboa.datatypes.samplePost
+ import com.jerboa.formatDuration
+ import com.jerboa.ui.theme.SMALL_PADDING
+ import com.jerboa.ui.theme.muted
++import androidx.lifecycle.viewmodel.compose.viewModel
++import com.jerboa.model.SiteViewModel
+ import java.time.Instant
+ import java.util.Date
+ 
+@@ -89,6 +91,8 @@ fun ScoreAndTime(
+     collapsedCommentsCount: Int = 0,
+     isNsfw: Boolean = false,
+ ) {
++    val siteViewModel: SiteViewModel = viewModel()
++    val showScores = siteViewModel.showScores()
+     Row(
+         horizontalArrangement = Arrangement.spacedBy(SMALL_PADDING),
+         verticalAlignment = Alignment.CenterVertically,
+@@ -96,12 +100,14 @@ fun ScoreAndTime(
+         NsfwBadge(isNsfw)
+         CollapsedIndicator(visible = !isExpanded, descendants = collapsedCommentsCount)
+         Spacer(modifier = Modifier.padding(end = SMALL_PADDING))
+-        Text(
+-            text = score.toString(),
+-            color = scoreColor(myVote = myVote),
+-            fontSize = MaterialTheme.typography.bodyMedium.fontSize.times(1.3),
+-        )
+-        DotSpacer(0.dp, MaterialTheme.typography.bodyMedium)
++        if (showScores) {
++            Text(
++                text = score.toString(),
++                color = scoreColor(myVote = myVote),
++                fontSize = MaterialTheme.typography.bodyMedium.fontSize.times(1.3),
++            )
++            DotSpacer(0.dp, MaterialTheme.typography.bodyMedium)
++        }
+         TimeAgo(published = published, updated = updated)
+     }
+ }

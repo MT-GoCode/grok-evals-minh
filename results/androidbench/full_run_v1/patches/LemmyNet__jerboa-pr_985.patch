@@ -1,0 +1,13 @@
+diff --git a/app/src/main/java/com/jerboa/ui/components/community/CommunityLink.kt b/app/src/main/java/com/jerboa/ui/components/community/CommunityLink.kt
+index d22561b..685aef9 100644
+--- a/app/src/main/java/com/jerboa/ui/components/community/CommunityLink.kt
++++ b/app/src/main/java/com/jerboa/ui/components/community/CommunityLink.kt
+@@ -48,7 +48,7 @@ fun CommunityName(
+         style = style,
+         color = color,
+         modifier = modifier,
+-        overflow = TextOverflow.Clip,
++        overflow = TextOverflow.Ellipsis,
+         maxLines = 1,
+     )
+ }

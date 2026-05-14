@@ -1,0 +1,1909 @@
+{
+  "info": {
+    "exit_status": "Submitted",
+    "submission": "diff --git a/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt b/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\nindex 284bece9..0c61269d 100644\n--- a/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n+++ b/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n@@ -77,6 +77,7 @@ import kotlinx.coroutines.launch\n  * @param filterQuality Sampling algorithm applied to a bitmap when it is scaled and drawn into the\n  *  destination.\n  */\n+@Stable\n @Composable\n @NonRestartableComposable\n fun rememberAsyncImagePainter(\n@@ -123,6 +124,7 @@ fun rememberAsyncImagePainter(\n  * @param filterQuality Sampling algorithm applied to a bitmap when it is scaled and drawn into the\n  *  destination.\n  */\n+@Stable\n @Composable\n fun rememberAsyncImagePainter(\n     model: Any?,\n@@ -308,6 +310,7 @@ class AsyncImagePainter internal constructor(\n     /**\n      * The current state of the [AsyncImagePainter].\n      */\n+@Stable\n     sealed interface State {\n \n         /** The current painter being drawn by [AsyncImagePainter]. */\n@@ -340,6 +343,7 @@ class AsyncImagePainter internal constructor(\n         /**\n          * A state transform that does not modify the state.\n          */\n+@Stable\n         val DefaultTransform: (State) -> State = { it }\n     }\n }\n",
+    "model_stats": {
+      "instance_cost": 0.4009354500000001,
+      "api_calls": 33,
+      "total_latency_seconds": 341.839981187004
+    },
+    "mini_version": "1.11.1",
+    "config": {
+      "agent": {
+        "system_template": "You are a helpful assistant that can interact multiple times with a computer shell to solve programming tasks.\nYour response must contain exactly ONE bash code block with ONE command (or commands connected with && or ||).\nCurrent Date/Time: {{current_datetime}}\n\nInclude a THOUGHT section before your command where you explain your reasoning process.\nFormat your response as shown in <format_example>.\n\n<format_example>\nTHOUGHT: Your reasoning and analysis here\n\n```bash\nyour_command_here\n```\n</format_example>\n\nFailure to follow these rules will cause your response to be rejected.\n",
+        "instance_template": "<pr_description>\nConsider the following PR description:\n{{task}}\n</pr_description>\n\n<instructions>\n# Task Instructions\n\n## Overview\nYou're an Android software engineer interacting continuously with a computer by submitting commands.\nYou'll be helping implement necessary changes to meet requirements in the PR description.\nYour task is specifically to make changes to non-test files in the current directory in order to fix the issue described in the PR description in a way that is general and consistent with the codebase.\n\nIMPORTANT: This is an interactive process where you will think and issue ONE command, see its result, then think and issue your next command.\n\nFor each response:\n1. Include a THOUGHT section explaining your reasoning and what you're trying to accomplish\n2. Provide exactly ONE bash command to execute\n\n## Important Boundaries\n- MODIFY: Regular source code files in /workspace/testbed (this is the working directory for all your subsequent commands)\n\n## Recommended Workflow\n1. Analyze the codebase by finding and reading relevant files\n2. Write a test to reproduce the issue if needed\n3. Edit the source code to resolve the issue\n4. Verify your fix works by running your test again\n5. Ensure there are no build errors by building the project with gradlew assembleDebug\n6. Test edge cases to ensure your fix is robust\n7. You can ignore build errors related to formatting or dependency guards. Just focus on code changes.\n\n## Command Execution Rules\nYou are operating in an environment where\n1. You write a single command\n2. The system executes that command in a subshell\n3. You see the result\n4. You write your next command\n\nEach response should include:\n1. A **THOUGHT** section where you explain your reasoning and plan\n2. A single bash code block with your command\n\nFormat your responses like this:\n\n<format_example>\nTHOUGHT: Here I explain my reasoning process, analysis of the current situation,\nand what I'm trying to accomplish with the command below.\n\n```bash\nyour_command_here\n```\n</format_example>\n\nCommands must be specified in a single bash code block:\n\n```bash\nyour_command_here\n```\n\n**CRITICAL REQUIREMENTS:**\n- Your response SHOULD include a THOUGHT section explaining your reasoning\n- Your response MUST include EXACTLY ONE bash code block\n- This bash block MUST contain EXACTLY ONE command (or a set of commands connected with && or ||)\n- If you include zero or multiple bash blocks, or no command at all, YOUR RESPONSE WILL FAIL\n- Do NOT try to run multiple independent commands in separate blocks in one response\n- Directory or environment variable changes are not persistent. Every action is executed in a new subshell.\n- However, you can prefix any action with `MY_ENV_VAR=MY_VALUE cd /path/to/working/dir && ...` or write/load environment variables from files\n\nExample of a CORRECT response:\n<example_response>\nTHOUGHT: I need to understand the structure of the repository first. Let me check what files are in the current directory to get a better understanding of the codebase.\n\n```bash\nls -la\n```\n</example_response>\n\nExample of an INCORRECT response:\n<example_response>\nTHOUGHT: I need to examine the codebase and then look at a specific file. I'll run multiple commands to do this.\n\n```bash\nls -la\n```\n\nNow I'll read the file:\n\n```bash\ncat file.txt\n```\n</example_response>\n\nIf you need to run multiple commands, either:\n1. Combine them in one block using && or ||\n```bash\ncommand1 && command2 || echo \"Error occurred\"\n```\n\n2. Wait for the first command to complete, see its output, then issue the next command in your following response.\n\n## Environment Details\n- You have a full Linux shell environment\n- Always use non-interactive flags (-y, -f) for commands\n- Avoid interactive tools like vi, nano, or any that require user input\n- If a command isn't available, you can install it\n\n## Useful Command Examples\n\n### Create a new file:\n```bash\ncat <<'EOF' > newfile.py\nimport numpy as np\nhello = \"world\"\nprint(hello)\nEOF\n```\n\n### Edit files with sed:\n```bash\n# Replace all occurrences\nsed -i 's/old_string/new_string/g' filename.py\n\n# Replace only first occurrence\nsed -i 's/old_string/new_string/' filename.py\n\n# Replace first occurrence on line 1\nsed -i '1s/old_string/new_string/' filename.py\n\n# Replace all occurrences in lines 1-10\nsed -i '1,10s/old_string/new_string/g' filename.py\n```\n\n### View file content:\n```bash\n# View specific lines with numbers\nnl -ba filename.py | sed -n '10,20p'\n```\n\n### Any other command you want to run\n```bash\nanything\n```\n\n## Submission\nFirst, if you have made any temporary files or scripts for testing, make sure to clean them up.\nThen, when you've completed your work (reading, editing, testing), and cannot make further progress\nissue exactly the following command:\n\n```bash\necho COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT && git add -A && git diff --cached --binary\n```\n\nThis command will submit your work.\nYou cannot continue working (reading, editing, testing) in any way on this task after submitting.\n</instructions>\n",
+        "timeout_template": "The last command <command>{{action['action']}}</command> timed out and has been killed.\nThe output of the command was:\n <output>\n{{output}}\n</output>\nPlease try another command and make sure to avoid those requiring interactive input.",
+        "format_error_template": "The bash commands submitted in your last response are not in the correct format and will not be executed.\n\nPlease always provide EXACTLY ONE action in triple backticks, found {{actions|length}} actions.\n\nPlease format your action in triple backticks as shown in <response_example>.\n\n<response_example>\nHere are some thoughts about why you want to perform the action.\n\n```bash\n<action>\n```\n</response_example>\n",
+        "action_observation_template": "<returncode>{{output.returncode}}</returncode>\n{% if output.output | length < 10000 -%}\n<output>\n{{ output.output -}}\n</output>\n{%- else -%}\n<warning>\nThe output of your last command was too long.\nPlease try a different command that produces less output.\nIf you're looking at a file you can try use head, tail or sed to view a smaller number of lines selectively.\nIf you're using grep or find and it produced too much output, you can use a more selective search pattern.\nIf you really need to see something from the full command's output, you can redirect output to a file and then search in that file.\n</warning>\n{%- set elided_chars = output.output | length - 10000 -%}\n<output_head>\n{{ output.output[:5000] }}\n</output_head>\n<elided_chars>\n{{ elided_chars }} characters elided\n</elided_chars>\n<output_tail>\n{{ output.output[-5000:] }}\n</output_tail>\n{%- endif -%}\n",
+        "step_limit": 250,
+        "cost_limit": 10.0
+      },
+      "model": {
+        "model_name": "xai/grok-4.3",
+        "model_kwargs": {
+          "drop_params": true,
+          "temperature": 1.0
+        },
+        "litellm_model_registry": null
+      },
+      "environment": {
+        "image": "coil-kt__coil-pr_1964",
+        "cwd": "/workspace/testbed",
+        "env": {
+          "PAGER": "cat",
+          "MANPAGER": "cat",
+          "LESS": "-R",
+          "PIP_PROGRESS_BAR": "off",
+          "TQDM_DISABLE": "1"
+        },
+        "forward_env": [],
+        "timeout": 1800,
+        "executable": "docker",
+        "run_args": [
+          "--rm"
+        ],
+        "container_timeout": "2h",
+        "pull_timeout": 600
+      },
+      "agent_type": "harness.inference.multimedia_processing_agent.MultimediaProcessingAgent",
+      "model_type": "minisweagent.models.litellm_model.LitellmModel",
+      "environment_type": "minisweagent.environments.docker.DockerEnvironment"
+    }
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant that can interact multiple times with a computer shell to solve programming tasks.\nYour response must contain exactly ONE bash code block with ONE command (or commands connected with && or ||).\nCurrent Date/Time: 2026-05-14 21:33:52\n\nInclude a THOUGHT section before your command where you explain your reasoning process.\nFormat your response as shown in <format_example>.\n\n<format_example>\nTHOUGHT: Your reasoning and analysis here\n\n```bash\nyour_command_here\n```\n</format_example>\n\nFailure to follow these rules will cause your response to be rejected."
+    },
+    {
+      "role": "user",
+      "content": "<pr_description>\nConsider the following PR description:\n`AsyncImage` and `SubcomposeAsyncImage` Cause Unnecessary Recompositions, Harming UI Performance\n\nThe `AsyncImage` and `SubcomposeAsyncImage` composables can lead to significant performance degradation. Because the composables are not correctly defined as skippable, the Compose compiler cannot skip their recomposition when their inputs remain unchanged. To fix this, the composables' inputs should be marked as stable to allow the compiler to perform optimizations correctly.\n</pr_description>\n\n<instructions>\n# Task Instructions\n\n## Overview\nYou're an Android software engineer interacting continuously with a computer by submitting commands.\nYou'll be helping implement necessary changes to meet requirements in the PR description.\nYour task is specifically to make changes to non-test files in the current directory in order to fix the issue described in the PR description in a way that is general and consistent with the codebase.\n\nIMPORTANT: This is an interactive process where you will think and issue ONE command, see its result, then think and issue your next command.\n\nFor each response:\n1. Include a THOUGHT section explaining your reasoning and what you're trying to accomplish\n2. Provide exactly ONE bash command to execute\n\n## Important Boundaries\n- MODIFY: Regular source code files in /workspace/testbed (this is the working directory for all your subsequent commands)\n\n## Recommended Workflow\n1. Analyze the codebase by finding and reading relevant files\n2. Write a test to reproduce the issue if needed\n3. Edit the source code to resolve the issue\n4. Verify your fix works by running your test again\n5. Ensure there are no build errors by building the project with gradlew assembleDebug\n6. Test edge cases to ensure your fix is robust\n7. You can ignore build errors related to formatting or dependency guards. Just focus on code changes.\n\n## Command Execution Rules\nYou are operating in an environment where\n1. You write a single command\n2. The system executes that command in a subshell\n3. You see the result\n4. You write your next command\n\nEach response should include:\n1. A **THOUGHT** section where you explain your reasoning and plan\n2. A single bash code block with your command\n\nFormat your responses like this:\n\n<format_example>\nTHOUGHT: Here I explain my reasoning process, analysis of the current situation,\nand what I'm trying to accomplish with the command below.\n\n```bash\nyour_command_here\n```\n</format_example>\n\nCommands must be specified in a single bash code block:\n\n```bash\nyour_command_here\n```\n\n**CRITICAL REQUIREMENTS:**\n- Your response SHOULD include a THOUGHT section explaining your reasoning\n- Your response MUST include EXACTLY ONE bash code block\n- This bash block MUST contain EXACTLY ONE command (or a set of commands connected with && or ||)\n- If you include zero or multiple bash blocks, or no command at all, YOUR RESPONSE WILL FAIL\n- Do NOT try to run multiple independent commands in separate blocks in one response\n- Directory or environment variable changes are not persistent. Every action is executed in a new subshell.\n- However, you can prefix any action with `MY_ENV_VAR=MY_VALUE cd /path/to/working/dir && ...` or write/load environment variables from files\n\nExample of a CORRECT response:\n<example_response>\nTHOUGHT: I need to understand the structure of the repository first. Let me check what files are in the current directory to get a better understanding of the codebase.\n\n```bash\nls -la\n```\n</example_response>\n\nExample of an INCORRECT response:\n<example_response>\nTHOUGHT: I need to examine the codebase and then look at a specific file. I'll run multiple commands to do this.\n\n```bash\nls -la\n```\n\nNow I'll read the file:\n\n```bash\ncat file.txt\n```\n</example_response>\n\nIf you need to run multiple commands, either:\n1. Combine them in one block using && or ||\n```bash\ncommand1 && command2 || echo \"Error occurred\"\n```\n\n2. Wait for the first command to complete, see its output, then issue the next command in your following response.\n\n## Environment Details\n- You have a full Linux shell environment\n- Always use non-interactive flags (-y, -f) for commands\n- Avoid interactive tools like vi, nano, or any that require user input\n- If a command isn't available, you can install it\n\n## Useful Command Examples\n\n### Create a new file:\n```bash\ncat <<'EOF' > newfile.py\nimport numpy as np\nhello = \"world\"\nprint(hello)\nEOF\n```\n\n### Edit files with sed:\n```bash\n# Replace all occurrences\nsed -i 's/old_string/new_string/g' filename.py\n\n# Replace only first occurrence\nsed -i 's/old_string/new_string/' filename.py\n\n# Replace first occurrence on line 1\nsed -i '1s/old_string/new_string/' filename.py\n\n# Replace all occurrences in lines 1-10\nsed -i '1,10s/old_string/new_string/g' filename.py\n```\n\n### View file content:\n```bash\n# View specific lines with numbers\nnl -ba filename.py | sed -n '10,20p'\n```\n\n### Any other command you want to run\n```bash\nanything\n```\n\n## Submission\nFirst, if you have made any temporary files or scripts for testing, make sure to clean them up.\nThen, when you've completed your work (reading, editing, testing), and cannot make further progress\nissue exactly the following command:\n\n```bash\necho COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT && git add -A && git diff --cached --binary\n```\n\nThis command will submit your work.\nYou cannot continue working (reading, editing, testing) in any way on this task after submitting.\n</instructions>"
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: I need to explore the repository structure to locate the source files defining AsyncImage and SubcomposeAsyncImage. Let's start by listing the contents of the current directory.\n\n```bash\nls -la /workspace/testbed\n```",
+      "extra": {
+        "response": {
+          "id": "58a05897-f65d-9af7-8d71-51d41c7b1706",
+          "created": 1778794433,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: I need to explore the repository structure to locate the source files defining AsyncImage and SubcomposeAsyncImage. Let's start by listing the contents of the current directory.\n\n```bash\nls -la /workspace/testbed\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "The task is to fix an issue in the PR description: \"AsyncImage and SubcomposeAsyncImage Cause Unnecessary Recompositions, Harming UI Performance\". The composables aren't correctly defined as skippable...",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "The task is to fix an issue in the PR description: \"AsyncImage and SubcomposeAsyncImage Cause Unnecessary Recompositions, Harming UI Performance\". The composables aren't correctly defined as skippable..."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 48,
+            "prompt_tokens": 1442,
+            "total_tokens": 1683,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 193,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 1442,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 23378000
+          }
+        }
+      },
+      "query_latency_seconds": 3.80802749999566
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\ntotal 284\ndrwxr-xr-x 1 root root  4096 May 14 08:30 .\ndrwxr-xr-x 1 root root  4096 May 13 23:15 ..\n-rw-r--r-- 1 root root  1501 May 14 08:29 .editorconfig\ndrwxr-xr-x 1 root root  4096 May 14 08:30 .git\n-rw-r--r-- 1 root root    53 May 13 23:15 .gitattributes\ndrwxr-xr-x 1 root root  4096 May 14 08:29 .github\n-rw-r--r-- 1 root root   263 May 14 08:29 .gitignore\ndrwxr-xr-x 7 root root  4096 May 14 08:32 .gradle\ndrwxr-xr-x 1 root root  4096 May 13 23:15 .idea\n-rw-r--r-- 1 root root 65005 May 14 08:29 CHANGELOG.md\n-rw-r--r-- 1 root root 11347 May 14 08:29 LICENSE.txt\n-rw-r--r-- 1 root root  4667 May 14 08:29 README-ja.md\n-rw-r--r-- 1 root root  4396 May 14 08:29 README-ko.md\n-rw-r--r-- 1 root root  3839 May 14 08:29 README-tr.md\n-rw-r--r-- 1 root root  3975 May 14 08:29 README-zh.md\n-rw-r--r-- 1 root root  4073 May 14 08:29 README.md\n-rw-r--r-- 1 root root   937 May 14 08:29 RELEASING.md\n-rw-r--r-- 1 root root   360 May 14 08:29 SECURITY.md\n-rwxr-xr-x 1 root root   783 May 14 08:29 assemble_baseline_profile.sh\n-rwxr-xr-x 1 root root   118 May 14 08:29 assemble_docs.sh\n-rw-r--r-- 1 root root  6960 May 14 08:29 build.gradle.kts\ndrwxr-xr-x 1 root root  4096 May 14 08:31 buildSrc\n-rwxr-xr-x 1 root root    44 May 14 08:29 ci_clear_gradle_cache.sh\ndrwxr-xr-x 1 root root  4096 May 14 08:32 coil\ndrwxr-xr-x 2 root root  4096 May 13 23:15 coil-bom\ndrwxr-xr-x 1 root root  4096 May 14 08:33 coil-compose\ndrwxr-xr-x 1 root root  4096 May 14 08:33 coil-compose-core\ndrwxr-xr-x 1 root root  4096 May 14 08:33 coil-core\ndrwxr-xr-x 1 root root  4096 May 14 08:33 coil-gif\ndrwxr-xr-x 5 root root  4096 May 14 08:34 coil-network\ndrwxr-xr-x 1 root root  4096 May 14 08:34 coil-svg\ndrwxr-xr-x 1 root root  4096 May 14 08:34 coil-test\ndrwxr-xr-x 1 root root  4096 May 14 08:34 coil-video\n-rwxr-xr-x 1 root root  1001 May 14 08:29 deploy_docs.sh\ndrwxr-xr-x 1 root root  4096 May 14 08:29 docs\ndrwxr-xr-x 1 root root  4096 May 14 08:29 gradle\n-rw-r--r-- 1 root root  1402 May 14 08:29 gradle.properties\n-rwxr-xr-x 1 root root  8692 May 14 08:29 gradlew\n-rw-r--r-- 1 root root  2868 May 14 08:29 gradlew.bat\ndrwxr-xr-x 1 root root  4096 May 14 08:29 internal\n-rw-r--r-- 1 root root    71 May 13 23:15 jitpack.yml\ndrwxr-xr-x 1 root root  4096 May 14 08:29 kotlin-js-store\n-rwxr-xr-x 1 root root  3762 May 13 23:15 logo.svg\n-rw-r--r-- 1 root root  1910 May 14 08:29 mkdocs.yml\n-rwxr-xr-x 1 root root   102 May 14 08:29 publish_local.sh\n-rwxr-xr-x 1 root root    83 May 14 08:29 publish_remote.sh\ndrwxr-xr-x 1 root root  4096 May 14 08:29 samples\n-rw-r--r-- 1 root root   602 May 14 08:29 settings.gradle.kts\n-rwxr-xr-x 1 root root   140 May 14 08:29 test.sh\n</output>",
+      "processing_latency_seconds": 0.17588249099208042
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The PR is about AsyncImage and SubcomposeAsyncImage in Coil's Compose support. The source likely is in coil-compose-core or coil-compose. Let's explore those directories to find the relevant Kotlin files defining the composables.\n\n```bash\nfind /workspace/testbed -path '*/coil-compose*/src/*' -name '*.kt' | head -20\n```",
+      "extra": {
+        "response": {
+          "id": "28461b9d-95f9-90a0-bc80-8752827d721c",
+          "created": 1778794437,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The PR is about AsyncImage and SubcomposeAsyncImage in Coil's Compose support. The source likely is in coil-compose-core or coil-compose. Let's explore those directories to find the relevant Kotlin files defining the composables.\n\n```bash\nfind /workspace/testbed -path '*/coil-compose*/src/*' -name '*.kt' | head -20\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "The repository is Coil, an image loading library for Android, with modules like coil-compose, coil-compose-core, etc.\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "The repository is Coil, an image loading library for Android, with modules like coil-compose, coil-compose-core, etc.\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 77,
+            "prompt_tokens": 2821,
+            "total_tokens": 2962,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 64,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 1408,
+              "text_tokens": 2821,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 24003500
+          }
+        }
+      },
+      "query_latency_seconds": 2.7333191840007203
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n/workspace/testbed/coil-compose-core/src/androidMain/kotlin/coil3/compose/AsyncImagePainter.kt\n/workspace/testbed/coil-compose-core/src/androidMain/kotlin/coil3/compose/LocalPlatformContext.kt\n/workspace/testbed/coil-compose-core/src/nonAndroidMain/kotlin/coil3/compose/AsyncImagePainter.kt\n/workspace/testbed/coil-compose-core/src/nonAndroidMain/kotlin/coil3/compose/LocalPlatformContext.kt\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/SubcomposeAsyncImage.kt\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImage.kt\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/ConstraintsSizeResolver.kt\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/CrossfadePainter.kt\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/utils.kt\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/ContentPainterModifier.kt\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/LocalPlatformContext.common.kt\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n/workspace/testbed/coil-compose-core/src/androidInstrumentedTest/kotlin/coil3/compose/ImageLoaderIdlingResource.kt\n/workspace/testbed/coil-compose-core/src/androidInstrumentedTest/kotlin/coil3/compose/AsyncImagePainterTest.kt\n/workspace/testbed/coil-compose-core/src/androidInstrumentedTest/kotlin/coil3/compose/FakeNetworkFetcher.kt\n/workspace/testbed/coil-compose-core/src/androidInstrumentedTest/kotlin/coil3/compose/AsyncImageTest.kt\n/workspace/testbed/coil-compose-core/src/androidInstrumentedTest/kotlin/coil3/compose/utils.test.kt\n/workspace/testbed/coil-compose/src/commonMain/kotlin/coil3/compose/SingletonSubcomposeAsyncImage.kt\n/workspace/testbed/coil-compose/src/commonMain/kotlin/coil3/compose/SingletonAsyncImagePainter.kt\n/workspace/testbed/coil-compose/src/commonMain/kotlin/coil3/compose/SingletonAsyncImage.kt\n</output>",
+      "processing_latency_seconds": 0.7128488110029139
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The main files are AsyncImage.kt and SubcomposeAsyncImage.kt in coil-compose-core/src/commonMain/kotlin/coil3/compose/. I need to examine their contents, especially the function signatures for AsyncImage and SubcomposeAsyncImage to see how parameters are defined and if they use stable markers. Let's use grep to find the composable function definitions.\n\n```bash\ngrep -n 'fun AsyncImage' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImage.kt && grep -n 'fun SubcomposeAsyncImage' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/SubcomposeAsyncImage.kt\n```",
+      "extra": {
+        "response": {
+          "id": "cc849fd5-638d-9722-8465-157a33bce663",
+          "created": 1778794441,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The main files are AsyncImage.kt and SubcomposeAsyncImage.kt in coil-compose-core/src/commonMain/kotlin/coil3/compose/. I need to examine their contents, especially the function signatures for AsyncImage and SubcomposeAsyncImage to see how parameters are defined and if they use stable markers. Let's use grep to find the composable function definitions.\n\n```bash\ngrep -n 'fun AsyncImage' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImage.kt && grep -n 'fun SubcomposeAsyncImage' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/SubcomposeAsyncImage.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "The key files are in /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "The key files are in /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 138,
+            "prompt_tokens": 3418,
+            "total_tokens": 3729,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 173,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 2816,
+              "text_tokens": 3418,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 20932000
+          }
+        }
+      },
+      "query_latency_seconds": 5.105315110005904
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n48:fun AsyncImage(\n102:fun AsyncImage(\n55:fun SubcomposeAsyncImage(\n110:fun SubcomposeAsyncImage(\n216:fun SubcomposeAsyncImageScope.SubcomposeAsyncImageContent(\n</output>",
+      "processing_latency_seconds": 0.11459934400045313
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: To understand the issue, I need to inspect the full function signatures and any annotations in AsyncImage.kt and SubcomposeAsyncImage.kt. I'll read the entire AsyncImage.kt file first.\n\n```bash\ncat /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImage.kt\n```",
+      "extra": {
+        "response": {
+          "id": "11d271c7-e31a-976b-9fa9-10843f8b0dca",
+          "created": 1778794464,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: To understand the issue, I need to inspect the full function signatures and any annotations in AsyncImage.kt and SubcomposeAsyncImage.kt. I'll read the entire AsyncImage.kt file first.\n\n```bash\ncat /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImage.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "There are multiple overloads. I need to read the files to see the full signatures and any @Stable annotations.\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "There are multiple overloads. I need to read the files to see the full signatures and any @Stable annotations.\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 67,
+            "prompt_tokens": 3797,
+            "total_tokens": 3992,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 128,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 3392,
+              "text_tokens": 3797,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 16721500
+          }
+        }
+      },
+      "query_latency_seconds": 21.76980607600126
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\npackage coil3.compose\n\nimport androidx.compose.runtime.Composable\nimport androidx.compose.runtime.NonRestartableComposable\nimport androidx.compose.ui.Alignment\nimport androidx.compose.ui.Modifier\nimport androidx.compose.ui.draw.clipToBounds\nimport androidx.compose.ui.graphics.ColorFilter\nimport androidx.compose.ui.graphics.DefaultAlpha\nimport androidx.compose.ui.graphics.FilterQuality\nimport androidx.compose.ui.graphics.drawscope.DrawScope.Companion.DefaultFilterQuality\nimport androidx.compose.ui.graphics.painter.Painter\nimport androidx.compose.ui.layout.ContentScale\nimport androidx.compose.ui.layout.Layout\nimport coil3.ImageLoader\nimport coil3.compose.AsyncImagePainter.Companion.DefaultTransform\nimport coil3.compose.AsyncImagePainter.State\nimport coil3.request.ImageRequest\n\n/**\n * A composable that executes an [ImageRequest] asynchronously and renders the result.\n *\n * @param model Either an [ImageRequest] or the [ImageRequest.data] value.\n * @param contentDescription Text used by accessibility services to describe what this image\n *  represents. This should always be provided unless this image is used for decorative purposes,\n *  and does not represent a meaningful action that a user can take.\n * @param imageLoader The [ImageLoader] that will be used to execute the request.\n * @param modifier Modifier used to adjust the layout algorithm or draw decoration content.\n * @param placeholder A [Painter] that is displayed while the image is loading.\n * @param error A [Painter] that is displayed when the image request is unsuccessful.\n * @param fallback A [Painter] that is displayed when the request's [ImageRequest.data] is null.\n * @param onLoading Called when the image request begins loading.\n * @param onSuccess Called when the image request completes successfully.\n * @param onError Called when the image request completes unsuccessfully.\n * @param alignment Optional alignment parameter used to place the [AsyncImagePainter] in the given\n *  bounds defined by the width and height.\n * @param contentScale Optional scale parameter used to determine the aspect ratio scaling to be\n *  used if the bounds are a different size from the intrinsic size of the [AsyncImagePainter].\n * @param alpha Optional opacity to be applied to the [AsyncImagePainter] when it is rendered\n *  onscreen.\n * @param colorFilter Optional [ColorFilter] to apply for the [AsyncImagePainter] when it is\n *  rendered onscreen.\n * @param filterQuality Sampling algorithm applied to a bitmap when it is scaled and drawn into the\n *  destination.\n */\n@Composable\n@NonRestartableComposable\nfun AsyncImage(\n    model: Any?,\n    contentDescription: String?,\n    imageLoader: ImageLoader,\n    modifier: Modifier = Modifier,\n    placeholder: Painter? = null,\n    error: Painter? = null,\n    fallback: Painter? = error,\n    onLoading: ((State.Loading) -> Unit)? = null,\n    onSuccess: ((State.Success) -> Unit)? = null,\n    onError: ((State.Error) -> Unit)? = null,\n    alignment: Alignment = Alignment.Center,\n    contentScale: ContentScale = ContentScale.Fit,\n    alpha: Float = DefaultAlpha,\n    colorFilter: ColorFilter? = null,\n    filterQuality: FilterQuality = DefaultFilterQuality,\n) = AsyncImage(\n    model = model,\n    contentDescription = contentDescription,\n    imageLoader = imageLoader,\n    modifier = modifier,\n    transform = transformOf(placeholder, error, fallback),\n    onState = onStateOf(onLoading, onSuccess, onError),\n    alignment = alignment,\n    contentScale = contentScale,\n    alpha = alpha,\n    colorFilter = colorFilter,\n    filterQuality = filterQuality,\n)\n\n/**\n * A composable that executes an [ImageRequest] asynchronously and renders the result.\n *\n * @param model Either an [ImageRequest] or the [ImageRequest.data] value.\n * @param contentDescription Text used by accessibility services to describe what this image\n *  represents. This should always be provided unless this image is used for decorative purposes,\n *  and does not represent a meaningful action that a user can take.\n * @param imageLoader The [ImageLoader] that will be used to execute the request.\n * @param modifier Modifier used to adjust the layout algorithm or draw decoration content.\n * @param transform A callback to transform a new [State] before it's applied to the\n *  [AsyncImagePainter]. Typically this is used to modify the state's [Painter].\n * @param onState Called when the state of this painter changes.\n * @param alignment Optional alignment parameter used to place the [AsyncImagePainter] in the given\n *  bounds defined by the width and height.\n * @param contentScale Optional scale parameter used to determine the aspect ratio scaling to be\n *  used if the bounds are a different size from the intrinsic size of the [AsyncImagePainter].\n * @param alpha Optional opacity to be applied to the [AsyncImagePainter] when it is rendered\n *  onscreen.\n * @param colorFilter Optional [ColorFilter] to apply for the [AsyncImagePainter] when it is\n *  rendered onscreen.\n * @param filterQuality Sampling algorithm applied to a bitmap when it is scaled and drawn into the\n *  destination.\n */\n@Composable\nfun AsyncImage(\n    model: Any?,\n    contentDescription: String?,\n    imageLoader: ImageLoader,\n    modifier: Modifier = Modifier,\n    transform: (State) -> State = DefaultTransform,\n    onState: ((State) -> Unit)? = null,\n    alignment: Alignment = Alignment.Center,\n    contentScale: ContentScale = ContentScale.Fit,\n    alpha: Float = DefaultAlpha,\n    colorFilter: ColorFilter? = null,\n    filterQuality: FilterQuality = DefaultFilterQuality,\n) {\n    // Create and execute the image request.\n    val request = requestOfWithSizeResolver(\n        model = model,\n        contentScale = contentScale,\n    )\n    val painter = rememberAsyncImagePainter(\n        model = request,\n        imageLoader = imageLoader,\n        transform = transform,\n        onState = onState,\n        contentScale = contentScale,\n        filterQuality = filterQuality,\n    )\n\n    // Draw the content.\n    val sizeResolver = request.sizeResolver\n    Content(\n        modifier = if (sizeResolver is ConstraintsSizeResolver) {\n            modifier.then(sizeResolver)\n        } else {\n            modifier\n        },\n        painter = painter,\n        contentDescription = contentDescription,\n        alignment = alignment,\n        contentScale = contentScale,\n        alpha = alpha,\n        colorFilter = colorFilter,\n    )\n}\n\n/** Draws the current image content. */\n@Composable\nprivate fun Content(\n    modifier: Modifier,\n    // Require AsyncImagePainter so Content is skippable.\n    painter: AsyncImagePainter,\n    contentDescription: String?,\n    alignment: Alignment,\n    contentScale: ContentScale,\n    alpha: Float,\n    colorFilter: ColorFilter?,\n) = Layout(\n    modifier = modifier\n        .contentDescription(contentDescription)\n        .clipToBounds()\n        .then(\n            ContentPainterModifier(\n                painter = painter,\n                alignment = alignment,\n                contentScale = contentScale,\n                alpha = alpha,\n                colorFilter = colorFilter,\n            ),\n        ),\n    measurePolicy = { _, constraints ->\n        layout(constraints.minWidth, constraints.minHeight) {}\n    },\n)\n</output>",
+      "processing_latency_seconds": 0.1466317610029364
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: Now I need to examine SubcomposeAsyncImage.kt to see its function signatures and any stability annotations. I'll read its entire content.\n\n```bash\ncat /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/SubcomposeAsyncImage.kt\n```",
+      "extra": {
+        "response": {
+          "id": "05f28a8a-5055-9389-a0e8-42329ef1df40",
+          "created": 1778794468,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: Now I need to examine SubcomposeAsyncImage.kt to see its function signatures and any stability annotations. I'll read its entire content.\n\n```bash\ncat /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/SubcomposeAsyncImage.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "The AsyncImage.kt has two overloads, one calling the other.\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "The AsyncImage.kt has two overloads, one calling the other.\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 57,
+            "prompt_tokens": 5520,
+            "total_tokens": 5674,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 97,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 3776,
+              "text_tokens": 5520,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 33202000
+          }
+        }
+      },
+      "query_latency_seconds": 3.370452021001256
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<warning>\nThe output of your last command was too long.\nPlease try a different command that produces less output.\nIf you're looking at a file you can try use head, tail or sed to view a smaller number of lines selectively.\nIf you're using grep or find and it produced too much output, you can use a more selective search pattern.\nIf you really need to see something from the full command's output, you can redirect output to a file and then search in that file.\n</warning><output_head>\npackage coil3.compose\n\nimport androidx.compose.foundation.layout.Box\nimport androidx.compose.foundation.layout.BoxScope\nimport androidx.compose.foundation.layout.BoxWithConstraints\nimport androidx.compose.foundation.layout.LayoutScopeMarker\nimport androidx.compose.runtime.Composable\nimport androidx.compose.runtime.Immutable\nimport androidx.compose.runtime.NonRestartableComposable\nimport androidx.compose.runtime.Stable\nimport androidx.compose.ui.Alignment\nimport androidx.compose.ui.Modifier\nimport androidx.compose.ui.draw.clipToBounds\nimport androidx.compose.ui.graphics.ColorFilter\nimport androidx.compose.ui.graphics.DefaultAlpha\nimport androidx.compose.ui.graphics.FilterQuality\nimport androidx.compose.ui.graphics.drawscope.DrawScope.Companion.DefaultFilterQuality\nimport androidx.compose.ui.graphics.painter.Painter\nimport androidx.compose.ui.layout.ContentScale\nimport androidx.compose.ui.layout.Layout\nimport coil3.ImageLoader\nimport coil3.annotation.Data\nimport coil3.compose.AsyncImagePainter.Companion.DefaultTransform\nimport coil3.compose.AsyncImagePainter.State\nimport coil3.request.ImageRequest\n\n/**\n * A composable that executes an [ImageRequest] asynchronously and renders the result.\n *\n * @param model Either an [ImageRequest] or the [ImageRequest.data] value.\n * @param contentDescription Text used by accessibility services to describe what this image\n *  represents. This should always be provided unless this image is used for decorative purposes,\n *  and does not represent a meaningful action that a user can take.\n * @param imageLoader The [ImageLoader] that will be used to execute the request.\n * @param modifier Modifier used to adjust the layout algorithm or draw decoration content.\n * @param loading An optional callback to overwrite what's drawn while the image request is loading.\n * @param success An optional callback to overwrite what's drawn when the image request succeeds.\n * @param error An optional callback to overwrite what's drawn when the image request fails.\n * @param onLoading Called when the image request begins loading.\n * @param onSuccess Called when the image request completes successfully.\n * @param onError Called when the image request completes unsuccessfully.\n * @param alignment Optional alignment parameter used to place the [AsyncImagePainter] in the given\n *  bounds defined by the width and height.\n * @param contentScale Optional scale parameter used to determine the aspect ratio scaling to be\n *  used if the bounds are a different size from the intrinsic size of the [AsyncImagePainter].\n * @param alpha Optional opacity to be applied to the [AsyncImagePainter] when it is rendered\n *  onscreen.\n * @param colorFilter Optional [ColorFilter] to apply for the [AsyncImagePainter] when it is\n *  rendered onscreen.\n * @param filterQuality Sampling algorithm applied to a bitmap when it is scaled and drawn into the\n *  destination.\n */\n@Composable\n@NonRestartableComposable\nfun SubcomposeAsyncImage(\n    model: Any?,\n    contentDescription: String?,\n    imageLoader: ImageLoader,\n    modifier: Modifier = Modifier,\n    loading: @Composable (SubcomposeAsyncImageScope.(State.Loading) -> Unit)? = null,\n    success: @Composable (SubcomposeAsyncImageScope.(State.Success) -> Unit)? = null,\n    error: @Composable (SubcomposeAsyncImageScope.(State.Error) -> Unit)? = null,\n    onLoading: ((State.Loading) -> Unit)? = null,\n    onSuccess: ((State.Success) -> Unit)? = null,\n    onError: ((State.Error) -> Unit)? = null,\n    alignment: Alignment = Alignment.Center,\n    contentScale: ContentScale = ContentScale.Fit,\n    alpha: Float = DefaultAlpha,\n    colorFilter: ColorFilter? = null,\n    filterQuality: FilterQuality = DefaultFilterQuality,\n) = SubcomposeAsyncImage(\n    model = model,\n    contentDescription = contentDescription,\n    imageLoader = imageLoader,\n    modifier = modifier,\n    onState = onStateOf(onLoading, onSuccess, onError),\n    alignment = alignment,\n    contentScale = contentScale,\n    alpha = alpha,\n    colorFilter = colorFilter,\n    filterQuality = filterQuality,\n    content = contentOf(loading, success, error),\n)\n\n/**\n * A composable that executes an [ImageRequest] asynchronously and renders the result.\n *\n * @param model Either an [ImageRequest] or the [ImageRequest.data] value.\n * @param contentDescription Text used by accessibility services to describe what this image\n *  represents. This should always be provided unless this image is used for decorative purposes,\n *  and does not represent a meaningful action that a user can take.\n * @param imageLoader The [ImageLoader] that will be used to execute the request.\n * @param modifier Modifier used to adjust the layout algorithm or draw decoration content.\n * @param transform A callback to transform a new [State] before it's applied to the\n *  [AsyncImagePainter]. Typically this is used to modify the state's [Painter].\n * @param onState Called when the state of this painter changes.\n * @param alignment Optional alignment parameter used to p\n</output_head>\n<elided_chars>\n1505 characters elided\n</elided_chars>\n<output_tail>\ner,\n        transform = transform,\n        onState = onState,\n        contentScale = contentScale,\n        filterQuality = filterQuality,\n    )\n\n    val sizeResolver = request.sizeResolver\n    if (sizeResolver !is ConstraintsSizeResolver) {\n        // Fast path: draw the content without subcomposition as we don't need to resolve the\n        // constraints.\n        Box(\n            modifier = modifier,\n            contentAlignment = alignment,\n            propagateMinConstraints = true,\n        ) {\n            RealSubcomposeAsyncImageScope(\n                parentScope = this,\n                painter = painter,\n                contentDescription = contentDescription,\n                alignment = alignment,\n                contentScale = contentScale,\n                alpha = alpha,\n                colorFilter = colorFilter,\n            ).content()\n        }\n    } else {\n        // Slow path: draw the content with subcomposition as we need to resolve the constraints\n        // before calling `content`.\n        BoxWithConstraints(\n            modifier = modifier,\n            contentAlignment = alignment,\n            propagateMinConstraints = true,\n        ) {\n            // Ensure `painter.state` is up to date immediately. Resolving the constraints\n            // synchronously is necessary to ensure that images from the memory cache are resolved\n            // and `painter.state` is updated to `Success` before invoking `content`.\n            sizeResolver.setConstraints(constraints)\n\n            RealSubcomposeAsyncImageScope(\n                parentScope = this,\n                painter = painter,\n                contentDescription = contentDescription,\n                alignment = alignment,\n                contentScale = contentScale,\n                alpha = alpha,\n                colorFilter = colorFilter,\n            ).content()\n        }\n    }\n}\n\n/**\n * A scope for the children of [SubcomposeAsyncImage].\n */\n@LayoutScopeMarker\n@Immutable\ninterface SubcomposeAsyncImageScope : BoxScope {\n\n    /** The painter that is drawn by [SubcomposeAsyncImageContent]. */\n    val painter: AsyncImagePainter\n\n    /** The content description for [SubcomposeAsyncImageContent]. */\n    val contentDescription: String?\n\n    /** The default alignment for any composables drawn in this scope. */\n    val alignment: Alignment\n\n    /** The content scale for [SubcomposeAsyncImageContent]. */\n    val contentScale: ContentScale\n\n    /** The alpha for [SubcomposeAsyncImageContent]. */\n    val alpha: Float\n\n    /** The color filter for [SubcomposeAsyncImageContent]. */\n    val colorFilter: ColorFilter?\n}\n\n/**\n * A composable that draws [SubcomposeAsyncImage]'s content with [SubcomposeAsyncImageScope]'s\n * properties.\n *\n * @see SubcomposeAsyncImageScope\n */\n@Composable\nfun SubcomposeAsyncImageScope.SubcomposeAsyncImageContent(\n    modifier: Modifier = Modifier,\n    painter: Painter = this.painter,\n    contentDescription: String? = this.contentDescription,\n    alignment: Alignment = this.alignment,\n    contentScale: ContentScale = this.contentScale,\n    alpha: Float = this.alpha,\n    colorFilter: ColorFilter? = this.colorFilter,\n) = Layout(\n    modifier = modifier\n        .contentDescription(contentDescription)\n        .clipToBounds()\n        .then(\n            ContentPainterModifier(\n                painter = painter,\n                alignment = alignment,\n                contentScale = contentScale,\n                alpha = alpha,\n                colorFilter = colorFilter\n            )\n        ),\n    measurePolicy = { _, constraints ->\n        layout(constraints.minWidth, constraints.minHeight) {}\n    },\n)\n\n@Stable\nprivate fun contentOf(\n    loading: @Composable (SubcomposeAsyncImageScope.(State.Loading) -> Unit)?,\n    success: @Composable (SubcomposeAsyncImageScope.(State.Success) -> Unit)?,\n    error: @Composable (SubcomposeAsyncImageScope.(State.Error) -> Unit)?,\n): @Composable SubcomposeAsyncImageScope.() -> Unit {\n    return if (loading != null || success != null || error != null) {\n        {\n            var draw = true\n            when (val state = painter.state) {\n                is State.Loading -> if (loading != null) loading(state).also { draw = false }\n                is State.Success -> if (success != null) success(state).also { draw = false }\n                is State.Error -> if (error != null) error(state).also { draw = false }\n                is State.Empty -> {} // Skipped if rendering on the main thread.\n            }\n            if (draw) SubcomposeAsyncImageContent()\n        }\n    } else {\n        { SubcomposeAsyncImageContent() }\n    }\n}\n\n@Data\nprivate class RealSubcomposeAsyncImageScope(\n    private val parentScope: BoxScope,\n    override val painter: AsyncImagePainter,\n    override val contentDescription: String?,\n    override val alignment: Alignment,\n    override val contentScale: ContentScale,\n    override val alpha: Float,\n    override val colorFilter: ColorFilter?,\n) : SubcomposeAsyncImageScope, BoxScope by parentScope\n\n</output_tail>",
+      "processing_latency_seconds": 0.12913594499696046
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The issue mentions that the composables' inputs should be marked as stable. I see @Stable is used in SubcomposeAsyncImage.kt. I need to check the AsyncImagePainter class definition, as it's a key input. Let's locate its full definition by grepping for the class declaration.\n\n```bash\ngrep -n 'class AsyncImagePainter' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "dc7d307d-a1c5-986a-af23-0718146bdd9e",
+          "created": 1778794472,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The issue mentions that the composables' inputs should be marked as stable. I see @Stable is used in SubcomposeAsyncImage.kt. I need to check the AsyncImagePainter class definition, as it's a key input. Let's locate its full definition by grepping for the class declaration.\n\n```bash\ngrep -n 'class AsyncImagePainter' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "The output was truncated, but I have most of it.\nAssistant: The code snippet you shared is from `SubcomposeAsyncImage.kt` in the Coil 3 Compose integration. It defines a composable `SubcomposeAsyncImage` for asynchronously loading and displaying images in Jetpack Compose, handling states like loading, success, and error with optional callbacks.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "The output was truncated, but I have most of it.\nAssistant: The code snippet you shared is from `SubcomposeAsyncImage.kt` in the Coil 3 Compose integration. It defines a composable `SubcomposeAsyncImage` for asynchronously loading and displaying images in Jetpack Compose, handling states like loading, success, and error with optional callbacks."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 98,
+            "prompt_tokens": 7855,
+            "total_tokens": 8336,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 383,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 7855,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 109540500
+          }
+        }
+      },
+      "query_latency_seconds": 8.01482023599965
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n154:class AsyncImagePainter internal constructor(\n</output>",
+      "processing_latency_seconds": 0.09246820399130229
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: I need to inspect the AsyncImagePainter class to see if it's annotated with @Stable or @Immutable. Let's extract the relevant section of the file using sed to view lines 100 to 220.\n\n```bash\nsed -n '100,220p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "a3273941-3aa5-917f-895f-0e633e2fb9fb",
+          "created": 1778794483,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: I need to inspect the AsyncImagePainter class to see if it's annotated with @Stable or @Immutable. Let's extract the relevant section of the file using sed to view lines 100 to 220.\n\n```bash\nsed -n '100,220p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "It's at line 154 in AsyncImagePainter.common.kt\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "It's at line 154 in AsyncImagePainter.common.kt\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 80,
+            "prompt_tokens": 8370,
+            "total_tokens": 8530,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 80,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 7808,
+              "text_tokens": 8370,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 26641000
+          }
+        }
+      },
+      "query_latency_seconds": 6.80515704699792
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n)\n\n/**\n * Return an [AsyncImagePainter] that executes an [ImageRequest] asynchronously and renders the result.\n *\n * ** This is a lower-level API than [AsyncImage] and may not work as expected in all situations. **\n *\n * - [AsyncImagePainter] will not finish loading if [AsyncImagePainter.onDraw] is not called.\n *   This can occur if a composable has an unbounded (i.e. [Constraints.Infinity]) width/height\n *   constraint. For example, to use [AsyncImagePainter] with [LazyRow] or [LazyColumn], you must\n *   set a bounded width or height respectively using `Modifier.width` or `Modifier.height`.\n * - [AsyncImagePainter.state] will not transition to [State.Success] synchronously during the\n *   composition phase. Use [SubcomposeAsyncImage] or set a custom [ImageRequest.Builder.size] value\n *   (e.g. `size(Size.ORIGINAL)`) if you need this.\n *\n * @param model Either an [ImageRequest] or the [ImageRequest.data] value.\n * @param imageLoader The [ImageLoader] that will be used to execute the request.\n * @param transform A callback to transform a new [State] before it's applied to the\n *  [AsyncImagePainter]. Typically this is used to overwrite the state's [Painter].\n * @param onState Called when the state of this painter changes.\n * @param contentScale Used to determine the aspect ratio scaling to be used if the canvas bounds\n *  are a different size from the intrinsic size of the image loaded by [model]. This should be set\n *  to the same value that's passed to [Image].\n * @param filterQuality Sampling algorithm applied to a bitmap when it is scaled and drawn into the\n *  destination.\n */\n@Composable\nfun rememberAsyncImagePainter(\n    model: Any?,\n    imageLoader: ImageLoader,\n    transform: (State) -> State = DefaultTransform,\n    onState: ((State) -> Unit)? = null,\n    contentScale: ContentScale = ContentScale.Fit,\n    filterQuality: FilterQuality = DefaultFilterQuality,\n): AsyncImagePainter {\n    val request = requestOf(model)\n    validateRequest(request)\n\n    val painter = remember { AsyncImagePainter(request, imageLoader) }\n    painter.transform = transform\n    painter.onState = onState\n    painter.contentScale = contentScale\n    painter.filterQuality = filterQuality\n    painter.isPreview = LocalInspectionMode.current\n    painter.imageLoader = imageLoader\n    painter.request = request // Update request last so all other properties are up to date.\n    painter.onRemembered() // Invoke this manually so `painter.state` is set to `Loading` immediately.\n    return painter\n}\n\n/**\n * A [Painter] that that executes an [ImageRequest] asynchronously and renders the result.\n */\n@Stable\nclass AsyncImagePainter internal constructor(\n    request: ImageRequest,\n    imageLoader: ImageLoader,\n) : Painter(), RememberObserver {\n\n    private var rememberScope: CoroutineScope? = null\n    private val drawSize = MutableStateFlow(Size.Zero)\n\n    private var painter: Painter? by mutableStateOf(null)\n    private var alpha: Float by mutableFloatStateOf(DefaultAlpha)\n    private var colorFilter: ColorFilter? by mutableStateOf(null)\n\n    // These fields allow access to the current value\n    // instead of the value in the current composition.\n    private var _state: State = State.Empty\n        set(value) {\n            field = value\n            state = value\n        }\n    private var _painter: Painter? = null\n        set(value) {\n            field = value\n            painter = value\n        }\n\n    internal var transform = DefaultTransform\n    internal var onState: ((State) -> Unit)? = null\n    internal var contentScale = ContentScale.Fit\n    internal var filterQuality = DefaultFilterQuality\n    internal var isPreview = false\n\n    /** The current [AsyncImagePainter.State]. */\n    var state: State by mutableStateOf(State.Empty)\n        private set\n\n    /** The current [ImageRequest]. */\n    var request: ImageRequest by mutableStateOf(request)\n        internal set\n\n    /** The current [ImageLoader]. */\n    var imageLoader: ImageLoader by mutableStateOf(imageLoader)\n        internal set\n\n    override val intrinsicSize: Size\n        get() = painter?.intrinsicSize ?: Size.Unspecified\n\n    override fun DrawScope.onDraw() {\n        // Update the draw scope's current size.\n        drawSize.value = size\n\n        // Draw the current painter.\n        painter?.apply { draw(size, alpha, colorFilter) }\n    }\n\n    override fun applyAlpha(alpha: Float): Boolean {\n        this.alpha = alpha\n        return true\n    }\n\n    override fun applyColorFilter(colorFilter: ColorFilter?): Boolean {\n        this.colorFilter = colorFilter\n        return true\n    }\n\n    @OptIn(ExperimentalCoroutinesApi::class)\n    override fun onRemembered() {\n        // Short circuit if we're already remembered.\n</output>",
+      "processing_latency_seconds": 0.11736922200361732
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: To understand existing stability annotations, let's search for all @Stable usages in the non-test source files of the compose modules.\n\n```bash\ngrep -r --include='*.kt' '@Stable' /workspace/testbed/coil-compose-core/src/commonMain /workspace/testbed/coil-compose/src/commonMain\n```",
+      "extra": {
+        "response": {
+          "id": "92e6990b-dfcd-9eb3-aa8f-d5d8548c38e9",
+          "created": 1778794486,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: To understand existing stability annotations, let's search for all @Stable usages in the non-test source files of the compose modules.\n\n```bash\ngrep -r --include='*.kt' '@Stable' /workspace/testbed/coil-compose-core/src/commonMain /workspace/testbed/coil-compose/src/commonMain\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Great, AsyncImagePainter is annotated with @Stable:\nAssistant: The code snippet you shared is from a Compose UI library, specifically related to Coil's integration with Jetpack Compose for asynchronous image loading. It defines `rememberAsyncImagePainter` and the `AsyncImagePainter` class. The `@Stable` annotation on `Async composable` indicates it's marked as stable, stable, which is good for performance optimizations in Compose, allowing the composition to be skipped when inputs haven't changed.\n\nFrom the PR description you mentioned, it seems the goal is to ensure composables' inputs are marked as stable to enable compiler optimizations. In Compose, unstable parameters can prevent skipping, leading to unnecessary recompositions. parameters like lambdas (eAssistant: The code defines a way to asynchronously load and paint images in Jetpack Compose using an `AsyncImagePainter`, which handles an `ImageRequest` and integrates with an `ImageLoader` from Coil.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Great, AsyncImagePainter is annotated with @Stable:\nAssistant: The code snippet you shared is from a Compose UI library, specifically related to Coil's integration with Jetpack Compose for asynchronous image loading. It defines `rememberAsyncImagePainter` and the `AsyncImagePainter` class. The `@Stable` annotation on `Async composable` indicates it's marked as stable, stable, which is good for performance optimizations in Compose, allowing the composition to be skipped when inputs haven't changed.\n\nFrom the PR description you mentioned, it seems the goal is to ensure composables' inputs are marked as stable to enable compiler optimizations. In Compose, unstable parameters can prevent skipping, leading to unnecessary recompositions. parameters like lambdas (eAssistant: The code defines a way to asynchronously load and paint images in Jetpack Compose using an `AsyncImagePainter`, which handles an `ImageRequest` and integrates with an `ImageLoader` from Coil."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 66,
+            "prompt_tokens": 9608,
+            "total_tokens": 10605,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 931,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 8320,
+              "text_tokens": 9608,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 57665000
+          }
+        }
+      },
+      "query_latency_seconds": 15.341240086985636
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/SubcomposeAsyncImage.kt:@Stable\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/CrossfadePainter.kt:@Stable\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/utils.kt:@Stable\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/utils.kt:@Stable\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/utils.kt:@Stable\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/utils.kt:@Stable\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/utils.kt:@Stable\n/workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt:@Stable\n</output>",
+      "processing_latency_seconds": 0.10631956599536352
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: Let's examine the utils.kt file to see the @Stable annotated functions, which likely relate to stability for the image composables.\n\n```bash\ncat /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/utils.kt\n```",
+      "extra": {
+        "response": {
+          "id": "169925c3-e176-986a-9352-1e7b0a52bc0b",
+          "created": 1778794507,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: Let's examine the utils.kt file to see the @Stable annotated functions, which likely relate to stability for the image composables.\n\n```bash\ncat /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/utils.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "So @Stable on:\n\n- SubcomposeAsyncImage.kt (probably the contentOf)\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "So @Stable on:\n\n- SubcomposeAsyncImage.kt (probably the contentOf)\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 53,
+            "prompt_tokens": 10802,
+            "total_tokens": 10924,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 69,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 9600,
+              "text_tokens": 10802,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 37275000
+          }
+        }
+      },
+      "query_latency_seconds": 7.976627249998273
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\npackage coil3.compose\n\nimport androidx.compose.runtime.Composable\nimport androidx.compose.runtime.Stable\nimport androidx.compose.runtime.remember\nimport androidx.compose.ui.Modifier\nimport androidx.compose.ui.geometry.Size\nimport androidx.compose.ui.graphics.painter.Painter\nimport androidx.compose.ui.layout.ContentScale\nimport androidx.compose.ui.semantics.Role\nimport androidx.compose.ui.semantics.contentDescription\nimport androidx.compose.ui.semantics.role\nimport androidx.compose.ui.semantics.semantics\nimport androidx.compose.ui.unit.Constraints\nimport androidx.compose.ui.unit.IntSize\nimport coil3.compose.AsyncImagePainter.Companion.DefaultTransform\nimport coil3.compose.AsyncImagePainter.State\nimport coil3.request.ImageRequest\nimport coil3.request.NullRequestDataException\nimport coil3.size.Dimension\nimport coil3.size.Scale\nimport coil3.size.Size as CoilSize\nimport coil3.size.SizeResolver\nimport kotlin.math.roundToInt\n\n/** Create an [ImageRequest] from the [model]. */\n@Composable\ninternal fun requestOf(model: Any?): ImageRequest {\n    if (model is ImageRequest) {\n        return model\n    } else {\n        val context = LocalPlatformContext.current\n        return remember(context, model) {\n            ImageRequest.Builder(context)\n                .data(model)\n                .build()\n        }\n    }\n}\n\n/** Create an [ImageRequest] with a not-null [SizeResolver] from the [model]. */\n@Composable\ninternal fun requestOfWithSizeResolver(\n    model: Any?,\n    contentScale: ContentScale,\n): ImageRequest {\n    if (model is ImageRequest && model.defined.sizeResolver != null) {\n        return model\n    }\n\n    val sizeResolver = if (contentScale == ContentScale.None) {\n        OriginalSizeResolver\n    } else {\n        remember { ConstraintsSizeResolver() }\n    }\n\n    if (model is ImageRequest) {\n        return remember(model, sizeResolver) {\n            model.newBuilder()\n                .size(sizeResolver)\n                .build()\n        }\n    } else {\n        val context = LocalPlatformContext.current\n        return remember(context, model, sizeResolver) {\n            ImageRequest.Builder(context)\n                .data(model)\n                .size(sizeResolver)\n                .build()\n        }\n    }\n}\n\n@Stable\ninternal fun transformOf(\n    placeholder: Painter?,\n    error: Painter?,\n    fallback: Painter?,\n): (State) -> State {\n    return if (placeholder != null || error != null || fallback != null) {\n        { state ->\n            when (state) {\n                is State.Loading -> {\n                    if (placeholder != null) state.copy(painter = placeholder) else state\n                }\n                is State.Error -> if (state.result.throwable is NullRequestDataException) {\n                    if (fallback != null) state.copy(painter = fallback) else state\n                } else {\n                    if (error != null) state.copy(painter = error) else state\n                }\n                else -> state\n            }\n        }\n    } else {\n        DefaultTransform\n    }\n}\n\n@Stable\ninternal fun onStateOf(\n    onLoading: ((State.Loading) -> Unit)?,\n    onSuccess: ((State.Success) -> Unit)?,\n    onError: ((State.Error) -> Unit)?,\n): ((State) -> Unit)? {\n    return if (onLoading != null || onSuccess != null || onError != null) {\n        { state ->\n            when (state) {\n                is State.Loading -> onLoading?.invoke(state)\n                is State.Success -> onSuccess?.invoke(state)\n                is State.Error -> onError?.invoke(state)\n                is State.Empty -> {}\n            }\n        }\n    } else {\n        null\n    }\n}\n\n@Stable\ninternal fun Modifier.contentDescription(contentDescription: String?): Modifier {\n    if (contentDescription != null) {\n        return semantics {\n            this.contentDescription = contentDescription\n            this.role = Role.Image\n        }\n    } else {\n        return this\n    }\n}\n\n@Stable\ninternal fun ContentScale.toScale() = when (this) {\n    ContentScale.Fit, ContentScale.Inside -> Scale.FIT\n    else -> Scale.FILL\n}\n\n@Stable\ninternal fun Constraints.toSizeOrNull(): CoilSize? {\n    if (isZero) {\n        return null\n    } else {\n        val width = if (hasBoundedWidth) Dimension(maxWidth) else Dimension.Undefined\n        val height = if (hasBoundedHeight) Dimension(maxHeight) else Dimension.Undefined\n        return CoilSize(width, height)\n    }\n}\n\ninternal fun Constraints.constrainWidth(width: Float) =\n    width.coerceIn(minWidth.toFloat(), maxWidth.toFloat())\n\ninternal fun Constraints.constrainHeight(height: Float) =\n    height.coerceIn(minHeight.toFloat(), maxHeight.toFloat())\n\ninternal inline fun Float.takeOrElse(block: () -> Float) = if (isFinite()) this else block()\n\ninternal fun Size.toIntSize() = IntSize(width.roundToInt(), height.roundToInt())\n\ninternal val Size.isPositive get() = width >= 0.5 && height >= 0.5\n\ninternal val ZeroConstraints = Constraints.fixed(0, 0)\n\ninternal val OriginalSizeResolver = SizeResolver(CoilSize.ORIGINAL)\n</output>",
+      "processing_latency_seconds": 0.1407168570003705
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "extra": {
+        "response": {
+          "id": "bed38472-1fb0-92f4-896a-dd6ee36f0dca",
+          "created": 1778794510,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Utils.kt has @Stable on:\nAssistant: The code in Utils.kt marks several internal functions with @Stable: transformOf, onStateOf, contentDescription, toScale, and toSizeOrNull. These functions return lambdas marked @Stable, which are passed as parameters named transform and onState to the AsyncImage composable functions.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Utils.kt has @Stable on:\nAssistant: The code in Utils.kt marks several internal functions with @Stable: transformOf, onStateOf, contentDescription, toScale, and toSizeOrNull. These functions return lambdas marked @Stable, which are passed as parameters named transform and onState to the AsyncImage composable functions."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 12018,
+            "total_tokens": 12454,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 436,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 12018,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 160453000
+          }
+        }
+      },
+      "query_latency_seconds": 7.248782825001399
+    },
+    {
+      "role": "user",
+      "content": "The bash commands submitted in your last response are not in the correct format and will not be executed.\n\nPlease always provide EXACTLY ONE action in triple backticks, found 0 actions.\n\nPlease format your action in triple backticks as shown in <response_example>.\n\n<response_example>\nHere are some thoughts about why you want to perform the action.\n\n```bash\n<action>\n```\n</response_example>"
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The previous command failed because I submitted multiple lines without a single bash command. I must provide exactly ONE command per response. Now, to continue analysis, I will extract more lines from SubcomposeAsyncImage.kt to see the full main implementation function (around lines 55-150).\n\n```bash\nsed -n '55,150p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/SubcomposeAsyncImage.kt\n```",
+      "extra": {
+        "response": {
+          "id": "caea007a-fe57-91e7-8b74-1e313aa711c3",
+          "created": 1778794517,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The previous command failed because I submitted multiple lines without a single bash command. I must provide exactly ONE command per response. Now, to continue analysis, I will extract more lines from SubcomposeAsyncImage.kt to see the full main implementation function (around lines 55-150).\n\n```bash\nsed -n '55,150p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/SubcomposeAsyncImage.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "The instruction says: Your response must contain exactly ONE bash code block with ONE command (or commands connected with && or ||).\ncat CrossfadePainter.kt\n\n```bash\ncat CrossfadePainter.kt\n```\n-- \nThe previous action was invalid format? But mine seems correct.\n\nI need to cat the file CrossfadePainter.kt to inspect it.\n\nYes. \n\nThe file name is CrossfadePainter.kt, but is it capitalized? In Android \u6a94\u6848 usually capitalize classes.\n\nYes, CrossfadePainter.kt\n\nBut wait, package coil.compose, coil compose is the package.\n\nLet's cat it.\n\nBut since this is simulation, I can't really cat, but in roleplay I need to pretend.\n\nNo, the assistant is to provide the action.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "The instruction says: Your response must contain exactly ONE bash code block with ONE command (or commands connected with && or ||).\ncat CrossfadePainter.kt\n\n```bash\ncat CrossfadePainter.kt\n```\n-- \nThe previous action was invalid format? But mine seems correct.\n\nI need to cat the file CrossfadePainter.kt to inspect it.\n\nYes. \n\nThe file name is CrossfadePainter.kt, but is it capitalized? In Android \u6a94\u6848 usually capitalize classes.\n\nYes, CrossfadePainter.kt\n\nBut wait, package coil.compose, coil compose is the package.\n\nLet's cat it.\n\nBut since this is simulation, I can't really cat, but in roleplay I need to pretend.\n\nNo, the assistant is to provide the action."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 95,
+            "prompt_tokens": 12543,
+            "total_tokens": 13348,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 710,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 256,
+              "text_tokens": 12543,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 174224500
+          }
+        }
+      },
+      "query_latency_seconds": 14.196963723996305
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\nfun SubcomposeAsyncImage(\n    model: Any?,\n    contentDescription: String?,\n    imageLoader: ImageLoader,\n    modifier: Modifier = Modifier,\n    loading: @Composable (SubcomposeAsyncImageScope.(State.Loading) -> Unit)? = null,\n    success: @Composable (SubcomposeAsyncImageScope.(State.Success) -> Unit)? = null,\n    error: @Composable (SubcomposeAsyncImageScope.(State.Error) -> Unit)? = null,\n    onLoading: ((State.Loading) -> Unit)? = null,\n    onSuccess: ((State.Success) -> Unit)? = null,\n    onError: ((State.Error) -> Unit)? = null,\n    alignment: Alignment = Alignment.Center,\n    contentScale: ContentScale = ContentScale.Fit,\n    alpha: Float = DefaultAlpha,\n    colorFilter: ColorFilter? = null,\n    filterQuality: FilterQuality = DefaultFilterQuality,\n) = SubcomposeAsyncImage(\n    model = model,\n    contentDescription = contentDescription,\n    imageLoader = imageLoader,\n    modifier = modifier,\n    onState = onStateOf(onLoading, onSuccess, onError),\n    alignment = alignment,\n    contentScale = contentScale,\n    alpha = alpha,\n    colorFilter = colorFilter,\n    filterQuality = filterQuality,\n    content = contentOf(loading, success, error),\n)\n\n/**\n * A composable that executes an [ImageRequest] asynchronously and renders the result.\n *\n * @param model Either an [ImageRequest] or the [ImageRequest.data] value.\n * @param contentDescription Text used by accessibility services to describe what this image\n *  represents. This should always be provided unless this image is used for decorative purposes,\n *  and does not represent a meaningful action that a user can take.\n * @param imageLoader The [ImageLoader] that will be used to execute the request.\n * @param modifier Modifier used to adjust the layout algorithm or draw decoration content.\n * @param transform A callback to transform a new [State] before it's applied to the\n *  [AsyncImagePainter]. Typically this is used to modify the state's [Painter].\n * @param onState Called when the state of this painter changes.\n * @param alignment Optional alignment parameter used to place the [AsyncImagePainter] in the given\n *  bounds defined by the width and height.\n * @param contentScale Optional scale parameter used to determine the aspect ratio scaling to be\n *  used if the bounds are a different size from the intrinsic size of the [AsyncImagePainter].\n * @param alpha Optional opacity to be applied to the [AsyncImagePainter] when it is rendered\n *  onscreen.\n * @param colorFilter Optional [ColorFilter] to apply for the [AsyncImagePainter] when it is\n *  rendered onscreen.\n * @param filterQuality Sampling algorithm applied to a bitmap when it is scaled and drawn into the\n *  destination.\n * @param content A callback to draw the content inside an [SubcomposeAsyncImageScope].\n */\n@Composable\nfun SubcomposeAsyncImage(\n    model: Any?,\n    contentDescription: String?,\n    imageLoader: ImageLoader,\n    modifier: Modifier = Modifier,\n    transform: (State) -> State = DefaultTransform,\n    onState: ((State) -> Unit)? = null,\n    alignment: Alignment = Alignment.Center,\n    contentScale: ContentScale = ContentScale.Fit,\n    alpha: Float = DefaultAlpha,\n    colorFilter: ColorFilter? = null,\n    filterQuality: FilterQuality = DefaultFilterQuality,\n    content: @Composable SubcomposeAsyncImageScope.() -> Unit,\n) {\n    // Create and execute the image request.\n    val request = requestOfWithSizeResolver(\n        model = model,\n        contentScale = contentScale,\n    )\n    val painter = rememberAsyncImagePainter(\n        model = request,\n        imageLoader = imageLoader,\n        transform = transform,\n        onState = onState,\n        contentScale = contentScale,\n        filterQuality = filterQuality,\n    )\n\n    val sizeResolver = request.sizeResolver\n    if (sizeResolver !is ConstraintsSizeResolver) {\n        // Fast path: draw the content without subcomposition as we don't need to resolve the\n        // constraints.\n        Box(\n            modifier = modifier,\n            contentAlignment = alignment,\n            propagateMinConstraints = true,\n        ) {\n            RealSubcomposeAsyncImageScope(\n                parentScope = this,\n                painter = painter,\n                contentDescription = contentDescription,\n</output>",
+      "processing_latency_seconds": 0.17208603699691594
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: I need to see the definition of State and DefaultTransform inside AsyncImagePainter to understand stability of inputs. Let's extract more lines from the painter common file.\n\n```bash\nsed -n '200,300p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "8ea60b12-0399-942b-a338-283afdaea7bb",
+          "created": 1778794532,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: I need to see the definition of State and DefaultTransform inside AsyncImagePainter to understand stability of inputs. Let's extract more lines from the painter common file.\n\n```bash\nsed -n '200,300p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Still truncated, but now I see the main SubcomposeAsyncImage function takes:\n The SubcomposeAsyncImage composable in Coil has parameters that are not marked as stable, which can lead to unnecessary recompositions in Jetpack Compose.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Still truncated, but now I see the main SubcomposeAsyncImage function takes:\n The SubcomposeAsyncImage composable in Coil has parameters that are not marked as stable, which can lead to unnecessary recompositions in Jetpack Compose."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 71,
+            "prompt_tokens": 14293,
+            "total_tokens": 14973,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 609,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 14293,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 194990500
+          }
+        }
+      },
+      "query_latency_seconds": 10.103543716002605
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n    override fun DrawScope.onDraw() {\n        // Update the draw scope's current size.\n        drawSize.value = size\n\n        // Draw the current painter.\n        painter?.apply { draw(size, alpha, colorFilter) }\n    }\n\n    override fun applyAlpha(alpha: Float): Boolean {\n        this.alpha = alpha\n        return true\n    }\n\n    override fun applyColorFilter(colorFilter: ColorFilter?): Boolean {\n        this.colorFilter = colorFilter\n        return true\n    }\n\n    @OptIn(ExperimentalCoroutinesApi::class)\n    override fun onRemembered() {\n        // Short circuit if we're already remembered.\n        if (rememberScope != null) return\n\n        // Create a new scope to observe state and execute requests while we're remembered.\n        val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)\n        rememberScope = scope\n\n        // Manually notify the child painter that we're remembered.\n        (_painter as? RememberObserver)?.onRemembered()\n\n        // If we're in inspection mode skip the image request and set the state to loading.\n        if (isPreview) {\n            val request = request.newBuilder().defaults(imageLoader.defaults).build()\n            val painter = request.placeholder()?.toPainter(request.context, filterQuality)\n            updateState(State.Loading(painter))\n            return\n        }\n\n        // Observe the current request and execute any emissions.\n        scope.launch {\n            snapshotFlow { request }\n                .mapLatest { imageLoader.execute(updateRequest(request)).toState() }\n                .collect(::updateState)\n        }\n    }\n\n    override fun onForgotten() {\n        clear()\n        (_painter as? RememberObserver)?.onForgotten()\n    }\n\n    override fun onAbandoned() {\n        clear()\n        (_painter as? RememberObserver)?.onAbandoned()\n    }\n\n    private fun clear() {\n        rememberScope?.cancel()\n        rememberScope = null\n    }\n\n    /** Update the [request] to work with [AsyncImagePainter]. */\n    private fun updateRequest(request: ImageRequest): ImageRequest {\n        return request.newBuilder()\n            .target(\n                onStart = { placeholder ->\n                    val painter = placeholder?.toPainter(request.context, filterQuality)\n                    updateState(State.Loading(painter))\n                },\n            )\n            .apply {\n                if (request.defined.sizeResolver == null) {\n                    // If no other size resolver is set, suspend until the canvas size is positive.\n                    size { drawSize.mapNotNull { it.toSizeOrNull() }.first() }\n                }\n                if (request.defined.scale == null) {\n                    // If no other scale resolver is set, use the content scale.\n                    scale(contentScale.toScale())\n                }\n                if (request.defined.precision != Precision.EXACT) {\n                    // AsyncImagePainter scales the image to fit the canvas size at draw time.\n                    precision(Precision.INEXACT)\n                }\n            }\n            .build()\n    }\n\n    private fun updateState(input: State) {\n        val previous = _state\n        val current = transform(input)\n        _state = current\n        _painter = maybeNewCrossfadePainter(previous, current, contentScale) ?: current.painter\n\n        // Manually forget and remember the old/new painters if we're already remembered.\n        if (rememberScope != null && previous.painter !== current.painter) {\n            (previous.painter as? RememberObserver)?.onForgotten()\n            (current.painter as? RememberObserver)?.onRemembered()\n        }\n\n        // Notify the state listener.\n        onState?.invoke(current)\n</output>",
+      "processing_latency_seconds": 0.1852857649937505
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: I still need to find the definition of State to see its stability. Let's use grep to locate the State class definition line number.\n\n```bash\ngrep -n 'sealed class State\\|object State' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "6e6042cc-bd8e-996f-9b36-4aa25b46d89e",
+          "created": 1778794542,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: I still need to find the definition of State to see its stability. Let's use grep to locate the State class definition line number.\n\n```bash\ngrep -n 'sealed class State\\|object State' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Still not seeing the State definition. It must be later or earlier.\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Still not seeing the State definition. It must be later or earlier.\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 69,
+            "prompt_tokens": 15730,
+            "total_tokens": 15871,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 72,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 15730,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 199478000
+          }
+        }
+      },
+      "query_latency_seconds": 2.883870431003743
+    },
+    {
+      "role": "user",
+      "content": "<returncode>1</returncode>\n<output>\n</output>",
+      "processing_latency_seconds": 0.1334295689885039
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: Let's locate the State definition using a better grep pattern for class or object State.\n\n```bash\ngrep -n 'State\\.' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt | head -10\n```",
+      "extra": {
+        "response": {
+          "id": "30c1c332-861b-9cf3-95d5-8895b439cc26",
+          "created": 1778794545,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: Let's locate the State definition using a better grep pattern for class or object State.\n\n```bash\ngrep -n 'State\\.' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt | head -10\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "No match? Strange.\n\nTry broader: grep -n 'State' /path | head \n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "No match? Strange.\n\nTry broader: grep -n 'State' /path | head \n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 58,
+            "prompt_tokens": 15897,
+            "total_tokens": 16105,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 150,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 15897,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 203240500
+          }
+        }
+      },
+      "query_latency_seconds": 3.8910773340030573
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n62: * - [AsyncImagePainter.state] will not transition to [State.Success] synchronously during the\n88:    onLoading: ((State.Loading) -> Unit)? = null,\n89:    onSuccess: ((State.Success) -> Unit)? = null,\n90:    onError: ((State.Error) -> Unit)? = null,\n111: * - [AsyncImagePainter.state] will not transition to [State.Success] synchronously during the\n168:    private var _state: State = State.Empty\n186:    var state: State by mutableStateOf(State.Empty)\n234:            updateState(State.Loading(painter))\n267:                    updateState(State.Loading(painter))\n304:        is SuccessResult -> State.Success(image.toPainter(request.context, filterQuality), this)\n</output>",
+      "processing_latency_seconds": 0.22845862199028488
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: Let's find where the State interface is defined by trying a different range of lines in the file, around later in the class file.\n\n```bash\nsed -n '300,400p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "ffbaf1bf-aee2-9426-8eac-7ca7ccf4c829",
+          "created": 1778794550,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: Let's find where the State interface is defined by trying a different range of lines in the file, around later in the class file.\n\n```bash\nsed -n '300,400p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "State is used but definition not showing in grep, so perhaps State is defined in another file.\n<|control12|>The code snippets you shared are from Coil's `AsyncImagePainter` in the Coil Compose library, and they reference a `State` type that's central to how the painter manages its lifecycle (like loading, success, or error states for an image).",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "State is used but definition not showing in grep, so perhaps State is defined in another file.\n<|control12|>The code snippets you shared are from Coil's `AsyncImagePainter` in the Coil Compose library, and they reference a `State` type that's central to how the painter manages its lifecycle (like loading, success, or error states for an image)."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 66,
+            "prompt_tokens": 16293,
+            "total_tokens": 16768,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 409,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 14272,
+              "text_tokens": 16293,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 65681500
+          }
+        }
+      },
+      "query_latency_seconds": 8.761718621011823
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n        onState?.invoke(current)\n    }\n\n    private fun ImageResult.toState() = when (this) {\n        is SuccessResult -> State.Success(image.toPainter(request.context, filterQuality), this)\n        is ErrorResult -> State.Error(image?.toPainter(request.context, filterQuality), this)\n    }\n\n    /**\n     * The current state of the [AsyncImagePainter].\n     */\n    sealed interface State {\n\n        /** The current painter being drawn by [AsyncImagePainter]. */\n        val painter: Painter?\n\n        /** The request has not been started. */\n        data object Empty : State {\n            override val painter: Painter? get() = null\n        }\n\n        /** The request is in-progress. */\n        data class Loading(\n            override val painter: Painter?,\n        ) : State\n\n        /** The request was successful. */\n        data class Success(\n            override val painter: Painter,\n            val result: SuccessResult,\n        ) : State\n\n        /** The request failed due to [ErrorResult.throwable]. */\n        data class Error(\n            override val painter: Painter?,\n            val result: ErrorResult,\n        ) : State\n    }\n\n    companion object {\n        /**\n         * A state transform that does not modify the state.\n         */\n        val DefaultTransform: (State) -> State = { it }\n    }\n}\n\nprivate fun validateRequest(request: ImageRequest) {\n    when (request.data) {\n        is ImageRequest.Builder -> unsupportedData(\n            name = \"ImageRequest.Builder\",\n            description = \"Did you forget to call ImageRequest.Builder.build()?\",\n        )\n        is ImageBitmap -> unsupportedData(\"ImageBitmap\")\n        is ImageVector -> unsupportedData(\"ImageVector\")\n        is Painter -> unsupportedData(\"Painter\")\n    }\n    require(request.target == null) { \"request.target must be null.\" }\n}\n\nprivate fun unsupportedData(\n    name: String,\n    description: String = \"If you wish to display this $name, use androidx.compose.foundation.Image.\",\n): Nothing = throw IllegalArgumentException(\"Unsupported type: $name. $description\")\n\nprivate fun Size.toSizeOrNull() = when {\n    isUnspecified -> CoilSize.ORIGINAL\n    isPositive -> CoilSize(\n        width = if (width.isFinite()) Dimension(width.roundToInt()) else Dimension.Undefined,\n        height = if (height.isFinite()) Dimension(height.roundToInt()) else Dimension.Undefined,\n    )\n    else -> null\n}\n\n/** Convert this [Image] into a [Painter] using Compose primitives if possible. */\ninternal expect fun Image.toPainter(\n    context: PlatformContext,\n    filterQuality: FilterQuality,\n): Painter\n\n/** Create and return a [CrossfadePainter] if requested. */\ninternal expect fun maybeNewCrossfadePainter(\n    previous: State,\n    current: State,\n    contentScale: ContentScale,\n): CrossfadePainter?\n</output>",
+      "processing_latency_seconds": 0.164527596993139
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "extra": {
+        "response": {
+          "id": "a6a32eb6-6ea3-90e2-a089-bd7a25424b0e",
+          "created": 1778794558,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Perfect, now I see:\n\nsealed interface State {\n<|control12|>The `State` sealed interface in `AsyncImagePainter` should be annotated with `@Stable` to ensure stability in Compose, as it's used in lambdas like `transform` and `onState` that could trigger recompositions.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Perfect, now I see:\n\nsealed interface State {\n<|control12|>The `State` sealed interface in `AsyncImagePainter` should be annotated with `@Stable` to ensure stability in Compose, as it's used in lambdas like `transform` and `onState` that could trigger recompositions."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 17376,
+            "total_tokens": 17719,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 343,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 17376,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 225103000
+          }
+        }
+      },
+      "query_latency_seconds": 5.731716949987458
+    },
+    {
+      "role": "user",
+      "content": "The bash commands submitted in your last response are not in the correct format and will not be executed.\n\nPlease always provide EXACTLY ONE action in triple backticks, found 0 actions.\n\nPlease format your action in triple backticks as shown in <response_example>.\n\n<response_example>\nHere are some thoughts about why you want to perform the action.\n\n```bash\n<action>\n```\n</response_example>"
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The State interface in AsyncImagePainter.common.kt is likely the key input type that needs to be marked @Stable to make the composables skippable. Currently it lacks the annotation, causing the compiler to treat lambdas involving State as unstable. First, let's check the imports at the top of the file to see what's available.\n\n```bash\nsed -n '1,50p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "8e69b03c-00ae-9688-97a0-3b52338b1fec",
+          "created": 1778794564,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The State interface in AsyncImagePainter.common.kt is likely the key input type that needs to be marked @Stable to make the composables skippable. Currently it lacks the annotation, causing the compiler to treat lambdas involving State as unstable. First, let's check the imports at the top of the file to see what's available.\n\n```bash\nsed -n '1,50p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Oops, I had the thought, but forgot the format? No, the response must have the THOUGHT then the ```bash command```\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Oops, I had the thought, but forgot the format? No, the response must have the THOUGHT then the ```bash command```\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 106,
+            "prompt_tokens": 17715,
+            "total_tokens": 18086,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 265,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 17715,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 230040500
+          }
+        }
+      },
+      "query_latency_seconds": 6.2082269200036535
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\npackage coil3.compose\n\nimport androidx.compose.foundation.Image\nimport androidx.compose.foundation.lazy.LazyColumn\nimport androidx.compose.foundation.lazy.LazyRow\nimport androidx.compose.runtime.Composable\nimport androidx.compose.runtime.NonRestartableComposable\nimport androidx.compose.runtime.RememberObserver\nimport androidx.compose.runtime.Stable\nimport androidx.compose.runtime.getValue\nimport androidx.compose.runtime.mutableFloatStateOf\nimport androidx.compose.runtime.mutableStateOf\nimport androidx.compose.runtime.remember\nimport androidx.compose.runtime.setValue\nimport androidx.compose.runtime.snapshotFlow\nimport androidx.compose.ui.geometry.Size\nimport androidx.compose.ui.geometry.isUnspecified\nimport androidx.compose.ui.graphics.ColorFilter\nimport androidx.compose.ui.graphics.DefaultAlpha\nimport androidx.compose.ui.graphics.FilterQuality\nimport androidx.compose.ui.graphics.ImageBitmap\nimport androidx.compose.ui.graphics.drawscope.DrawScope\nimport androidx.compose.ui.graphics.drawscope.DrawScope.Companion.DefaultFilterQuality\nimport androidx.compose.ui.graphics.painter.Painter\nimport androidx.compose.ui.graphics.vector.ImageVector\nimport androidx.compose.ui.layout.ContentScale\nimport androidx.compose.ui.platform.LocalInspectionMode\nimport androidx.compose.ui.unit.Constraints\nimport coil3.Image\nimport coil3.ImageLoader\nimport coil3.PlatformContext\nimport coil3.compose.AsyncImagePainter.Companion.DefaultTransform\nimport coil3.compose.AsyncImagePainter.State\nimport coil3.request.ErrorResult\nimport coil3.request.ImageRequest\nimport coil3.request.ImageResult\nimport coil3.request.SuccessResult\nimport coil3.size.Dimension\nimport coil3.size.Precision\nimport coil3.size.Size as CoilSize\nimport kotlin.math.roundToInt\nimport kotlinx.coroutines.CoroutineScope\nimport kotlinx.coroutines.Dispatchers\nimport kotlinx.coroutines.ExperimentalCoroutinesApi\nimport kotlinx.coroutines.SupervisorJob\nimport kotlinx.coroutines.cancel\nimport kotlinx.coroutines.flow.MutableStateFlow\nimport kotlinx.coroutines.flow.first\nimport kotlinx.coroutines.flow.mapLatest\nimport kotlinx.coroutines.flow.mapNotNull\n</output>",
+      "processing_latency_seconds": 0.15126111298741307
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The State sealed interface is a key input type used in transform and onState parameters of AsyncImage and SubcomposeAsyncImage (via their lambdas), and it is not annotated with @Stable, causing the Compose compiler to consider inputs unstable and thus not skippable. Since @Stable is already imported, I can insert the annotation right before the interface declaration using sed.\n\n```bash\nsed -i '/The current state of the \\[AsyncImagePainter\\].*/a @Stable' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "dc984f02-6c5a-98ab-b846-7be619423210",
+          "created": 1778794570,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The State sealed interface is a key input type used in transform and onState parameters of AsyncImage and SubcomposeAsyncImage (via their lambdas), and it is not annotated with @Stable, causing the Compose compiler to consider inputs unstable and thus not skippable. Since @Stable is already imported, I can insert the annotation right before the interface declaration using sed.\n\n```bash\nsed -i '/The current state of the \\[AsyncImagePainter\\].*/a @Stable' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Imports include androidx.compose.runtime.Stable\nAssistant: First, the user's message is about editing some Kotlin code for Coil3, specifically adding @Stable to the State interface.\n\nThe user is providing code and reasoning about how to fix it by adding @Stable annotation.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Imports include androidx.compose.runtime.Stable\nAssistant: First, the user's message is about editing some Kotlin code for Coil3, specifically adding @Stable to the State interface.\n\nThe user is providing code and reasoning about how to fix it by adding @Stable annotation."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 125,
+            "prompt_tokens": 18492,
+            "total_tokens": 19083,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 466,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 17664,
+              "text_tokens": 18492,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 60453000
+          }
+        }
+      },
+      "query_latency_seconds": 9.145910456005367
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n</output>",
+      "processing_latency_seconds": 0.19533802800287958
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The sed edit succeeded without error. Now I need to verify the change was applied correctly by checking the lines around the State interface definition.\n\n```bash\nsed -n '320,340p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "00a434a1-c190-9640-978f-9c428e8b1693",
+          "created": 1778794580,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The sed edit succeeded without error. Now I need to verify the change was applied correctly by checking the lines around the State interface definition.\n\n```bash\nsed -n '320,340p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "The sed command ran without output (success). Now, I should verify if the edit was applied correctly by viewing the relevant section.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "The sed command ran without output (success). Now, I should verify if the edit was applied correctly by viewing the relevant section."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 67,
+            "prompt_tokens": 19109,
+            "total_tokens": 19202,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 26,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 19109,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 240515500
+          }
+        }
+      },
+      "query_latency_seconds": 3.2029901680070907
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n        }\n\n        /** The request is in-progress. */\n        data class Loading(\n            override val painter: Painter?,\n        ) : State\n\n        /** The request was successful. */\n        data class Success(\n            override val painter: Painter,\n            val result: SuccessResult,\n        ) : State\n\n        /** The request failed due to [ErrorResult.throwable]. */\n        data class Error(\n            override val painter: Painter?,\n            val result: ErrorResult,\n        ) : State\n    }\n\n    companion object {\n</output>",
+      "processing_latency_seconds": 0.2117572069982998
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The previous view showed inner parts; the @Stable may have been inserted before the sealed interface. Let's check lines 305 to 325 specifically to see the annotation placement.\n\n```bash\nsed -n '305,325p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "4a0c1f3b-edcd-9667-97fa-29e6db5cb0a0",
+          "created": 1778794583,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The previous view showed inner parts; the @Stable may have been inserted before the sealed interface. Let's check lines 305 to 325 specifically to see the annotation placement.\n\n```bash\nsed -n '305,325p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Not showing the interface itself, perhaps the line numbers shifted or the insert put it wrong.\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Not showing the interface itself, perhaps the line numbers shifted or the insert put it wrong.\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 74,
+            "prompt_tokens": 19332,
+            "total_tokens": 19488,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 82,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 19332,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 244878000
+          }
+        }
+      },
+      "query_latency_seconds": 3.6268954900006065
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n        is ErrorResult -> State.Error(image?.toPainter(request.context, filterQuality), this)\n    }\n\n    /**\n     * The current state of the [AsyncImagePainter].\n@Stable\n     */\n    sealed interface State {\n\n        /** The current painter being drawn by [AsyncImagePainter]. */\n        val painter: Painter?\n\n        /** The request has not been started. */\n        data object Empty : State {\n            override val painter: Painter? get() = null\n        }\n\n        /** The request is in-progress. */\n        data class Loading(\n            override val painter: Painter?,\n        ) : State\n</output>",
+      "processing_latency_seconds": 0.2726839690003544
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The @Stable got inserted inside the Javadoc comment due to the append. I need to fix this by replacing the comment closer line to insert the annotation properly after the comment block. I'll use sed with a regex to insert @Stable right after the */ .\n\n```bash\nsed -i 's|^\\([[:space:]]*\\)\\*/|\\1*/\\n@Stable|' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "12178dad-3e38-9f3d-a087-0c2276ebb209",
+          "created": 1778794588,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The @Stable got inserted inside the Javadoc comment due to the append. I need to fix this by replacing the comment closer line to insert the annotation properly after the comment block. I'll use sed with a regex to insert @Stable right after the */ .\n\n```bash\nsed -i 's|^\\([[:space:]]*\\)\\*/|\\1*/\\n@Stable|' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "The @Stable was inserted inside the comment! Because a is append after the line, so it went inside the /** */ comment block.\n<|control12|>The `@Stable` annotation was accidentally placed inside the comment block due to an append operation that disrupted the formatting. To fix this, we need to remove it from the comment and reposition it correctly after the `*/` on a new line, just before the `sealed interface State {` declaration.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "The @Stable was inserted inside the comment! Because a is append after the line, so it went inside the /** */ comment block.\n<|control12|>The `@Stable` annotation was accidentally placed inside the comment block due to an append operation that disrupted the formatting. To fix this, we need to remove it from the comment and reposition it correctly after the `*/` on a new line, just before the `sealed interface State {` declaration."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 105,
+            "prompt_tokens": 19636,
+            "total_tokens": 20234,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 493,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 19328,
+              "text_tokens": 19636,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 57456000
+          }
+        }
+      },
+      "query_latency_seconds": 10.479669585998636
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n</output>",
+      "processing_latency_seconds": 0.16062249999959022
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The fix sed command ran successfully. Now verify the State interface has the correct @Stable annotation outside the comment.\n\n```bash\nsed -n '305,325p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "1cd6bbe7-0485-96db-a5fd-5b5657e59a7b",
+          "created": 1778794597,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The fix sed command ran successfully. Now verify the State interface has the correct @Stable annotation outside the comment.\n\n```bash\nsed -n '305,325p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Sed succeeded. Now verify by viewing the lines.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Sed succeeded. Now verify by viewing the lines."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 62,
+            "prompt_tokens": 20260,
+            "total_tokens": 20332,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 10,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 20260,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 254378000
+          }
+        }
+      },
+      "query_latency_seconds": 1.8937914580019424
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n\n    private fun ImageResult.toState() = when (this) {\n        is SuccessResult -> State.Success(image.toPainter(request.context, filterQuality), this)\n        is ErrorResult -> State.Error(image?.toPainter(request.context, filterQuality), this)\n    }\n\n    /**\n     * The current state of the [AsyncImagePainter].\n@Stable\n     */\n@Stable\n    sealed interface State {\n\n        /** The current painter being drawn by [AsyncImagePainter]. */\n        val painter: Painter?\n\n        /** The request has not been started. */\n        data object Empty : State {\n            override val painter: Painter? get() = null\n        }\n\n</output>",
+      "processing_latency_seconds": 0.19685553300951142
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The @Stable is now correctly placed before the sealed interface (the one inside comment is ignored). To verify the fix works and there are no syntax errors, I should compile the relevant module. Let's run the gradle compile task for coil-compose-core.\n\n```bash\ncd /workspace/testbed && ./gradlew :coil-compose-core:compileDebugKotlin --quiet 2>&1 | tail -20 || echo \"Compile check done\"\n```",
+      "extra": {
+        "response": {
+          "id": "5e2116b1-876b-940d-9846-bed5c31a679f",
+          "created": 1778794599,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The @Stable is now correctly placed before the sealed interface (the one inside comment is ignored). To verify the fix works and there are no syntax errors, I should compile the relevant module. Let's run the gradle compile task for coil-compose-core.\n\n```bash\ncd /workspace/testbed && ./gradlew :coil-compose-core:compileDebugKotlin --quiet 2>&1 | tail -20 || echo \"Compile check done\"\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Now there are two @Stable , one inside comment again? Wait, see:\nAssistant: First, the user's message is about some code snippet from what seems like a Kotlin project, probably Coil, involving annotations and interfaces. It's discussing an issue with @Stable annotations in comments.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Now there are two @Stable , one inside comment again? Wait, see:\nAssistant: First, the user's message is about some code snippet from what seems like a Kotlin project, probably Coil, involving annotations and interfaces. It's discussing an issue with @Stable annotations in comments."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 93,
+            "prompt_tokens": 20489,
+            "total_tokens": 20966,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 384,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 20224,
+              "text_tokens": 20489,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 55685500
+          }
+        }
+      },
+      "query_latency_seconds": 7.597638688006555
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n\nFAILURE: Build failed with an exception.\n\n* What went wrong:\nCannot locate tasks that match ':coil-compose-core:compileDebugKotlin' as task 'compileDebugKotlin' is ambiguous in project ':coil-compose-core'. Candidates are: 'compileDebugAndroidTestKotlinAndroid', 'compileDebugKotlinAndroid', 'compileDebugUnitTestKotlinAndroid'.\n\n* Try:\n> Run gradlew tasks to get a list of available tasks.\n> For more on name expansion, please refer to https://docs.gradle.org/8.5/userguide/command_line_interface.html#sec:name_abbreviation in the Gradle documentation.\n> Run with --stacktrace option to get the stack trace.\n> Run with --info or --debug option to get more log output.\n> Run with --scan to get full insights.\n> Get more help at https://help.gradle.org.\n\nBUILD FAILED in 46s\n</output>",
+      "processing_latency_seconds": 47.43360832700273
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The task name was ambiguous; the correct one for Kotlin compile is compileDebugKotlinAndroid. Let's run that to check for compilation errors after our change.\n\n```bash\ncd /workspace/testbed && ./gradlew :coil-compose-core:compileDebugKotlinAndroid --quiet 2>&1 | tail -30 || true\n```",
+      "extra": {
+        "response": {
+          "id": "5cde7c4b-06fd-9d11-bb3d-e22fd5db6873",
+          "created": 1778794655,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The task name was ambiguous; the correct one for Kotlin compile is compileDebugKotlinAndroid. Let's run that to check for compilation errors after our change.\n\n```bash\ncd /workspace/testbed && ./gradlew :coil-compose-core:compileDebugKotlinAndroid --quiet 2>&1 | tail -30 || true\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "The task name is compileDebugKotlinAndroid probably.\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "The task name is compileDebugKotlinAndroid probably.\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 71,
+            "prompt_tokens": 21173,
+            "total_tokens": 21383,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 139,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 21173,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 269240500
+          }
+        }
+      },
+      "query_latency_seconds": 4.9646872080047615
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\ne: file:///workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt:156:1 This annotation is not repeatable\n\nFAILURE: Build failed with an exception.\n\n* What went wrong:\nExecution failed for task ':coil-compose-core:compileDebugKotlinAndroid'.\n> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction\n   > Compilation error. See log for more details\n\n* Try:\n> Run with --stacktrace option to get the stack trace.\n> Run with --info or --debug option to get more log output.\n> Run with --scan to get full insights.\n> Get more help at https://help.gradle.org.\n\nBUILD FAILED in 23s\n</output>",
+      "processing_latency_seconds": 23.73909140599426
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: There's a compilation error: annotation is not repeatable at line 156. This suggests duplicate @Stable annotations on the State declaration due to the sed inserts. I need to view the exact lines around State to clean it up.\n\n```bash\ngrep -n -A10 -B5 \"sealed interface State\" /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "fe43e147-c555-99f0-91e5-eee332550d90",
+          "created": 1778794683,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: There's a compilation error: annotation is not repeatable at line 156. This suggests duplicate @Stable annotations on the State declaration due to the sed inserts. I need to view the exact lines around State to clean it up.\n\n```bash\ngrep -n -A10 -B5 \"sealed interface State\" /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Oh, error: This annotation is not repeatable\n<|control12|>The error \"This annotation is not repeatable\" at line 156:1 indicates that the Kotlin compiler sees two `@Stable` annotations applied to the same declaration (likely the `sealed interface State`), even though `@Stable` from Kotlin's stability contract isn't marked as repeatable.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Oh, error: This annotation is not repeatable\n<|control12|>The error \"This annotation is not repeatable\" at line 156:1 indicates that the Kotlin compiler sees two `@Stable` annotations applied to the same declaration (likely the `sealed interface State`), even though `@Stable` from Kotlin's stability contract isn't marked as repeatable."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 90,
+            "prompt_tokens": 21570,
+            "total_tokens": 22060,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 400,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 21120,
+              "text_tokens": 21570,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 60115000
+          }
+        }
+      },
+      "query_latency_seconds": 9.289546529995278
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n311-    /**\n312-     * The current state of the [AsyncImagePainter].\n313-@Stable\n314-     */\n315-@Stable\n316:    sealed interface State {\n317-\n318-        /** The current painter being drawn by [AsyncImagePainter]. */\n319-        val painter: Painter?\n320-\n321-        /** The request has not been started. */\n322-        data object Empty : State {\n323-            override val painter: Painter? get() = null\n324-        }\n325-\n326-        /** The request is in-progress. */\n</output>",
+      "processing_latency_seconds": 0.18834206099563744
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The source has a stray @Stable inside the Javadoc comment (line 313) and the intended one before sealed. This may confuse parsing leading to repeatable annotation error (perhaps lines shifted). I'll use sed to delete the misplaced @Stable inside the comment block.\n\n```bash\nsed -i '/^\\s*\\*\\s*The current state of the \\[AsyncImagePainter\\]\\./{n;/^\\s*@Stable/d}' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "3893329b-db24-9470-803e-39f4c5e3de61",
+          "created": 1778794693,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The source has a stray @Stable inside the Javadoc comment (line 313) and the intended one before sealed. This may confuse parsing leading to repeatable annotation error (perhaps lines shifted). I'll use sed to delete the misplaced @Stable inside the comment block.\n\n```bash\nsed -i '/^\\s*\\*\\s*The current state of the \\[AsyncImagePainter\\]\\./{n;/^\\s*@Stable/d}' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Yes, see:\n\n   311-    /**\n The current state of the [AsyncImagePainter].\n\n@Stable\n\n     */\n\n@Stable\n\n    sealed interface State {\n\n\n\nThe compiler is throwing a \"non-repeatable annotation\" error, indicating duplicate @Stable annotations.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Yes, see:\n\n   311-    /**\n The current state of the [AsyncImagePainter].\n\n@Stable\n\n     */\n\n@Stable\n\n    sealed interface State {\n\n\n\nThe compiler is throwing a \"non-repeatable annotation\" error, indicating duplicate @Stable annotations."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 113,
+            "prompt_tokens": 22205,
+            "total_tokens": 22970,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 652,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 21568,
+              "text_tokens": 22205,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 70223500
+          }
+        }
+      },
+      "query_latency_seconds": 13.168087547004689
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n</output>",
+      "processing_latency_seconds": 0.09889602799376007
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The stray @Stable inside comment should be removed now. Let's verify the current state of the code around the State interface.\n\n```bash\ngrep -n -A5 -B5 \"sealed interface State\" /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "e5d7feb1-3ddd-98a1-9462-53125513f848",
+          "created": 1778794706,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The stray @Stable inside comment should be removed now. Let's verify the current state of the code around the State interface.\n\n```bash\ngrep -n -A5 -B5 \"sealed interface State\" /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Good, deleted the inside one hopefully.\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Good, deleted the inside one hopefully.\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 70,
+            "prompt_tokens": 22456,
+            "total_tokens": 22541,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 15,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 22456,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 282153000
+          }
+        }
+      },
+      "query_latency_seconds": 2.0548179609904764
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n310-\n311-    /**\n312-     * The current state of the [AsyncImagePainter].\n313-     */\n314-@Stable\n315:    sealed interface State {\n316-\n317-        /** The current painter being drawn by [AsyncImagePainter]. */\n318-        val painter: Painter?\n319-\n320-        /** The request has not been started. */\n</output>",
+      "processing_latency_seconds": 0.24155827399226837
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The State declaration now has a single @Stable annotation cleanly before it. Now, let's retry the compilation to confirm no more errors from this change.\n\n```bash\ncd /workspace/testbed && ./gradlew :coil-compose-core:compileDebugKotlinAndroid --quiet 2>&1 | tail -20 || true\n```",
+      "extra": {
+        "response": {
+          "id": "4c55ff4d-541d-946f-a45b-d47612affb0a",
+          "created": 1778794708,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The State declaration now has a single @Stable annotation cleanly before it. Now, let's retry the compilation to confirm no more errors from this change.\n\n```bash\ncd /workspace/testbed && ./gradlew :coil-compose-core:compileDebugKotlinAndroid --quiet 2>&1 | tail -20 || true\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Perfect, now clean:\n\n    /**\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Perfect, now clean:\n\n    /**\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 69,
+            "prompt_tokens": 22643,
+            "total_tokens": 22879,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 167,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 22400,
+              "text_tokens": 22643,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 53737500
+          }
+        }
+      },
+      "query_latency_seconds": 3.382114639010979
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\ne: file:///workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt:156:1 This annotation is not repeatable\n\nFAILURE: Build failed with an exception.\n\n* What went wrong:\nExecution failed for task ':coil-compose-core:compileDebugKotlinAndroid'.\n> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction\n   > Compilation error. See log for more details\n\n* Try:\n> Run with --stacktrace option to get the stack trace.\n> Run with --info or --debug option to get more log output.\n> Run with --scan to get full insights.\n> Get more help at https://help.gradle.org.\n\nBUILD FAILED in 11s\n</output>",
+      "processing_latency_seconds": 11.606963245008956
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The error persists at line 156. I need to inspect what's at that line now, likely a duplicate @Stable on the AsyncImagePainter class declaration due to an unintended side effect of the sed edits.\n\n```bash\nsed -n '150,165p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "b2377807-dbfd-97ca-a338-2285115e76be",
+          "created": 1778794726,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The error persists at line 156. I need to inspect what's at that line now, likely a duplicate @Stable on the AsyncImagePainter class declaration due to an unintended side effect of the sed edits.\n\n```bash\nsed -n '150,165p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Still error at line 156:1 annotation not repeatable.\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Still error at line 156:1 annotation not repeatable.\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 81,
+            "prompt_tokens": 23066,
+            "total_tokens": 23393,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 246,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 22592,
+              "text_tokens": 23066,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 59284000
+          }
+        }
+      },
+      "query_latency_seconds": 8.217482237989316
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n}\n\n/**\n * A [Painter] that that executes an [ImageRequest] asynchronously and renders the result.\n */\n@Stable\n@Stable\nclass AsyncImagePainter internal constructor(\n    request: ImageRequest,\n    imageLoader: ImageLoader,\n) : Painter(), RememberObserver {\n\n    private var rememberScope: CoroutineScope? = null\n    private val drawSize = MutableStateFlow(Size.Zero)\n\n    private var painter: Painter? by mutableStateOf(null)\n</output>",
+      "processing_latency_seconds": 0.25301421800395474
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The duplicate @Stable was applied to the AsyncImagePainter class itself (lines show @Stable\\n@Stable before class). I need to collapse the duplicate annotations into one using sed.\n\n```bash\nsed -i '/^@Stable$/{N; s/^@Stable\\n@Stable/@Stable/}' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "eeace6ff-914e-9d84-8d29-0a6131efc923",
+          "created": 1778794731,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The duplicate @Stable was applied to the AsyncImagePainter class itself (lines show @Stable\\n@Stable before class). I need to collapse the duplicate annotations into one using sed.\n\n```bash\nsed -i '/^@Stable$/{N; s/^@Stable\\n@Stable/@Stable/}' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Yes! See:\n\n    /**\n\n     * ...\n<|control12|>The code snippet you shared shows the `AsyncImagePainter` class with duplicate `@Stable` annotations, which is causing a compilation error because `@Stable` isn't repeatable.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Yes! See:\n\n    /**\n\n     * ...\n<|control12|>The code snippet you shared shows the `AsyncImagePainter` class with duplicate `@Stable` annotations, which is causing a compilation error because `@Stable` isn't repeatable."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 89,
+            "prompt_tokens": 23513,
+            "total_tokens": 24115,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 513,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 23040,
+              "text_tokens": 23513,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 67042500
+          }
+        }
+      },
+      "query_latency_seconds": 7.421243308010162
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n</output>",
+      "processing_latency_seconds": 0.14692995400400832
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The duplicate on the class should be fixed now. Let's confirm the class declaration and State declaration look clean with single @Stable each.\n\n```bash\nsed -n '150,165p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt && echo '---' && sed -n '310,320p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+      "extra": {
+        "response": {
+          "id": "bd63c431-1cde-9ec7-9a74-791caf640530",
+          "created": 1778794739,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The duplicate on the class should be fixed now. Let's confirm the class declaration and State declaration look clean with single @Stable each.\n\n```bash\nsed -n '150,165p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt && echo '---' && sed -n '310,320p' /workspace/testbed/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Now verify. \n\nCheck the lines 150-165 again.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Now verify. \n\nCheck the lines 150-165 again."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 103,
+            "prompt_tokens": 24141,
+            "total_tokens": 24257,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 13,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 23488,
+              "text_tokens": 24141,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 58038500
+          }
+        }
+      },
+      "query_latency_seconds": 2.6575576739996905
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n}\n\n/**\n * A [Painter] that that executes an [ImageRequest] asynchronously and renders the result.\n */\n@Stable\nclass AsyncImagePainter internal constructor(\n    request: ImageRequest,\n    imageLoader: ImageLoader,\n) : Painter(), RememberObserver {\n\n    private var rememberScope: CoroutineScope? = null\n    private val drawSize = MutableStateFlow(Size.Zero)\n\n    private var painter: Painter? by mutableStateOf(null)\n    private var alpha: Float by mutableFloatStateOf(DefaultAlpha)\n---\n    /**\n     * The current state of the [AsyncImagePainter].\n     */\n@Stable\n    sealed interface State {\n\n        /** The current painter being drawn by [AsyncImagePainter]. */\n        val painter: Painter?\n\n        /** The request has not been started. */\n        data object Empty : State {\n</output>",
+      "processing_latency_seconds": 0.23264905100222677
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: Both the class and the State now have exactly one @Stable annotation each. Let's attempt to compile again to confirm success.\n\n```bash\ncd /workspace/testbed && ./gradlew :coil-compose-core:compileDebugKotlinAndroid --quiet 2>&1 | tail -30 || true\n```",
+      "extra": {
+        "response": {
+          "id": "9e7240a8-471f-92cf-99af-123c83734078",
+          "created": 1778794742,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: Both the class and the State now have exactly one @Stable annotation each. Let's attempt to compile again to confirm success.\n\n```bash\ncd /workspace/testbed && ./gradlew :coil-compose-core:compileDebugKotlinAndroid --quiet 2>&1 | tail -30 || true\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "Good, now class has single @Stable, and State also.\n",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "Good, now class has single @Stable, and State also.\n"
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 64,
+            "prompt_tokens": 24450,
+            "total_tokens": 24560,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 46,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 24128,
+              "text_tokens": 24450,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 55031000
+          }
+        }
+      },
+      "query_latency_seconds": 2.0793961330055026
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n</output>",
+      "processing_latency_seconds": 21.978069646007498
+    },
+    {
+      "role": "assistant",
+      "content": "THOUGHT: The compilation succeeded with no errors after fixing the @Stable annotation placement on AsyncImagePainter and State. By marking State as @Stable, the input types to the AsyncImage and SubcomposeAsyncImage composables (via their transform/onState lambdas) are now stable, allowing the Compose compiler to skip recompositions correctly. No temporary files were created, so now I can submit the final output.\n\n```bash\necho COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT && git add -A && git diff --cached --binary\n```",
+      "extra": {
+        "response": {
+          "id": "5fa18e46-3afc-973f-84e6-f6a6819dd010",
+          "created": 1778794767,
+          "model": "grok-4.3",
+          "object": "chat.completion",
+          "system_fingerprint": "fp_95e16318f1b12647",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "THOUGHT: The compilation succeeded with no errors after fixing the @Stable annotation placement on AsyncImagePainter and State. By marking State as @Stable, the input types to the AsyncImage and SubcomposeAsyncImage composables (via their transform/onState lambdas) are now stable, allowing the Compose compiler to skip recompositions correctly. No temporary files were created, so now I can submit the final output.\n\n```bash\necho COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT && git add -A && git diff --cached --binary\n```",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null,
+                "reasoning_content": "The output is empty, meaning probably success, since --quiet and no error printed in tail, and || true didn't trigger? The output shows just empty, meaning the tail showed nothing, so build succeeded ...<|control12|>The build succeeded without any output or errors, which confirms everything went smoothly.",
+                "provider_specific_fields": {
+                  "refusal": null,
+                  "reasoning_content": "The output is empty, meaning probably success, since --quiet and no error printed in tail, and || true didn't trigger? The output shows just empty, meaning the tail showed nothing, so build succeeded ...<|control12|>The build succeeded without any output or errors, which confirms everything went smoothly."
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 108,
+            "prompt_tokens": 24586,
+            "total_tokens": 25062,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 368,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 64,
+              "text_tokens": 24586,
+              "image_tokens": 0
+            },
+            "num_sources_used": 0,
+            "cost_in_usd_ticks": 318553000
+          }
+        }
+      },
+      "query_latency_seconds": 6.914760821004165
+    },
+    {
+      "role": "user",
+      "content": "diff --git a/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt b/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\nindex 284bece9..0c61269d 100644\n--- a/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n+++ b/coil-compose-core/src/commonMain/kotlin/coil3/compose/AsyncImagePainter.common.kt\n@@ -77,6 +77,7 @@ import kotlinx.coroutines.launch\n  * @param filterQuality Sampling algorithm applied to a bitmap when it is scaled and drawn into the\n  *  destination.\n  */\n+@Stable\n @Composable\n @NonRestartableComposable\n fun rememberAsyncImagePainter(\n@@ -123,6 +124,7 @@ fun rememberAsyncImagePainter(\n  * @param filterQuality Sampling algorithm applied to a bitmap when it is scaled and drawn into the\n  *  destination.\n  */\n+@Stable\n @Composable\n fun rememberAsyncImagePainter(\n     model: Any?,\n@@ -308,6 +310,7 @@ class AsyncImagePainter internal constructor(\n     /**\n      * The current state of the [AsyncImagePainter].\n      */\n+@Stable\n     sealed interface State {\n \n         /** The current painter being drawn by [AsyncImagePainter]. */\n@@ -340,6 +343,7 @@ class AsyncImagePainter internal constructor(\n         /**\n          * A state transform that does not modify the state.\n          */\n+@Stable\n         val DefaultTransform: (State) -> State = { it }\n     }\n }\n"
+    }
+  ],
+  "trajectory_format": "mini-swe-agent-1"
+}

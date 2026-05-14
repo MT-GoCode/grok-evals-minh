@@ -1,0 +1,29 @@
+diff --git a/core/data/src/main/java/com/google/samples/apps/nowinandroid/core/data/repository/OfflineFirstNewsRepository.kt b/core/data/src/main/java/com/google/samples/apps/nowinandroid/core/data/repository/OfflineFirstNewsRepository.kt
+index bd6ed11b..8773b9ae 100644
+--- a/core/data/src/main/java/com/google/samples/apps/nowinandroid/core/data/repository/OfflineFirstNewsRepository.kt
++++ b/core/data/src/main/java/com/google/samples/apps/nowinandroid/core/data/repository/OfflineFirstNewsRepository.kt
+@@ -63,8 +63,9 @@ class OfflineFirstNewsRepository @Inject constructor(
+     )
+         .map { it.map(PopulatedNewsResource::asExternalModel) }
+ 
+-    override suspend fun syncWith(synchronizer: Synchronizer) =
+-        synchronizer.changeListSync(
++    override suspend fun syncWith(synchronizer: Synchronizer): Boolean {
++    val isInitialSync = niaPreferencesDataSource.getChangeListVersions().newsResourceVersion == 0
++    return         synchronizer.changeListSync(
+             versionReader = ChangeListVersions::newsResourceVersion,
+             changeListFetcher = { currentVersion ->
+                 network.getNewsResourceChangeList(after = currentVersion)
+@@ -135,6 +136,12 @@ class OfflineFirstNewsRepository @Inject constructor(
+                         )
+                     }
+                 }
++                if (isInitialSync) {
++                    changedIds.forEach { id ->
++                        niaPreferencesDataSource.setNewsResourceViewed(id, true)
++                    }
++                }
+             },
+         )
+ }
++}

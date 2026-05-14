@@ -1,0 +1,16 @@
+diff --git a/app/src/main/java/com/jerboa/ui/components/common/ImageViewerDialog.kt b/app/src/main/java/com/jerboa/ui/components/common/ImageViewerDialog.kt
+index 61d916f..4634b3f 100644
+--- a/app/src/main/java/com/jerboa/ui/components/common/ImageViewerDialog.kt
++++ b/app/src/main/java/com/jerboa/ui/components/common/ImageViewerDialog.kt
+@@ -123,10 +123,7 @@ fun ImageViewerDialog(url: String, onBackRequest: () -> Unit) {
+                     .zoomable(
+                         zoomState = rememberZoomState(),
+                         onTap = { showTopBar = !showTopBar },
+-                    )
+-                    .clickable {
+-                        onBackRequest()
+-                    },
++                    ),
+             )
+ 
+             Row(
