@@ -60,10 +60,11 @@ def wait_for_build() -> None:
         time.sleep(60)
 
 
-def retry_failed_builds() -> None:
-    """Retry every 'Error building docker image X' once. Some are flaky network
-    failures (gradle dep download); retrying recovers them. Issue-#46 ones
-    will fail again, which is fine."""
+def retry_failed_builds(time_budget_s: int = 1800, per_build_timeout_s: int = 480) -> None:
+    """Retry failed builds, time-boxed. Sequential (low memory pressure),
+    each capped at per_build_timeout_s, whole pass capped at time_budget_s.
+    After the budget elapses, returns and lets the inference loop run on
+    whatever we have. Issue-#46 / structural failures fail again fast."""
     if not BUILD_LOG.is_file():
         return
     txt = BUILD_LOG.read_text(errors="ignore")
@@ -79,33 +80,40 @@ def retry_failed_builds() -> None:
         log("no failed images to retry")
         return
 
-    # Map lowercase tag back to actual task dir name
     actual: dict[str, str] = {}
     for p in TASKS_DIR.iterdir():
         if p.is_dir() and (p / "task.yaml").exists():
             actual[p.name.lower()] = p.name
-    log(f"retrying {len(failed)} failed image builds (one shot each)…")
+    log(f"retrying {len(failed)} failed image builds (sequential, time_budget={time_budget_s}s, per_build_timeout={per_build_timeout_s}s)…")
     n_recovered = 0
+    n_attempted = 0
+    deadline = time.time() + time_budget_s
     for tid_lc in failed:
+        if time.time() >= deadline:
+            log(f"  retry time budget exhausted; recovered {n_recovered}/{n_attempted} attempted of {len(failed)} failed")
+            break
         if task_has_image(tid_lc):
             n_recovered += 1
             continue
         real = actual.get(tid_lc)
         if not real:
-            log(f"  ? no task dir for {tid_lc}")
             continue
         df = TASKS_DIR / real / "Dockerfile"
         if not df.is_file():
             continue
         cmd = ["docker", "build", "--quiet", "-t", tid_lc, "-f", str(df), str(TASKS_DIR / real)]
         log(f"  retry {real} ...")
-        rc = subprocess.run(cmd, capture_output=True, text=True, check=False)
-        if rc.returncode == 0:
-            n_recovered += 1
-            log(f"    OK -> {tid_lc}")
-        else:
-            log(f"    FAIL rc={rc.returncode} stderr_tail={(rc.stderr or '')[-200:]!r}")
-    log(f"retry pass done: recovered {n_recovered}/{len(failed)}")
+        n_attempted += 1
+        try:
+            rc = subprocess.run(cmd, capture_output=True, text=True, check=False, timeout=per_build_timeout_s)
+            if rc.returncode == 0:
+                n_recovered += 1
+                log(f"    OK -> {tid_lc}")
+            else:
+                log(f"    FAIL rc={rc.returncode} stderr_tail={(rc.stderr or '')[-200:]!r}")
+        except subprocess.TimeoutExpired:
+            log(f"    TIMEOUT after {per_build_timeout_s}s")
+    log(f"retry pass done: recovered {n_recovered}/{n_attempted} attempted of {len(failed)} total failed")
 
 
 def all_task_ids() -> list[str]:
