@@ -1,0 +1,9 @@
+Grok 4.3 on AndroidBench v1 (n=1)
+Accuracy: 0.00%   Wilson 95% CI: [0.00, 79.35]   (±39.7pp)
+Median cost / task: $0.1252    Total: $3.23
+
+Status breakdown:
+  AGENT_FAILED_TEST           1  (100.0%)
+
+Failing instance ids (status != PASSED*):
+  AlphaWallet__alpha-wallet-android-pr_3329                    AGENT_FAILED_TEST
