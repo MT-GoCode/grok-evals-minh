@@ -1,11 +1,11 @@
 Grok 4.3 on AndroidBench v1 (n=100)
-Accuracy: 7.00%   Wilson 95% CI: [3.43, 13.75]   (±5.2pp)
+Accuracy: 9.00%   Wilson 95% CI: [4.81, 16.23]   (±5.7pp)
 Median cost / task: $0.1929    Total: $14.56
 
 Status breakdown:
-  AGENT_NO_PATCH             82  (82.0%)
-  PASSED                      6  (6.0%)
-  AGENT_FAILED_TEST           5  (5.0%)
+  AGENT_NO_PATCH             79  (79.0%)
+  PASSED                      8  (8.0%)
+  AGENT_FAILED_TEST           6  (6.0%)
   INFRA_FAILURE_AGENT         4  (4.0%)
   INFRA_FAILURE               1  (1.0%)
   PASSED_FLAKY                1  (1.0%)
@@ -14,11 +14,9 @@ Status breakdown:
 Failing instance ids (status != PASSED*):
   AlphaWallet__alpha-wallet-android-pr_3329                    AGENT_FAILED_TEST
   Automattic__pocket-casts-android-pr_1114                     AGENT_FAILED_TEST
-  Automattic__pocket-casts-android-pr_757                      AGENT_NO_PATCH
+  Automattic__pocket-casts-android-pr_757                      AGENT_FAILED_TEST
   CatimaLoyalty__Android-pr_1588                               AGENT_NO_PATCH
   DroidKaigi__conference-app-2023-pr_896                       INFRA_FAILURE
-  LemmyNet__jerboa-pr_1068                                     AGENT_NO_PATCH
-  LemmyNet__jerboa-pr_1114                                     AGENT_NO_PATCH
   LemmyNet__jerboa-pr_1122                                     AGENT_NO_PATCH
   LemmyNet__jerboa-pr_1198                                     AGENT_NO_PATCH
   LemmyNet__jerboa-pr_1485                                     AGENT_NO_PATCH

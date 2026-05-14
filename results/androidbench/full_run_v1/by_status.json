@@ -2,6 +2,7 @@
   "AGENT_FAILED_TEST": [
     "AlphaWallet__alpha-wallet-android-pr_3329",
     "Automattic__pocket-casts-android-pr_1114",
+    "Automattic__pocket-casts-android-pr_757",
     "MohamedRejeb__compose-rich-editor-pr_319",
     "MohamedRejeb__compose-rich-editor-pr_335",
     "coil-kt__coil-pr_2669"
@@ -10,15 +11,14 @@
     "AntennaPod__AntennaPod-pr_6838",
     "Automattic__pocket-casts-android-pr_3970",
     "CatimaLoyalty__Android-pr_1524",
+    "LemmyNet__jerboa-pr_1068",
+    "LemmyNet__jerboa-pr_1114",
     "thunderbird__thunderbird-android-pr_7103",
     "thunderbird__thunderbird-android-pr_7190",
     "thunderbird__thunderbird-android-pr_8020"
   ],
   "AGENT_NO_PATCH": [
-    "Automattic__pocket-casts-android-pr_757",
     "CatimaLoyalty__Android-pr_1588",
-    "LemmyNet__jerboa-pr_1068",
-    "LemmyNet__jerboa-pr_1114",
     "LemmyNet__jerboa-pr_1122",
     "LemmyNet__jerboa-pr_1198",
     "LemmyNet__jerboa-pr_1485",
