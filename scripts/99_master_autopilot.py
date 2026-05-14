@@ -107,7 +107,28 @@ def already_verified(run_dir: Path, instance_id: str) -> bool:
     return False
 
 
-def run_inference_one(instance_id: str, run_name: str, model: str) -> int:
+BALANCE_PATTERNS = (
+    "insufficient credit",
+    "insufficient credits",
+    "insufficient balance",
+    "insufficient_credits",
+    "402 payment required",
+    "payment_required",
+    "credits exhausted",
+    "out of credits",
+    "billing required",
+    "no credit",
+)
+
+
+def run_inference_one(instance_id: str, run_name: str, model: str) -> tuple[int, bool, str]:
+    """Returns (rc, balance_exhausted, stderr_tail).
+
+    Captures stdout/stderr so we can grep for an unambiguous out-of-money
+    signal from xAI. Rate limits (HTTP 429) are NOT considered exhaustion —
+    litellm retries them internally; we only stop if xAI says we are out
+    of money.
+    """
     cmd = [
         str(PY), "-m", "harness.inference.androidbench",
         "--instance", instance_id,
@@ -118,7 +139,10 @@ def run_inference_one(instance_id: str, run_name: str, model: str) -> int:
         "--skip-existing",
     ]
     log(f"  infer cmd: {' '.join(cmd)}")
-    return subprocess.run(cmd, cwd=str(VENDOR)).returncode
+    p = subprocess.run(cmd, cwd=str(VENDOR), capture_output=True, text=True, check=False)
+    blob = (p.stdout + "\n" + p.stderr).lower()
+    balance_exhausted = any(pat in blob for pat in BALANCE_PATTERNS)
+    return p.returncode, balance_exhausted, (p.stderr or "")[-2000:]
 
 
 def run_verify_one(instance_id: str, run_name: str) -> int:
@@ -258,14 +282,15 @@ def git_push(message: str) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--budget", type=float, default=14.50)
     ap.add_argument("--run-name", default="full_run_v1")
     ap.add_argument("--model", default="xai/grok-4.3")
     ap.add_argument("--commit-every", type=int, default=COMMIT_EVERY)
     ap.add_argument("--start-from", default=None)
+    ap.add_argument("--max-balance-misses", type=int, default=2,
+                    help="Stop after this many consecutive tasks return an unambiguous balance-exhausted error from xAI.")
     args = ap.parse_args()
 
-    log(f"=== autopilot start budget=${args.budget:.2f} run_name={args.run_name} model={args.model}")
+    log(f"=== autopilot start run_name={args.run_name} model={args.model} (no budget cap; stops on xAI balance-exhausted)")
     wait_for_build()
 
     run_dir = OUT_DIR / args.run_name
@@ -289,12 +314,8 @@ def main() -> int:
 
     # Phase: per-task loop
     n_attempted = 0
-    n_passed = 0
+    consecutive_balance_errors = 0
     for idx, tid in enumerate(task_ids, 1):
-        if total_spend >= args.budget:
-            log(f"BUDGET HIT total=${total_spend:.4f} >= ${args.budget:.2f}; stopping new tasks")
-            break
-
         if already_verified(run_dir, tid):
             continue
 
@@ -306,11 +327,19 @@ def main() -> int:
         if not already_inferred(run_dir, tid):
             log(f"[{idx}/{len(task_ids)}] {tid}: inference (running_total=${total_spend:.4f})")
             t0 = time.time()
-            rc = run_inference_one(tid, args.run_name, args.model)
+            rc, balance_exhausted, stderr_tail = run_inference_one(tid, args.run_name, args.model)
             elapsed = time.time() - t0
             cost = trajectory_cost(run_dir, tid) or 0.0
             total_spend += cost
-            log(f"  infer rc={rc} elapsed={elapsed:.1f}s cost=${cost:.4f} total=${total_spend:.4f}")
+            log(f"  infer rc={rc} elapsed={elapsed:.1f}s cost=${cost:.4f} total=${total_spend:.4f} balance_exhausted={balance_exhausted}")
+            if balance_exhausted:
+                consecutive_balance_errors += 1
+                log(f"  xAI balance-exhausted signal in subprocess output (consecutive={consecutive_balance_errors}). stderr_tail: {stderr_tail!r}")
+                if consecutive_balance_errors >= args.max_balance_misses:
+                    log(f"BALANCE EXHAUSTED after {consecutive_balance_errors} consecutive misses; stopping new tasks")
+                    break
+            else:
+                consecutive_balance_errors = 0
         else:
             log(f"[{idx}/{len(task_ids)}] {tid}: skip-inference (patch exists)")
 
@@ -337,7 +366,7 @@ def main() -> int:
     log("=== final aggregate + push ===")
     aggregate(run_dir)
     update_readme_section(run_dir)
-    git_push(f"AndroidBench: final results (${total_spend:.4f} spent on this session)")
+    git_push(f"AndroidBench: final results (${total_spend:.4f} spent this session, n_attempted={n_attempted})")
 
     log(f"=== autopilot done. n_attempted={n_attempted} cumulative=${total_spend:.4f} ===")
     return 0
