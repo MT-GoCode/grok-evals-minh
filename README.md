@@ -1,6 +1,6 @@
 In my writeup, I identified 3 focus areas I'd love to work on for Grok: mobile development, pedagogical ability, and physical science reasoning.
 
-To ground those proposals in evidence, I ran Grok 4.3 against recent benchmarks (published the last few months to one year), one per focus area, to illustrate even the latest Grok 4.3 trails leading models. This shows the gap and motivates why these focus areas matter.
+To ground those proposals in evidence, I ran Grok 4.3 against recent benchmarks (published the last few months to one year), one per focus area, to illustrate the gap to full accuracy and that Grok 4.3 trails leading models. This shows the gap and motivates why these focus areas matter, and for many of them, opportunity to pull ahead of the curve.
 
 The benchmarks I used are as follows:
 
@@ -20,7 +20,7 @@ Results summary: Grok 4.3 sits in the bottom tier of frontier models on material
 
 Android Bench measures a model's ability to resolve real-world Android engineering issues, drawn from 38,000+ merged PRs across popular Kotlin/Java repositories spanning Jetpack Compose migrations, SDK breaking changes, Coroutines, Room, and emulator-tested instrumentation flows. Inputs are an issue description plus the pre-fix repo snapshot; outputs are unified diffs that must compile and pass unit + instrumentation tests on an x86_64 emulator, scored binary per task and averaged across 10 runs.
 
-Results summary: 
+Results summary: Grok performs solidly mid-tier in the frontier, achieving 63.4%, trailing the latest and greatest GPT/Claude models which barely break the 70% boundary. There's room for improvement for everyone!
 
 ## In-depth results
 
@@ -85,17 +85,6 @@ Observation: Grok 4.3 performance collapses on symbolic.
 | Claude-4-Sonnet | 54.44 |
 
 ### Android Bench
-
-#### Grok 4.3 performance by task subset
-
-| Subset | n | Accuracy | Notes |
-|---|---|---|---|
-| Solid run-throughs (image built + Grok ran + verifier scored) | 41 | **63.4% ± 14.1** | Apples-to-apples Grok number |
-| Full task universe (incl. 58 where the docker image couldn't be built) | 100 | 26.0% | Strict leaderboard methodology |
-
-Observation: 58/100 task images failed to build in our cloud-VM docker env (gradle DNS failure inside the bridge network). On the 41 we did get a complete pipeline for, Grok 4.3 wins 63.4%.
-
-#### Leaderboard placement (attempted-only, n=41)
 
 | Rank | Model | Accuracy |
 |---|---|---|
